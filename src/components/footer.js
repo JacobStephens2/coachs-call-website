@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className={style.footer}>
       <FooterNav />
       <div>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.jacobstephens.net">Coach's Call</a>
       </div>
     </footer>
   )
