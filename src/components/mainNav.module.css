@@ -1,0 +1,34 @@
+.mainnav {
+  margin: 0.5rem auto 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 960px;
+}
+
+.mainnav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainnav ul ul {
+  flex-direction: column;
+}
+
+.mainnav li {
+  list-style-type: none;
+}
+
+.mainnav a {
+  padding: 0.3rem 1rem;
+  display: block;
+  /* Bee black */
+  color: #1c1b1a;
+  border: 1px solid hsla(0, 0%, 100%, 0);
+}
+
+.mainnav a:hover,
+.mainnav a:focus {
+  /* Bee black */
+  border-color: #1c1b1a;
+}
