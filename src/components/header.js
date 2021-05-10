@@ -47,13 +47,3 @@ Header.defaultProps = {
 }
 
 export default Header
-
-export const query = graphql`
-	 query SiteTitleQuery {
-	   wp {
-		 generalSettings {
-		   title
-		 }
-	   }
-	 }
-  `  
