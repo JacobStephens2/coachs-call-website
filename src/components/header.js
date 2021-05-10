@@ -4,10 +4,11 @@ import React from "react"
 
 import MainNav from "./mainNav"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  return (
   <header
     style={{
-      background: `#F8B429`, // Yellow bee
+      background: `#002856`, // dark blue
       marginBottom: `1.45rem`,
     }}
   >
@@ -22,17 +23,20 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `#1C1B1A`, // Black bee
+            color: `#FFFFFF`, // white
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+
+          <div dangerouslySetInnerHTML={{ __html: siteTitle }} />
+
         </Link>
       </h1>
     </div>
     <MainNav />
   </header>
 )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -43,3 +47,13 @@ Header.defaultProps = {
 }
 
 export default Header
+
+export const query = graphql`
+	 query SiteTitleQuery {
+	   wp {
+		 generalSettings {
+		   title
+		 }
+	   }
+	 }
+  `  

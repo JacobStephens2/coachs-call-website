@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Steward Goods`,
-    description: `Web design service by Jacob Stephens`,
-    author: `@JacobCStephens`,
+    title: `Coach's Call`,
+    description: `Glorifying God and Experiencing Joy Through Sports`,
+    author: `John Levis`,
   },
   flags: {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://stewardgoods.com/graphql`,
+        url: `https://coachscall.org/graphql`,
         develop: {
           hardCacheMediaFiles: true,
         },
@@ -37,10 +37,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#F9AC00`, // Orange comb
-        theme_color: `#F8B429`, // Yellow bee
+        background_color: `#ffffff`, // white
+        theme_color: `#002856`, // Dark blue
         display: `minimal-ui`,
-        icon: `src/images/stewardgoods-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/CoachsCall-Crest-Logo-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

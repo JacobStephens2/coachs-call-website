@@ -25,9 +25,9 @@
 	 }
    `)
  
-   return (
+ return (
 	 <>
-	   <Header siteTitle={data.wp.generalSettings.title || `Title`} />
+	<Header siteTitle={data.wp.generalSettings.title || `Title`} />
 	   <div
 		 style={{
 		   margin: `0 auto`,
