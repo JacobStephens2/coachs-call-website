@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://coachscall.org/graphql`,
+        url: `https://content.coachscall.org/graphql`,
         develop: {
           hardCacheMediaFiles: true,
         },
