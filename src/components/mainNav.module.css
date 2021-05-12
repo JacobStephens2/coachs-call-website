@@ -22,13 +22,11 @@
 .mainnav a {
   padding: 0.3rem 1rem;
   display: block;
-  /* Bee black */
-  color: #1c1b1a;
+  color: #ffffff; /* White */
   border: 1px solid hsla(0, 0%, 100%, 0);
 }
 
 .mainnav a:hover,
 .mainnav a:focus {
-  /* Bee black */
-  border-color: #1c1b1a;
+  border-color: #ffffff; /* White */
 }

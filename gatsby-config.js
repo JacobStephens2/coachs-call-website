@@ -40,7 +40,7 @@ module.exports = {
         background_color: `#ffffff`, // white
         theme_color: `#002856`, // Dark blue
         display: `minimal-ui`,
-        icon: `src/images/CoachsCall-Crest-Logo-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
