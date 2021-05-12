@@ -21,14 +21,6 @@ const NamedPage = ({ data }) => {
           </figure>
         )}
         <h1>{page.title}</h1>
-        <div>
-          by {page.author.node.name}. Published on{" "}
-          {new Date(page.date).toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-          })}
-        </div>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
       </article>
     </Layout>
