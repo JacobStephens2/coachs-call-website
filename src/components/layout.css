@@ -9,7 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #002856;
+  color: var(--dark-blue);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -594,4 +594,7 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+.wp-block-button__link {
+  background-color: var(--dark-blue) !important;
 }

@@ -22,11 +22,11 @@
 .mainnav a {
   padding: 0.3rem 1rem;
   display: block;
-  color: #ffffff; /* White */
+  color: var(--white); /* White */
   border: 1px solid hsla(0, 0%, 100%, 0);
 }
 
 .mainnav a:hover,
 .mainnav a:focus {
-  border-color: #ffffff; /* White */
+  border-color: var(--white); /* White */
 }

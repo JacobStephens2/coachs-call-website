@@ -7,10 +7,10 @@
   padding: 2rem;
   text-align: center;
   /* Bee black */
-  color: #ffffff;
+  color: var(--white);
 }
 
 .footer a {
   /* Bee black */
-  color: #ffffff;
+  color: var(--white);
 }

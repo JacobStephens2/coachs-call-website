@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => {
   return (
   <header
     style={{
-      background: `#002856`, // dark blue
+      background: `var(--dark-blue)`, // dark blue
       marginBottom: `1.45rem`,
     }}
   >
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => {
         <Link
           to="/"
           style={{
-            color: `#FFFFFF`, // white
+            color: `var(--white)`, // white
             textDecoration: `none`,
           }}
         >

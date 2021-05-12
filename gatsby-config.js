@@ -37,8 +37,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#ffffff`, // white
-        theme_color: `#002856`, // Dark blue
+        background_color: `var(--white)`, // white
+        theme_color: `var(--dark-blue)`, // Dark blue
         display: `minimal-ui`,
         icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`, // This path is relative to the root of the site.
       },
