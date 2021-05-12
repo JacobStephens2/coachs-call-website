@@ -43,6 +43,13 @@ module.exports = {
         icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-css-customs`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0})],
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
