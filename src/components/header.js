@@ -10,6 +10,9 @@ const Header = ({ siteTitle }) => {
     style={{
       background: `var(--dark-blue)`, // dark blue
       marginBottom: `1.45rem`,
+      position: `fixed`,
+      width: `100%`,
+      zIndex: `1`,
     }}
   >
     <div
