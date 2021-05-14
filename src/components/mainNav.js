@@ -6,12 +6,15 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "../utils/UniversalLink"
 import { FlatListToHierarchical } from "../utils/FlatListToHierarchical"
+import BurgerMenu from "../components/burgerMenu"
 
 import * as style from "./mainNav.module.css"
+
 
 const MenuLoop = ({ menuItems }) => {
   return (
     <ul>
+      <BurgerMenu />
       {menuItems.map((menuItem, index) => {
         return (
           <li
