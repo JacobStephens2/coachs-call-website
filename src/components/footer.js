@@ -10,7 +10,7 @@ const Footer = () => {
         © {new Date().getFullYear()}
         {` `}
         <a href="https://www.jacobstephens.net">Coach's&nbsp;Call</a>
-        <div style={{position: `inline`,}}>&ensp;|&ensp;</div>
+        &ensp;|&ensp;
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
     </footer>
