@@ -55,6 +55,10 @@
   padding: 0.8em;
 }
 
+.bm-item-list ul {
+  margin-bottom: 110px;
+}
+
 /* Individual item */
 .bm-item {
   display: inline-block;
