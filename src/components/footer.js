@@ -1,6 +1,5 @@
 import React from "react"
 
-import FooterNav from "./footerNav"
 import * as style from "./footer.module.css"
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
       <div>
         © {new Date().getFullYear()}
         {` `}
-        <a href="https://www.jacobstephens.net">Coach's&nbsp;Call</a>
+        <a href="https://www.jacobstephens.net">Coach's Call</a>
         &ensp;|&ensp;
         <a href="/privacy-policy">Privacy Policy</a>
       </div>

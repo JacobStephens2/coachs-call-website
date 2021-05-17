@@ -73,15 +73,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Generate single page pages
   const pages = queryResult.data.pageQuery.nodes
   pages.forEach(page => {
-    createPage({
-      path: page.uri,
-      component: path.resolve(`./src/templates/page.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        databaseId: page.databaseId,
-      },
-    })
+    if (page.uri == "/") {
+      createPage({
+        path: page.uri,
+        component: path.resolve(`./src/templates/home.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          databaseId: page.databaseId,
+        },
+      })
+    } else {
+      createPage({
+        path: page.uri,
+        component: path.resolve(`./src/templates/page.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          databaseId: page.databaseId,
+        },
+      })
+    }
   })
 
   // Generate single post pages

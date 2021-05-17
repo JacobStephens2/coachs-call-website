@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => {
       marginBottom: `1.45rem`,
       position: `fixed`,
       width: `100%`,
-      zIndex: `1`,
+      zIndex: `2`,
     }}
   >
     <div
