@@ -1,15 +1,15 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import { StaticImage } from "gatsby-plugin-image"
 import MainNav from "./mainNav"
 
 const Header = ({ siteTitle }) => {
   return (
   <header
     style={{
-      background: `var(--dark-blue)`, // dark blue
-      marginBottom: `1.45rem`,
+      background:  `var(--white)`,
+      marginBottom: `1rem`,
       position: `fixed`,
       width: `100%`,
       zIndex: `2`,
@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem 0.5rem`,
+        padding: `1rem 1.0875rem 0 25px`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -31,7 +31,13 @@ const Header = ({ siteTitle }) => {
           }}
         >
 
-          <div dangerouslySetInnerHTML={{ __html: siteTitle }} />
+          <StaticImage
+            src="../images/CoachsCall-Crest-Logo-icon-square-tight.png"
+            alt="The Coach's Call crest"
+            placeholder="blurred"
+            width={50}
+            width={50}
+          />
 
         </Link>
       </h1>
