@@ -8,7 +8,6 @@ const Header = ({ siteTitle }) => {
   return (
   <header
     style={{
-      background:  `var(--white)`,
       marginBottom: `1rem`,
       position: `fixed`,
       width: `100%`,
@@ -32,10 +31,11 @@ const Header = ({ siteTitle }) => {
         >
 
           <StaticImage
-            src="../images/CoachsCall-Type-Logo-no-margin.png"
+            src="../images/CoachsCall-Crest-Logo-icon-white-circle.png"
             alt="The Coach's Call crest"
             placeholder="blurred"
-            width={250}
+            width={50}
+            height={50}
           />
 
         </Link>

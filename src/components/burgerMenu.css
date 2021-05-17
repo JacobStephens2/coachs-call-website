@@ -9,7 +9,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: var(--dark-blue);
+  background: var(--white);
 }
 
 /* Color/shape of burger icon bars on hover*/
