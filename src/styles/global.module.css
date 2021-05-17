@@ -1,7 +1,9 @@
 :root {
   /* Fonts */
-  --primary-font: serif;
-  --highlight-font: sans-serif;
+  --primary-font: abolition, serif;
+  --highlight-font: abolition, sans-serif;
+  --highlight-font-weight: 400;
+  --highlight-font-style: italic;
 
   /* Colours */
   --dark-blue: #002856;

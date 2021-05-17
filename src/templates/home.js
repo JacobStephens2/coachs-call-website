@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import * as style from "./single.module.css"
+import "./style.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -20,8 +21,6 @@ const NamedPage = ({ data }) => {
             />
           </figure>
         )}
-        <h1>{page.title}</h1>
-        <h1>Home Template</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
       </article>
     </Layout>

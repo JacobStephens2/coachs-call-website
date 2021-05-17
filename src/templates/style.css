@@ -1,0 +1,4 @@
+.wp-block-cover-image,
+.wp-block-cover {
+  min-height: 100vh !important;
+}
