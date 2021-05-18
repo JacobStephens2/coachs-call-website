@@ -96,22 +96,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   })
 
-  // Generate single post pages
-  const posts = queryResult.data.postQuery.edges
-  posts.forEach(post => {
-    createPage({
-      path: `/posts${post.node.uri}`,
-      component: path.resolve(`./src/templates/post.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        databaseId: post.node.databaseId,
-        nextId: post.next ? post.next.databaseId : null,
-        prevId: post.previous ? post.previous.databaseId : null,
-      },
-    })
-  })  
-
   // Create your paginated pages
   paginate({
     createPage, // The Gatsby `createPage` function
@@ -137,20 +121,5 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })  
 
-  // Create your paginated tag indexes
-  const tags = queryResult.data.tagQuery.nodes
-  tags.map(tag => {
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: tag.posts.nodes, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: tag.uri, // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve(`./src/templates/tags.js`), // Just like `createPage()`
-      context: {
-        tagId: tag.databaseId,
-        tagName: tag.name,
-      },
-    })
-  })
   
 }

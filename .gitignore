@@ -59,6 +59,9 @@ typings/
 public
 .wordpress-cache/
 
+# other files
+mapsAPIKey.js
+
 # Mac files
 .DS_Store
 

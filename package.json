@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@react-google-maps/api": "^2.1.1",
     "@wordpress/block-library": "^2.29.3",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.1",
