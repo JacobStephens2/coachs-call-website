@@ -6,7 +6,7 @@ import * as style from "./single.module.css"
 import "./style.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Map from "../components/map"
+import LocationsMap from "../components/map"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -23,7 +23,7 @@ const NamedPage = ({ data }) => {
           </figure>
         )}
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-        <Map />
+        <LocationsMap />
       </article>
     </Layout>
   )
