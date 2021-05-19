@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import * as style from "./single.module.css"
 import "./style.css"
@@ -14,22 +13,12 @@ const NamedPage = ({ data }) => {
     <Layout>
       <Seo title={page.title} />
       <article className={style.article}>
-        {page.featuredImage && (
-          <figure className={style.featimg}>
-            <Img
-              fluid={page.featuredImage.node.localFile.childImageSharp.fluid}
-              alt={page.featuredImage.node.altText}
-            />
-          </figure>
-        )}
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
         <LocationsMap />
       </article>
     </Layout>
   )
 }
-
-export default NamedPage;
 
 export const query = graphql`
   query($databaseId: Int!) {
@@ -42,18 +31,8 @@ export const query = graphql`
         }
       }
       date
-      featuredImage {
-        node {
-          altText
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1360) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
     }
   }
 `
+
+export default NamedPage;
