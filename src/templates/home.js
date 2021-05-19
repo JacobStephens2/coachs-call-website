@@ -5,7 +5,6 @@ import * as style from "./single.module.css"
 import "./style.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import LocationsMap from "../components/map"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -14,11 +13,11 @@ const NamedPage = ({ data }) => {
       <Seo title={page.title} />
       <article className={style.article}>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-        <LocationsMap />
       </article>
     </Layout>
   )
 }
+
 
 export default NamedPage;
 
