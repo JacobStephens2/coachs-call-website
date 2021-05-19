@@ -45,18 +45,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `var(--white)`, // white
-        theme_color: `var(--dark-blue)`, // Dark blue
-        display: `minimal-ui`,
-        icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`, // This path is relative to the root of the site.
-      },
-    },
     `gatsby-plugin-css-customs`,
     {
       resolve: `gatsby-plugin-postcss`,
@@ -65,8 +53,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Coach's Call`,
+        short_name: `Coach's Call`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#002856`,
+        display: `standalone`,
+        icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
