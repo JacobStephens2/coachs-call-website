@@ -22,8 +22,6 @@ const NamedPage = ({ data }) => {
 
 export default NamedPage;
 
-ReactDOM.render(<LocationsMap />, document.querySelector("#locationsMap"));
-
 export const query = graphql`
   query($databaseId: Int!) {
     wpPage(databaseId: { eq: $databaseId }) {
@@ -38,4 +36,7 @@ export const query = graphql`
     }
   }
 `
+if (typeof window !== `undefined`) {
+  ReactDOM.render(<LocationsMap />, document.querySelector("#locationsMap"));
+}
 
