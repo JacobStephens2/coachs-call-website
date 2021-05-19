@@ -36,7 +36,4 @@ export const query = graphql`
     }
   }
 `
-if (typeof window !== `undefined`) {
-  ReactDOM.render(<LocationsMap />, document.querySelector("#locationsMap"));
-}
 
