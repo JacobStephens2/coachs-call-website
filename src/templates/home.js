@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ReactDOM from 'react-dom'
 
 import * as style from "./single.module.css"
 import "./style.css"
@@ -15,6 +14,7 @@ const NamedPage = ({ data }) => {
       <Seo title={page.title} />
       <article className={style.article}>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
+        <LocationsMap />
       </article>
     </Layout>
   )
