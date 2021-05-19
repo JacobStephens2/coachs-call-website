@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import ReactDOM from 'react-dom'
 
 import * as style from "./single.module.css"
 import "./style.css"
@@ -14,11 +15,14 @@ const NamedPage = ({ data }) => {
       <Seo title={page.title} />
       <article className={style.article}>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-        <LocationsMap />
       </article>
     </Layout>
   )
 }
+
+export default NamedPage;
+
+ReactDOM.render(<LocationsMap />, document.querySelector("#locationsMap"));
 
 export const query = graphql`
   query($databaseId: Int!) {
@@ -35,4 +39,3 @@ export const query = graphql`
   }
 `
 
-export default NamedPage;
