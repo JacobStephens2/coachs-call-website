@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 import { graphql } from "gatsby"
 
 import * as style from "./single.module.css"
 import "./style.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import LocationsMap from "../components/map"
+import LocationsMap from "../components/locationsMap"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -14,8 +14,8 @@ const NamedPage = ({ data }) => {
       <Seo title={page.title} />
       <article className={style.article}>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-        <LocationsMap />
       </article>
+      <LocationsMap />
     </Layout>
   )
 }
