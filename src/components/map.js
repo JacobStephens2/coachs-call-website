@@ -8,8 +8,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 40.05120629190717,
+  lng: -75.37134437493822
 };
 
 const LocationsMap = () => {
@@ -44,12 +44,5 @@ const LocationsMap = () => {
   ) : <></>
 }
 
-const MapPageLocation = document.querySelector("#locationsMap");
-
-const testContent = `
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.085265684293!2d-75.37347404871379!3d40.05119807930828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c69516c87148cb%3A0x10ad9e9aa29f94b9!2sEastern%20University!5e0!3m2!1sen!2sus!4v1621371434107!5m2!1sen!2sus" width="375" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-`;
-
-MapPageLocation.innerHTML = testContent;
 
 export default LocationsMap
