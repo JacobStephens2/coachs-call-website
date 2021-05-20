@@ -7,7 +7,7 @@
 .article {
   max-width: var(--content-w-regular);
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 1rem;
 }
 
 .featimg {
@@ -76,4 +76,32 @@ a {
   width: 10rem;
   margin: 4rem auto;
   border-bottom: 1px solid black;
+}
+
+.dark__overlay {
+  filter: brightness(50%);
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+}
+
+.container__top {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  padding-top: 6px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center__text {
+  text-align: center;
 }

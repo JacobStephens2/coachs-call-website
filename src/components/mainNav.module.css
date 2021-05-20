@@ -7,7 +7,6 @@
 .mainnav ul {
   margin: 0;
   padding: 0;
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -20,7 +19,6 @@
 }
 
 .mainnav a {
-  padding: 0.3rem 1rem;
   display: block;
   color: var(--white); /* White */
   border: 1px solid hsla(0, 0%, 100%, 0);
