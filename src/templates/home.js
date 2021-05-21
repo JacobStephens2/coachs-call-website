@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LocationsMap from "../components/locationsMap"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 
 const NamedPage = ({ data }) => {
@@ -26,7 +27,7 @@ const NamedPage = ({ data }) => {
           alt="Track"
           placeholder="blurred"
         />
-        <h2 className={style.centered}>About</h2>
+        <h2 className={style.centered}><Link to="/about">About</Link></h2>
       </div>
       <div className={style.container}>
         <StaticImage 
@@ -35,7 +36,7 @@ const NamedPage = ({ data }) => {
           alt="Baseball batting spot"
           placeholder="blurred"
         />
-        <h2 className={style.centered}>Work</h2>
+        <h2 className={style.centered}><Link to="/work">Work</Link></h2>
       </div>
       <div className={style.container}>
         <StaticImage 
@@ -44,7 +45,7 @@ const NamedPage = ({ data }) => {
           alt="Baseball batting spot"
           placeholder="blurred"
         />
-        <h2 className={style.centered}>Contact</h2>
+        <h2 className={style.centered}><Link to="/contact">Contact</Link></h2>
       </div>
     </Layout>
   )
