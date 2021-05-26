@@ -100,8 +100,26 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.lower__centered {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .center__text {
   text-align: center;
+}
+
+.crest {
+  position: absolute !important;
+  top: 100px;
+}
+
+.belowheader {
+  padding-top: 84px;
 }

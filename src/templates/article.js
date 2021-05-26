@@ -3,8 +3,6 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import _ from "lodash"
 
-import Video from "../components/video"
-
 import Layout from "../components/layout"
 import * as style from "./article.module.css"
 
@@ -22,10 +20,6 @@ const Article = ({ data }) => {
           </figure>
         )}
 
-        <Video
-          videoSourceURL={article.frontmatter.videoSourceURL}
-          videoTitle={article.frontmatter.videoTitle}
-        />
         <h1 className={style.article__title}>{article.frontmatter.title}</h1>
 
         <div className={style.article__meta}>

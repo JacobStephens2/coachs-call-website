@@ -9,28 +9,36 @@ import LocationsMap from "../components/locationsMap"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import GrassVideo from "../videos/AdobeStock-grass-lines-259971257_Video_HD_Preview.mp4"
-import GoalPostVideo from "../videos/AdobeStock-football-goal-225268472_Video_HD_Preview.mp4"
+import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
   return (
     <Layout>
       <Seo title={page.title} />
-      <article className={style.article}>
-        <div dangerouslySetInnerHTML={{ __html: page.content }} />
-      </article>
 
-      <div className={style.container}>
+      <div className={`${style.container} ${style.belowheader}`}>
+
         <video className={style.dark__overlay} autoPlay muted loop>
-          <source src={GrassVideo} type="video/mp4" />
+          <source src={AthleticVideo} type="video/mp4" />
         </video>
 
-        <h2 className={style.centered}>Glorifying God and Experiencing Joy Through Sports</h2>
+        <h2 className={style.lower__centered}>Glorifying God and&nbsp;Experiencing Joy Through Sports</h2>
+
       </div>
 
+        <StaticImage
+          className={style.crest}
+          alt="Coach's Call logo crest"
+          placeholder="blurred"
+          src="../images/CoachsCall-Crest-Logo-icon-square.png"
+          height={300}
+        />
+
       <h2 className={style.center__text}>Locations</h2>
+      
       <LocationsMap />
+
       <div className={style.container__top}>
         <StaticImage 
           className={style.dark__overlay}
@@ -78,27 +86,3 @@ export const query = graphql`
     }
   }
 `
-
-const isBrowser = typeof window !== "undefined"
-
-if (isBrowser) {
-  let videoSource = ["../videos/AdobeStock-grass-lines-259971257_Video_HD_Preview.mp4", "../videos/AdobeStock-football-goal-225268472_Video_HD_Preview.mp4"];
-  let i = 0; // define i
-  let videoCount = videoSource.length;
-
-  function videoPlay(videoNum) {
-      document.querySelector("video source").setAttribute("src", videoSource[videoNum]);
-  }
-  document.querySelector("video source").addEventListener("ended", myHandler, false);
-  videoPlay(0); // play the video
-
-  function myHandler() {
-      i++;
-      if (i == (videoCount - 1)) {
-          i = 0;
-          videoPlay(i);
-      } else {
-          videoPlay(i);
-      }
-  }
-}
