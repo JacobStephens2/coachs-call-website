@@ -17,23 +17,27 @@ const NamedPage = ({ data }) => {
     <Layout>
       <Seo title={page.title} />
 
-      <div className={`${style.container} ${style.belowheader}`}>
+      <div style={{ height: 83, }}></div>
 
-        <video className={style.dark__overlay} autoPlay muted loop>
+      <div className={style.hero__container}>
+
+        <video className={`${style.video} ${style.dark__overlay}`} autoPlay playsInline muted loop>
           <source src={AthleticVideo} type="video/mp4" />
         </video>
 
-        <h2 className={style.lower__centered}>Glorifying God and&nbsp;Experiencing Joy Through Sports</h2>
+        <div className={style.crestContainer}>
+          <StaticImage
+              className={style.crest}
+              alt="Coach's Call logo crest"
+              placeholder="blurred"
+              src="../images/CoachsCall-Crest-Logo-icon-square.png"
+              height={300}
+          />
+        </div>
+
+        <h2 className={style.hero__text}>Glorifying God and Experiencing Joy Through&nbsp;Sports</h2>
 
       </div>
-
-        <StaticImage
-          className={style.crest}
-          alt="Coach's Call logo crest"
-          placeholder="blurred"
-          src="../images/CoachsCall-Crest-Logo-icon-square.png"
-          height={300}
-        />
 
       <h2 className={style.center__text}>Locations</h2>
       

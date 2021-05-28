@@ -22,7 +22,10 @@ const Header = ({ siteTitle }) => {
         padding: `1rem 1rem 0 25px`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{
+        display: `inline-block`,
+        margin: 0,
+        }}>
         <Link
           to="/"
           style={{
@@ -40,8 +43,8 @@ const Header = ({ siteTitle }) => {
 
         </Link>
       </h1>
+        <MainNav style={{ zIndex: 99,}} />
     </div>
-    <MainNav />
   </header>
 )
 }
