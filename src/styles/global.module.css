@@ -1,7 +1,9 @@
 :root {
   /* Fonts */
-  --primary-font: abolition, serif;
-  --highlight-font: abolition, sans-serif;
+  --primary-font: rift, sans-serif;
+  --highlight-font-weight: 600;
+  --highlight-font-style: normal;
+  --highlight-font: rift, sans-serif;
   --highlight-font-weight: 400;
   --highlight-font-style: italic;
   --large-font: 2rem;

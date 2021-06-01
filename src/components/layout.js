@@ -35,7 +35,6 @@ import "@wordpress/block-library/build-style/style.css"
 	   <div
 		 style={{
 		   margin: `0 auto`,
-		   maxWidth: 960,
 		 }}
 	   >
 		 <main>{children}</main>
