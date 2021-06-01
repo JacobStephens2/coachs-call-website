@@ -1,9 +1,9 @@
 :root {
   /* Fonts */
-  --primary-font: rift, sans-serif;
+  --primary-font: "Open Sans", sans-serif;
   --highlight-font-weight: 600;
   --highlight-font-style: normal;
-  --highlight-font: rift, sans-serif;
+  --highlight-font: "rift", sans-serif;
   --highlight-font-weight: 400;
   --highlight-font-style: italic;
   --large-font: 2rem;

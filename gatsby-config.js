@@ -1,5 +1,6 @@
-const { resolve } = require(`path`)
-const { platform } = require(`os`)
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Coach's Call`,
@@ -44,7 +45,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         typekit: {
           id: process.env.GATSBY_TYPEKIT_ID,

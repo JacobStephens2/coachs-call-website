@@ -60,7 +60,7 @@ public
 .wordpress-cache/
 
 # other files
-mapsAPIKey.js
+envProduction.js
 
 # Mac files
 .DS_Store
