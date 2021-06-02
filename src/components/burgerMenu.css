@@ -16,14 +16,14 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
-  right: 20px !important;
+  height: 50px;
+  width: 50px;
+  right: 25px !important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: var(--dark-blue);
+  background: var(--white);
 }
 
 /*
@@ -50,11 +50,6 @@
 /* Wrapper for item list */
 .bm-item-list {
   color: var(--dark-blue);
-  padding: 0.8em;
-}
-
-.bm-item-list ul {
-  margin-bottom: 110px;
 }
 
 /* Individual item */

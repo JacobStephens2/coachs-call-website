@@ -1,7 +1,6 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
   /* Comb orange */
   background-color: var(--dark-blue);
   padding: 2rem;

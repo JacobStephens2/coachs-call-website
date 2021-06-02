@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import MainNav from "./mainNav"
+import "./header.css"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -18,11 +19,13 @@ const Header = ({ siteTitle }) => {
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1rem 1rem 0 25px`,
+        padding: `1rem 1rem 0 0`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{
+        display: `inline-block`,
+        margin: 0,
+        }}>
         <Link
           to="/"
           style={{
@@ -36,12 +39,13 @@ const Header = ({ siteTitle }) => {
             alt="The Coach's Call crest"
             placeholder="blurred"
             width={250}
+            className="logo"
           />
 
         </Link>
       </h1>
+        <MainNav style={{ zIndex: 99,}} />
     </div>
-    <MainNav />
   </header>
 )
 }

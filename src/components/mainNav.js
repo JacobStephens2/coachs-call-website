@@ -39,7 +39,7 @@ const MainNav = () => {
       allWpMenuItem(
         sort: { fields: order, order: ASC }
         filter: {
-          menu: { node: { slug: { eq: "footer" } } }
+          menu: { node: { slug: { eq: "header" } } }
         }
       ) {
         nodes {
