@@ -8,6 +8,27 @@
 
 const path = require(`path`)
 const { paginate } = require(`gatsby-awesome-pagination`)
+const _ = require(`lodash`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+/**
+ * Articles
+ */
+
+// Markdown items: Create slug and collection nodes based on folder
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `content` })
+
+    actions.createNodeField({
+      node,
+      name: `slug`,
+      value: `/articles${slug}`,
+    })
+  }
+}
+
+
 
 /**
  * Generate pages
@@ -19,6 +40,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Query all the data
   const queryResult = await graphql(`
     {
+      markdownQuery: allMarkdownRemark(
+        sort: { order: ASC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
       pageQuery: allWpPage {
         nodes {
           databaseId
@@ -94,63 +126,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       })
     }
-  })
+  })  
 
   // Generate single post pages
-  const posts = queryResult.data.postQuery.edges
+  const posts = queryResult.data.markdownQuery.edges
   posts.forEach(post => {
     createPage({
-      path: `/posts${post.node.uri}`,
-      component: path.resolve(`./src/templates/post.js`),
+      path: post.node.fields.slug,
+      component: path.resolve(`./src/templates/article.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
-        databaseId: post.node.databaseId,
-        nextId: post.next ? post.next.databaseId : null,
-        prevId: post.previous ? post.previous.databaseId : null,
-      },
-    })
-  })  
-
-  // Create your paginated pages
-  paginate({
-    createPage, // The Gatsby `createPage` function
-    items: posts, // An array of objects
-    itemsPerPage: 4, // How many items you want per page
-    pathPrefix: "/posts", // Creates pages like `/blog`, `/blog/2`, etc
-    component: path.resolve(`./src/templates/posts.js`), // Just like `createPage()`
-  })
-
-  // Create your paginated category indexes
-  const categories = queryResult.data.catQuery.nodes
-  categories.map(category => {
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: category.posts.nodes, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: category.uri, // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve(`./src/templates/categories.js`), // Just like `createPage()`
-      context: {
-        catId: category.databaseId,
-        catName: category.name,
-      },
-    })
-  })  
-
-  // Create your paginated tag indexes
-  const tags = queryResult.data.tagQuery.nodes
-  tags.map(tag => {
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: tag.posts.nodes, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: tag.uri, // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve(`./src/templates/tags.js`), // Just like `createPage()`
-      context: {
-        tagId: tag.databaseId,
-        tagName: tag.name,
+        slug: post.node.fields.slug,
       },
     })
   })
-  
 }
+
+

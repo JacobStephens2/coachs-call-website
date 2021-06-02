@@ -1,15 +1,20 @@
 :root {
   /* Fonts */
-  --primary-font: abolition, serif;
-  --highlight-font: abolition, sans-serif;
+  --primary-font: "Open Sans", sans-serif;
+  --highlight-font-weight: 600;
+  --highlight-font-style: normal;
+  --highlight-font: "Lato", sans-serif;
   --highlight-font-weight: 400;
-  --highlight-font-style: italic;
+  --highlight-font-style: normal;
+  --normal-text: 19px;
+  --large-text: 26px;
 
   /* Colours */
   --dark-blue: #002856;
   --light-blue: #00a7e1;
   --grey: #808285;
   --white: #ffffff;
+  --orange: #e03400;
 
   --mod-light: 90%;
   --mod-medium: 50%;

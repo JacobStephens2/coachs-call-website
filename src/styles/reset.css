@@ -40,6 +40,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: var(--dark-blue);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

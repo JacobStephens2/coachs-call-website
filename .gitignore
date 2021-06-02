@@ -52,12 +52,15 @@ typings/
 *.tgz
 
 # dotenv environment variable files
-.env*
+.env.*
 
 # gatsby files
 .cache/
 public
 .wordpress-cache/
+
+# other files
+envProduction.js
 
 # Mac files
 .DS_Store
