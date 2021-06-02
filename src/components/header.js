@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
   >
     <div
       style={{
-        margin: `0 auto`,
+        margin: `0 auto 9px`,
         padding: `1rem 1rem 0 0`,
       }}
     >

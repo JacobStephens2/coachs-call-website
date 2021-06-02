@@ -9,7 +9,7 @@ import LocationsMap from "../components/locationsMap"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
+import AthleticVideo from "../videos/AdobeStock_397213891_Video_HD_Preview-field-wide-low-gradient.mp4"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -17,11 +17,11 @@ const NamedPage = ({ data }) => {
     <Layout>
       <Seo title={page.title} />
 
-      <div style={{ height: 83, }}></div>
+      <div style={{ height: 80, background: `var(--white)` }}></div>
 
       <div className={style.hero__container}>
 
-        <video className={`${style.video} ${style.dark__overlay}`} autoPlay playsInline muted loop>
+        <video className={`${style.video}`} autoPlay playsInline muted loop>
           <source src={AthleticVideo} type="video/mp4" />
         </video>
 
@@ -31,7 +31,7 @@ const NamedPage = ({ data }) => {
               alt="Coach's Call logo crest"
               placeholder="blurred"
               src="../images/CoachsCall-Crest-Logo-icon-square.png"
-              height={300}
+              height={250}
           />
         </div>
 
@@ -43,7 +43,7 @@ const NamedPage = ({ data }) => {
       
       <LocationsMap />
 
-      <div className={style.container__top}>
+      <div className={style.container}>
         <StaticImage 
           className={style.dark__overlay}
           src="../images/AdobeStock-track-119954823_Preview.jpeg"

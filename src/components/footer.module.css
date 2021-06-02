@@ -3,7 +3,7 @@
   justify-content: space-around;
   /* Comb orange */
   background-color: var(--dark-blue);
-  padding: 2rem;
+  padding: 1rem 2rem 2rem;
   text-align: center;
   /* Bee black */
   color: var(--white);

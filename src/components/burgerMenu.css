@@ -1,29 +1,42 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 36px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   right: 1rem;
-  top: 24px;
+  top: 1rem;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: var(--dark-blue);
+  background: var(--orange);
 }
 
 /* Color/shape of burger icon bars on hover*/
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 50px;
-  width: 50px;
-  right: 25px !important;
+  height: 48px !important;
+  width: 48px !important;
+  right: 1.3rem !important;
+  top: 1rem !important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
   background: var(--white);
+}
+
+span.bm-cross:first-child {
+  right: 0;
+  width: 10px !important;
+  height: 48px !important;
+}
+
+span.bm-cross:last-child {
+  right: 0;
+  width: 10px !important;
+  height: 48px !important;
 }
 
 /*
@@ -39,7 +52,7 @@
 .bm-menu {
   background: var(--dark-blue);
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  font-size: var(--large-text);
 }
 
 /* Morph shape necessary with bubble or elastic */

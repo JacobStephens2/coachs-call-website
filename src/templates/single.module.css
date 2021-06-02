@@ -7,7 +7,7 @@
 .article {
   max-width: var(--content-w-regular);
   margin: 0 auto;
-  padding: 74px 0 1rem;
+  padding: 100px 1rem 1rem;
 }
 
 .featimg {
@@ -82,10 +82,13 @@ a {
   position: relative;
   text-align: center;
   color: var(--white);
+  object-fit: cover;
 }
 
 .dark__overlay {
   filter: brightness(50%);
+  height: 80vh;
+  width: 100vw;
 }
 
 /* Hero container */
@@ -109,7 +112,7 @@ a {
   width: 80vw;
   position: absolute;
   left: 0;
-  top: 140px;
+  top: 120px;
   right: 0;
   bottom: 0;
   display: flex;
@@ -118,6 +121,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 45px;
+  text-transform: unset;
 }
 
 .crest {
@@ -139,24 +143,19 @@ a {
   justify-content: center;
 }
 
-.container__top {
-  position: relative;
-  text-align: center;
-  color: var(--white);
-  padding-top: 6px;
-}
-
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
+  color: white;
 }
 
 .center__text {
   text-align: center;
   margin-top: 0.7rem;
+  color: var(--light-blue);
 }
 
 .belowheader {
