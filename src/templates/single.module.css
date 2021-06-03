@@ -87,7 +87,7 @@ a {
 
 .dark__overlay {
   filter: brightness(50%);
-  height: 80vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -112,7 +112,7 @@ a {
   width: 80vw;
   position: absolute;
   left: 0;
-  top: 120px;
+  top: 170px;
   right: 0;
   bottom: 0;
   display: flex;
@@ -122,19 +122,21 @@ a {
   margin-right: auto;
   margin-top: 45px;
   text-transform: unset;
+  filter: drop-shadow(3px 3px 3px #000);
 }
 
 .crest {
   position: absolute;
   display: block;
-  top: 0;
+  top: -20px;
   left: 0;
   right: 0;
+  filter: drop-shadow(3px 3px 15px #fff);
 }
 
 .crestContainer {
   position: absolute;
-  top: 20px;
+  top: 90px;
   left: 0;
   right: 0;
   height: 300px;
@@ -155,7 +157,7 @@ a {
 .center__text {
   text-align: center;
   margin-top: 0.7rem;
-  color: var(--light-blue);
+  color: var(--white);
 }
 
 .belowheader {

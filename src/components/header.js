@@ -8,7 +8,8 @@ import "./header.css"
 const Header = ({ siteTitle }) => {
   return (
   <header
-    style={{
+  className="header"  
+  style={{
       marginBottom: `1rem`,
       position: `fixed`,
       width: `100%`,
@@ -17,8 +18,8 @@ const Header = ({ siteTitle }) => {
   >
     <div
       style={{
-        margin: `0 auto 9px`,
-        padding: `1rem 1rem 0 0`,
+        margin: `0 auto`,
+        padding: `1rem 1rem 9px 0`,
       }}
     >
       <h1 style={{
@@ -34,7 +35,7 @@ const Header = ({ siteTitle }) => {
         >
 
           <StaticImage
-            src="../images/CoachsCall-Crest-Logo-icon-white-circle.png"
+            src="../images/CoachsCall_FIN-Outlined-No-Tagline.png"
             alt="The Coach's Call crest"
             placeholder="blurred"
             width={250}

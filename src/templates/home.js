@@ -9,7 +9,7 @@ import LocationsMap from "../components/locationsMap"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import AthleticVideo from "../videos/AdobeStock_397213891_Video_HD_Preview-field-wide-low-gradient.mp4"
+import AthleticVideo from "../videos/AdobeStock-tennis-239849130_Video_HD_Preview.mp4"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -17,7 +17,7 @@ const NamedPage = ({ data }) => {
     <Layout>
       <Seo title={page.title} />
 
-      <div style={{ height: 80, background: `var(--white)` }}></div>
+      <div style={{ height: 30, background: `var(--white)` }}></div>
 
       <div className={style.hero__container}>
 

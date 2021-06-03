@@ -31,15 +31,19 @@ import "@wordpress/block-library/build-style/style.css"
  
  return (
 	 <>
-	<Header siteTitle={data.wp.generalSettings.title || `Title`} />
-	   <div
-		 style={{
-		   margin: `0 auto`,
-		 }}
-	   >
-		 <main>{children}</main>
+	 <div id="outer-container">
+		<Header siteTitle={data.wp.generalSettings.title || `Title`} />
+			<main id="page-wrap">
+				<div
+					style={{
+					margin: `0 auto`,
+					}}
+				>
+					<main>{children}</main>
+				</div>
+			<Footer />
+		</main>
 	   </div>
-	   <Footer />
 	 </>
    )
  }

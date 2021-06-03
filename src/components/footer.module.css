@@ -1,15 +1,13 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  /* Comb orange */
-  background-color: var(--dark-blue);
+  background: var(--orange);
+  background: linear-gradient(90deg, var(--orange) 12%, var(--dark-blue) 100%);
   padding: 1rem 2rem 2rem;
   text-align: center;
-  /* Bee black */
   color: var(--white);
 }
 
 .footer a {
-  /* Bee black */
   color: var(--white);
 }

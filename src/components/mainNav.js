@@ -6,7 +6,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "../utils/UniversalLink"
 import { FlatListToHierarchical } from "../utils/FlatListToHierarchical"
-import { slide as Menu } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 
 import * as style from "./mainNav.module.css"
 import "./burgerMenu.css"
@@ -61,7 +61,7 @@ const MainNav = () => {
 
   return (
     <nav className={style.mainnav}>
-      <Menu right >
+      <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right >
       {headerMenu.length > 0 && <MenuLoop menuItems={headerMenu}></MenuLoop>}
       </Menu>
     </nav>

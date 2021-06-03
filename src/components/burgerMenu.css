@@ -1,15 +1,15 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 36px;
   right: 1rem;
   top: 1rem;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: var(--orange);
+  background: var(--white);
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -46,11 +46,13 @@ span.bm-cross:last-child {
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  margin-top: 9px;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: var(--dark-blue);
+  background: var(--orange);
+  background: linear-gradient(90deg, var(--orange) 12%, var(--dark-blue) 100%);
   padding: 2.5em 1.5em 0;
   font-size: var(--large-text);
 }
@@ -74,4 +76,5 @@ span.bm-cross:last-child {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
+  margin-top: 9px;
 }
