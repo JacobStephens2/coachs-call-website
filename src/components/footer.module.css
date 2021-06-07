@@ -1,8 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  background: var(--orange);
-  background: linear-gradient(90deg, var(--orange) 12%, var(--dark-blue) 100%);
+  background: var(--white);
   padding: 1rem 2rem 2rem;
   text-align: center;
   color: var(--white);

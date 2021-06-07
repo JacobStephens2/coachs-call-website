@@ -6,7 +6,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "../utils/UniversalLink"
 import { FlatListToHierarchical } from "../utils/FlatListToHierarchical"
-import { push as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 
 import * as style from "./mainNav.module.css"
 import "./burgerMenu.css"

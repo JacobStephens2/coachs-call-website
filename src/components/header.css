@@ -3,6 +3,5 @@
 }
 
 .header {
-  background: var(--orange);
-  background: linear-gradient(90deg, var(--orange) 12%, var(--dark-blue) 100%);
+  background: var(--white);
 }

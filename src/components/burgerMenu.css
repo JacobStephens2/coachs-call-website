@@ -9,7 +9,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: var(--white);
+  background: var(--dark-blue);
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -51,8 +51,7 @@ span.bm-cross:last-child {
 
 /* General sidebar styles */
 .bm-menu {
-  background: var(--orange);
-  background: linear-gradient(90deg, var(--orange) 12%, var(--dark-blue) 100%);
+  background: var(--dark-blue);
   padding: 2.5em 1.5em 0;
   font-size: var(--large-text);
 }

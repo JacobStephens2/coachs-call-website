@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby"
 
 import * as style from "./single.module.css"
 import "./style.css"
@@ -9,7 +8,7 @@ import LocationsMap from "../components/locationsMap"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import AthleticVideo from "../videos/AdobeStock-tennis-239849130_Video_HD_Preview.mp4"
+import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
@@ -17,7 +16,7 @@ const NamedPage = ({ data }) => {
     <Layout>
       <Seo title={page.title} />
 
-      <div style={{ height: 30, background: `var(--white)` }}></div>
+      <div style={{height: "71px"}}></div>
 
       <div className={style.hero__container}>
 
@@ -30,8 +29,8 @@ const NamedPage = ({ data }) => {
               className={style.crest}
               alt="Coach's Call logo crest"
               placeholder="blurred"
+              loading="eager"
               src="../images/CoachsCall-Crest-Logo-icon-square.png"
-              height={250}
           />
         </div>
 
@@ -76,18 +75,3 @@ const NamedPage = ({ data }) => {
 
 
 export default NamedPage;
-
-export const query = graphql`
-  query($databaseId: Int!) {
-    wpPage(databaseId: { eq: $databaseId }) {
-      title
-      content
-      author {
-        node {
-          name
-        }
-      }
-      date
-    }
-  }
-`
