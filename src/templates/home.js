@@ -23,10 +23,9 @@ const NamedPage = ({ data }) => {
         <video className={`${style.video}`} autoPlay playsInline muted loop>
           <source src={AthleticVideo} type="video/mp4" />
         </video>
-
-        <div className={style.crestContainer}>
+        
+        <div className={style.crest}>
           <StaticImage
-              className={style.crest}
               alt="Coach's Call logo crest"
               placeholder="blurred"
               loading="eager"
