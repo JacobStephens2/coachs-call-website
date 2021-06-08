@@ -82,7 +82,7 @@ const NamedPage = ({ data }) => {
           <StaticImage 
             className={style.imageOverlay}
             src="../images/AdobeStock-high_school_fields-296321889_Preview.jpeg"
-            alt="Baseball batting spot"
+            alt="Athletic field"
             placeholder="blurred"
             height={cardHeight}
             width={cardWidth}

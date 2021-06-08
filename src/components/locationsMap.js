@@ -28,7 +28,7 @@ class LocationsMap extends Component {
   render() {
 	return (
 	  <LoadScript
-		googleMapsApiKey={process.env.GATSBY_GOOGLEMAPSAPI_KEY}
+		googleMapsApiKey={process.env.GOOGLEMAPSAPI_KEY}
 	  >
 		<GoogleMap
 		  mapContainerStyle={containerStyle}
