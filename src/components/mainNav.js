@@ -61,7 +61,7 @@ const MainNav = () => {
 
   return (
     <nav className={style.mainnav}>
-      <Menu right >
+      <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right >
       {headerMenu.length > 0 && <MenuLoop menuItems={headerMenu}></MenuLoop>}
       </Menu>
     </nav>

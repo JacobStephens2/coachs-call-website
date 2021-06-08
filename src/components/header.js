@@ -8,8 +8,8 @@ import "./header.css"
 const Header = ({ siteTitle }) => {
   return (
   <header
-    style={{
-      background:  `var(--white)`,
+  className="header"  
+  style={{
       marginBottom: `1rem`,
       position: `fixed`,
       width: `100%`,
@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
     <div
       style={{
         margin: `0 auto`,
-        padding: `1rem 1rem 0 0`,
+        padding: `1rem 1rem 9px 0`,
       }}
     >
       <h1 style={{

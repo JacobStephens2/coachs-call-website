@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100vw',
-  height: '400px'
+  height: '60vh',
 };
 
 const center = {
@@ -28,7 +28,7 @@ class LocationsMap extends Component {
   render() {
 	return (
 	  <LoadScript
-		googleMapsApiKey={process.env.GATSBY_GOOGLEMAPSAPI_KEY}
+		googleMapsApiKey={process.env.GOOGLEMAPSAPI_KEY}
 	  >
 		<GoogleMap
 		  mapContainerStyle={containerStyle}

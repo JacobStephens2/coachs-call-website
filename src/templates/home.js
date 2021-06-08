@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby"
 
 import * as style from "./single.module.css"
 import "./style.css"
@@ -12,81 +11,89 @@ import { Link } from "gatsby"
 import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 
 const NamedPage = ({ data }) => {
-  const page = data.wpPage
+  const cardHeight = 500;
+  const cardWidth = 749;
   return (
     <Layout>
-      <Seo title={page.title} />
+      <Seo title="Home" />
 
-      <div style={{ height: 83, }}></div>
+      <div className={style.topBar}></div>
 
-      <div className={style.hero__container}>
+      <div className={style.heroContainer}>
 
-        <video className={`${style.video} ${style.dark__overlay}`} autoPlay playsInline muted loop>
+        <video className={`${style.video}`} autoPlay playsInline muted loop>
           <source src={AthleticVideo} type="video/mp4" />
         </video>
-
+        
         <div className={style.crestContainer}>
           <StaticImage
               className={style.crest}
               alt="Coach's Call logo crest"
               placeholder="blurred"
+              loading="eager"
               src="../images/CoachsCall-Crest-Logo-icon-square.png"
-              height={300}
+              height="330"
           />
         </div>
 
-        <h2 className={style.hero__text}>Glorifying God and Experiencing Joy Through&nbsp;Sports</h2>
+        <h2 className={style.heroHeader}>Partnering with athletic departments and coaches to worship God through&nbsp;sports</h2>
 
       </div>
 
-      <h2 className={style.center__text}>Locations</h2>
-      
+      <div className={style.contentBlock}>
+      <p className={style.standaloneParagraph}>I envision coaches who interpret the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator, and I desire for the joy they take in their work to be like that of a composer creating masterpieces unto the Lord.</p>
+      </div>
+
+      <h2 className={style.centerText}>Locations</h2>
+
+      <div className={style.contentBlock}>
+        <p className={style.standaloneParagraph}>Coach's Call operates in a variety of locations throughout the United States.</p>
+      </div>
+
       <LocationsMap />
 
-      <div className={style.container__top}>
-        <StaticImage 
-          className={style.dark__overlay}
-          src="../images/AdobeStock-track-119954823_Preview.jpeg"
-          alt="Track"
-          placeholder="blurred"
-        />
-        <h2 className={style.centered}><Link to="/about">About</Link></h2>
-      </div>
-      <div className={style.container}>
-        <StaticImage 
-          className={style.dark__overlay}
-          src="../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg"
-          alt="Baseball batting spot"
-          placeholder="blurred"
-        />
-        <h2 className={style.centered}><Link to="/work">Work</Link></h2>
-      </div>
-      <div className={style.container}>
-        <StaticImage 
-          className={style.dark__overlay}
-          src="../images/AdobeStock-high_school_fields-296321889_Preview.jpeg"
-          alt="Baseball batting spot"
-          placeholder="blurred"
-        />
-        <h2 className={style.centered}><Link to="/contact">Contact</Link></h2>
+      <div className={style.cardGroup}>
+
+        <div className={style.cardContainer}>
+          <StaticImage 
+            className={style.imageOverlay}
+            src="../images/AdobeStock-track-119954823_Preview.jpeg"
+            alt="Track"
+            placeholder="blurred"
+            height={cardHeight}
+            width={cardWidth}
+          />
+          <h2 className={style.cardTitle}><Link to="/about">About</Link></h2>
+        </div>
+
+        <div className={style.cardContainer}>
+          <StaticImage 
+            className={style.imageOverlay}
+            src="../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg"
+            alt="Baseball batting spot"
+            placeholder="blurred"
+            height={cardHeight}
+            width={cardWidth}
+          />
+          <h2 className={style.cardTitle}><Link to="/work">Work</Link></h2>
+        </div>
+
+        <div className={style.cardContainer}>
+          <StaticImage 
+            className={style.imageOverlay}
+            src="../images/AdobeStock-high_school_fields-296321889_Preview.jpeg"
+            alt="Athletic field"
+            placeholder="blurred"
+            height={cardHeight}
+            width={cardWidth}
+          />
+          <h2 className={style.cardTitle}><Link to="/contact">Contact</Link></h2>
+        </div>
+        
       </div>
     </Layout>
   )
 }
 
-export default NamedPage;
 
-export const query = graphql`
-  query($databaseId: Int!) {
-    wpPage(databaseId: { eq: $databaseId }) {
-      title
-      content
-      author {
-        node {
-          name
-        }
-      }
-      date
-    }
-  }
-`
+export default NamedPage;

@@ -11,24 +11,6 @@ const { paginate } = require(`gatsby-awesome-pagination`)
 const _ = require(`lodash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-/**
- * Articles
- */
-
-// Markdown items: Create slug and collection nodes based on folder
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `content` })
-
-    actions.createNodeField({
-      node,
-      name: `slug`,
-      value: `/articles${slug}`,
-    })
-  }
-}
-
-
 
 /**
  * Generate pages
@@ -40,17 +22,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Query all the data
   const queryResult = await graphql(`
     {
-      markdownQuery: allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___date] }
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
       pageQuery: allWpPage {
         nodes {
           databaseId
@@ -126,21 +97,5 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       })
     }
-  })  
-
-  // Generate single post pages
-  const posts = queryResult.data.markdownQuery.edges
-  posts.forEach(post => {
-    createPage({
-      path: post.node.fields.slug,
-      component: path.resolve(`./src/templates/article.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: post.node.fields.slug,
-      },
-    })
   })
 }
-
-
