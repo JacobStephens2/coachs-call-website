@@ -12,7 +12,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "bootstrap": "^4.6.0",
     "dotenv": "^8.6.0",
-    "gatsby": "^3.4.1",
+    "gatsby": "^3.7.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-css-customs": "^0.4.0",

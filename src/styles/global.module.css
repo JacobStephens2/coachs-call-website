@@ -25,11 +25,16 @@
   --main-bg-dark: hsl(183, 42%, var(--mod-dark));
 
   /* Sizes and widths */
+  /* If root size = 16px, then 80rem = 1280px */
   --content-w-wide: 80rem;
+  /* If root size = 16px, then 60rem = 960px */
   --content-w-regular: 60rem;
+  /* If root size = 16px, then 40rem = 640px */
   --content-w-narrow: 40rem;
 }
 
+/* If root size = 16px, then 40rem = 640px */
 @custom-media --viewport-narrow-max (max-width: 40rem);
 @custom-media --viewport-narrow-min (min-width: 40rem);
+/* If root size = 16px, then 60rem = 960px */
 @custom-media --viewport-wide (min-width: 60rem);
