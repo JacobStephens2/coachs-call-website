@@ -35,7 +35,7 @@ a {
   position: relative;
   top: 0;
   left: 0;
-  height: 90vh;
+  height: 30rem;
   width: 100vw;
   object-fit: cover;
   filter: brightness(50%);
@@ -79,7 +79,7 @@ a {
   display: none;
 }
 
-/* For desktop views ----------------------------*/
+/* Hero container: For desktop views ----------------------------*/
 @media (--viewport-wide) {
   .gridOverVideo {
     position: absolute;
@@ -87,9 +87,12 @@ a {
     height: 600px;
     top: 90px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: "text crest";
+  }
+  .video {
+    height: 90vh;
   }
   .heroText {
     display: grid;
@@ -138,7 +141,7 @@ a {
   }
 }
 
-/* Below hero area */
+/* Below hero area and map */
 /* ------------------------------------------- */
 
 .standaloneParagraph {
@@ -195,26 +198,14 @@ a {
   color: var(--white);
   object-fit: cover;
   margin-top: 1rem;
+  height: 27rem;
 }
 
-@media (--viewport-narrow-min) {
-  .cardContainer {
-    margin: 1rem 0.5rem 0;
-  }
-  .cardContainer {
-    margin: 1rem 0.5rem 0;
-  }
-  .cardContainer:first-child {
-    margin-left: 0;
-  }
-  .cardContainer:last-child {
-    margin-right: 0;
-  }
-}
-
-.imageOverlay {
+.cardImage {
   width: 100vw;
   filter: brightness(50%);
+  object-fit: cover;
+  height: 27rem;
 }
 
 .cardTitle {
@@ -224,14 +215,62 @@ a {
   transform: translate(-50%, -50%);
   text-align: left;
   color: white;
+  filter: drop-shadow(3px 3px 3px #000);
+}
+
+.cardText {
+  display: none;
 }
 
 /* For desktop views --------------------- */
+
 @media (--viewport-wide) {
-  .cardGroup {
-    flex-direction: row;
+  .cardContainer {
+    margin: 1rem 0.5rem 0;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 50vw 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+    height: 75vh;
   }
-  .imageOverlay {
+  .cardContainer:first-child {
+    margin-left: 0;
+  }
+  .cardContainer:last-child {
+    margin-right: 0;
+  }
+  .cardGroup {
+    display: block;
+    width: 100vw;
+  }
+  .cardImage {
     width: initial;
+    width: 100vw;
+    height: 75vh;
+  }
+  .cardLeft {
+    grid-area: left;
+    display: grid;
+  }
+  p.cardLeft {
+    left: 60%;
+    width: 100%;
+    padding-left: 15vw;
+  }
+  .cardRight {
+    grid-area: right;
+  }
+  p.cardRight {
+    left: 25%;
+  }
+  h2.cardLeft {
+    left: 55%;
+  }
+  h2.cardRight {
+    left: 35%;
+  }
+  .cardText {
+    display: inherit;
   }
 }

@@ -19,7 +19,7 @@ const NamedPage = ({ data }) => {
 
       <div className={style.topBar}></div>
 
-      <div className={style.heroContainer}>
+      <section className={style.heroContainer}>
 
         <video className={`${style.video}`} autoPlay playsInline muted loop>
           <source src={AthleticVideo} type="video/mp4" />
@@ -44,56 +44,60 @@ const NamedPage = ({ data }) => {
 
         </div>
         
-      </div>
+      </section>
 
       <div className={style.visionBlockMobile}>
         <p className={style.visionParagraphMobile}>"My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the Lord." John&nbsp;Levis</p>
       </div>
 
-      <h2 className={style.centerText}>Locations</h2>
+      <section>
+        <h2 className={style.centerText}>Locations</h2>
 
-      <div className={style.contentBlock}>
-        <p className={style.standaloneParagraph}>Coach's Call operates in a variety of locations throughout the United States.</p>
-      </div>
+        <div className={style.contentBlock}>
+          <p className={style.standaloneParagraph}>Coach's Call operates in a variety of locations throughout the United States.</p>
+        </div>
 
-      <LocationsMap />
+        <div className={style.map}>
+          <LocationsMap />
+        </div>
+      </section>
 
       <div className={style.cardGroup}>
 
         <div className={style.cardContainer}>
           <StaticImage 
-            className={style.imageOverlay}
+            className={style.cardImage}
             src="../images/AdobeStock-track-119954823_Preview.jpeg"
             alt="Track"
-            placeholder="blurred"
             height={cardHeight}
             width={cardWidth}
           />
-          <h2 className={style.cardTitle}><Link to="/about">About</Link></h2>
+          <h2 className={style.cardTitle + ' ' + style.cardRight}><Link to="/about">About</Link></h2>
+          <p className={style.cardTitle + ' ' + style.cardLeft + ' ' + style.cardText}>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
         </div>
 
         <div className={style.cardContainer}>
           <StaticImage 
-            className={style.imageOverlay}
+            className={style.cardImage}
             src="../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg"
             alt="Baseball batting spot"
-            placeholder="blurred"
             height={cardHeight}
             width={cardWidth}
           />
-          <h2 className={style.cardTitle}><Link to="/work">Work</Link></h2>
+          <h2 className={style.cardTitle + ' ' + style.cardLeft}><Link to="/work">Work</Link></h2>
+          <p className={style.cardTitle + ' ' + style.cardRight + ' ' + style.cardText}>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
         </div>
 
         <div className={style.cardContainer}>
           <StaticImage 
-            className={style.imageOverlay}
+            className={style.cardImage}
             src="../images/AdobeStock-high_school_fields-296321889_Preview.jpeg"
             alt="Athletic field"
-            placeholder="blurred"
             height={cardHeight}
             width={cardWidth}
           />
-          <h2 className={style.cardTitle}><Link to="/contact">Contact</Link></h2>
+          <h2 className={style.cardTitle + ' ' + style.cardRight}><Link to="/contact">Contact</Link></h2>
+          <p className={style.cardTitle + ' ' + style.cardLeft + ' ' + style.cardText}>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
         </div>
         
       </div>

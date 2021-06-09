@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import './locationsMap.css'
 
-const containerStyle = {
-  width: '100vw',
-  height: '60vh',
-};
+const containerClassName = 'map';
 
 const center = {
   lat: 36.731,
@@ -31,9 +29,9 @@ class LocationsMap extends Component {
 		googleMapsApiKey={process.env.GOOGLEMAPSAPI_KEY}
 	  >
 		<GoogleMap
-		  mapContainerStyle={containerStyle}
 		  center={center}
 		  zoom={4}
+		  mapContainerClassName={containerClassName}
 		>
 		  { /* Child components, such as markers, info windows, etc. */ }
 		  <>

@@ -1,0 +1,10 @@
+.map {
+  width: 100vw;
+  height: 30rem;
+}
+
+@media (--viewport-wide) {
+  .map {
+    height: 70vh;
+  }
+}

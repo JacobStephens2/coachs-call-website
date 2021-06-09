@@ -31,6 +31,7 @@
   --content-w-regular: 60rem;
   /* If root size = 16px, then 40rem = 640px */
   --content-w-narrow: 40rem;
+  --mobile-card-height: 500px;
 }
 
 /* If root size = 16px, then 40rem = 640px */
