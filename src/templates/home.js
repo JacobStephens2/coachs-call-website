@@ -25,23 +25,29 @@ const NamedPage = ({ data }) => {
           <source src={AthleticVideo} type="video/mp4" />
         </video>
         
-        <div className={style.crestContainer}>
-          <StaticImage
-              className={style.crest}
-              alt="Coach's Call logo crest"
-              placeholder="blurred"
-              loading="eager"
-              src="../images/CoachsCall-Crest-Logo-icon-square.png"
-              height="330"
-          />
+        <div className={style.gridOverVideo}>
+          <div className={style.crestContainer}>
+            <StaticImage
+                className={style.crest}
+                alt="Coach's Call logo crest"
+                placeholder="blurred"
+                loading="eager"
+                src="../images/CoachsCall-Crest-Logo-icon-square.png"
+                height="330"
+            />
+          </div>
+
+          <div className={style.heroText}>
+            <h2 className={style.heroHeader}>Partnering with athletic departments and coaches to worship God through&nbsp;sports</h2>
+            <div className={style.visionParagraph}><h2>Partnering with athletic departments and coaches to worship God through&nbsp;sports</h2><p>"My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the Lord." John&nbsp;Levis</p></div>
+          </div>
+
         </div>
-
-        <h2 className={style.heroHeader}>Partnering with athletic departments and coaches to worship God through&nbsp;sports</h2>
-
+        
       </div>
 
-      <div className={style.visionBlock}>
-        <p className={style.visionParagraph}>"My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the Lord." John&nbsp;Levis</p>
+      <div className={style.visionBlockMobile}>
+        <p className={style.visionParagraphMobile}>"My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the Lord." John&nbsp;Levis</p>
       </div>
 
       <h2 className={style.centerText}>Locations</h2>
