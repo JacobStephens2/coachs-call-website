@@ -41,7 +41,7 @@ const NamedPage = ({ data }) => {
       </div>
 
       <div className={style.visionBlock}>
-        <p className={style.visionParagraph}>My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the&nbsp;Lord.</p>
+        <p className={style.visionParagraph}>"My vision is for coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. I envision the joy coaches take in their work as that of a composer creating masterpieces as unto the Lord." John&nbsp;Levis</p>
       </div>
 
       <h2 className={style.centerText}>Locations</h2>
