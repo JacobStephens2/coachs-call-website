@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import * as style from "./single.module.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -10,7 +9,7 @@ const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={page.title} />
-      <article className={style.article}>
+      <article>
         <h1>{page.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
       </article>
