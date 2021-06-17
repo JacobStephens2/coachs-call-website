@@ -28,7 +28,7 @@
   /* If root size = 16px, then 80rem = 1280px */
   --content-w-wide: 80rem;
   /* If root size = 16px, then 60rem = 960px */
-  --content-w-regular: 60rem;
+  --content-w-regular: 45rem;
   /* If root size = 16px, then 40rem = 640px */
   --content-w-narrow: 40rem;
 }
