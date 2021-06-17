@@ -30,13 +30,13 @@
 span.bm-cross:first-child {
   right: 0;
   width: 10px !important;
-  height: 48px !important;
+  height: 35px !important;
 }
 
 span.bm-cross:last-child {
   right: 0;
   width: 10px !important;
-  height: 48px !important;
+  height: 35px !important;
 }
 
 /*
@@ -64,6 +64,7 @@ span.bm-cross:last-child {
 /* Wrapper for item list */
 .bm-item-list {
   color: var(--dark-blue);
+  text-transform: uppercase;
 }
 
 /* Individual item */
@@ -76,4 +77,8 @@ span.bm-cross:last-child {
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
   margin-top: 9px;
+}
+
+.bm-item-list ul li a {
+  text-decoration: none;
 }
