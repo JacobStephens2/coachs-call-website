@@ -98,6 +98,7 @@ a {
     display: grid;
     justify-content: end;
     grid-area: text;
+    padding-left: 1rem;
   }
   .heroHeader {
     display: none;
@@ -273,4 +274,10 @@ a {
   .cardText {
     display: inherit;
   }
+}
+
+.pageArticle {
+  padding: 5.5rem 1rem 0;
+  max-width: var(--content-w-regular);
+  margin: 0 auto;
 }
