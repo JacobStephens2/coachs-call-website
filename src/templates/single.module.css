@@ -79,6 +79,12 @@ a {
   display: none;
 }
 
+@media (max-width: 1227px) {
+  .heroText {
+    padding-left: 1rem;
+  }
+}
+
 /* For desktop views ----------------------------*/
 @media (--viewport-wide) {
   .gridOverVideo {
@@ -87,7 +93,7 @@ a {
     height: 600px;
     top: 90px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 6fr 5fr;
     grid-template-rows: 1fr;
     grid-template-areas: "text crest";
   }
@@ -95,7 +101,6 @@ a {
     display: grid;
     justify-content: end;
     grid-area: text;
-    padding-left: 1rem;
   }
   .heroHeader {
     display: none;
