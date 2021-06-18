@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
     <div
       style={{
         margin: `0 auto`,
-        padding: `1rem 1rem 9px 0`,
+        padding: `9px 1rem 9px 0`,
       }}
     >
       <h1 style={{
@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => {
             src="../images/CoachsCall-Type-Logo-no-margin.png"
             alt="The Coach's Call crest"
             placeholder="blurred"
-            width={250}
+            width={335}
             className="logo"
           />
 

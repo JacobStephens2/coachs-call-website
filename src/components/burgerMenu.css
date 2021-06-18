@@ -5,6 +5,13 @@
   height: 36px;
   right: 1rem;
   top: 1rem;
+  margin-top: 4px;
+}
+
+@media (--viewport-narrow-min) {
+  .bm-burger-button {
+    margin-top: 6px;
+  }
 }
 
 /* Color/shape of burger icon bars */

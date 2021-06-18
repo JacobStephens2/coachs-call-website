@@ -5,3 +5,9 @@
 .header {
   background: var(--white);
 }
+
+@media (--viewport-narrow-max) {
+  .logo {
+    width: 260px;
+  }
+}
