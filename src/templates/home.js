@@ -56,7 +56,9 @@ const NamedPage = ({ data }) => {
         <p className={style.standaloneParagraph}>Coach's Call operates in a variety of locations throughout the United States.</p>
       </div>
 
+
       <LocationsMap />
+
 
       <div className={style.cardGroup}>
 
@@ -72,6 +74,7 @@ const NamedPage = ({ data }) => {
           <h2 className={style.cardTitle}><Link to="/about">About</Link></h2>
         </div>
 
+
         <div className={style.cardContainer}>
           <StaticImage 
             className={style.imageOverlay}
@@ -83,6 +86,7 @@ const NamedPage = ({ data }) => {
           />
           <h2 className={style.cardTitle}><Link to="/work">Work</Link></h2>
         </div>
+
 
         <div className={style.cardContainer}>
           <StaticImage 
@@ -97,6 +101,8 @@ const NamedPage = ({ data }) => {
         </div>
         
       </div>
+
+
     </Layout>
   )
 }
