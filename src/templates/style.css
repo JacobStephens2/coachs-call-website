@@ -8,3 +8,27 @@
   min-width: 360px;
   min-height: 360px;
 }
+
+.introText {
+  font-weight: bold;
+}
+
+.introText h2 {
+  color: white;
+}
+.introText p {
+  color: white;
+}
+
+.row {
+  align-items: center;
+}
+
+.subhead {
+  text-transform: uppercase;
+}
+
+.tagline {
+  letter-spacing: 3px;
+  font-style: italic;
+}

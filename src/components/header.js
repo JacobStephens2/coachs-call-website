@@ -10,8 +10,6 @@ const Header = ({ siteTitle }) => {
   <header
   className="header"  
   style={{
-      marginBottom: `1rem`,
-      position: `fixed`,
       width: `100%`,
       zIndex: `2`,
     }}

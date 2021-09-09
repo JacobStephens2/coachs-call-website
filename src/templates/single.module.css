@@ -86,10 +86,6 @@ a {
     width: 100vw;
     height: 600px;
     top: 90px;
-    display: grid;
-    grid-template-columns: 5fr 4fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "text crest";
   }
   .video {
     height: 90vh;
@@ -273,4 +269,8 @@ a {
   .cardText {
     display: inherit;
   }
+}
+
+.upperCase {
+  text-transform: uppercase;
 }
