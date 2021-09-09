@@ -32,3 +32,15 @@
   letter-spacing: 3px;
   font-style: italic;
 }
+
+h2 a {
+  text-decoration: none;
+}
+
+.darkBackground h2 a {
+  color: white;
+}
+
+.darkBackground p {
+  color: white;
+}

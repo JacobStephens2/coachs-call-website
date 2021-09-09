@@ -1,3 +1,15 @@
+.workCard {
+  background-image: url("../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg");
+}
+
+.aboutCard {
+  background-image: url("../images/AdobeStock-track-119954823_Preview.jpeg");
+}
+
+.contactCard {
+  background-image: url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
+}
+
 /* Header area */
 /* ------------------------------------------- */
 a {
@@ -41,17 +53,6 @@ a {
   filter: brightness(50%);
 }
 
-.crestContainer {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  filter: drop-shadow(3px 3px 11px #fff);
-}
-
 .heroHeader {
   color: var(--white);
   width: 80vw;
@@ -84,7 +85,6 @@ a {
   .gridOverVideo {
     position: absolute;
     width: 100vw;
-    height: 600px;
     top: 90px;
   }
   .video {
@@ -97,18 +97,6 @@ a {
   }
   .heroHeader {
     display: none;
-  }
-  .crestContainer {
-    justify-content: left;
-    padding: 0;
-    display: grid;
-    grid-area: crest;
-    align-items: center;
-  }
-  .crest {
-    top: 30px;
-    height: 480px;
-    width: 500px;
   }
   .visionParagraph {
     display: grid;
@@ -183,11 +171,6 @@ a {
 /* Front page cards */
 /* ------------------------------------------- */
 
-.cardGroup {
-  display: flex;
-  flex-direction: column;
-}
-
 .cardContainer {
   position: relative;
   text-align: center;
@@ -235,10 +218,6 @@ a {
   }
   .cardContainer:last-child {
     margin-right: 0;
-  }
-  .cardGroup {
-    display: block;
-    width: 100vw;
   }
   .cardImage {
     width: initial;
