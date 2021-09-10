@@ -10,7 +10,7 @@ const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title={page.title} />
-      <article className={style.pageArticle}>
+      <article>
         <h1>{page.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
       </article>

@@ -10,8 +10,6 @@ const Header = ({ siteTitle }) => {
   <header
   className="header"  
   style={{
-      marginBottom: `1rem`,
-      position: `fixed`,
       width: `100%`,
       zIndex: `2`,
     }}
@@ -35,7 +33,7 @@ const Header = ({ siteTitle }) => {
         >
 
           <StaticImage
-            src="../images/CoachsCall-Type-Logo-no-margin.png"
+            src="../images/CoachsCall_FIN-Outlined-No-Tagline.png"
             alt="The Coach's Call crest"
             width={250}
             className="logo"

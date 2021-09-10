@@ -270,8 +270,8 @@ h2 {
   text-rendering: optimizeLegibility;
   font-size: var(--large-text);
   line-height: 1.1;
-  text-transform: uppercase;
 }
+
 h3 {
   margin-left: 0;
   margin-right: 0;
