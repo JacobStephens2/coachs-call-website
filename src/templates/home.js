@@ -43,20 +43,20 @@ const NamedPage = ({ data }) => {
 			</Container>
 		</div>
 			
-		<Row>
-			<Col className={style.workCard} lg={4}>
+		<Row className={style.areasRow}>
+			<Col className={[style.workCard, style.card].join(' ')} lg={4}>
 				<Container className="darkBackground">
 					<h2><Link to="/work">Work</Link></h2>
 					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
 				</Container>
 			</Col>
-			<Col className={style.aboutCard} lg={4}>
+			<Col className={[style.aboutCard, style.card].join(' ')} lg={4}>
 				<Container>
 					<h2><Link to="/about">About</Link></h2>
 					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
 				</Container>
 			</Col>
-			<Col className={style.contactCard} lg={4}>
+			<Col className={[style.contactCard, style.card].join(' ')} lg={4}>
 				<Container>
 					<h2><Link to="/contact">Contact</Link></h2>
 					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>

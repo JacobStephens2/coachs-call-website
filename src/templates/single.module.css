@@ -88,7 +88,7 @@ a {
     top: 90px;
   }
   .video {
-    height: 90vh;
+    height: 80vh;
   }
   .heroText {
     display: grid;
@@ -252,4 +252,8 @@ a {
 
 .upperCase {
   text-transform: uppercase;
+}
+
+.card {
+  min-height: 320px;
 }

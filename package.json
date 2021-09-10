@@ -9,6 +9,7 @@
     "@fontsource/open-sans": "^4.4.2",
     "@react-google-maps/api": "^2.1.1",
     "@wordpress/block-library": "^2.29.3",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "babel-plugin-styled-components": "^1.12.0",
     "bootstrap": "^5.1.0",
     "dotenv": "^8.6.0",
