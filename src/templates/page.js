@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as style from "./single.module.css"
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage

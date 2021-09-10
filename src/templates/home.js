@@ -1,7 +1,7 @@
 import React from "react";
 
-import * as style from "./single.module.css"
-import "./style.css"
+import * as style from "./single.module.scss"
+import "./style.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -18,7 +18,8 @@ const NamedPage = ({ data }) => {
 	<Layout>
 	  <Seo title="Home" />
 
-		<video className={`${style.video}`} autoPlay playsInline muted loop>
+{/* add autoPlay as an attribute to video element when ready to restart video */}
+		<video className={`${style.video}`} playsInline muted loop>
 			<source src={AthleticVideo} type="video/mp4" />
 		</video>
 		<div className={style.gridOverVideo}>
@@ -44,21 +45,24 @@ const NamedPage = ({ data }) => {
 		</div>
 			
 		<Row className={style.areasRow}>
-			<Col className={[style.workCard, style.card].join(' ')} lg={4}>
-				<Container className="darkBackground">
-					<h2><Link to="/work">Work</Link></h2>
-					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
-				</Container>
-			</Col>
 			<Col className={[style.aboutCard, style.card].join(' ')} lg={4}>
 				<Container>
 					<h2><Link to="/about">About</Link></h2>
+					<h3>Seminars | Mentoring | Consulting</h3>
+					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
+				</Container>
+			</Col>
+			<Col className={[style.workCard, style.card, style.darkBackground].join(' ')} lg={4}>
+				<Container>
+					<h2><Link to="/work">Work</Link></h2>
+					<h3>John Levis</h3>
 					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
 				</Container>
 			</Col>
 			<Col className={[style.contactCard, style.card].join(' ')} lg={4}>
 				<Container>
 					<h2><Link to="/contact">Contact</Link></h2>
+					<h3>Contact John</h3>
 					<p>The mission and vision of Coach’s Call will be performed in two different types of delivery- professional development seminars and one on one or small group&nbsp;sessions.</p>
 				</Container>
 			</Col>

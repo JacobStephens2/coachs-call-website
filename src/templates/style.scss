@@ -1,3 +1,9 @@
+$dark-blue: #002856;
+$light-blue: #00a7e1;
+$green: #97ca3d;
+$gray: #808285;
+$orange: #f78d1e;
+
 .wp-block-cover-image,
 .wp-block-cover {
   min-height: 100vh !important;
@@ -43,4 +49,8 @@ h2 a {
 
 .darkBackground p {
   color: white;
+}
+
+h3 {
+  color: $dark-blue;
 }

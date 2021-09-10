@@ -53,6 +53,8 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `mini-css-extract-plugin`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,

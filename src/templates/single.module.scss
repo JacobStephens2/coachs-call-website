@@ -39,10 +39,6 @@ a {
 /* Hero container */
 /* ------------------------------------------- */
 
-.heroContainer {
-  position: relative;
-}
-
 .video {
   position: relative;
   top: 0;
@@ -53,25 +49,6 @@ a {
   filter: brightness(50%);
 }
 
-.heroHeader {
-  color: var(--white);
-  width: 80vw;
-  position: absolute;
-  left: 0;
-  top: 230px;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 45px;
-  text-transform: unset;
-  filter: drop-shadow(3px 3px 3px #000);
-}
-
 .visionBlock {
   display: none;
 }
@@ -80,7 +57,26 @@ a {
   display: none;
 }
 
-/* Hero container: For desktop views ----------------------------*/
+/* Dark Background */
+
+.darkBackground p {
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.darkBackground h2 {
+  color: white;
+}
+
+.darkBackground h3 {
+  color: white;
+}
+
+.darkBackground a {
+  color: white;
+}
+
+/* Background video: For desktop views ----------------------------*/
 @media (--viewport-wide) {
   .gridOverVideo {
     position: absolute;
@@ -90,39 +86,6 @@ a {
   .video {
     height: 80vh;
   }
-  .heroText {
-    display: grid;
-    justify-content: end;
-    grid-area: text;
-  }
-  .heroHeader {
-    display: none;
-  }
-  .visionParagraph {
-    display: grid;
-    width: 580px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    text-align: left;
-    align-self: center;
-    text-transform: unset;
-    filter: drop-shadow(3px 3px 3px #000);
-    margin: 0 0 0 0;
-  }
-  .visionParagraph p {
-    color: var(--white);
-  }
-  .visionParagraph h2 {
-    color: var(--white);
-  }
-  .visionBlockMobile {
-    display: none;
-  }
-  .visionParagraphMobile {
-    display: none;
-  }
 }
 
 /* Below hero area and map */
@@ -131,25 +94,6 @@ a {
 .standaloneParagraph {
   margin: 1rem;
   max-width: var(--content-w-narrow);
-}
-
-.visionParagraphMobile {
-  margin: 1rem;
-  max-width: var(--content-w-narrow);
-}
-
-.visionBlockMobile {
-  display: flex;
-  justify-content: center;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  color: white;
 }
 
 .contentBlock {
@@ -256,4 +200,6 @@ a {
 
 .card {
   min-height: 320px;
+  display: flex;
+  align-items: end;
 }
