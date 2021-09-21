@@ -1,18 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Container from 'react-bootstrap/Container';
+
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage
   return (
     <Layout>
       <Seo title={page.title} />
-      <article>
+      <Container>
         <h1>{page.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-      </article>
+      </Container>
     </Layout>
   )
 }

@@ -1,11 +1,10 @@
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   background: var(--dark-blue);
   padding: 1rem 2rem;
-  text-align: center;
   color: var(--white);
-  margin-top: 1rem;
+  font-size: 0.8rem;
 }
 
 .footer a {

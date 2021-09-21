@@ -12,7 +12,7 @@ $black: #000;
   min-height: 100vh !important;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
+/* Style the video: 100% width and height to cover window */
 #myVideo {
   min-width: 360px;
   min-height: 360px;
@@ -24,9 +24,14 @@ $black: #000;
 
 .introText h2 {
   color: white;
+  font-size: 2.8rem;
 }
 .introText p {
   color: white;
+}
+
+.introRow {
+  padding-top: 15%;
 }
 
 .row {
@@ -37,8 +42,18 @@ $black: #000;
   text-transform: uppercase;
 }
 
+.introText .subhead {
+  font-size: 1.2rem;
+}
+
+.subhead.tagline {
+  font-size: 1.2rem;
+  margin-top: 8%;
+  color: white;
+}
+
 .tagline {
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   font-style: italic;
 }
 
@@ -64,19 +79,27 @@ a h2 {
 }
 
 section {
-  padding: 2rem 0;
+  padding: 4rem 0 3rem;
 }
 
 .blue-section {
   background-color: $light-blue;
   color: $white;
+  padding: 2rem 0 2rem;
 }
 
-// select citation immediately after blockquote and break
-blockquote + cite {
+cite {
   text-transform: uppercase;
-  font-weight: bold;
   font-style: normal;
+}
+
+blockquote + cite {
+  font-weight: bold;
+}
+
+q + br + cite {
+  text-transform: initial;
+  font-weight: initial;
 }
 
 .large-quotation-mark {
@@ -104,4 +127,18 @@ button.btn {
   border-radius: 0;
   border-color: $grey;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-primary:hover {
+  background-color: $dark-blue !important;
+  border-color: $dark-blue !important;
 }

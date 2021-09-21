@@ -1,13 +1,15 @@
+.aboutCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/AdobeStock-track-119954823_Preview.jpeg");
+}
+
 .workCard {
   background-image: url("../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg");
 }
 
-.aboutCard {
-  background-image: url("../images/AdobeStock-track-119954823_Preview.jpeg");
-}
-
 .contactCard {
-  background-image: url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
 }
 
 /* Header area */
@@ -204,12 +206,6 @@ a {
 .card {
   min-height: 320px;
   padding-top: 120px;
-  transition: 0.2s ease-in-out;
-}
-
-.card:hover {
-  transition: 0.2s ease-in-out;
-  transform: rotate(-2deg) translateY(-5px) scale(1.025);
 }
 
 .card a {
