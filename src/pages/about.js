@@ -3,7 +3,6 @@ import React from "react";
 import "../style.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -13,24 +12,26 @@ import Button from 'react-bootstrap/Button';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import IntroRow from '../components/IntroRow'
 import ListItem from '../components/ListItem'
+import LetsConnect from '../components/LetsConnect'
+import BlockQuote from '../components/BlockQuote'
+import WhiteSection from '../components/WhiteSection'
+
 
 const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
-
         <IntroRow 
           heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching." 
           subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration." 
         />
-        
         <section>
         <Container>
           <Col lg={6}>
             <h2>John Levis, Founder</h2>
             <p className="subhead">helping coaches understand the pursuit of excellence on the field or court as their daily act of&nbsp;worship</p>
             <ul>
-            <ListItem
+              <ListItem
                 boldOne="Education"
                 description="John holds a Master’s in Business Administration from Eastern University (2007) and completed undergraduate studies at Wheaton College&nbsp;(1996)."
               />
@@ -71,45 +72,9 @@ const NamedPage = ({ data }) => {
               />
             </ul>
             <Link to="/work"><Button>LEARN MORE</Button></Link>
-
           </Col>
-          </Container>
-          </section>
-
-        <p>To partner with athletic departments and coaches to worship God through sports.</p>
-
-        <h2>Vision</h2>
-        <p>That coaches see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. That the joy taken in the work is that of a composer creating masterpieces as unto the Lord.</p>
-
-        <h2>Founder John Levis</h2>
-        <p>John Levis has broad experience coaching athletic teams and working in Christian higher education.</p>
-
-        <blockquote>“I had the distinct pleasure of being a student at Eastern University while Mr. Levis was there. While I was there, I was marveled by both his professionalism and strong people skills. He was always concerned about students and their well being and always had a concern for making sure that the students experience at Eastern was a good one.”</blockquote>
-        <cite>Brandon Robinson, Executive Producer at Bally Sports</cite>
-
-        <p>John holds a Master’s in Business Administration from Eastern University and completed undergraduate studies at Wheaton College.</p>
-                    
-        <section>
-          <Container>
-            <Row>
-              <Col>
-                  <h2>National Connections</h2>
-                  <h3>SERVING AND ENRICHING THROUGH RELATIONSHIPS</h3>
-                  <p>Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching.</p>
-                  <Link to="/work"><Button>LEARN MORE ABOUT OUR WORK</Button></Link>
-              </Col>
-              <Col>
-                  <StaticImage
-                      alt="Map of Coach's Call locations"
-                      placeholder="blurred"
-                      loading="eager"
-                      src="../images/UnitedStatesMap_112467261.svg"
-                      height="320"
-                  />
-              </Col>
-            </Row>
-          </Container>
-        </section>
+        </Container>
+      </section>
 
         <section className="grey-section">
             <Container>
@@ -121,29 +86,20 @@ const NamedPage = ({ data }) => {
             </Container>
         </section>
 
-        <section className="blue-section">
-            <Container>
-                <Row>
-                    <Col sm={12} md={2} lg={2} xl={2} className="large-quotation-mark">
-                    “
-                    </Col>
-                    <Col sm={12} md={10} lg={8} xl={7} className="blockquote-column">
-                      <blockquote>The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable.”</blockquote>
-                      <cite>Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University</cite>
-                    </Col>
-                </Row>
-            </Container>
-            
-        </section>
+        <WhiteSection
+          heading="Development Council"
+          subheading="Learn more about leaders in this organization"
+          description="We have a board of directors who guide our progress."
+          link="/development"
+          buttonText="MEET THE DEVELOPMENT COUNCIL"
+        />
 
-        <section>
-            <Container>
-                <h2>Let's Connect</h2>
-                <h3>Learn more about Coach’s Call</h3>
-                <p>“As iron sharpens iron, so one person sharpens another.”  <cite>proverbs 27:1</cite></p>
-                <Link to="/contact"><Button>CONTACT JOHN</Button></Link>
-            </Container>
-        </section>
+        <BlockQuote 
+          quote="John is an effective coach who clearly understands the hearts of students and how to apply the hope of Jesus through sport to them. He is insightful and thought provoking, helping you to think deeply about your philosophy, vision, and mission as a coach. He helps put language to your values and passion. He is someone you want on your team."
+          source="Doug Walker, Boys’ Soccer Coach, Second Baptist School"
+        />
+
+        <LetsConnect />
 
         <section className="grey-section">
             <Container>

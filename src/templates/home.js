@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import LetsConnect from '../components/LetsConnect'
+import BlockQuote from '../components/BlockQuote'
 
 import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -109,28 +111,11 @@ const NamedPage = ({ data }) => {
             </Container>
         </section>
 
-        <section className="blue-section">
-            <Container>
-                <Row>
-                    <Col sm={12} md={2} lg={2} xl={2} className="large-quotation-mark">
-                    “
-                    </Col>
-                    <Col sm={12} md={10} lg={8} xl={7} className="blockquote-column">
-                      <blockquote>The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable.”</blockquote>
-                      <cite>Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University</cite>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-
-        <section>
-            <Container>
-                <h2>Let's Connect</h2>
-                <h3>Learn more about Coach’s Call</h3>
-                <p>“As iron sharpens iron, so one person sharpens another.”  <cite>proverbs 27:1</cite></p>
-                <Link to="/contact"><Button>CONTACT JOHN</Button></Link>
-            </Container>
-        </section>
+        <BlockQuote 
+          quote="The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable."
+          source="Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University"
+        />
+        <LetsConnect />
 
         <section className="grey-section">
             <Container>
