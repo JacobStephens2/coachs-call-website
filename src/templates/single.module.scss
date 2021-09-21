@@ -59,9 +59,12 @@ a {
 
 /* Dark Background */
 
+.darkBackground {
+  text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
 .darkBackground p {
   color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 .darkBackground h2 {
@@ -78,7 +81,7 @@ a {
 
 /* Background video: For desktop views ----------------------------*/
 @media (--viewport-wide) {
-  .gridOverVideo {
+  .videoBackground {
     position: absolute;
     width: 100vw;
     top: 90px;
@@ -200,6 +203,15 @@ a {
 
 .card {
   min-height: 320px;
-  display: flex;
-  align-items: end;
+  padding-top: 120px;
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transition: 0.2s ease-in-out;
+  transform: rotate(-2deg) translateY(-5px) scale(1.025);
+}
+
+.card a {
+  text-decoration: none;
 }

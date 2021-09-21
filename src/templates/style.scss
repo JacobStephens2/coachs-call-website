@@ -1,8 +1,11 @@
 $dark-blue: #002856;
 $light-blue: #00a7e1;
 $green: #97ca3d;
-$gray: #808285;
+$grey: #808285;
+$light-grey: #d1d1d1;
 $orange: #f78d1e;
+$white: #fff;
+$black: #000;
 
 .wp-block-cover-image,
 .wp-block-cover {
@@ -51,6 +54,54 @@ h2 a {
   color: white;
 }
 
-h3 {
-  color: $dark-blue;
+a h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.grey-section {
+  background-color: $light-grey;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.blue-section {
+  background-color: $light-blue;
+  color: $white;
+}
+
+// select citation immediately after blockquote and break
+blockquote + cite {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.large-quotation-mark {
+  font-size: 10rem;
+  font-family: proxima nova;
+}
+
+.blockquote-column {
+  padding-right: 20%;
+}
+
+blockquote + cite {
+  font-size: 0.85rem;
+}
+
+h2 + h3 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+button.btn {
+  font-size: 0.85rem;
+  background-color: $white;
+  color: $black;
+  border-radius: 0;
+  border-color: $grey;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
