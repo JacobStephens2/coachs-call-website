@@ -1,7 +1,6 @@
 import React from "react";
 
 import * as style from "./single.module.scss"
-import "./style.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -20,7 +19,7 @@ const NamedPage = ({ data }) => {
       <Seo title="Home" />
 
 {/* add autoPlay as an attribute to video element when ready to restart video */}
-        <video className={`${style.video}`} autoPlay playsInline muted loop>
+        <video className={`${style.video}`} playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className={style.videoBackground}>

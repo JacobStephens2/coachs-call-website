@@ -1,6 +1,6 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
 $dark-blue: #002856;
 $light-blue: #00a7e1;
@@ -36,6 +36,10 @@ $black: #000;
 
 .introRow {
   padding-top: 5%;
+}
+
+.introRow h1 {
+  text-transform: initial;
 }
 
 .row {
@@ -160,4 +164,9 @@ a {
 .btn-primary:hover {
   background-color: $dark-blue !important;
   border-color: $dark-blue !important;
+}
+
+.grey-section .subhead.tagline {
+  color: $dark-blue;
+  margin-top: 3%;
 }

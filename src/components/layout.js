@@ -16,6 +16,8 @@ import "../styles/accessibility.css"
 import "../styles/global.module.css"
 import "./layout.css"
 import "@wordpress/block-library/build-style/style.css"
+import "../style.scss"
+
  
  const Layout = ({ children }) => {
    const data = useStaticQuery(graphql`
