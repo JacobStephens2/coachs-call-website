@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => {
         >
 
           <StaticImage
-            src="../images/CoachsCall_FIN-Outlined-No-Tagline.png"
+            src="../images/logo-no-tagline.png"
             alt="The Coach's Call crest"
             width={250}
             className="logo"

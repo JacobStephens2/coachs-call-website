@@ -1,6 +1,7 @@
 .mainnav {
   margin: 0 auto 0;
   font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 
 .mainnav ul {
@@ -19,11 +20,24 @@
 
 .mainnav a {
   display: block;
-  color: var(--white); /* White */
+  color: var(--white);
   border: 1px solid hsla(0, 0%, 100%, 0);
 }
 
 .mainnav a:hover,
 .mainnav a:focus {
-  border-color: var(--white); /* White */
+  border-color: var(--white);
+}
+
+/* Menu level one items */
+ul li a {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Menu level two items */
+ul ul li a {
+  font-weight: initial;
+  padding-left: 1.3rem;
+  text-indent: -0.6rem;
 }

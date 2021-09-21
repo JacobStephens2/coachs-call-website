@@ -1,3 +1,7 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
 $dark-blue: #002856;
 $light-blue: #00a7e1;
 $green: #97ca3d;
@@ -31,7 +35,13 @@ $black: #000;
 }
 
 .introRow {
-  padding-top: 15%;
+  padding-top: 5%;
+}
+
+@include media-breakpoint-up(xl) {
+  .introRow {
+    padding-top: 15%;
+  }
 }
 
 .row {
@@ -104,11 +114,17 @@ q + br + cite {
 
 .large-quotation-mark {
   font-size: 10rem;
-  font-family: proxima nova;
+  font-family: proxima-nova;
+  font-weight: 600; // semi-bold
+  height: 9rem;
 }
 
-.blockquote-column {
-  padding-right: 20%;
+@include media-breakpoint-up(md) {
+  .large-quotation-mark {
+    height: 100%;
+    position: relative;
+    top: -2.9rem;
+  }
 }
 
 blockquote + cite {
@@ -120,8 +136,17 @@ h2 + h3 {
   font-size: 1.2rem;
 }
 
+q {
+  font-size: 1.5rem;
+}
+
+q + br + cite {
+  display: block;
+  padding-top: 0.5rem;
+}
+
 button.btn {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   background-color: $white;
   color: $black;
   border-radius: 0;

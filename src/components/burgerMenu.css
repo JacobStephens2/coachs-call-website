@@ -52,7 +52,7 @@ span.bm-cross:last-child {
 /* General sidebar styles */
 .bm-menu {
   background: var(--dark-blue);
-  padding: 2.5em 1.5em 0;
+  padding: 2.5rem 1.5rem 0 1.5rem;
   font-size: var(--large-text);
 }
 

@@ -20,7 +20,7 @@ const NamedPage = ({ data }) => {
       <Seo title="Home" />
 
 {/* add autoPlay as an attribute to video element when ready to restart video */}
-        <video className={`${style.video}`} autoPlay playsInline muted loop>
+        <video className={`${style.video}`} playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className={style.videoBackground}>
@@ -37,7 +37,6 @@ const NamedPage = ({ data }) => {
                     </Col>
                     <Col className="order-lg-1 introText" lg={8}>
                         <h2>Deepening coach impact through one-on-one mentoring, consulting, and&nbsp;seminars.</h2>
-                        
                         <p className="subhead">Founder and coach John Levis has 25 years experience in coaching, young life Ministry, and college&nbsp;administration.</p>
                     </Col>
                 </Row>
@@ -48,7 +47,6 @@ const NamedPage = ({ data }) => {
         </div>
             
         <Row>
-
             <Col className={[style.aboutCard, style.card, style.darkBackground].join(' ')} lg={4}>
                 <Link to="/about">
                         <Container>
@@ -78,46 +76,49 @@ const NamedPage = ({ data }) => {
                     </Container>
                 </Link>
             </Col>
-            
         </Row>
-
-        <Container>
+        
+        <section>
+          <Container>
             <Row>
-                    <Col>
-                        <h2>National Connections</h2>
-                        <h3>SERVING AND ENRICHING THROUGH RELATIONSHIPS</h3>
-                        <p>Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching.</p>
-                        <Link to="/work"><Button>LEARN MORE ABOUT OUR WORK</Button></Link>
-                    </Col>
-                    <Col>
-                        <StaticImage
-                            alt="Map of Coach's Call locations"
-                            placeholder="blurred"
-                            loading="eager"
-                            src="../images/UnitedStatesMap_112467261.svg"
-                            height="320"
-                        />
-                    </Col>
+              <Col>
+                  <h2>National Connections</h2>
+                  <h3>SERVING AND ENRICHING THROUGH RELATIONSHIPS</h3>
+                  <p>Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching.</p>
+                  <Link to="/work"><Button>LEARN MORE ABOUT OUR WORK</Button></Link>
+              </Col>
+              <Col>
+                  <StaticImage
+                      alt="Map of Coach's Call locations"
+                      placeholder="blurred"
+                      loading="eager"
+                      src="../images/UnitedStatesMap_112467261.svg"
+                      height="320"
+                  />
+              </Col>
             </Row>
-        </Container>
+          </Container>
+        </section>
 
         <section className="grey-section">
             <Container>
+              <Col lg={8}>
                 <q>To become holy is rather like joining a secret society. To put it at the very lowest, it must be great fun.</q>
                 <br />
                 <cite>C.S. Lewis, <i>Mere Christianity</i></cite>
+              </Col>
             </Container>
         </section>
 
         <section className="blue-section">
             <Container>
                 <Row>
-                    <Col xl={2} className="large-quotation-mark">
-                    "
+                    <Col sm={12} md={2} lg={2} xl={2} className="large-quotation-mark">
+                    “
                     </Col>
-                    <Col xl={7} className="blockquote-column">
-                            <blockquote>The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable.”</blockquote>
-                            <cite>Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University</cite>
+                    <Col sm={12} md={10} lg={8} xl={7} className="blockquote-column">
+                      <blockquote>The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable.”</blockquote>
+                      <cite>Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University</cite>
                     </Col>
                 </Row>
             </Container>
