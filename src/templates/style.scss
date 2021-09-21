@@ -38,12 +38,6 @@ $black: #000;
   padding-top: 5%;
 }
 
-@include media-breakpoint-up(xl) {
-  .introRow {
-    padding-top: 15%;
-  }
-}
-
 .row {
   align-items: center;
 }
@@ -53,11 +47,11 @@ $black: #000;
 }
 
 .introText .subhead {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .subhead.tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 8%;
   color: white;
 }
