@@ -20,7 +20,7 @@ const NamedPage = ({ data }) => {
       <Seo title="Home" />
 
 {/* add autoPlay as an attribute to video element when ready to restart video */}
-        <video className={`${style.video}`} playsInline muted loop>
+        <video className={`${style.video}`} autoPlay playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className={style.videoBackground}>
