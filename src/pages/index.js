@@ -96,7 +96,6 @@ const NamedPage = ({ data }) => {
         />
         <LetsConnect />
         <Contact />
-
     </Layout>
   )
 }

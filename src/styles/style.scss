@@ -46,6 +46,10 @@ $black: #000;
   align-items: center;
 }
 
+.row.flex-start {
+  align-items: start;
+}
+
 .subhead {
   text-transform: uppercase;
 }

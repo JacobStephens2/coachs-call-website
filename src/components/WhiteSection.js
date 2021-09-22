@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 const WhiteSection = (props) => {
 	return (
-		<section>
+		<section id={props.id}>
 			<Container>
 				<h2>{props.heading}</h2>
 				<h3>{props.subheading}</h3>

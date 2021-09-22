@@ -24,10 +24,22 @@ const NamedPage = ({ data }) => {
           heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching." 
           subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration." 
         />
-				<section>
+				<section id="john-levis">
         <Container>
-					<Row>
-						<Col lg={7}>
+					<Row className="flex-start">
+						<Col className="order-lg-2" lg={5}>
+							<StaticImage
+									alt="John Levis with their family"
+									placeholder="blurred"
+									loading="eager"
+									src="../images/LevisFamFPO.png"
+									height="320"
+							/>
+							<blockquote>“The level of my growth in grace is revealed by the way I look at obedience. We should have a much higher view of the word obedience, rescuing it from the mire of the world.”</blockquote>
+							<cite>Oswald Chambers</cite>
+						</Col>
+
+						<Col className="order-lg-1" lg={7}>
 							<h2>John Levis, Founder</h2>
 							<p className="subhead">helping coaches understand the pursuit of excellence on the field or court as their daily act of&nbsp;worship</p>
 							<ul>
@@ -73,39 +85,27 @@ const NamedPage = ({ data }) => {
 							</ul>
 							<Link to="/work"><Button>LEARN MORE</Button></Link>
 						</Col>
-						<Col lg={5}>
-							<StaticImage
-									alt="Map of Coach's Call locations"
-									placeholder="blurred"
-									loading="eager"
-									src="../images/UnitedStatesMap_112467261.svg"
-									height="320"
-							/>
-							<StaticImage
-									alt="Map of Coach's Call locations"
-									placeholder="blurred"
-									loading="eager"
-									src="../images/UnitedStatesMap_112467261.svg"
-									height="320"
-							/>
-							<blockquote>“The level of my growth in grace is revealed by the way I look at obedience. We should have a much higher view of the word obedience, rescuing it from the mire of the world.”</blockquote>
-							<cite>Oswald Chambers</cite>
-						</Col>
 					</Row>
         </Container>
 			</section>
 				
-        <section className="grey-section">
+        <section id="mission-vision" className="grey-section">
             <Container>
-              <Col lg={8}>
-                <q>To become holy is rather like joining a secret society. To put it at the very lowest, it must be great fun.</q>
-                <br />
-                <cite>C.S. Lewis, <i>Mere Christianity</i></cite>
+							<Row>
+              <Col lg={4}>
+                <h3>VISION</h3>
+                <p>Partnering with athletic departments and coaches to worship God through sports</p>
               </Col>
+              <Col lg={8}>
+                <h3>MISSION</h3>
+                <p>For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the Lord.</p>
+              </Col>
+							</Row>
             </Container>
         </section>
 
         <WhiteSection
+					id="development-council"
           heading="Development Council"
           subheading="Learn more about leaders in this organization"
           description="We have a board of directors who guide our progress."
