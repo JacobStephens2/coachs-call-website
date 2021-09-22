@@ -10,17 +10,19 @@ import { StaticImage } from "gatsby-plugin-image"
 
 
 const IntroRowVideo = (props) => {
+	var contactButton = '';
 	if (props.contact === "no") {
-		var contactButton = '';
+		contactButton = '';
 	} else {
-		var contactButton = 
+		contactButton = 
 			<Link to="/contact">
 				<Button>CONTACT JOHN</Button>
 			</Link>;
 	}
 
+	var logo = ''
 	if (props.logo === "yes") {
-		var logo = 
+		logo = 
 			<Col className="order-lg-2" lg={4}>
 					<StaticImage
 							alt="Coach's Call logo crest"
@@ -31,13 +33,13 @@ const IntroRowVideo = (props) => {
 					/>
 			</Col>;
 	} else {
-		var logo = '';
+		logo = '';
 	}
 
 	return (
 		<div>
 				{/* add or remove autoPlay as an attribute to start or stop video */}
-				<video className={`${style.video}`} autoPlay playsInline muted loop>
+				<video className={`${style.video}`} playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className={style.videoBackground}>
