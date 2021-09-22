@@ -107,10 +107,13 @@ const NamedPage = ({ data }) => {
         <Section
 					id="development-council"
           heading="Development Council"
-          subheading="Learn more about leaders in this organization"
+          subheading="Guides and supporters of this organization"
           description="We have a board of directors who guide our progress."
           link="/development"
           buttonText="MEET THE DEVELOPMENT COUNCIL"
+					list="no"
+					quote="no"
+					button="no"
         />
 
         <BlockQuote 

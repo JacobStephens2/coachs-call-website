@@ -46,7 +46,7 @@ const IntroRowVideo = (props) => {
 	return (
 		<div>
 				{/* add or remove autoPlay as an attribute to start or stop video */}
-				<video className={`${style.video}`} playsInline muted loop>
+				<video className={`${style.video}`} autoPlay playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className={style.videoBackground}>
