@@ -1,16 +1,15 @@
 import React from "react";
 
-import "../style.scss"
+import "../styles/style.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Link } from "gatsby"
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import IntroRow from '../components/IntroRow'
+import IntroRowVideo from '../components/IntroRowVideo'
 import ListItem from '../components/ListItem'
 import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
@@ -21,7 +20,7 @@ const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
-        <IntroRow 
+        <IntroRowVideo
           heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching." 
           subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration." 
         />

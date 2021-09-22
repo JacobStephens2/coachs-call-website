@@ -1,6 +1,5 @@
 import React from "react";
-
-import * as style from "./single.module.scss"
+import * as style from "./index.module.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -11,42 +10,21 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
-
-import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
+import IntroRowVideo from '../components/IntroRowVideo'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Home" />
+			
+        <IntroRowVideo 
+					contact="no" 
+					logo="yes"
+					heading="Deepening coach impact through one-on-one mentoring, consulting, and&nbsp;seminars."
+					subhead="Founder and coach John Levis has 25 years experience in coaching, young life Ministry, and college&nbsp;administration."
+				/>
 
-{/* add autoPlay as an attribute to video element when ready to restart video */}
-        <video className={`${style.video}`} playsInline muted loop>
-            <source src={AthleticVideo} type="video/mp4" />
-        </video>
-        <div className={style.videoBackground}>
-            <Container>
-                <Row className="introRow">
-                    <Col className="order-lg-2" lg={4}>
-                        <StaticImage
-                            alt="Coach's Call logo crest"
-                            placeholder="blurred"
-                            loading="eager"
-                            src="../images/CoachsCall-Crest-Logo-icon-square.png"
-                            height="320"
-                        />
-                    </Col>
-                    <Col className="order-lg-1 introText" lg={8}>
-                        <h2>Deepening coach impact through one-on-one mentoring, consulting, and&nbsp;seminars.</h2>
-                        <p className="subhead">Founder and coach John Levis has 25 years experience in coaching, young life Ministry, and college&nbsp;administration.</p>
-                    </Col>
-                </Row>
-                <Row>
-                <p className="subhead tagline">Glorifying God and Experiencing Joy Through Sports</p>
-                </Row>
-            </Container>
-        </div>
-            
         <Row>
             <Col className={[style.aboutCard, style.card, style.darkBackground].join(' ')} lg={4}>
                 <Link to="/about">
