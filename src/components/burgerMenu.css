@@ -1,10 +1,10 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 45px;
-  height: 36px;
+  width: 38px;
+  height: 30px;
   right: 1rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 
 /* Color/shape of burger icon bars */
@@ -16,8 +16,8 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 48px !important;
-  width: 48px !important;
+  height: 32px !important;
+  width: 32px !important;
   right: 1.3rem !important;
   top: 1rem !important;
 }
@@ -29,14 +29,14 @@
 
 span.bm-cross:first-child {
   right: 0;
-  width: 10px !important;
-  height: 48px !important;
+  width: 5px !important;
+  height: 32px !important;
 }
 
 span.bm-cross:last-child {
   right: 0;
-  width: 10px !important;
-  height: 48px !important;
+  width: 5px !important;
+  height: 32px !important;
 }
 
 /*

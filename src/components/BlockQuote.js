@@ -4,9 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
 const BlockQuote = (props) => {
-	var quoteCol = '';
-	var quotationMark = '';
-	if (props.quotationMark == "no") {
+	if (props.quotationMark === "no") {
 		return (
 			<section className="blue-section">
 			<Container>

@@ -7,13 +7,13 @@ const ContactText = () => {
 		<h4>CONTACT</h4>
 		<p>
 			<a href="tel:484.574.1444">
-			<i class="far fa-envelope"></i>
+			<i class="fas fa-phone-alt"></i>
 			&ensp;
 			484.574.1444</a>
 		</p>
 		<p>
 			<a href="mailto:john@coachscall.org">
-			<i class="fas fa-phone-alt"></i>
+			<i class="far fa-envelope"></i>
 			&ensp;
 			john@coachscall.org</a>
 		</p>

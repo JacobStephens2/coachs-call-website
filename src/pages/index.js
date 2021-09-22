@@ -42,7 +42,7 @@ const NamedPage = ({ data }) => {
               <Container>
                 <h2>Work</h2>
                 <h3>Seminars | Mentoring | Consulting</h3>
-                <p>Customized offerings for coaches and&nbsp;programs</p>
+                <p>Customized offerings for coaches and&nbsp;programs.</p>
               </Container>
             </Link>
           </Col>
