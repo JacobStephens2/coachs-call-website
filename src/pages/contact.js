@@ -6,6 +6,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import IntroRowVideo from '../components/IntroRowVideo'
 import BlockQuote from '../components/BlockQuote'
 import ContactText from "../components/ContactText"
+import Contact from "../components/Contact"
 import Section from "../components/Section"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,7 +17,6 @@ const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Work" />
-      <span id="donate">
         <IntroRowVideo
           heading="Let's Connect" 
           subhead="Email me" 
@@ -24,7 +24,6 @@ const NamedPage = ({ data }) => {
           donateButton="yes"
           contact="no"
         />
-      </span>
 
       <span id="email">
         <Section
@@ -48,6 +47,18 @@ const NamedPage = ({ data }) => {
           </Row>
         </Section>
         </span>
+
+      <span id="donate">
+        <Section 
+          quote="no"
+          list="no"
+          button="donate"
+          heading="Support Coach's Call"
+          description="Donate to support the ministry of Coach’s Call. Coach’s Call is a 501(c)(3) nonprofit organization, and as such all donations are tax-deductible. Donations are securely processed through PayPal according to Payment Card Industry&nbsp;standards."
+        />
+      </span>
+
+      <Contact />
 
     </Layout>
   )

@@ -18,8 +18,7 @@ const BlockQuote = (props) => {
 				</Row>
 			</Container>
 		</section>	
-		)
-;
+		);
 	} else {
 		return (
 			<section className="blue-section">

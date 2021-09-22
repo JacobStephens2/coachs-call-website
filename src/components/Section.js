@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import ListItemNoDivider from './ListItemNoDivider'
 import TwoImages from './TwoImages'
+import DonateButton from './DonateButton'
 
 const Section = (props) => {
 	
@@ -35,8 +36,10 @@ const Section = (props) => {
 	var button = ''
 	if (props.button === "no") {
 		button = '';
+	} else if (props.button === "donate") {
+		button = <DonateButton />;
 	} else {
-		button = <Link to={props.link}><Button>{props.buttonText}</Button></Link>
+		button = <Link to={props.link}><Button>{props.buttonText}</Button></Link>;
 	}
 	
 	return (
