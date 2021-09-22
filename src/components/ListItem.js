@@ -4,7 +4,6 @@ const ListItem = (props) => {
 	ListItem.defaultProps = {
 		boldTwo: 0
 	};
-
 	if (props.boldTwo === 0) {
 		return (
 			<li>

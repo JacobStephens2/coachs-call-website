@@ -12,7 +12,7 @@ import IntroRowVideo from '../components/IntroRowVideo'
 import ListItem from '../components/ListItem'
 import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
-import WhiteSection from '../components/WhiteSection'
+import Section from '../components/Section'
 import { StaticImage } from "gatsby-plugin-image"
 import Contact from "../components/Contact";
 
@@ -83,7 +83,7 @@ const NamedPage = ({ data }) => {
 									description="John served as an Assistant Director of Admissions and the Director of Advancement for the Templeton Honors College at Eastern University. His time was spent in recruiting, marketing, and fundraising as the Honors College went through branding, doubled its size, founded an institute, and built a global recruiting presence."
 								/>
 							</ul>
-							<Link to="/work"><Button>LEARN MORE</Button></Link>
+							<Link to="/contact"><Button>LEARN MORE</Button></Link>
 						</Col>
 					</Row>
         </Container>
@@ -92,19 +92,19 @@ const NamedPage = ({ data }) => {
         <section id="mission-vision" className="grey-section">
             <Container>
 							<Row>
-              <Col lg={4}>
-                <h3>VISION</h3>
-                <p>Partnering with athletic departments and coaches to worship God through sports</p>
+              <Col lg={5}>
+                <h4><strong>VISION</strong></h4>
+                <p>Partnering with athletic departments and coaches to worship God through&nbsp;sports</p>
               </Col>
-              <Col lg={8}>
-                <h3>MISSION</h3>
-                <p>For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the Lord.</p>
+              <Col lg={7}>
+                <h4><strong>MISSION</strong></h4>
+                <p>For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the&nbsp;Lord.</p>
               </Col>
 							</Row>
             </Container>
         </section>
 
-        <WhiteSection
+        <Section
 					id="development-council"
           heading="Development Council"
           subheading="Learn more about leaders in this organization"

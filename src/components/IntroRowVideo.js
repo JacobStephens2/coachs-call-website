@@ -8,7 +8,6 @@ import * as style from "../pages/index.module.scss"
 import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 import { StaticImage } from "gatsby-plugin-image"
 
-
 const IntroRowVideo = (props) => {
 	var contactButton = '';
 	if (props.contact === "no") {
@@ -18,6 +17,16 @@ const IntroRowVideo = (props) => {
 			<Link to="/contact">
 				<Button>CONTACT JOHN</Button>
 			</Link>;
+	}
+
+	var donateButton = '';
+	if (props.donateButton === "yes") {
+		donateButton = 
+		<a href="https://www.paypal.com/us/webapps/mpp/nfp" target="_blank">
+				<Button>DONATE TO COACH'S CALL TODAY</Button>
+			</a>;
+	} else {
+		donateButton = '';
 	}
 
 	var logo = ''
@@ -49,6 +58,8 @@ const IntroRowVideo = (props) => {
                     <Col className="order-lg-1 introText" lg={8}>
                         <h2>{props.heading}</h2>
                         <p className="subhead">{props.subhead}</p>
+												<p className="intro-body">{props.body}</p>
+												{donateButton}
 												{contactButton}
                     </Col>
                 </Row>

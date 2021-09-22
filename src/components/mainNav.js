@@ -46,11 +46,11 @@ const MainNav = () => {
           
           <li><Link to='/contact'>Contact</Link></li>
             <ul>
-              <li><Link to='/contact#john-levis'>
-                <i class="fas fa-angle-right"></i>&ensp;John Levis</Link>
+              <li><Link to='/contact#email'>
+                <i class="fas fa-angle-right"></i>&ensp;Email</Link>
               </li>
-              <li><Link to='/contact#mission-vision'>
-                <i class="fas fa-angle-right"></i>&ensp;Mission&ensp;|&ensp;Vision</Link>
+              <li><Link to='/contact#donate'>
+                <i class="fas fa-angle-right"></i>&ensp;Donate</Link>
               </li>
             </ul>   
 

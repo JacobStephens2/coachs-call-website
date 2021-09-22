@@ -174,3 +174,19 @@ a {
   color: $dark-blue;
   margin-top: 3%;
 }
+
+.drop-shadow {
+  box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px,
+    rgba(71, 63, 79, 0.16) 0px 4px 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.quote-no-cite {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.intro-body {
+  margin-top: 1rem;
+}

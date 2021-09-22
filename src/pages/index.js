@@ -27,54 +27,54 @@ const NamedPage = ({ data }) => {
 				/>
 
         <Row>
-            <Col className={[style.aboutCard, style.card, style.darkBackground].join(' ')} lg={4}>
-                <Link to="/about">
-                        <Container>
-                            <h2>About</h2>
-                            <h3>John Levis</h3>
-                            <p>John has broad experience coaching and working in higher&nbsp;education.</p>
-                        </Container>
-                </Link>
-            </Col>
+          <Col className={[style.aboutCard, style.card, style.darkBackground].join(' ')} lg={4}>
+            <Link to="/about">
+              <Container>
+                <h2>About</h2>
+                <h3>John Levis</h3>
+                <p>John has broad experience coaching and working in higher&nbsp;education.</p>
+              </Container>
+            </Link>
+          </Col>
 
-            <Col className={[style.workCard, style.card, style.darkBackground].join(' ')} lg={4}>
-                <Link to="/work">
-                        <Container>
-                            <h2>Work</h2>
-                            <h3>Seminars | Mentoring | Consulting</h3>
-                            <p>Customized offerings for coaches and&nbsp;programs</p>
-                        </Container>
-                </Link>
-            </Col>
+          <Col className={[style.workCard, style.card, style.darkBackground].join(' ')} lg={4}>
+            <Link to="/work">
+              <Container>
+                <h2>Work</h2>
+                <h3>Seminars | Mentoring | Consulting</h3>
+                <p>Customized offerings for coaches and&nbsp;programs</p>
+              </Container>
+            </Link>
+          </Col>
 
-            <Col className={[style.contactCard, style.card, style.darkBackground].join(' ')} lg={4}>
-                <Link to="/contact">
-                    <Container>
-                        <h2>Contact</h2>
-                        <h3>Contact John</h3>
-                        <p>Learn more about Coach's&nbsp;Call.</p>
-                    </Container>
-                </Link>
-            </Col>
+          <Col className={[style.contactCard, style.card, style.darkBackground].join(' ')} lg={4}>
+            <Link to="/contact">
+              <Container>
+                <h2>Contact</h2>
+                <h3>Contact John</h3>
+                <p>Learn more about Coach's&nbsp;Call.</p>
+              </Container>
+            </Link>
+          </Col>
         </Row>
         
         <section>
           <Container>
             <Row>
               <Col>
-                  <h2>National Connections</h2>
-                  <h3>SERVING AND ENRICHING THROUGH RELATIONSHIPS</h3>
-                  <p>Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching.</p>
-                  <Link to="/work"><Button>LEARN MORE ABOUT OUR WORK</Button></Link>
+                <h2>National Connections</h2>
+                <h3>SERVING AND ENRICHING THROUGH RELATIONSHIPS</h3>
+                <p>Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching.</p>
+                <Link to="/work"><Button>LEARN MORE ABOUT OUR WORK</Button></Link>
               </Col>
               <Col>
-                  <StaticImage
-                      alt="Map of Coach's Call locations"
-                      placeholder="blurred"
-                      loading="eager"
-                      src="../images/UnitedStatesMap_112467261.svg"
-                      height="320"
-                  />
+                <StaticImage
+                  alt="Map of Coach's Call locations"
+                  placeholder="blurred"
+                  loading="eager"
+                  src="../images/UnitedStatesMap_112467261.svg"
+                  height="320"
+                />
               </Col>
             </Row>
           </Container>

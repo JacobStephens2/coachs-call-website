@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           © {new Date().getFullYear()}
           {` `}
-          <a href="https://www.jacobstephens.net">Coach's Call</a>
+          <a href="https://www.15eastcreative.com" target="_blank" >Coach's Call</a>
           &ensp;|&ensp;
           All rights reserved.
           &ensp;|&ensp;
