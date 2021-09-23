@@ -1,10 +1,10 @@
-import React from "react"
-import * as style from "./footer.module.css"
+import * as React from "react"
+
 import Container from 'react-bootstrap/Container';
 
 const Footer = () => {
   return (
-    <footer className={style.footer}>
+    <footer className="footer">
       <Container>
         <div>
           © {new Date().getFullYear()}

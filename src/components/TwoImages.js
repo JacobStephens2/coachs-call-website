@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image' // highlight-line
+
+import { GatsbyImage } from 'gatsby-plugin-image'
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 

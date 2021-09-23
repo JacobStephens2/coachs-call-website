@@ -1,5 +1,7 @@
 import * as React from 'react'
+
 import { Link } from "gatsby"
+
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 

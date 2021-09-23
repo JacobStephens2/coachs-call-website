@@ -1,26 +1,28 @@
-import React from "react";
-import "../styles/style.scss"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import * as React from "react";
+
 import { Link } from "gatsby"
+
+import { StaticImage } from "gatsby-plugin-image"
+
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import IntroRowVideo from '../components/IntroRowVideo'
+
+import Layout from "../components/layout"
+import Seo from "../components/Seo"
+import IntroRow from '../components/IntroRow'
 import ListItem from '../components/ListItem'
 import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
-import { StaticImage } from "gatsby-plugin-image"
 import Contact from "../components/Contact";
 
 const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
-        <IntroRowVideo
+        <IntroRow
           heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching." 
           subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration." 
         />
@@ -111,9 +113,6 @@ const NamedPage = ({ data }) => {
           description="We have a board of directors who guide our progress."
           link="/development"
           buttonText="MEET THE DEVELOPMENT COUNCIL"
-					list="no"
-					quote="no"
-					button="no"
         />
 
         <BlockQuote 

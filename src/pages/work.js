@@ -1,15 +1,16 @@
-import React from "react";
-import "../styles/style.scss"
+import * as React from "react";
+
+import { graphql } from 'gatsby'
+
+import { getImage } from 'gatsby-plugin-image'
+
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import IntroRowVideo from '../components/IntroRowVideo'
+import Seo from "../components/Seo"
+import IntroRow from '../components/IntroRow'
 import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
 import Contact from "../components/Contact"
-import { graphql } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
 
 const NamedPage = ({ data }) => {
   
@@ -19,7 +20,7 @@ const NamedPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Work" />
-        <IntroRowVideo
+        <IntroRow
           heading="Whether you win or lose matters, and so does how you play the&nbsp;game." 
           subhead="Partnering with Coaches in their pursuit of God’s call in&nbsp;coaching." 
         />
@@ -62,7 +63,6 @@ const NamedPage = ({ data }) => {
 					descriptionTwo="in practical ways to pursue excellence and see the pursuit as&nbsp;worship"
 					boldThree="Helping coaches"
 					descriptionThree="develop strategies for culture building, program development, recruiting, and day to day&nbsp;excellence"
-          quote="no"
         />
 
         <LetsConnect />

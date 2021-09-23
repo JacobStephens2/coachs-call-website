@@ -1,6 +1,6 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 $dark-blue: #002856;
 $light-blue: #00a7e1;
@@ -10,117 +10,846 @@ $light-grey: #d1d1d1;
 $orange: #f78d1e;
 $white: #fff;
 $black: #000;
+$main-header-font-size: 3rem;
 
-.wp-block-cover-image,
-.wp-block-cover {
-  min-height: 100vh !important;
+// CONTENTS
+//
+// If an element is ultimately targeted, that rule goes into the elements section, and so on.
+// Within each section, rules should be organized from less to more specific
+// with subgroupings for each selector, such as the following:
+// h1, section h1, .alternate h1, h2
+// There should be no spaces between same ultimate selector group (such as all the permutations selecting h1's)
+//
+// Elements
+// Classes
+// IDs
+
+// Elements  --------------------------
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: 112.5%/1.45em var(--primary-font), serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--dark-blue);
+  font-family: var(--primary-font), serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+[hidden],
+template {
+  display: none;
 }
 
-/* Style the video: 100% width and height to cover window */
-#myVideo {
-  min-width: 360px;
-  min-height: 360px;
+// h1
+h1 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: var(--dark-blue);
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
-
-.introText {
-  font-weight: bold;
+html h1 {
+  font-size: $main-header-font-size;
 }
-
-.introText h2 {
-  color: white;
-  font-size: 2.8rem;
-}
-.introText p {
-  color: white;
-}
-
-.introRow {
-  padding-top: 5%;
-}
-
 .introRow h1 {
+  color: $white;
   text-transform: initial;
 }
 
-.row {
-  align-items: center;
+// h2
+h2 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: var(--large-text);
+  line-height: 1.1;
 }
-
-.row.flex-start {
-  align-items: start;
+section h2 {
+  font-size: $main-header-font-size;
 }
-
-.subhead {
-  text-transform: uppercase;
-}
-
-.introText .subhead {
-  font-size: 1.1rem;
-}
-
-.subhead.tagline {
-  font-size: 1.1rem;
-  margin-top: 8%;
-  color: white;
-}
-
-.tagline {
-  letter-spacing: 5px;
-  font-style: italic;
-}
-
-h2 a {
-  text-decoration: none;
-}
-
-.darkBackground h2 a {
-  color: white;
-}
-
-.darkBackground p {
-  color: white;
-}
-
 a h2 {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
+.introText h2 {
+  color: $white;
+  font-size: 2.8rem;
+}
+.darkBackground h2 {
+  color: $white;
+}
 
-.grey-section {
-  background-color: $light-grey;
+// h3
+h3 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1.38316rem;
+  line-height: 1.1;
+}
+h2 + h3 {
+  font-size: 1.8rem;
+  margin-top: 0.8rem;
+}
+.darkBackground h3 {
+  color: $white;
+}
+
+// h4
+h4 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+.container h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+// h5 and h6
+h5 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 0.85028rem;
+  line-height: 1.1;
+}
+h6 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: inherit;
+  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 0.78405rem;
+  line-height: 1.1;
+}
+
+// Paragraphs
+p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  color: var(--dark-blue);
+}
+.introText p {
+  color: $white;
+}
+.darkBackground p {
+  color: $white;
+}
+
+// Anchors
+a {
+  text-decoration: none !important;
+  color: inherit;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+}
+h2 a {
+  text-decoration: none;
+}
+.card a {
+  text-decoration: none;
+}
+.darkBackground a {
+  color: $white;
+}
+.darkBackground h2 a {
+  color: $white;
+}
+.grey-section a {
+  color: $dark-blue;
+}
+.footer a {
+  color: $dark-blue;
+}
+
+// Citations
+cite {
+  text-transform: uppercase;
+  font-style: normal;
+}
+blockquote + cite {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+q + br + cite {
+  text-transform: initial;
+  font-weight: initial;
+  display: block;
+  padding-top: 0.5rem;
+}
+
+// Video
+video {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30rem;
+  width: 100vw;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+@media (--viewport-wide) {
+  video {
+    height: 80vh;
+  }
+}
+
+// Other
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+q {
+  font-size: 1.5rem;
 }
 
 section {
   padding: 4rem 0 3rem;
 }
 
-.blue-section {
-  background-color: $light-blue;
-  color: $white;
-  padding: 2rem 0 2rem;
+img {
+  border-style: none;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
 }
 
-cite {
-  text-transform: uppercase;
-  font-style: normal;
+svg:not(:root) {
+  overflow: hidden;
 }
 
-blockquote + cite {
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: calc(1.45rem - 1px);
+  background: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  height: 1px;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+optgroup {
+  font-weight: 700;
+}
+
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+  -webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid silver;
+  padding: 0.35em 0.625em 0.75em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+
+hgroup {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+ul {
+  margin-left: 1.45rem;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  list-style-position: outside;
+  list-style-image: none;
+}
+ol {
+  margin-left: 1.45rem;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  list-style-position: outside;
+  list-style-image: none;
+}
+dl {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+dd {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+  font-size: 0.85rem;
+  line-height: 1.42;
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  overflow: auto;
+  word-wrap: normal;
+  padding: 1.45rem;
+}
+table {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+blockquote {
+  margin-left: 1.45rem;
+  margin-right: 1.45rem;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+form {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+noscript {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+iframe {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+address {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+}
+b {
   font-weight: bold;
 }
-
-q + br + cite {
-  text-transform: initial;
-  font-weight: initial;
+strong {
+  font-weight: bold;
+}
+dt {
+  font-weight: bold;
+}
+th {
+  font-weight: bold;
+}
+li {
+  margin-bottom: calc(1.45rem / 2);
+}
+ol li {
+  padding-left: 0;
+}
+ul li {
+  padding-left: 0;
+}
+li > ol {
+  margin-left: 1.45rem;
+  margin-bottom: calc(1.45rem / 2);
+  margin-top: calc(1.45rem / 2);
+}
+li > ul {
+  margin-left: 1.45rem;
+  margin-bottom: calc(1.45rem / 2);
+  margin-top: calc(1.45rem / 2);
+}
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+li *:last-child {
+  margin-bottom: 0;
+}
+p *:last-child {
+  margin-bottom: 0;
+}
+li > p {
+  margin-bottom: calc(1.45rem / 2);
+}
+code {
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+kbd {
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+samp {
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+abbr {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+acronym {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+thead {
+  text-align: left;
+}
+td,
+th {
+  text-align: left;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  font-feature-settings: "tnum";
+  -moz-font-feature-settings: "tnum";
+  -ms-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  padding-left: 0.96667rem;
+  padding-right: 0.96667rem;
+  padding-top: 0.725rem;
+  padding-bottom: calc(0.725rem - 1px);
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+tt,
+code {
+  background-color: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+pre code {
+  background: none;
+  line-height: 1.42;
+}
+code:before,
+code:after,
+tt:before,
+tt:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
+  content: "";
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
 }
 
+.has-submenu ul {
+  margin-left: 15px;
+}
+
+// Classes --------------------------
+
+// Burger Menu
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: 38px;
+  height: 30px;
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--dark-blue);
+}
+
+/* Color/shape of burger icon bars on hover*/
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 32px !important;
+  width: 32px !important;
+  right: 1.3rem !important;
+  top: 1rem !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: var(--white);
+}
+
+span.bm-cross:first-child {
+  right: 0;
+  width: 5px !important;
+  height: 32px !important;
+}
+
+span.bm-cross:last-child {
+  right: 0;
+  width: 5px !important;
+  height: 32px !important;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--dark-blue);
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  font-size: var(--large-text);
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: var(--dark-blue);
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: var(--dark-blue);
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+}
+
+// large-quotation-mark
 .large-quotation-mark {
   font-size: 10rem;
   font-family: proxima-nova;
   font-weight: 600; // semi-bold
   height: 9rem;
 }
-
 @include media-breakpoint-up(md) {
   .large-quotation-mark {
     height: 100%;
@@ -129,24 +858,52 @@ q + br + cite {
   }
 }
 
-blockquote + cite {
-  font-size: 0.85rem;
+// listitem
+.listitem {
+  margin: 3rem 0;
 }
-
-h2 + h3 {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-q {
-  font-size: 1.5rem;
-}
-
-q + br + cite {
+.listitem::after {
+  content: "";
   display: block;
-  padding-top: 0.5rem;
+  width: 10rem;
+  margin: 4rem auto;
+  border-bottom: 1px solid black;
 }
 
+// subhead
+.subhead {
+  text-transform: uppercase;
+}
+.introText .subhead {
+  font-size: 1rem;
+}
+
+// tagline
+.tagline {
+  letter-spacing: 5px;
+  font-style: italic;
+}
+.subhead.tagline {
+  font-size: 1.1rem;
+  margin-top: 8%;
+  color: $white;
+}
+.grey-section .subhead.tagline {
+  color: $dark-blue;
+  margin-top: 3%;
+}
+
+// Sections
+.grey-section {
+  background-color: $light-grey;
+}
+.blue-section {
+  background-color: $light-blue;
+  color: $white;
+  padding: 2rem 0 2rem;
+}
+
+// Buttons
 button.btn {
   font-size: 0.7rem;
   background-color: $white;
@@ -156,23 +913,31 @@ button.btn {
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
-.container h4 {
-  font-size: 1.1rem;
-  margin-bottom: 1.1rem;
-}
-
-a {
-  text-decoration: none !important;
-}
-
 .btn-primary:hover {
   background-color: $dark-blue !important;
   border-color: $dark-blue !important;
 }
 
-.grey-section .subhead.tagline {
-  color: $dark-blue;
-  margin-top: 3%;
+// Cards
+.card {
+  min-height: 320px;
+  padding-top: 120px;
+}
+
+.row .card {
+  border-radius: 0;
+}
+
+// Other
+.footer {
+  display: flex;
+  justify-content: start;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+}
+
+.upperCase {
+  text-transform: uppercase;
 }
 
 .drop-shadow {
@@ -189,4 +954,101 @@ a {
 
 .intro-body {
   margin-top: 1rem;
+}
+
+.logo {
+  margin-left: 1rem;
+}
+
+.header {
+  background: var(--white);
+  width: 100%;
+  z-index: 2;
+}
+
+.darkBackground {
+  text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.topBar {
+  height: 71px;
+}
+
+.introText {
+  font-weight: bold;
+}
+
+.introRow {
+  padding-top: 10%;
+}
+
+.standaloneParagraph {
+  margin: 1rem;
+  max-width: var(--content-w-narrow);
+}
+
+.contentBlock {
+  display: flex;
+  justify-content: center;
+}
+
+.centerText {
+  text-align: center;
+  margin-top: 1.7rem;
+  color: var(--dark-blue);
+  margin-bottom: 0;
+}
+
+.belowheader {
+  padding-top: 84px;
+}
+
+.row {
+  align-items: center;
+}
+
+@media (--viewport-wide) {
+  .videoBackground {
+    position: absolute;
+    width: 100vw;
+    top: 90px;
+  }
+}
+
+.row.flex-start {
+  align-items: start;
+}
+
+.listitem .article__content {
+  margin-top: 1rem;
+}
+
+// IDs  --------------------------
+
+#myVideo {
+  min-width: 360px;
+  min-height: 360px;
+}
+
+#aboutCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/AdobeStock-track-119954823_Preview.jpeg");
+}
+
+#workCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg");
+}
+
+#contactCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
+}
+
+// Attributes --------------------
+
+abbr[title] {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+  text-decoration: none;
 }

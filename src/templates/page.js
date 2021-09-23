@@ -1,9 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Container from 'react-bootstrap/Container';
+import * as React from "react"
 
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
+import Seo from "../components/Seo"
+
+import Container from 'react-bootstrap/Container';
 
 const NamedPage = ({ data }) => {
   const page = data.wpPage

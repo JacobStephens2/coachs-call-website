@@ -1,15 +1,19 @@
 import * as React from 'react'
+
+import { Link } from "gatsby"
+
+import { StaticImage } from "gatsby-plugin-image"
+
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import { Link } from "gatsby"
 import Col from 'react-bootstrap/Col';
-import * as style from "../pages/index.module.scss"
-import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
-import { StaticImage } from "gatsby-plugin-image"
+
 import DonateButton from './DonateButton'
 
-const IntroRowVideo = (props) => {
+import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
+
+const IntroRow = (props) => {
 	var contactButton = '';
 	if (props.contact === "no") {
 		contactButton = '';
@@ -46,15 +50,15 @@ const IntroRowVideo = (props) => {
 	return (
 		<div>
 				{/* add or remove autoPlay as an attribute to start or stop video */}
-				<video className={`${style.video}`} playsInline muted loop>
+				<video playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
-        <div className={style.videoBackground}>
+        <div className="videoBackground">
             <Container>
                 <Row className="introRow">
                     {logo}
                     <Col className="order-lg-1 introText" lg={8}>
-                        <h2>{props.heading}</h2>
+                        <h1>{props.heading}</h1>
                         <p className="subhead">{props.subhead}</p>
 												<p className="intro-body">{props.body}</p>
 												{donateButton}
@@ -70,4 +74,8 @@ const IntroRowVideo = (props) => {
 	)
 }
 
-export default IntroRowVideo
+IntroRow.defaultProps = {
+	contact: "no",
+}
+
+export default IntroRow

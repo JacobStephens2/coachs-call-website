@@ -1,12 +1,10 @@
- /**
- * Creates hierarchical menu based on WordPress menu.
- * @link https://www.wpgraphql.com/docs/menus/#hierarchical-data
- */
-import React from "react"
-import { slide as Menu } from 'react-burger-menu'
-import * as style from "./mainNav.module.css"
-import "./burgerMenu.css"
+import * as React from "react"
+
 import { Link } from "gatsby"
+
+import { slide as Menu } from 'react-burger-menu'
+
+import * as style from "./mainnav.module.css"
 
 const MainNav = () => {      
 

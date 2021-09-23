@@ -3,7 +3,8 @@
  * @link https://github.com/henrikwirth/gatsby-starter-wordpress-twenty-twenty/blob/master/src/components/UniversalLink.js
  */
 import { Link as GatsbyLink } from "gatsby"
-import React from "react"
+
+import * as React from "react"
 
 // Since DOM elements <a> cannot receive activeClassName
 // and partiallyActive, destructure the prop here and
