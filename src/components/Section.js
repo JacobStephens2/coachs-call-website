@@ -59,6 +59,13 @@ const Section = (props) => {
 			/>;
 	}
 	
+	var boldIntro = ''
+	if (props.bold === "no" ) {
+		boldIntro = '';
+	} else {
+		boldIntro = props.bold
+	}
+
 	return (
 		<section id={props.id} className={props.sectionClass}>
 			<Container>
@@ -66,7 +73,7 @@ const Section = (props) => {
 					<Col lg={7}>
 					<h2>{props.heading}</h2>
 					<p className="subhead">{props.subheading}</p>
-					<p>{props.description}</p>
+					<p><strong>{props.bold}</strong> {props.description}</p>
 					{button}
 					</Col>
 
@@ -86,7 +93,8 @@ Section.defaultProps = {
 	belowImages: "no",
 	quote: "no",
 	list: "no",
-	button: "no"
+	button: "no",
+	bold: "no"
 }
 
 
