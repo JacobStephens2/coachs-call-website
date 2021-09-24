@@ -94,13 +94,13 @@ const NamedPage = ({ data }) => {
         <section id="mission-vision">
             <Container>
 							<Row>
-              <Col lg={5} className="light-grey-section bigger-column">
-                <h4><strong>VISION</strong></h4>
-                <p>Partnering with athletic departments and coaches to worship God through&nbsp;sports</p>
+              <Col lg={4} className="bigger-column">
+                <h3><strong>VISION</strong></h3>
+                <p className="vision">Partnering with athletic departments and coaches to worship God through&nbsp;sports</p>
               </Col>
-              <Col lg={7} className="grey-section bigger-column">
-                <h4><strong>MISSION</strong></h4>
-                <p>For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the&nbsp;Lord.</p>
+              <Col lg={7} className="bigger-column mission-column mission">
+                <h3><strong>MISSION</strong></h3>
+                <p className="mission">For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the&nbsp;Lord.</p>
               </Col>
 							</Row>
             </Container>

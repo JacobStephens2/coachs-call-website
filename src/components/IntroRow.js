@@ -31,7 +31,8 @@ const IntroRow = (props) => {
 		donateButton = '';
 	}
 
-	var logo = ''
+	var logo = '';
+	var textColumnWidth = 8;
 	if (props.logo === "yes") {
 		logo = 
 			<Col className="order-lg-2" lg={4}>
@@ -45,19 +46,20 @@ const IntroRow = (props) => {
 			</Col>;
 	} else {
 		logo = '';
+		textColumnWidth = 9;
 	}
 
 	return (
 		<div>
 				{/* add or remove autoPlay as an attribute to start or stop video */}
-				<video playsInline autoPlay muted loop>
+				<video playsInline muted loop>
             <source src={AthleticVideo} type="video/mp4" />
         </video>
         <div className="videoBackground">
             <Container>
                 <Row className="introRow">
                     {logo}
-                    <Col className="order-lg-1 introText" lg={8}>
+                    <Col className="order-lg-1 introText" lg={textColumnWidth}>
                         <h1>{props.heading}</h1>
                         <p className="subhead">{props.subhead}</p>
 												<p className="intro-body">{props.body}</p>

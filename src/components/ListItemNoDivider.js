@@ -5,17 +5,17 @@ const ListItemNoDivider = (props) => {
 		<div>
 			<li>
 				<b>{props.bold}</b>
-				&ensp;
+				<span> </span>
 				{props.description}
 			</li>
 			<li>
 				<b>{props.boldTwo}</b>
-				&ensp;
+				<span> </span>
 				{props.descriptionTwo}
 			</li>
 			<li>
 				<b>{props.boldThree}</b>
-				&ensp;
+				<span> </span>
 				{props.descriptionThree}
 			</li>
 		</div>

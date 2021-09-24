@@ -19,7 +19,7 @@ const Section = (props) => {
 	} else {
 		quote = 
 			<Col lg={9}>
-				<q className="quote-no-cite">{props.quote}</q>
+				<p className="quote-no-cite quote-no-marks">{props.quote}</p>
 			</Col>;
 	}
 
@@ -29,8 +29,8 @@ const Section = (props) => {
 	} else {
 		list = 
 			<ListItemNoDivider
-				bold={props.bold}
-				description={props.description}
+				bold={props.boldList}
+				description={props.descriptionList}
 				boldTwo={props.boldTwo}
 				descriptionTwo={props.descriptionTwo}
 				boldThree={props.boldThree}
@@ -43,7 +43,7 @@ const Section = (props) => {
 	} else if (props.button === "donate") {
 		button = <DonateButton />;
 	} else {
-		button = <Link to={props.link}><Button>{props.buttonText}</Button></Link>;
+		button = <Link to={props.link}><Button className="section-button">{props.buttonText}</Button></Link>;
 	}
 
 	var belowImages = ''
@@ -66,27 +66,50 @@ const Section = (props) => {
 		boldIntro = props.bold
 	}
 
-	return (
-		<section id={props.id} className={props.sectionClass}>
-			<Container>
-				<Row gx={20}>
-					<Col lg={7}>
-					<h2>{props.heading}</h2>
-					<p className="subhead">{props.subheading}</p>
-					<p><strong>{boldIntro}</strong> {props.description}</p>
+	if (props.endButton === "no") {
+		return (
+			<section id={props.id} className={props.sectionClass}>
+				<Container>
+					<Row gx={20}>
+						<Col lg={7}>
+						<h2>{props.heading}</h2>
+						<p className="subhead">{props.subheading}</p>
+						<p><strong>{boldIntro}</strong> {props.description}</p>
+						{button}
+						</Col>
+	
+						<Col lg={5}>
+						{props.children}
+						</Col>
+					</Row>
+					{list}
+					{belowImages}
+					{quote}
+				</Container>
+			</section>
+		)		
+	} else {
+		return (
+			<section id={props.id} className={props.sectionClass}>
+				<Container>
+					<Row gx={20}>
+						<Col lg={7}>
+						<h2>{props.heading}</h2>
+						<p className="subhead">{props.subheading}</p>
+						<p><strong>{boldIntro}</strong> {props.description}</p>
+						</Col>
+						<Col lg={5}>
+						{props.children}
+						</Col>
+					</Row>
+					{list}
+					{belowImages}
+					{quote}
 					{button}
-					</Col>
-
-					<Col lg={5}>
-					{props.children}
-					</Col>
-				</Row>
-				{list}
-				{belowImages}
-				{quote}
-			</Container>
-		</section>
-	)
+				</Container>
+			</section>
+		)
+	}
 }
 
 Section.defaultProps = {
@@ -94,7 +117,8 @@ Section.defaultProps = {
 	quote: "no",
 	list: "no",
 	button: "no",
-	bold: "no"
+	bold: "no",
+	endButton: "no"
 }
 
 

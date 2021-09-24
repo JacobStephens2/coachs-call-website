@@ -35,6 +35,7 @@ function Seo({ description, lang, meta, title }) {
             lang,
           }}
           title={data.siteMetadata?.title}
+          titleTemplate={data.siteMetadata?.title ? `%s | ${data.siteMetadata?.title}` : null}
           meta={[
             {
               name: `description`,
@@ -70,7 +71,6 @@ function Seo({ description, lang, meta, title }) {
             },
             ].concat(meta)}
           >
-          <script src="https://kit.fontawesome.com/5ebbfa01b2.js" crossorigin="anonymous"></script>
           <link rel="stylesheet" href="https://use.typekit.net/fot1kfm.css"></link>
         </Helmet>
       }}

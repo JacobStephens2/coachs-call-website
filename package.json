@@ -7,6 +7,7 @@
   "dependencies": {
     "@fontsource/lato": "^4.4.2",
     "@fontsource/open-sans": "^4.4.2",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@react-google-maps/api": "^2.1.1",
     "@wordpress/block-library": "^2.29.3",
     "babel-plugin-react-css-modules": "^5.2.6",

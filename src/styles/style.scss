@@ -155,7 +155,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: $black;
   font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
@@ -280,6 +280,12 @@ h2 a {
   color: $dark-blue;
 }
 .footer a {
+  color: $dark-blue;
+}
+.contact-text a {
+  color: $black;
+}
+.contact-text a:hover {
   color: $dark-blue;
 }
 
@@ -930,6 +936,10 @@ button.btn {
   border-color: $dark-blue !important;
 }
 
+.section-button {
+  margin-top: 0.5rem;
+}
+
 // Cards
 .card {
   min-height: 320px;
@@ -978,6 +988,11 @@ button.btn {
 .quote-no-cite {
   display: block;
   margin-bottom: 1rem;
+}
+
+.quote-no-marks {
+  font-size: 1.5rem;
+  display: block;
 }
 
 .intro-body {
@@ -1063,7 +1078,33 @@ button.btn {
   padding-left: 1rem;
 }
 
+$mission-vision-font-size: 1.2rem;
+
+.vision {
+  padding-right: 3rem;
+  font-size: $mission-vision-font-size;
+}
+
+.mission {
+  font-size: $mission-vision-font-size;
+}
+
+.mission-column {
+  margin-left: 1rem;
+}
+
 // IDs  --------------------------
+
+$meeting-point: 33%;
+#mission-vision {
+  background: linear-gradient(
+    to right,
+    $lighter-grey 0%,
+    $lighter-grey $meeting-point,
+    $light-grey $meeting-point,
+    $light-grey 100%
+  );
+}
 
 #myVideo {
   min-width: 360px;
