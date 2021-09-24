@@ -27,7 +27,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
    `)
  
  return (
-	 <>
 	 <div id="outer-container">
 		<Header siteTitle={data.wp.generalSettings.title || `Title`} />
 			<main id="page-wrap">
@@ -41,7 +40,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 			<Footer />
 		</main>
 	   </div>
-	 </>
    )
  }
  

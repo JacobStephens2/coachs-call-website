@@ -37,11 +37,11 @@ const NamedPage = ({ data }) => {
 									src="../images/LevisFamFPO.png"
 									height="320"
 							/>
-							<blockquote>“The level of my growth in grace is revealed by the way I look at obedience. We should have a much higher view of the word obedience, rescuing it from the mire of the world.”</blockquote>
-							<cite>Oswald Chambers</cite>
+							<blockquote className="column-blockquote">"The level of my growth in grace is revealed by the way I look at obedience. We should have a much higher view of the word obedience, rescuing it from the mire of the&nbsp;world.”</blockquote>
+							<p className="column-citation">Oswald Chambers</p>
 						</Col>
 
-						<Col className="order-lg-1" lg={7}>
+						<Col className="order-lg-1 wide-col-gap" lg={6}>
 							<h2>John Levis, Founder</h2>
 							<p className="subhead">helping coaches understand the pursuit of excellence on the field or court as their daily act of&nbsp;worship</p>
 							<ul>
@@ -91,14 +91,14 @@ const NamedPage = ({ data }) => {
         </Container>
 			</section>
 				
-        <section id="mission-vision" className="grey-section">
+        <section id="mission-vision">
             <Container>
 							<Row>
-              <Col lg={5}>
+              <Col lg={5} className="light-grey-section bigger-column">
                 <h4><strong>VISION</strong></h4>
                 <p>Partnering with athletic departments and coaches to worship God through&nbsp;sports</p>
               </Col>
-              <Col lg={7}>
+              <Col lg={7} className="grey-section bigger-column">
                 <h4><strong>MISSION</strong></h4>
                 <p>For coaches to see the act of coaching, the pursuit of success, and the mentoring of athletes as acts of worship to the Creator. The joy in this work is that of a composer creating masterpieces as unto the&nbsp;Lord.</p>
               </Col>

@@ -34,4 +34,11 @@ const TwoImages = (props) => {
 	}
 }
 
+TwoImages.defaultProps = {
+	image: {},
+	imageAlt: {},
+	imageTwo: {},
+	imageAltTwo: {}
+}
+
 export default TwoImages;
