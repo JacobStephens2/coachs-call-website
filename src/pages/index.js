@@ -16,6 +16,7 @@ import Contact from '../components/Contact'
 const NamedPage = ({ data }) => {
   return (
     <Layout>
+      <span id="homepage">
       <Seo title="Home" />
 			
         <IntroRow 
@@ -72,7 +73,7 @@ const NamedPage = ({ data }) => {
         <LetsConnect />
         
         <Contact />
-
+      </span>
     </Layout>
   )
 }

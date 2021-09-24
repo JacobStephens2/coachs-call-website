@@ -315,7 +315,10 @@ video {
 }
 @media (--viewport-wide) {
   video {
-    height: 80vh;
+    height: 612px;
+  }
+  #homepage video {
+    height: 680px;
   }
 }
 
@@ -972,6 +975,14 @@ button.btn {
 
 .container {
   padding-left: 1rem;
+}
+
+#email .container {
+  padding-left: 0;
+}
+
+#email .blue-section .container {
+  padding-left: 2rem;
 }
 
 .upperCase {
