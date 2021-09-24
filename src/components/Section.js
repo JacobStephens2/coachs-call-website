@@ -73,7 +73,7 @@ const Section = (props) => {
 					<Col lg={7}>
 					<h2>{props.heading}</h2>
 					<p className="subhead">{props.subheading}</p>
-					<p><strong>{props.bold}</strong> {props.description}</p>
+					<p><strong>{boldIntro}</strong> {props.description}</p>
 					{button}
 					</Col>
 

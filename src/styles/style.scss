@@ -117,7 +117,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1rem;
-  color: var(--dark-blue);
+  color: $black;
   font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
@@ -283,10 +283,8 @@ h2 a {
 cite {
   text-transform: uppercase;
   font-style: normal;
-}
-blockquote + cite {
-  font-weight: bold;
   font-size: 0.85rem;
+  font-weight: bold;
 }
 q + br + cite {
   text-transform: initial;
@@ -349,6 +347,8 @@ sup {
 
 q {
   font-size: 1.5rem;
+  text-indent: -0.75rem;
+  display: block;
 }
 
 section {
@@ -873,6 +873,7 @@ span.bm-cross:last-child {
 // subhead
 .subhead {
   text-transform: uppercase;
+  font-weight: bold;
 }
 .introText .subhead {
   font-size: 1rem;
@@ -934,6 +935,10 @@ button.btn {
   justify-content: start;
   padding: 1rem 2rem;
   font-size: 0.8rem;
+}
+
+.container {
+  padding-left: 1rem;
 }
 
 .upperCase {
