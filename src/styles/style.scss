@@ -3,8 +3,11 @@
 @import "bootstrap/scss/mixins";
 
 $dark-blue: #002856;
+$dark-blue-overlay: rgba(1, 39, 83, 0.7);
 $light-blue: #00a7e1;
+$light-blue-overlay: rgba(2, 123, 163, 0.7);
 $green: #97ca3d;
+$green-overlay: rgba(116, 156, 46, 0.7);
 $grey: #808285;
 $light-grey: #d1d1d1;
 $orange: #f78d1e;
@@ -1035,18 +1038,21 @@ button.btn {
   min-height: 360px;
 }
 
+$about-gradient: $dark-blue-overlay;
 #aboutCard {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient($about-gradient, $about-gradient),
     url("../images/AdobeStock-track-119954823_Preview.jpeg");
 }
 
+$work-gradient: $green-overlay;
 #workCard {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background-image: linear-gradient($work-gradient, $work-gradient),
     url("../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg");
 }
 
+$contact-gradient: $light-blue-overlay;
 #contactCard {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient($contact-gradient, $contact-gradient),
     url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
 }
 
