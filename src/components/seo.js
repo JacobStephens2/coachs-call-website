@@ -1,6 +1,6 @@
 /**
  * Seo component that queries for data with
- *  Gatsby's useStaticQuery React hook
+ *  Gatsby's StaticQuery component
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
@@ -35,11 +35,10 @@ function Seo({ description, lang, meta, title }) {
             lang,
           }}
           title={data.siteMetadata?.title}
-          titleTemplate={data.siteMetadata.defaultTitle ? `%s | ${data.siteMetadata.defaultTitle}` : null}
           meta={[
             {
               name: `description`,
-              content: data.sitemetaData.description,
+              content: data.sitemetaData?.description,
             },
             {
               property: `og:title`,
