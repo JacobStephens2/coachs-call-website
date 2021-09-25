@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from "gatsby-plugin-image"
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,17 +15,17 @@ const TwoImages = (props) => {
 			<span>
 				<Row>
 					<Col>
-					<GatsbyImage
+					<StaticImage
 						className="drop-shadow"
-						image={props.image}
-						alt={props.imageAlt}
+						src="../images/WorkImage1.jpg"
+						alt="The Coaching Pyramid"
 						/>
 					</Col>
 					<Col>
-					<GatsbyImage
+					<StaticImage
 						className="drop-shadow"
-						image={props.imageTwo}
-						alt={props.imageAltTwo}
+						src="../images/WorkImage2.jpg"
+						alt="Joy and Performance slide"
 					/>
 					</Col>
 				</Row>

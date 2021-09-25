@@ -1,9 +1,5 @@
 import * as React from "react";
 
-import { graphql } from 'gatsby'
-
-import { getImage } from 'gatsby-plugin-image'
-
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import IntroRow from '../components/IntroRow'
@@ -14,9 +10,6 @@ import Contact from "../components/Contact"
 
 const WorkPage = ({ data }) => {
   
-  const image = getImage(data.imageOne)
-  const imageTwo = getImage(data.imageTwo)
-
   return (
     <Layout>
       <Seo title="Work" />
@@ -45,10 +38,6 @@ const WorkPage = ({ data }) => {
 					descriptionThree="to use and implement into sport specific&nbsp;coaching"
 					
           belowImages="yes"
-          image={image}
-					imageAlt="The Coaching Pyramid"
-					imageTwo={imageTwo}
-					imageAltTwo="Joy and Performance slide"
 
           quote="I am created to glorify God by obeying His call through coaching and my primary responsibility is to create the “beautiful game” as an act of worship to&nbsp;Him."
         />
@@ -85,16 +74,5 @@ const WorkPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    imageOne: imageSharp(id: {eq: "02cc50c6-0efa-588b-a405-b75f71d460dd"}) {
-      gatsbyImageData
-    }
-    imageTwo: imageSharp(id: {eq: "8c27fcc9-3318-582a-a22d-f6f4ccb779cb"}) {
-      gatsbyImageData
-    }
-  }
-`
 
 export default WorkPage;
