@@ -13,7 +13,7 @@ import Contact from "../components/Contact"
 import Section from "../components/Section"
 
 
-const NamedPage = ({ data }) => {
+const ContactPage = ({ data }) => {
   
   return (
     <Layout>
@@ -60,4 +60,4 @@ const NamedPage = ({ data }) => {
 }
 
 
-export default NamedPage;
+export default ContactPage;

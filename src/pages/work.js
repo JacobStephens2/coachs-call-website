@@ -12,7 +12,7 @@ import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
 import Contact from "../components/Contact"
 
-const NamedPage = ({ data }) => {
+const WorkPage = ({ data }) => {
   
   const image = getImage(data.imageOne)
   const imageTwo = getImage(data.imageTwo)
@@ -97,4 +97,4 @@ export const query = graphql`
   }
 `
 
-export default NamedPage;
+export default WorkPage;

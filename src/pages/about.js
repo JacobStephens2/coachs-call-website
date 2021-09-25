@@ -18,7 +18,7 @@ import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
 import Contact from "../components/Contact";
 
-const NamedPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
@@ -128,4 +128,4 @@ const NamedPage = ({ data }) => {
 }
 
 
-export default NamedPage;
+export default AboutPage;

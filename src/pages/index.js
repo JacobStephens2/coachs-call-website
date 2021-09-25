@@ -13,7 +13,7 @@ import Map from '../components/Map'
 import IntroRow from '../components/IntroRow'
 import Contact from '../components/Contact'
 
-const NamedPage = ({ data }) => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <span id="homepage">
@@ -79,4 +79,4 @@ const NamedPage = ({ data }) => {
 }
 
 
-export default NamedPage;
+export default IndexPage;
