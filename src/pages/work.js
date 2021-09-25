@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 
 import { getImage } from 'gatsby-plugin-image'
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import IntroRow from '../components/IntroRow'
 import LetsConnect from '../components/LetsConnect'
