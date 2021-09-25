@@ -9,7 +9,6 @@ import "../styles/reset.css"
 import "../styles/accessibility.css"
 import "../styles/global.module.css"
 import "../styles/style.scss"
-import "@wordpress/block-library/build-style/style.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
  const Layout = ({ children }) => {
