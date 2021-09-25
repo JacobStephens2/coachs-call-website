@@ -23,6 +23,15 @@ const IntroRow = (props) => {
 				<Button>CONTACT JOHN</Button>
 			</Link>;
 	}
+	var emailButton = '';
+	if (props.emailButton === "no") {
+		emailButton = '';
+	} else {
+		emailButton = 
+			<a href="mailto:john@coachscall.org">
+				<Button>EMAIL JOHN</Button>
+			</a>;
+	}
 
 	var donateButton = '';
 	if (props.donateButton === "yes") {
@@ -35,7 +44,7 @@ const IntroRow = (props) => {
 	var textColumnWidth = 8;
 	if (props.logo === "yes") {
 		logo = 
-			<Col className="order-lg-2" lg={4}>
+			<Col className="order-lg-2 mobile-hidden" lg={4}>
 					<StaticImage
 							alt="Coach's Call logo crest"
 							placeholder="blurred"
@@ -65,6 +74,7 @@ const IntroRow = (props) => {
 												<p className="intro-body">{props.body}</p>
 												{donateButton}
 												{contactButton}
+												{emailButton}
                     </Col>
                 </Row>
                 <Row>
@@ -78,6 +88,7 @@ const IntroRow = (props) => {
 
 IntroRow.defaultProps = {
 	contact: "no",
+	emailButton: "no"
 }
 
 export default IntroRow
