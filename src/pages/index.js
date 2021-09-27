@@ -12,8 +12,9 @@ import Section from '../components/Section'
 import Map from '../components/Map'
 import IntroRow from '../components/IntroRow'
 import Contact from '../components/Contact'
+import VideoSlowGrass from '../components/VideoSlowGrass'
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <Layout>
       <span id="homepage">
@@ -24,7 +25,9 @@ const IndexPage = ({ data }) => {
 					heading="Deepening coach impact through one-on-one mentoring, consulting, and&nbsp;seminars."
 					subhead="Founder and coach John Levis has 25 years experience in coaching, young life Ministry, and college&nbsp;administration."
           cardClass="aboutCard"
-				/>
+				>
+          <VideoSlowGrass />
+        </IntroRow>
 
         <Row>
           <Card

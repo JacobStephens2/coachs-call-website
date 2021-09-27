@@ -7,6 +7,7 @@ import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
 import Contact from "../components/Contact"
+import VideoAthlete from "../components/VideoAthlete"
 
 const WorkPage = ({ data }) => {
   
@@ -14,9 +15,12 @@ const WorkPage = ({ data }) => {
     <Layout>
       <Seo title="Work" />
         <IntroRow
+          logo="yes"
           heading="Whether you win or lose matters, and so does how you play the&nbsp;game." 
           subhead="Partnering with Coaches in their pursuit of God’s call in&nbsp;coaching." 
-        />
+        >
+          <VideoAthlete />
+        </IntroRow>
 				
         <Section
 					id="seminars-and-workshops"

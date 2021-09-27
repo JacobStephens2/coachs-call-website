@@ -11,6 +11,7 @@ import BlockQuote from '../components/BlockQuote'
 import ContactText from "../components/ContactText"
 import Contact from "../components/Contact"
 import Section from "../components/Section"
+import VideoWideGrass from "../components/VideoWideGrass"
 
 
 const ContactPage = ({ data }) => {
@@ -19,11 +20,14 @@ const ContactPage = ({ data }) => {
     <Layout>
       <Seo title="Work" />
         <IntroRow
+          logo="yes"
           heading="Let's Connect" 
           subhead="Email me" 
           body="Feel free to message me, and we can email back and forth or set up a time to call. Also, if you would like to donate to support the work we are doing, please do so with the link&nbsp;below."
           emailButton="yes"
-        />
+        >
+          <VideoWideGrass />
+        </IntroRow>
 
         <section
           id="email"

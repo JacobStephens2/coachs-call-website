@@ -17,15 +17,19 @@ import LetsConnect from '../components/LetsConnect'
 import BlockQuote from '../components/BlockQuote'
 import Section from '../components/Section'
 import Contact from "../components/Contact";
+import VideoGoal from '../components/VideoGoal'
 
 const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
         <IntroRow
+					logo="yes"
           heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching." 
           subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration." 
-        />
+        >
+					<VideoGoal />
+				</IntroRow>
 				<section id="john-levis">
         <Container>
 					<Row className="flex-start">

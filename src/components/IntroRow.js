@@ -11,7 +11,6 @@ import Col from 'react-bootstrap/Col';
 
 import DonateButton from './DonateButton'
 
-import AthleticVideo from "../videos/AdobeStock_athletic-video-montage.mp4"
 
 const IntroRow = (props) => {
 	var contactButton = '';
@@ -44,7 +43,7 @@ const IntroRow = (props) => {
 	var textColumnWidth = 8;
 	if (props.logo === "yes") {
 		logo = 
-			<Col className="order-lg-2 mobile-hidden" lg={4}>
+			<Col className="order-lg-2" lg={4}>
 					<StaticImage
 							alt="Coach's Call logo crest"
 							placeholder="blurred"
@@ -60,28 +59,25 @@ const IntroRow = (props) => {
 
 	return (
 		<div>
-				{/* add or remove autoPlay as an attribute to start or stop video */}
-				<video autoPlay playsInline muted loop>
-            <source src={AthleticVideo} type="video/mp4" />
-        </video>
-        <div className="videoBackground">
-            <Container>
-                <Row className="introRow">
-                    {logo}
-                    <Col className="order-lg-1 introText" lg={textColumnWidth}>
-                        <h1>{props.heading}</h1>
-                        <p className="subhead">{props.subhead}</p>
-												<p className="intro-body">{props.body}</p>
-												{donateButton}
-												{contactButton}
-												{emailButton}
-                    </Col>
-                </Row>
-                <Row>
-                <p className="subhead tagline">Glorifying God and Experiencing Joy Through Sports</p>
-                </Row>
-            </Container>
-        </div>
+			{props.children}
+			<div className="videoBackground">
+				<Container>
+						<Row className="introRow">
+								{logo}
+								<Col className="order-lg-1 introText" lg={textColumnWidth}>
+										<h1>{props.heading}</h1>
+										<p className="subhead">{props.subhead}</p>
+										<p className="intro-body">{props.body}</p>
+										{donateButton}
+										{contactButton}
+										{emailButton}
+								</Col>
+						</Row>
+						<Row>
+						<p className="subhead tagline">Glorifying God and Experiencing Joy Through Sports</p>
+						</Row>
+				</Container>
+			</div>
 	  </div>
 	)
 }
