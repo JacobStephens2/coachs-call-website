@@ -9,7 +9,7 @@ const Map = () => {
 				placeholder="blurred"
 				loading="eager"
 				src="../images/UnitedStatesMap_112467261.svg"
-				height="320"
+				height="500"
 			/>
 
 	)

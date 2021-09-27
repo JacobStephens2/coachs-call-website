@@ -7,7 +7,7 @@ $dark-blue-overlay: rgba(1, 39, 83, 0.7);
 $light-blue: #00a7e1;
 $light-blue-overlay: rgba(2, 123, 163, 0.7);
 $green: #97ca3d;
-$green-overlay: rgba(116, 156, 46, 0.7);
+$green-overlay: rgba(61, 80, 30, 0.7);
 $grey: #808285;
 $light-grey: #d1d1d1;
 $lighter-grey: rgb(230, 230, 230);
@@ -284,14 +284,14 @@ h2 a {
 .grey-section a {
   color: $dark-blue;
 }
+.dark-blue-section a {
+  color: $white;
+}
 .footer a {
   color: $dark-blue;
 }
-.contact-text a {
-  color: $black;
-}
 .contact-text a:hover {
-  color: $dark-blue;
+  color: $light-blue;
 }
 
 // Citations
@@ -325,7 +325,7 @@ video {
 }
 @include media-breakpoint-down(lg) {
   video {
-    height: 568px;
+    height: 850px;
   }
 }
 
@@ -784,6 +784,22 @@ pre tt:after {
 
 // Classes --------------------------
 
+.white-shadow {
+  filter: drop-shadow(0px 0px 4px $white);
+}
+
+.justify-end {
+  display: flex;
+  justify-content: end;
+}
+
+@include media-breakpoint-up(md) {
+  .blockquote-column {
+    position: absolute;
+    left: 16%;
+  }
+}
+
 // Burger Menu
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -828,42 +844,41 @@ span.bm-cross:last-child {
 
 /*
   Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  Note: Beware of modifying this element as it can break the animations.
+  You should not need to touch it in most cases
   */
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
   margin-top: 1rem;
 }
-
 /* General sidebar styles */
 .bm-menu {
   background: var(--dark-blue);
   padding: 2.5rem 1.5rem 0 1.5rem;
   font-size: var(--large-text);
 }
-
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: var(--dark-blue);
 }
-
 /* Wrapper for item list */
 .bm-item-list {
   color: var(--dark-blue);
 }
-
 /* Individual item */
 .bm-item {
   display: inline-block;
 }
-
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
   position: absolute;
   top: 0;
+}
+.bm-menu a:hover {
+  color: $light-blue;
 }
 
 // large-quotation-mark
@@ -932,6 +947,11 @@ span.bm-cross:last-child {
 }
 .blue-section {
   background-color: $light-blue;
+  color: $white;
+  padding: 2rem 0 2rem;
+}
+.dark-blue-section {
+  background-color: $dark-blue;
   color: $white;
   padding: 2rem 0 2rem;
 }
@@ -1004,8 +1024,8 @@ button.btn {
 .drop-shadow {
   box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px,
     rgba(71, 63, 79, 0.16) 0px 4px 8px;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.7rem;
 }
 
 .quote-no-cite {
@@ -1024,6 +1044,13 @@ button.btn {
 
 .logo {
   margin-left: 1rem;
+}
+$logo-mobile-scale: 80%;
+@include media-breakpoint-down(md) {
+  .logo {
+    width: $logo-mobile-scale;
+    height: $logo-mobile-scale;
+  }
 }
 
 .header {
@@ -1087,6 +1114,11 @@ button.btn {
 
 @include media-breakpoint-down(md) {
   .mobile-hidden {
+    display: none;
+  }
+}
+@include media-breakpoint-down(md) {
+  .desktop-hidden {
     display: none;
   }
 }
@@ -1166,7 +1198,7 @@ $about-gradient: $dark-blue-overlay;
 $work-gradient: $green-overlay;
 #workCard {
   background-image: linear-gradient($work-gradient, $work-gradient),
-    url("../images/AdobeStock-baseball_batting_spot-13720898_Preview.jpeg");
+    url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
 }
 
 $contact-gradient: $light-blue-overlay;
