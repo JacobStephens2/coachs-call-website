@@ -787,6 +787,14 @@ pre tt:after {
 
 // Classes --------------------------
 
+.bottom-sticky-row {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100vw;
+  max-height: 60px;
+}
+
 .white-shadow {
   filter: drop-shadow(0px 0px 4px $white);
 }

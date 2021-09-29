@@ -53,6 +53,28 @@ const IndexPage = () => {
           <VideoSlowGrass />
         </IntroRow>
 
+        <Row 
+          className="bottom-sticky-row"
+          data-aos="slide-down"
+          data-aos-easing="ease-out"
+        >
+          <Card
+            link="/about"
+            category="About"
+            id="aboutCard"
+          />
+          <Card
+            link="/work"
+            category="Work"
+            id="workCard"
+          />
+          <Card
+            link="/contact"
+            category="Contact"
+            id="contactCard"
+          />
+        </Row>
+
         <Row>
           <Card
             link="/about"
@@ -76,11 +98,6 @@ const IndexPage = () => {
             id="contactCard"
           />
         </Row>
-
-        <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-          <h1>fade zoom in</h1>
-        </div>
-
 
         <Section 
           heading="National Connections"
