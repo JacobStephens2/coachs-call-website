@@ -60,7 +60,7 @@ const IntroRow = props => {
   }
 
   return (
-    <div>
+    <div className="introRowFirstDiv">
       {props.children}
       <div className="videoBackground">
         <Container>

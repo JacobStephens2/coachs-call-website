@@ -6,6 +6,7 @@ import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"
 import Card from "../components/Card"
+import CardSlim from "../components/CardSlim"
 import BlockQuote from "../components/BlockQuote"
 import Section from "../components/Section"
 import Map from "../components/Map"
@@ -17,12 +18,21 @@ const isBrowser = typeof window !== "undefined"
 
 const IndexPage = () => {
   if (isBrowser) {
-    const myButton = document.querySelector(".target-button")
+    const bottomBar = document.querySelector(".bottom-bar")
 
-    myButton.addEventListener("click", () => {
-      myButton.classList.toggle("dark-button")
-      console.log("button was clicked")
-    })
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (window.scrollY === 0) {
+          bottomBar.classList.add("slideIn")
+          bottomBar.classList.remove("slideOut")
+        } else {
+          bottomBar.classList.add("slideOut")
+          bottomBar.classList.remove("slideIn")
+        }
+      },
+      false
+    )
   }
 
   return (
@@ -39,12 +49,10 @@ const IndexPage = () => {
           <VideoSlowGrass />
         </IntroRow>
 
-        <button className="target-button">Toggle dark button</button>
-
-        <Row className="bottom-sticky-row">
-          <Card link="/about" category="About" id="aboutCard" />
-          <Card link="/work" category="Work" id="workCard" />
-          <Card link="/contact" category="Contact" id="contactCard" />
+        <Row id="animated-example" className="bottom-bar animated">
+          <CardSlim link="/about" category="About" id="aboutCard" />
+          <CardSlim link="/work" category="Work" id="workCard" />
+          <CardSlim link="/contact" category="Contact" id="contactCard" />
         </Row>
 
         <Row>

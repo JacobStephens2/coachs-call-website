@@ -112,6 +112,12 @@ html h1 {
   html h1 {
     font-size: 2.5rem;
   }
+  .introRow {
+    padding-left: 1rem;
+  }
+  .videoBackground .row .tagline {
+    padding-left: 1rem;
+  }
 }
 .introRow h1 {
   color: var(--white);
@@ -325,7 +331,7 @@ video {
 }
 @media (--viewport-wide) {
   video {
-    height: 680px;
+    height: 83vh;
   }
 }
 @include media-breakpoint-down(lg) {
@@ -789,12 +795,56 @@ pre tt:after {
 
 // Classes --------------------------
 
-.dark-button {
-  background-color: navy;
-  color: white;
+.animated {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-.bottom-sticky-row {
+@-webkit-keyframes slideOut {
+  0% {
+  }
+  100% {
+    bottom: -60px;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+  }
+  100% {
+    bottom: -60px;
+  }
+}
+
+.slideOut {
+  -webkit-animation-name: slideOut;
+  animation-name: slideOut;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    bottom: -60px;
+  }
+  100% {
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    bottom: -60px;
+  }
+  100% {
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.bottom-bar {
   position: fixed;
   bottom: 0;
   z-index: 2;
@@ -1008,6 +1058,20 @@ button.btn {
 .card {
   min-height: 320px;
   padding-top: 120px;
+}
+
+#homepage .introRowFirstDiv {
+  height: 83vh;
+}
+
+.slim-card {
+  min-height: 60px;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.row .slim-card {
+  border-radius: 0;
 }
 
 .row .card {
@@ -1229,6 +1293,7 @@ $work-gradient: var(--green-overlay);
 #workCard {
   background-image: linear-gradient($work-gradient, $work-gradient),
     url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
+  max-height: 320px;
 }
 
 $contact-gradient: var(--light-blue-overlay);
