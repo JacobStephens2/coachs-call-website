@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { useEffect } from "react" 
 import Row from 'react-bootstrap/Row'
 
 import Layout from "../components/Layout"
@@ -13,8 +13,32 @@ import Map from '../components/Map'
 import IntroRow from '../components/IntroRow'
 import Contact from '../components/Contact'
 import VideoSlowGrass from '../components/VideoSlowGrass'
+import "aos/dist/aos.css";
+
+
 
 const IndexPage = () => {
+
+  let AOS;
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
+
+
   return (
     <Layout>
       <span id="homepage">
@@ -52,6 +76,11 @@ const IndexPage = () => {
             id="contactCard"
           />
         </Row>
+
+        <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+          <h1>fade zoom in</h1>
+        </div>
+
 
         <Section 
           heading="National Connections"

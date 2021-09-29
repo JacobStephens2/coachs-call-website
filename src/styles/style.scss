@@ -287,6 +287,9 @@ h2 a {
 .dark-blue-section a {
   color: $white;
 }
+.contact-text a {
+  color: $dark-blue;
+}
 .footer a {
   color: $dark-blue;
 }
@@ -798,6 +801,9 @@ pre tt:after {
     position: absolute;
     left: 16%;
   }
+  .block-position .blockquote-column {
+    position: initial;
+  }
 }
 
 // Burger Menu
@@ -1117,9 +1123,10 @@ $logo-mobile-scale: 80%;
     display: none;
   }
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-up(md) {
   .desktop-hidden {
     display: none;
+    height: 750px;
   }
 }
 
