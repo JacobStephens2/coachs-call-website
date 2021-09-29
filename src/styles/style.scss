@@ -2,19 +2,21 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
-$dark-blue: #002856;
-$dark-blue-overlay: rgba(1, 39, 83, 0.7);
-$light-blue: #00a7e1;
-$light-blue-overlay: rgba(2, 123, 163, 0.7);
-$green: #97ca3d;
-$green-overlay: rgba(61, 80, 30, 0.7);
-$grey: #808285;
-$light-grey: #d1d1d1;
-$lighter-grey: rgb(230, 230, 230);
-$orange: #f78d1e;
-$white: #fff;
-$black: #000;
-$main-header-font-size: 3rem;
+:root {
+  --dark-blue-overlay: rgba(1, 39, 83, 0.7);
+  --dark-blue: #002856;
+  --light-blue: #00a7e1;
+  --light-blue-overlay: rgba(2, 123, 163, 0.7);
+  --green: #97ca3d;
+  --green-overlay: rgba(61, 80, 30, 0.7);
+  --grey: #808285;
+  --lighter-grey: rgb(230, 230, 230);
+  --light-grey: #d1d1d1;
+  --orange: #f78d1e;
+  --white: #fff;
+  --black: #000;
+  --main-header-font-size: 3rem;
+}
 
 // CONTENTS
 //
@@ -41,7 +43,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $black;
+  color: var(--black);
   font-family: var(--primary-font), serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -104,7 +106,7 @@ h1 {
   text-transform: uppercase;
 }
 html h1 {
-  font-size: $main-header-font-size;
+  font-size: var(--main-header-font-size);
 }
 @include media-breakpoint-down(md) {
   html h1 {
@@ -112,7 +114,7 @@ html h1 {
   }
 }
 .introRow h1 {
-  color: $white;
+  color: var(--white);
   text-transform: initial;
 }
 
@@ -126,7 +128,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1rem;
-  color: $dark-blue;
+  color: var(--dark-blue);
   font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
@@ -136,18 +138,18 @@ h2 {
   line-height: 1.1;
 }
 section h2 {
-  font-size: $main-header-font-size;
+  font-size: var(--main-header-font-size);
 }
 a h2 {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
 .introText h2 {
-  color: $white;
+  color: var(--white);
   font-size: 2.8rem;
 }
 .darkBackground h2 {
-  color: $white;
+  color: var(--white);
 }
 
 // h3
@@ -160,7 +162,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $black;
+  color: var(--black);
   font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
@@ -174,7 +176,7 @@ h2 + h3 {
   margin-top: 0.8rem;
 }
 .darkBackground h3 {
-  color: $white;
+  color: var(--white);
 }
 
 // h4
@@ -249,13 +251,13 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $black;
+  color: var(--black);
 }
 .introText p {
-  color: $white;
+  color: var(--white);
 }
 .darkBackground p {
-  color: $white;
+  color: var(--white);
 }
 
 // Anchors
@@ -276,25 +278,25 @@ h2 a {
   text-decoration: none;
 }
 .darkBackground a {
-  color: $white;
+  color: var(--white);
 }
 .darkBackground h2 a {
-  color: $white;
+  color: var(--white);
 }
 .grey-section a {
-  color: $dark-blue;
+  color: var(--dark-blue);
 }
 .dark-blue-section a {
-  color: $white;
+  color: var(--white);
 }
 .contact-text a {
-  color: $dark-blue;
+  color: var(--white);
 }
 .footer a {
-  color: $dark-blue;
+  color: var(--dark-blue);
 }
 .contact-text a:hover {
-  color: $light-blue;
+  color: var(--light-blue);
 }
 
 // Citations
@@ -787,6 +789,11 @@ pre tt:after {
 
 // Classes --------------------------
 
+.dark-button {
+  background-color: navy;
+  color: white;
+}
+
 .bottom-sticky-row {
   position: fixed;
   bottom: 0;
@@ -794,9 +801,17 @@ pre tt:after {
   width: 100vw;
   max-height: 60px;
 }
+.visible,
+.invisible {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1;
+}
 
 .white-shadow {
-  filter: drop-shadow(0px 0px 4px $white);
+  filter: drop-shadow(0px 0px 4px var(--white));
 }
 
 .justify-end {
@@ -892,7 +907,7 @@ span.bm-cross:last-child {
   top: 0;
 }
 .bm-menu a:hover {
-  color: $light-blue;
+  color: var(--light-blue);
 }
 
 // large-quotation-mark
@@ -940,7 +955,7 @@ span.bm-cross:last-child {
 .subhead.tagline {
   font-size: 1.1rem;
   margin-top: 8%;
-  color: $white;
+  color: var(--white);
 }
 @include media-breakpoint-down(md) {
   .subhead.tagline {
@@ -948,41 +963,41 @@ span.bm-cross:last-child {
   }
 }
 .grey-section .subhead.tagline {
-  color: $dark-blue;
+  color: var(--dark-blue);
   margin-top: 3%;
 }
 
 // Sections
 .grey-section {
-  background-color: $light-grey;
+  background-color: var(--light-grey);
 }
 .light-grey-section {
-  background-color: $lighter-grey;
+  background-color: var(--lighter-grey);
 }
 .blue-section {
-  background-color: $light-blue;
-  color: $white;
+  background-color: var(--light-blue);
+  color: var(--white);
   padding: 2rem 0 2rem;
 }
 .dark-blue-section {
-  background-color: $dark-blue;
-  color: $white;
+  background-color: var(--dark-blue);
+  color: var(--white);
   padding: 2rem 0 2rem;
 }
 
 // Buttons
 button.btn {
   font-size: 0.7rem;
-  background-color: $white;
-  color: $black;
+  background-color: var(--white);
+  color: var(--black);
   border-radius: 0;
-  border-color: $grey;
+  border-color: var(--grey);
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: $dark-blue !important;
-  border-color: $dark-blue !important;
+  background-color: var(--dark-blue) !important;
+  border-color: var(--dark-blue) !important;
 }
 
 .section-button {
@@ -1179,10 +1194,10 @@ $meeting-point: 33%;
 #mission-vision {
   background: linear-gradient(
     to right,
-    $lighter-grey 0%,
-    $lighter-grey $meeting-point,
-    $light-grey $meeting-point,
-    $light-grey 100%
+    var(--lighter-grey) 0%,
+    var(--lighter-grey) $meeting-point,
+    var(--light-grey) $meeting-point,
+    var(--light-grey) 100%
   );
 }
 
@@ -1191,10 +1206,10 @@ $mobile-meeting-point: 50%;
   #mission-vision {
     background: linear-gradient(
       to bottom,
-      $lighter-grey 0%,
-      $lighter-grey $mobile-meeting-point,
-      $light-grey $mobile-meeting-point,
-      $light-grey 100%
+      var(--lighter-grey) 0%,
+      var(--lighter-grey) $mobile-meeting-point,
+      var(--light-grey) $mobile-meeting-point,
+      var(--light-grey) 100%
     );
   }
 }
@@ -1204,19 +1219,19 @@ $mobile-meeting-point: 50%;
   min-height: 360px;
 }
 
-$about-gradient: $dark-blue-overlay;
+$about-gradient: var(--dark-blue-overlay);
 #aboutCard {
   background-image: linear-gradient($about-gradient, $about-gradient),
     url("../images/AdobeStock-track-119954823_Preview.jpeg");
 }
 
-$work-gradient: $green-overlay;
+$work-gradient: var(--green-overlay);
 #workCard {
   background-image: linear-gradient($work-gradient, $work-gradient),
     url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
 }
 
-$contact-gradient: $light-blue-overlay;
+$contact-gradient: var(--light-blue-overlay);
 #contactCard {
   background-image: linear-gradient($contact-gradient, $contact-gradient),
     url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
