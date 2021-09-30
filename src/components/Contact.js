@@ -14,7 +14,7 @@ const Contact = () => {
           <Col>
             <ContactText />
           </Col>
-          <Col className="justify-end order-lg-2">
+          <Col className="justify-end order-lg-2 contact-section-crest-col">
             <StaticImage
               alt="Coach's Call logo crest"
               placeholder="blurred"

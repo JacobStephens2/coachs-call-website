@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container"
 
 const Footer = () => {
   return (
@@ -9,11 +9,15 @@ const Footer = () => {
         <div>
           © {new Date().getFullYear()}
           {` `}
-          <a rel="noreferrer" href="https://www.15eastcreative.com" target="_blank" >Coach's Call</a>
-          &ensp;|&ensp;
-          All rights reserved.
-          &ensp;|&ensp;
-          <a href="/privacy-policy">Privacy Policy</a>
+          <a
+            rel="noreferrer"
+            href="https://www.15eastcreative.com"
+            target="_blank"
+          >
+            Coach's Call
+          </a>
+          &ensp;|&ensp; All rights reserved. &ensp;|&ensp;
+          <a href="/privacy-policy">Privacy&nbsp;Policy</a>
         </div>
       </Container>
     </footer>

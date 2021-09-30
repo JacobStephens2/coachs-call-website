@@ -300,11 +300,20 @@ h2 a {
 .contact-text a {
   color: var(--white);
 }
+.contact-john-levis .contact-text a {
+  color: var(--dark-blue);
+}
 .footer a {
   color: var(--dark-blue);
 }
 .contact-text a:hover {
   color: var(--light-blue);
+}
+
+@include media-breakpoint-down(md) {
+  .contact-text p {
+    font-size: 0.9rem;
+  }
 }
 
 // Citations
@@ -797,6 +806,14 @@ pre tt:after {
 
 // Classes --------------------------
 
+.contact-page .contact-john-levis {
+  padding-left: 2rem;
+}
+
+.contact-page .blockquote-column {
+  padding-left: 0;
+}
+
 .white-bar {
   height: 6px;
   background-color: var(--white);
@@ -1045,6 +1062,9 @@ span.bm-cross:last-child {
   .subhead.tagline {
     margin-top: 0;
   }
+  .contact-page .subhead.tagline {
+    margin-top: 1rem;
+  }
 }
 .grey-section .subhead.tagline {
   color: var(--dark-blue);
@@ -1157,6 +1177,12 @@ button.btn {
   font-size: 0.8rem;
 }
 
+@include media-breakpoint-down(md) {
+  .footer {
+    padding: 1rem 0;
+  }
+}
+
 .container {
   padding-left: 1rem;
 }
@@ -1250,8 +1276,21 @@ $logo-mobile-scale: 80%;
   margin-bottom: 0;
 }
 
+.contact-page .contact-section-crest-col {
+  padding-left: 0;
+}
+
 .belowheader {
   padding-top: 84px;
+}
+
+@include media-breakpoint-down(md) {
+  .dark-blue-section .contact-text-container {
+    padding: 0;
+  }
+  .contact-page .dark-blue-section .contact-text-container {
+    padding-left: 0.3rem;
+  }
 }
 
 .row {
@@ -1328,7 +1367,18 @@ $mission-vision-font-size: 1.2rem;
   margin-left: 1rem;
 }
 
+@include media-breakpoint-down(md) {
+  .mission-column {
+    margin-left: 0;
+  }
+}
+
 // IDs #ids --------------------------
+
+section#donate {
+  padding-top: 0;
+  padding-left: 0.4rem;
+}
 
 $meeting-point: 33%;
 #mission-vision {
