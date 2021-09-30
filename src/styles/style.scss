@@ -116,7 +116,7 @@ html h1 {
     padding-left: 1rem;
   }
   .videoBackground .row .tagline {
-    padding-left: 1rem;
+    padding-left: 1.7rem;
   }
 }
 .introRow h1 {
@@ -795,6 +795,10 @@ pre tt:after {
 
 // Classes --------------------------
 
+.darken {
+  filter: brightness(50%);
+}
+
 .animated {
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
@@ -1054,20 +1058,33 @@ button.btn {
   margin-top: 0.5rem;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 // Cards
 .card {
   min-height: 320px;
-  padding-top: 120px;
+  padding-top: 91px;
+}
+
+.slim-card#contactCard {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #homepage .introRowFirstDiv {
-  height: 83vh;
+  min-height: 83vh;
 }
 
 .slim-card {
   min-height: 60px;
   padding-top: 1rem;
   text-align: center;
+}
+
+.slim-card a h2 {
+  font-size: 0.9rem;
 }
 
 .row .slim-card {
@@ -1208,6 +1225,10 @@ $logo-mobile-scale: 80%;
 @include media-breakpoint-down(md) {
   .mobile-hidden {
     display: none;
+  }
+  .mobile-center {
+    display: flex;
+    justify-content: center;
   }
 }
 @include media-breakpoint-up(md) {

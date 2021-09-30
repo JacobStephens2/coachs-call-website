@@ -7,9 +7,16 @@ import Container from "react-bootstrap/Container"
 
 const CardSlim = props => {
   return (
-    <Col id={props.id} className="slim-card darkBackground" lg={4}>
+    <Col
+      id={props.id}
+      className="slim-card darkBackground"
+      xs={4}
+      sm={4}
+      md={4}
+      lg={4}
+    >
       <Link to={props.link}>
-        <Container>
+        <Container className="no-padding">
           <h2>{props.category}</h2>
         </Container>
       </Link>
