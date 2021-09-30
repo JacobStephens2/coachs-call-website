@@ -855,6 +855,18 @@ pre tt:after {
   width: 100vw;
   max-height: 60px;
 }
+#animated-example.bottom-bar {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .bottom-bar {
+    max-height: 48px;
+  }
+}
+
 .visible,
 .invisible {
   opacity: 0;
@@ -1008,7 +1020,7 @@ span.bm-cross:last-child {
 }
 .subhead.tagline {
   font-size: 1.1rem;
-  margin-top: 8%;
+  margin-top: 3%;
   color: var(--white);
 }
 @include media-breakpoint-down(md) {
@@ -1084,7 +1096,13 @@ button.btn {
 }
 
 .slim-card a h2 {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+}
+
+@include media-breakpoint-down(md) {
+  .slim-card a h2 {
+    font-size: 0.9rem;
+  }
 }
 
 .row .slim-card {
