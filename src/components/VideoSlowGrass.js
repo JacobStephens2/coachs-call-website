@@ -9,11 +9,11 @@ const VideoSlowGrass = () => {
         <source src={AthleticVideo} type="video/mp4" />
       </video>
       <StaticImage
-        className="desktop-hidden darken"
+        className="desktop-hidden darken intro-row-image"
         src="../images/ImageSlowGrass.png"
         alt="Athlete stretching"
         height={750}
-        layout="fixed"
+        layout="constrained"
       />
     </span>
   )

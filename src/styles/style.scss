@@ -18,6 +18,8 @@
   --main-header-font-size: 3rem;
 }
 
+$mobile-homepage-image-height: 850px;
+
 // CONTENTS
 //
 // If an element is ultimately targeted, that rule goes into the elements section, and so on.
@@ -876,6 +878,17 @@ pre tt:after {
   opacity: 1;
 }
 
+.intro-row-image {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+@include media-breakpoint-down(md) {
+  .intro-row-image {
+    min-height: $mobile-homepage-image-height;
+  }
+}
+
 .white-shadow {
   filter: drop-shadow(0px 0px 4px var(--white));
 }
@@ -1089,6 +1102,12 @@ button.btn {
   min-height: 83vh;
 }
 
+@include media-breakpoint-down(md) {
+  #homepage .introRowFirstDiv {
+    min-height: $mobile-homepage-image-height;
+  }
+}
+
 .slim-card {
   min-height: 60px;
   padding-top: 1rem;
@@ -1251,7 +1270,7 @@ $logo-mobile-scale: 80%;
 }
 @include media-breakpoint-up(md) {
   .desktop-hidden {
-    display: none;
+    display: none !important;
     height: 750px;
   }
 }
