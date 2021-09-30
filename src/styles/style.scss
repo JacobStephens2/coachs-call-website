@@ -797,6 +797,11 @@ pre tt:after {
 
 // Classes --------------------------
 
+.white-bar {
+  height: 6px;
+  background-color: var(--white);
+}
+
 .darken {
   filter: brightness(50%);
 }
@@ -865,7 +870,7 @@ pre tt:after {
 
 @include media-breakpoint-down(md) {
   .bottom-bar {
-    max-height: 48px;
+    max-height: 52px;
   }
 }
 
@@ -1251,6 +1256,11 @@ $logo-mobile-scale: 80%;
 
 .row {
   align-items: center;
+  max-width: 100vw;
+}
+
+.row.home-page-main-card-row {
+  margin: 0;
 }
 
 .videoBackground {
@@ -1263,15 +1273,23 @@ $logo-mobile-scale: 80%;
   .mobile-hidden {
     display: none;
   }
-  .mobile-center {
-    display: flex;
-    justify-content: center;
-  }
 }
 @include media-breakpoint-up(md) {
   .desktop-hidden {
     display: none !important;
     height: 750px;
+  }
+}
+@include media-breakpoint-down(lg) {
+  .mobile-center {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .blockquote-column {
+    margin-left: 3rem;
   }
 }
 

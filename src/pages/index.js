@@ -50,12 +50,13 @@ const IndexPage = () => {
         </IntroRow>
 
         <Row id="animated-example" className="bottom-bar animated">
+          <div className="white-bar"></div>
           <CardSlim link="/about" category="About" id="aboutCard" />
           <CardSlim link="/work" category="Work" id="workCard" />
           <CardSlim link="/contact" category="Contact" id="contactCard" />
         </Row>
 
-        <Row>
+        <Row className="home-page-main-card-row">
           <Card
             link="/about"
             category="About"
