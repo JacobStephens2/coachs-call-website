@@ -35,11 +35,19 @@ const AboutPage = ({ data }) => {
           <Row className="flex-start">
             <Col className="order-lg-2" lg={5}>
               <StaticImage
+                alt="Portrait photo of John Levis"
+                className="john-portrait"
+                placeholder="blurred"
+                loading="eager"
+                src="../images/john-levis-headshot-sep-2021-edited.jpg"
+                height={500}
+              />
+              <StaticImage
                 alt="John Levis with their family"
                 placeholder="blurred"
                 loading="eager"
-                src="../images/LevisFamFPO.png"
-                height={320}
+                src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
+                height={300}
               />
               <blockquote className="column-blockquote">
                 "The level of my growth in grace is revealed by the way I look
