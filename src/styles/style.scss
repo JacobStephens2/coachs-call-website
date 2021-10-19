@@ -1,7 +1,6 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
-@import "./global.module.css";
 
 :root {
   /* Fonts */
@@ -887,7 +886,9 @@ pre tt:after {
   display: flex;
   justify-content: center;
 }
+
 $quote-background-color: rgba(49, 50, 53, 0.8);
+
 .quote-section {
   margin-top: 8px;
   text-align: center;

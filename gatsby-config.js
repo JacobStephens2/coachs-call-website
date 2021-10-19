@@ -79,13 +79,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-css-customs`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
-      },
-    },
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-manifest`,
