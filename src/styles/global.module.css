@@ -1,39 +1,3 @@
-:root {
-  /* Fonts */
-  --primary-font: "Open Sans", sans-serif;
-  --highlight-font-weight: 600;
-  --highlight-font-style: normal;
-  --highlight-font: "Lato", sans-serif;
-  --highlight-font-weight: 400;
-  --highlight-font-style: normal;
-  --normal-text: 19px;
-  --large-text: 26px;
-
-  /* Colours */
-  --dark-blue: #002856;
-  --light-blue: #00a7e1;
-  --grey: #808285;
-  --white: #ffffff;
-  --orange: #e03400;
-  --purple: #9100bd;
-
-  --mod-light: 90%;
-  --mod-medium: 50%;
-  --mod-dark: 20%;
-  --main-bg-light: hsl(183, 42%, var(--mod-light));
-  --main-bg-medium: hsl(183, 42%, var(--mod-medium));
-  --main-bg-dark: hsl(183, 42%, var(--mod-dark));
-
-  /* Sizes and widths */
-  /* If root size = 16px, then 80rem = 1280px */
-  --content-w-wide: 80rem;
-  /* If root size = 16px, then 60rem = 960px */
-  --content-w-regular: 45rem;
-  /* If root size = 16px, then 40rem = 640px */
-  --content-w-narrow: 40rem;
-  --mobile-card-height: 500px;
-}
-
 /* If root size = 16px, then 40rem = 640px */
 @custom-media --viewport-narrow-max (max-width: 40rem);
 @custom-media --viewport-narrow-min (min-width: 40rem);

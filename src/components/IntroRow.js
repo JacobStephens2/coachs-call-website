@@ -75,11 +75,6 @@ const IntroRow = props => {
               {emailButton}
             </Col>
           </Row>
-          <Row>
-            <p className="subhead tagline">
-              Glorifying God and Experiencing Joy Through&nbsp;Sports
-            </p>
-          </Row>
         </Container>
       </div>
     </div>

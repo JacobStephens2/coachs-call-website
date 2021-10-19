@@ -42,8 +42,8 @@ const IndexPage = () => {
 
         <IntroRow
           logo="yes"
-          heading="Deepening coach impact through one-on-one mentoring, consulting, and&nbsp;seminars."
-          subhead="Founder and coach John Levis has 25 years experience in coaching, young life Ministry, and college&nbsp;administration."
+          heading="Deepening coach impact"
+          subhead="Through one-on-one mentoring, consulting, and&nbsp;seminars."
           cardClass="aboutCard"
         >
           <VideoSlowGrass />

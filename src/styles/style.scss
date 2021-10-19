@@ -1,21 +1,52 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "./global.module.css";
 
 :root {
-  --dark-blue-overlay: rgba(1, 39, 83, 0.7);
+  /* Fonts */
+  --main-header-font-size: 3rem;
+  --primary-font: "Open Sans", sans-serif;
+  --highlight-font-weight: 600;
+  --highlight-font-style: normal;
+  --highlight-font: "Lato", sans-serif;
+  --highlight-font-weight: 400;
+  --highlight-font-style: normal;
+  --normal-text: 19px;
+  --large-text: 26px;
+
+  /* Colours */
   --dark-blue: #002856;
   --light-blue: #00a7e1;
+  --grey: #808285;
+  --white: #ffffff;
+  --orange: #e03400;
+  --purple: #9100bd;
+
+  --mod-light: 90%;
+  --mod-medium: 50%;
+  --mod-dark: 20%;
+  --main-bg-light: hsl(183, 42%, var(--mod-light));
+  --main-bg-medium: hsl(183, 42%, var(--mod-medium));
+  --main-bg-dark: hsl(183, 42%, var(--mod-dark));
+
+  --dark-blue-overlay: rgba(1, 39, 83, 0.7);
   --light-blue-overlay: rgba(2, 123, 163, 0.7);
   --green: #97ca3d;
   --green-overlay: rgba(61, 80, 30, 0.7);
-  --grey: #808285;
   --lighter-grey: rgb(230, 230, 230);
   --light-grey: #d1d1d1;
   --orange: #f78d1e;
-  --white: #fff;
   --black: #000;
-  --main-header-font-size: 3rem;
+
+  /* Sizes and widths */
+  /* If root size = 16px, then 80rem = 1280px */
+  --content-w-wide: 80rem;
+  /* If root size = 16px, then 60rem = 960px */
+  --content-w-regular: 45rem;
+  /* If root size = 16px, then 40rem = 640px */
+  --content-w-narrow: 40rem;
+  --mobile-card-height: 500px;
 }
 
 $mobile-homepage-image-height: 850px;
@@ -109,6 +140,9 @@ h1 {
 }
 html h1 {
   font-size: var(--main-header-font-size);
+}
+.introRow h1 {
+  font-size: 5rem;
 }
 @include media-breakpoint-down(md) {
   html h1 {
@@ -260,6 +294,7 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: var(--black);
+  font-family: var(--primary-font);
 }
 .introText p {
   color: var(--white);
@@ -342,7 +377,7 @@ video {
 }
 @media (--viewport-wide) {
   video {
-    height: 83vh;
+    height: 92vh;
   }
 }
 @include media-breakpoint-down(lg) {
