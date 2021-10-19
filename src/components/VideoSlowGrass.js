@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const VideoSlowGrass = () => {
   return (
     <>
-      <video className="mobile-hidden" autoPlay playsInline muted loop>
+      <video className="mobile-hidden" autoPlay playsInline muted>
         <source src={AthleticVideo} type="video/mp4" />
       </video>
       <StaticImage
