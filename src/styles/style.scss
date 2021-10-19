@@ -146,6 +146,7 @@ html h1 {
   color: var(--white);
   text-transform: initial;
   line-height: 1.05;
+  margin-bottom: 0.7rem;
 }
 @include media-breakpoint-down(md) {
   html h1 {
