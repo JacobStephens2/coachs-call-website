@@ -16,7 +16,7 @@ import VideoWideGrass from "../components/VideoWideGrass"
 const ContactPage = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Work" />
+      <Seo title="Contact" />
       <span className="contact-page">
         <IntroRow logo="yes" heading="Let's Connect" emailButton="yes">
           <VideoWideGrass />
