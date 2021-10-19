@@ -15,7 +15,7 @@ const WorkPage = ({ data }) => {
       <Seo title="Work" />
       <IntroRow
         logo="yes"
-        heading="It's how you play the game"
+        heading="It's how you play the&nbsp;game"
         subhead="And winning and losing do&nbsp;matter"
       >
         <VideoWideGrass />
