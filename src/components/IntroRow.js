@@ -49,7 +49,7 @@ const IntroRow = props => {
           alt="Coach's Call logo crest"
           placeholder="blurred"
           loading="eager"
-          src="../images/CoachsCall-Crest-Logo-icon-square.png"
+          src="../images/CoachsCallCrest_FINwhstars.svg"
           height={320}
         />
       </Col>
