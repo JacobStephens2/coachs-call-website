@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
-import Logo from "../../svg/logo-wide-no-tagline-slim.svg"
+import Logo from "../../svg/logo-wide-no-tagline.svg"
 
 import PropTypes from "prop-types"
 
