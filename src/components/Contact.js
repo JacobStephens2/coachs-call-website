@@ -1,34 +1,23 @@
 import * as React from "react"
 
-import ContactText from "./ContactText"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
-import { StaticImage } from "gatsby-plugin-image"
+import Crest from "../../svg/crest-white-stars.svg"
 
 const Contact = () => {
   return (
     <section className="dark-blue-section">
       <Container>
         <Row>
-          <Col>
-            <ContactText />
+          <Col xs={8}>
+            <p className="subhead tagline">
+              Glorifying God and Experiencing Joy Through&nbsp;Sports
+            </p>
           </Col>
-          <Col className="justify-end order-lg-2 contact-section-crest-col">
-            <StaticImage
-              alt="Coach's Call logo crest"
-              placeholder="blurred"
-              loading="eager"
-              src="../images/CoachsCall-Crest-Logo-icon-square.png"
-              height={150}
-              className="white-shadow"
-            />
+          <Col className="justify-end contact-section-crest-col" xs={4}>
+            <Crest />
           </Col>
-        </Row>
-        <Row>
-          <p className="subhead tagline">
-            Glorifying God and Experiencing Joy Through&nbsp;Sports
-          </p>
         </Row>
       </Container>
     </section>

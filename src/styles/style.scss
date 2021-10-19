@@ -6,15 +6,23 @@
 :root {
   /* Fonts */
   --main-header-font-size: 3rem;
+
   --primary-font: proxima-nova, sans-serif;
   --primary-font-weight: 400;
   --primary-font-style: normal;
+
   --highlight-font: proxima-nova, sans-serif;
   --highlight-font-weight: 600;
   --highlight-font-style: normal;
+
   --light-font: proxima-nova, sans-serif
   --light-font-weight: 300;
   --light-font-style: normal;
+
+  --athletic-font: abolition, sans-serif;
+  --athletic-font-weight: 400;
+  --athletic-font-style: italic;
+
   --normal-text: 19px;
   --large-text: 26px;
 
@@ -51,8 +59,6 @@
   --content-w-narrow: 40rem;
   --mobile-card-height: 500px;
 }
-
-$mobile-homepage-image-height: 850px;
 
 // CONTENTS
 //
@@ -132,16 +138,14 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: var(--dark-blue);
-  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-  font-weight: var(--highlight-font-weight);
-  font-style: var(--highlight-font-style);
   text-rendering: optimizeLegibility;
   line-height: 1.1;
   text-transform: uppercase;
 }
-html h1 {
+body h1 {
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
   font-size: var(--main-header-font-size);
 }
 .introRow h1 {
@@ -177,13 +181,14 @@ h2 {
   padding-top: 0;
   margin-bottom: 1rem;
   color: var(--dark-blue);
-  font-family: var(--highlight-font), -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: var(--large-text);
   line-height: 1.1;
+}
+body h2 {
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
 }
 section h2 {
   font-size: var(--main-header-font-size);
@@ -339,7 +344,7 @@ h2 a {
   color: var(--white);
 }
 .contact-text a {
-  color: var(--white);
+  color: black;
 }
 .contact-john-levis .contact-text a {
   color: var(--dark-blue);
@@ -355,6 +360,10 @@ h2 a {
   font-size: 0.9rem;
 }
 
+.contact-text p:first-of-type {
+  margin-bottom: 6px;
+}
+
 // Citations
 cite {
   font-family: var(--light-font);
@@ -368,6 +377,13 @@ q + br + cite {
   font-weight: initial;
   display: block;
   padding-top: 0.5rem;
+}
+blockquote + cite {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
 }
 
 // Video
@@ -851,15 +867,23 @@ pre tt:after {
 
 // Classes --------------------------
 
+.connect-cite {
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
+}
+
 .quote-section-cite {
   display: block;
 }
 
-$quote-background-color: rgba(49, 50, 53, 0.8);
-
 .quote-section.grey-section {
-  background-color: rgba(118, 119, 128, 0.8);
+  background-color: rgba(156, 158, 169, 0.8);
 }
+$quote-background-color: rgba(49, 50, 53, 0.8);
 .quote-section {
   margin-top: 8px;
   text-align: center;
@@ -885,7 +909,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   }
 }
 
-#Crest {
+.intro-row-crest #Crest {
   height: 40vh;
 }
 
@@ -1002,16 +1026,8 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 }
 
 .intro-row-image {
-  min-height: 100vh;
+  min-height: 750px;
   max-width: 100vw;
-}
-
-.intro-row-image {
-  min-height: $mobile-homepage-image-height;
-}
-
-.white-shadow {
-  filter: drop-shadow(0px 0px 4px var(--white));
 }
 
 .justify-end {
@@ -1113,9 +1129,12 @@ span.bm-cross:last-child {
 // large-quotation-mark
 .large-quotation-mark {
   font-size: 10rem;
-  font-family: proxima-nova;
-  font-weight: 600; // semi-bold
-  height: 9rem;
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight); 
+  font-style: var(--highlight-font-style); 
+  height: 5rem;
+  position: relative;
+  top: -47px;
 }
 @include media-breakpoint-up(md) {
   .large-quotation-mark {
@@ -1140,7 +1159,6 @@ span.bm-cross:last-child {
 // subhead
 .subhead {
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 1.3rem;
 }
 .introText .subhead {
@@ -1156,6 +1174,9 @@ span.bm-cross:last-child {
   font-size: 1.1rem;
   margin-top: 3%;
   color: var(--white);
+  font-family: var(--athletic-font);
+  font-weight: var(--athletic-font-weight);
+  font-style: var(--athletic-font-style);
 }
 
 .subhead.tagline {
@@ -1213,8 +1234,8 @@ button.btn {
 
 // Cards
 .card {
-  min-height: 320px;
-  padding-top: 86px;
+  min-height: 266px;
+  padding-top: 69px;
 }
 
 .slim-card#contactCard {
@@ -1224,10 +1245,6 @@ button.btn {
 
 #homepage .introRowFirstDiv {
   min-height: 83vh;
-}
-
-#homepage .introRowFirstDiv {
-  min-height: $mobile-homepage-image-height;
 }
 
 .slim-card {
@@ -1267,13 +1284,13 @@ button.btn {
 
 .footer {
   padding: 1rem 0;
+  font-size: 0.8rem;
 }
 @include media-breakpoint-up(md) {
   .footer {
     display: flex;
     justify-content: start;
     padding: 1rem 2rem;
-    font-size: 0.8rem;
   }
 }
 
@@ -1387,6 +1404,11 @@ $logo-mobile-scale: 80%;
 
 .contact-page .contact-section-crest-col {
   padding-left: 0;
+}
+.contact-section-crest-col #Crest {
+  height: 104px;
+  position: relative;
+  top: -9px;
 }
 
 .belowheader {
