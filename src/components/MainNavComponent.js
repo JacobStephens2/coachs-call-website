@@ -6,7 +6,7 @@ import { slide as Menu } from "react-burger-menu"
 
 const MainNavComponent = () => {
   return (
-    <nav className="MainNavComponent">
+    <nav className="mainnav">
       <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} right>
         <ul>
           <li>

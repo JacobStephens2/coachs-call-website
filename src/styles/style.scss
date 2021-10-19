@@ -1100,7 +1100,7 @@ span.bm-cross:last-child {
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  margin-top: 55px;
+  margin-top: 57px;
 }
 /* General sidebar styles */
 .bm-menu {
@@ -1568,10 +1568,14 @@ abbr[title] {
   text-decoration: none;
 }
 
-.mainnav {
+// MainNav
+
+a.mainnav {
   margin: 0 auto 0;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
+  font-style: var(--primary-font-style);
+  color: white;
 }
 
 .mainnav ul {
@@ -1600,13 +1604,17 @@ abbr[title] {
 }
 
 /* Menu level one items */
-ul li a {
+.mainnav ul li a {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
+  text-transform: uppercase;
 }
 
 /* Menu level two items */
-ul ul li a {
+.mainnav ul ul li a {
+  text-transform: uppercase;
   font-weight: initial;
   padding-left: 1.3rem;
   text-indent: -0.6rem;
