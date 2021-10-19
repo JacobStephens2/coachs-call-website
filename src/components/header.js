@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
-import Logo from "../../svg/logo-wide-no-tagline.svg"
+import Logo from "../../svg/logo-wide-no-tagline-slim.svg"
 
 import PropTypes from "prop-types"
 
@@ -21,13 +21,7 @@ const Header = ({ siteTitle }) => {
       >
         <Container>
           <div className="logo-box">
-            <Link
-              to="/"
-              style={{
-                color: `var(--white)`,
-                textDecoration: `none`,
-              }}
-            >
+            <Link to="/">
               <Logo className="header-logo" />
             </Link>
           </div>
