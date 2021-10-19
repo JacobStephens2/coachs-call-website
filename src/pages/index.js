@@ -82,9 +82,10 @@ const IndexPage = () => {
 
         <Section
           heading="National Connections"
-          subheading="SERVING AND ENRICHING THROUGH RELATIONSHIPS"
+          subheading="SERVING AND ENRICHING THROUGH&nbsp;RELATIONSHIPS"
           description="Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching."
           link="/work"
+          button="yes"
           buttonText="LEARN MORE ABOUT OUR WORK"
         >
           <Map />

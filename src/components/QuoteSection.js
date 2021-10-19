@@ -9,8 +9,10 @@ const QuoteSection = props => {
       <Container>
         <Col lg={8}>
           <q>{props.quote}</q>
-          <br />
-          <cite dangerouslySetInnerHTML={{ __html: props.citation }}></cite>
+          <cite
+            className="quote-section-cite"
+            dangerouslySetInnerHTML={{ __html: props.citation }}
+          ></cite>
         </Col>
       </Container>
     </section>

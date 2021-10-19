@@ -6,12 +6,15 @@
 :root {
   /* Fonts */
   --main-header-font-size: 3rem;
-  --primary-font: "Open Sans", sans-serif;
+  --primary-font: proxima-nova, sans-serif;
+  --primary-font-weight: 400;
+  --primary-font-style: normal;
+  --highlight-font: proxima-nova, sans-serif;
   --highlight-font-weight: 600;
   --highlight-font-style: normal;
-  --highlight-font: "Lato", sans-serif;
-  --highlight-font-weight: 400;
-  --highlight-font-style: normal;
+  --light-font: proxima-nova, sans-serif
+  --light-font-weight: 300;
+  --light-font-style: normal;
   --normal-text: 19px;
   --large-text: 26px;
 
@@ -354,10 +357,11 @@ h2 a {
 
 // Citations
 cite {
-  text-transform: uppercase;
-  font-style: normal;
-  font-size: 0.85rem;
-  font-weight: bold;
+  font-family: var(--light-font);
+  font-style: var(--light-font-style);
+  font-weight: var(--light-font-weight);
+  color: var(--white);
+  font-size: 1.1rem;
 }
 q + br + cite {
   text-transform: initial;
@@ -427,6 +431,11 @@ q {
   font-size: 1.5rem;
   text-indent: -0.75rem;
   display: block;
+  color: var(--white);
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
+  line-height: 1.25;
 }
 
 section {
@@ -842,9 +851,26 @@ pre tt:after {
 
 // Classes --------------------------
 
+.quote-section-cite {
+  display: block;
+}
+
+$quote-background-color: rgba(49, 50, 53, 0.8);
+
+.quote-section.grey-section {
+  background-color: rgba(118, 119, 128, 0.8);
+}
 .quote-section {
-  margin-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: 8px;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(
+      $quote-background-color,
+      $quote-background-color
+    ),
+    url("../images/AdobeStock_145127324_soccer-field.jpeg");
 }
 
 .header-logo {
@@ -1188,7 +1214,7 @@ button.btn {
 // Cards
 .card {
   min-height: 320px;
-  padding-top: 59px;
+  padding-top: 86px;
 }
 
 .slim-card#contactCard {
