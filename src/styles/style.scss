@@ -867,7 +867,6 @@ pre tt:after {
 
 // Classes --------------------------
 
-
 .connect-cite {
   color: black;
   text-transform: uppercase;
@@ -883,6 +882,10 @@ pre tt:after {
 
 .quote-section.grey-section {
   background-color: rgba(156, 158, 169, 0.8);
+}
+.quote-center {
+  display: flex;
+  justify-content: center;
 }
 $quote-background-color: rgba(49, 50, 53, 0.8);
 .quote-section {
@@ -1562,4 +1565,48 @@ abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
+}
+
+.mainnav {
+  margin: 0 auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.mainnav ul {
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.mainnav ul ul {
+  flex-direction: column;
+}
+
+.mainnav li {
+  list-style-type: none;
+}
+
+.mainnav a {
+  display: block;
+  color: var(--white);
+  border: 1px solid hsla(0, 0%, 100%, 0);
+}
+
+.mainnav a:hover,
+.mainnav a:focus {
+  border-color: var(--white);
+}
+
+/* Menu level one items */
+ul li a {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Menu level two items */
+ul ul li a {
+  font-weight: initial;
+  padding-left: 1.3rem;
+  text-indent: -0.6rem;
 }

@@ -1,13 +1,7 @@
 import * as React from "react"
-
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Container from "react-bootstrap/Container"
-
 import Seo from "../components/Seo"
 import Layout from "../components/LayoutComponent"
 import IntroRow from "../components/IntroRow"
-import BlockQuote from "../components/BlockQuote"
 import QuoteSection from "../components/QuoteSection"
 import Contact from "../components/Contact"
 import LetsConnect from "../components/LetsConnect"

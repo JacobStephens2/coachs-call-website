@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container"
 const QuoteSection = props => {
   return (
     <section className="grey-section quote-section">
-      <Container>
+      <Container className="quote-center">
         <Col lg={8}>
           <q>{props.quote}</q>
           <cite

@@ -4,11 +4,9 @@ import { Link } from "gatsby"
 
 import { slide as Menu } from "react-burger-menu"
 
-import * as style from "./mainnav.module.css"
-
 const MainNav = () => {
   return (
-    <nav className={style.mainnav}>
+    <nav className="mainnav">
       <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} right>
         <ul>
           <li>

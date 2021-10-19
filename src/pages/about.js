@@ -15,7 +15,6 @@ import IntroRow from "../components/IntroRow"
 import ListItem from "../components/ListItem"
 import LetsConnect from "../components/LetsConnect"
 import BlockQuote from "../components/BlockQuote"
-import Section from "../components/Section"
 import Contact from "../components/Contact"
 import VideoGoal from "../components/VideoGoal"
 
