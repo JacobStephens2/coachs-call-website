@@ -1239,6 +1239,16 @@ $logo-mobile-scale: 80%;
   background: var(--white);
   width: 100%;
   z-index: 2;
+  position: fixed;
+  height: 73px;
+}
+
+.logo-box {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 7px;
+  left: 0;
 }
 
 .darkBackground {
