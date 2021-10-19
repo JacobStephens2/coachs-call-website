@@ -26,11 +26,6 @@ const MainNav = () => {
                 &ensp;Mission&ensp;|&ensp;Vision
               </Link>
             </li>
-            <li>
-              <Link to="/about#development-council">
-                <i className="fas fa-angle-right"></i>&ensp;Development Council
-              </Link>
-            </li>
           </ul>
 
           <li>
