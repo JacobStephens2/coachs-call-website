@@ -10,8 +10,6 @@ import MainNav from "./MainNav"
 
 import Container from "react-bootstrap/Container"
 
-import "../styles/style.scss"
-
 const Header = ({ siteTitle }) => {
   return (
     <header className="header">
