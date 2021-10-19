@@ -142,11 +142,16 @@ html h1 {
   font-size: var(--main-header-font-size);
 }
 .introRow h1 {
-  font-size: 5rem;
+  font-size: 3.3rem;
   color: var(--white);
   text-transform: initial;
   line-height: 1.05;
   margin-bottom: 0.7rem;
+}
+@include media-breakpoint-up(lg) {
+  .introRow h1 {
+    font-size: 5rem;
+  }
 }
 @include media-breakpoint-down(md) {
   html h1 {
@@ -844,6 +849,8 @@ pre tt:after {
 .intro-row-crest {
   position: relative;
   top: -27px;
+  max-height: 309px;
+  margin-top: 35px;
 }
 
 .john-portrait {
@@ -1304,7 +1311,7 @@ $logo-mobile-scale: 80%;
 }
 
 .introRow {
-  padding-top: 15%;
+  padding-top: 5%;
 }
 
 @include media-breakpoint-down(md) {
