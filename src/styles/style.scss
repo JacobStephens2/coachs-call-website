@@ -846,6 +846,10 @@ pre tt:after {
 
 // Classes --------------------------
 
+.header-logo {
+  height: 117px;
+}
+
 .intro-row-crest {
   position: relative;
   top: -27px;
@@ -1166,7 +1170,7 @@ button.btn {
 // Cards
 .card {
   min-height: 320px;
-  padding-top: 91px;
+  padding-top: 59px;
 }
 
 .slim-card#contactCard {
@@ -1294,7 +1298,7 @@ $logo-mobile-scale: 80%;
   display: inline-block;
   margin: 0;
   position: absolute;
-  top: 7px;
+  top: -15px;
   left: 0;
 }
 

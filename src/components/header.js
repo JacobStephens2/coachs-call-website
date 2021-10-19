@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
-import { StaticImage } from "gatsby-plugin-image"
+import Logo from "../../svg/logo-wide-no-tagline.svg"
 
 import PropTypes from "prop-types"
 
@@ -28,12 +28,7 @@ const Header = ({ siteTitle }) => {
                 textDecoration: `none`,
               }}
             >
-              <StaticImage
-                src="../images/logo-no-tagline.png"
-                alt="The Coach's Call crest"
-                width={390}
-                className="logo"
-              />
+              <Logo className="header-logo" />
             </Link>
           </div>
         </Container>
