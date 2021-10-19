@@ -25,8 +25,8 @@ const AboutPage = ({ data }) => {
       <Seo title="About" />
       <IntroRow
         logo="yes"
-        heading="John has worked with over 500 athletes of all levels in his 25 years of&nbsp;coaching."
-        subhead="John hopes to change the view on the field to worship, and John hopes for all players and coaches to understand game day as a&nbsp;celebration."
+        heading="Game day is&nbsp;a&nbsp;call to worship"
+        subhead="John has helped over 500 athletes celebrate over 25&nbsp;years"
       >
         <VideoGoal />
       </IntroRow>
@@ -138,15 +138,6 @@ const AboutPage = ({ data }) => {
           </Row>
         </Container>
       </section>
-
-      <Section
-        id="development-council"
-        heading="Development Council"
-        subheading="Guides and supporters of this organization"
-        description="We have a board of directors who guide our progress."
-        link="/development"
-        buttonText="MEET THE DEVELOPMENT COUNCIL"
-      />
 
       <BlockQuote
         quote="John is an effective coach who clearly understands the hearts of students and how to apply the hope of Jesus through sport to them. He is insightful and thought provoking, helping you to think deeply about your philosophy, vision, and mission as a coach. He helps put language to your values and passion. He is someone you want on your team."

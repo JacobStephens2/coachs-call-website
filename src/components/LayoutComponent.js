@@ -10,7 +10,7 @@ import "../styles/accessibility.css"
 import "../styles/style.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, props }) => {
   return (
     <div id="outer-container">
       <Header siteTitle="Coach's Call" />
