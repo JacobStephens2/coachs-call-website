@@ -1,7 +1,7 @@
 import * as React from "react"
 import Row from "react-bootstrap/Row"
 
-import Layout from "../components/Layout"
+import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"

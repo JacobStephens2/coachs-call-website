@@ -12,6 +12,19 @@ import Col from "react-bootstrap/Col"
 import DonateButton from "./DonateButton"
 
 const IntroRow = props => {
+  var logo = ""
+  var textColumnWidth = 8
+  if (props.logo === "yes") {
+    logo = (
+      <Col className="order-lg-2 intro-row-crest" md={12} lg={4}>
+        <Crest />
+      </Col>
+    )
+  } else {
+    logo = ""
+    textColumnWidth = 9
+  }
+
   var contactButton = ""
   if (props.contact === "no") {
     contactButton = ""
@@ -38,19 +51,6 @@ const IntroRow = props => {
     donateButton = <DonateButton />
   } else {
     donateButton = ""
-  }
-
-  var logo = ""
-  var textColumnWidth = 8
-  if (props.logo === "yes") {
-    logo = (
-      <Col className="order-lg-2 mobile-center intro-row-crest" lg={4}>
-        <Crest />
-      </Col>
-    )
-  } else {
-    logo = ""
-    textColumnWidth = 9
   }
 
   return (

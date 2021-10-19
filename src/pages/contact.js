@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 
 import Seo from "../components/Seo"
-import Layout from "../components/Layout"
+import Layout from "../components/LayoutComponent"
 import IntroRow from "../components/IntroRow"
 import BlockQuote from "../components/BlockQuote"
 import ContactText from "../components/ContactText"

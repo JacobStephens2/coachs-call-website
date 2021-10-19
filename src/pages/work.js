@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Layout from "../components/Layout"
+import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import LetsConnect from "../components/LetsConnect"

@@ -1,5 +1,0 @@
-/* If root size = 16px, then 40rem = 640px */
-@custom-media --viewport-narrow-max (max-width: 40rem);
-@custom-media --viewport-narrow-min (min-width: 40rem);
-/* If root size = 16px, then 60rem = 960px */
-@custom-media --viewport-wide (min-width: 60rem);
