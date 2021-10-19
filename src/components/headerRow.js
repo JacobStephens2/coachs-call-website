@@ -6,7 +6,7 @@ import Logo from "../../svg/logo-wide-no-tagline.svg"
 
 import PropTypes from "prop-types"
 
-import MainNav from "./MainNav"
+import MainNavComponent from "./MainNavComponent"
 
 import Container from "react-bootstrap/Container"
 
@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
             </Link>
           </div>
         </Container>
-        <MainNav style={{ zIndex: 99 }} />
+        <MainNavComponent style={{ zIndex: 99 }} />
       </div>
     </header>
   )
