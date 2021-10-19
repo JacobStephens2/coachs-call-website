@@ -97,7 +97,7 @@ const IndexPage = () => {
 
         <BlockQuote
           quote="The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable."
-          source="Dave Hoger, Men’s lacrosse coach, Calvin&nbsp;University"
+          source="Men’s lacrosse coach, Calvin&nbsp;University"
         />
 
         <LetsConnect />

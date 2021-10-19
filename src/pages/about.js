@@ -150,7 +150,7 @@ const AboutPage = ({ data }) => {
 
       <BlockQuote
         quote="John is an effective coach who clearly understands the hearts of students and how to apply the hope of Jesus through sport to them. He is insightful and thought provoking, helping you to think deeply about your philosophy, vision, and mission as a coach. He helps put language to your values and passion. He is someone you want on your team."
-        source="Doug Walker, Boys’ Soccer Coach, Second Baptist School"
+        source="Boys’ Soccer Coach, Second Baptist School"
       />
 
       <LetsConnect />
