@@ -44,7 +44,7 @@ const IntroRow = props => {
   var textColumnWidth = 8
   if (props.logo === "yes") {
     logo = (
-      <Col className="order-lg-2 mobile-center" lg={4}>
+      <Col className="order-lg-2 mobile-center intro-row-crest" lg={4}>
         <StaticImage
           alt="Coach's Call logo crest"
           placeholder="blurred"

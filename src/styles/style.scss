@@ -143,6 +143,9 @@ html h1 {
 }
 .introRow h1 {
   font-size: 5rem;
+  color: var(--white);
+  text-transform: initial;
+  line-height: 1.05;
 }
 @include media-breakpoint-down(md) {
   html h1 {
@@ -154,10 +157,6 @@ html h1 {
   .videoBackground .row .tagline {
     padding-left: 1.7rem;
   }
-}
-.introRow h1 {
-  color: var(--white);
-  text-transform: initial;
 }
 
 // h2
@@ -841,6 +840,11 @@ pre tt:after {
 
 // Classes --------------------------
 
+.intro-row-crest {
+  position: relative;
+  top: -27px;
+}
+
 .john-portrait {
   margin-bottom: 3rem;
 }
@@ -1084,7 +1088,7 @@ span.bm-cross:last-child {
   font-size: 1.3rem;
 }
 .introText .subhead {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 // tagline
