@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 
-import { StaticImage } from "gatsby-plugin-image"
+import Crest from "../../svg/crest-white-stars.svg"
 
 import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
@@ -45,13 +45,7 @@ const IntroRow = props => {
   if (props.logo === "yes") {
     logo = (
       <Col className="order-lg-2 mobile-center intro-row-crest" lg={4}>
-        <StaticImage
-          alt="Coach's Call logo crest"
-          placeholder="blurred"
-          loading="eager"
-          src="../images/CoachsCallCrest_FINwhstars.svg"
-          height={320}
-        />
+        <Crest />
       </Col>
     )
   } else {
