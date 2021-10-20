@@ -172,9 +172,6 @@ body h1 {
 html h1 {
   font-size: 2.5rem;
 }
-.introRow {
-  padding-left: 1rem;
-}
 .introRow .subhead {
   font-family: var(--primary-font);
   font-weight: var(--primary-font-weight);
@@ -776,6 +773,8 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
   margin-bottom: 0.725rem;
+}
+#seminars-and-workshops li {
   text-indent: -21px;
   padding-left: 20px;
 }
@@ -1310,10 +1309,6 @@ button.btn {
   padding-right: 5px;
 }
 
-#homepage .introRowFirstDiv {
-  min-height: 83vh;
-}
-
 .slim-card {
   min-height: 60px;
   padding-top: 1rem;
@@ -1446,6 +1441,8 @@ $logo-mobile-scale: 80%;
 
 .introRow {
   padding-top: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @include media-breakpoint-up(md) {
   .introRow {
