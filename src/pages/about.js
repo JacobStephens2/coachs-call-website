@@ -156,10 +156,10 @@ const AboutPage = ({ data }) => {
         </Container>
       </section>
 
-      <section id="mission-vision">
+      <section id="mission-vision-section">
         <Container>
           <Row>
-            <Col lg={4} className="bigger-column">
+            <Col lg={4} className="bigger-column mission-vision-box">
               <h3>
                 <strong>VISION</strong>
               </h3>
@@ -168,7 +168,7 @@ const AboutPage = ({ data }) => {
                 through&nbsp;sports
               </p>
             </Col>
-            <Col lg={7} className="bigger-column mission-column mission">
+            <Col lg={7} className="bigger-column mission-vision-box">
               <h3>
                 <strong>MISSION</strong>
               </h3>

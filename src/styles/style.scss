@@ -885,6 +885,7 @@ figcaption {
 
 // Classes --------------------------
 
+
 .education-section p {
   margin-bottom: 0.25rem;
 }
@@ -1317,9 +1318,10 @@ button.btn {
 
 // Other
 
+
 .bigger-column {
   height: 250px;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 @include media-breakpoint-up(md) {
@@ -1528,6 +1530,10 @@ $logo-mobile-scale: 80%;
   padding-left: 1rem;
 }
 
+section#mission-vision-section {
+  padding-bottom: 5px;
+}
+
 $mission-vision-font-size: 1.2rem;
 
 .vision {
@@ -1560,26 +1566,24 @@ section#donate {
   padding-left: 0.4rem;
 }
 
-$meeting-point: 33%;
-#mission-vision {
-  background: linear-gradient(
-    to right,
-    var(--lighter-grey) 0%,
-    var(--lighter-grey) $meeting-point,
-    var(--light-grey) $meeting-point,
-    var(--light-grey) 100%
-  );
+.mission-vision-box {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-$mobile-meeting-point: 50%;
-#mission-vision {
-  background: linear-gradient(
-    to bottom,
-    var(--lighter-grey) 0%,
-    var(--lighter-grey) $mobile-meeting-point,
-    var(--light-grey) $mobile-meeting-point,
-    var(--light-grey) 100%
-  );
+.mission-vision-box:first-of-type {
+  margin-bottom: 5px;
+}
+
+#mission-vision-section p {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+#mission-vision-section h3 {
+  color: var(--light-blue);
 }
 
 #myVideo {
