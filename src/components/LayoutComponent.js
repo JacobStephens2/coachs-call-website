@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 import Header from "./headerRow"
 import Footer from "./Footer"
 
+import BottomBar from "../components/BottomBar"
+
 import "../styles/reset.css"
 import "../styles/accessibility.css"
 import "../styles/style.scss"
@@ -21,6 +23,7 @@ const Layout = ({ children, props }) => {
           }}
         >
           <main>{children}</main>
+          <BottomBar />
         </div>
         <Footer />
       </main>

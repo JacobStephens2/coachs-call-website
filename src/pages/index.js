@@ -1,12 +1,10 @@
 import * as React from "react"
 import Row from "react-bootstrap/Row"
-
 import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"
 import Card from "../components/Card"
-import CardSlim from "../components/CardSlim"
 import BlockQuote from "../components/BlockQuote"
 import Section from "../components/Section"
 import Map from "../../svg/map.svg"
@@ -48,13 +46,6 @@ const IndexPage = () => {
         >
           <VideoSlowGrass />
         </IntroRow>
-
-        <Row id="animated-example" className="bottom-bar animated">
-          <div className="white-bar"></div>
-          <CardSlim link="/about" category="About" id="aboutCard" />
-          <CardSlim link="/work" category="Work" id="workCard" />
-          <CardSlim link="/contact" category="Contact" id="contactCard" />
-        </Row>
 
         <Row className="home-page-main-card-row">
           <Card
