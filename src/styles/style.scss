@@ -197,9 +197,9 @@ h2 {
   color: var(--dark-blue);
   text-rendering: optimizeLegibility;
   font-size: var(--large-text);
-  line-height: 1.1;
 }
 body h2 {
+  line-height: 1;
   font-family: var(--highlight-font);
   font-weight: var(--highlight-font-weight);
   font-style: var(--highlight-font-style);
@@ -657,6 +657,12 @@ ol {
 .subhead + ul {
   padding-left: 1rem;
 }
+
+p.subhead {
+  font-family: var(--bold-font);
+  font-weight: var(--bold-font-weight);
+  font-style: var(--bold-font-style);
+}
 dl {
   margin-left: 0;
   margin-right: 0;
@@ -769,6 +775,9 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0.725rem;
+  text-indent: -21px;
+  padding-left: 20px;
 }
 ol li {
   padding-left: 0;
@@ -901,7 +910,7 @@ figcaption {
 
 .about-photos-background {
   background-color: var(--dark-blue);
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .connect-cite {
@@ -963,11 +972,12 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 .intro-row-crest {
   top: 0;
   margin-top: 28px;
-  display: flex;
   justify-content: center;
+  display: none;
 }
 @include media-breakpoint-up(md) {
   .intro-row-crest {
+    display: flex;
     top: -27px;
     margin-top: 0;
   }
@@ -1211,6 +1221,11 @@ span.bm-cross:last-child {
 .introText .subhead {
   font-size: 1.4rem;
 }
+
+div.introRow {
+  margin-top: 3rem;
+}
+
 .bold {
   font-family: var(--bold-font);
   font-weight: var(--bold-font-weight);
