@@ -880,13 +880,14 @@ figcaption {
   font-family: var(--bold-font);
   font-weight: var(--bold-font-weight);
   font-style: var(--bold-font-style);
+  font-size: 1.2rem;
 }
 
 // Classes --------------------------
 
 .about-photos-background {
   background-color: var(--dark-blue);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .connect-cite {
@@ -908,6 +909,10 @@ figcaption {
 .quote-center {
   display: flex;
   justify-content: center;
+}
+
+#john-levis .quote-section {
+  margin-bottom: 1rem;
 }
 
 $quote-background-color: rgba(49, 50, 53, 0.8);

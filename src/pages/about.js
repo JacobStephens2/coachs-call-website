@@ -80,12 +80,12 @@ const AboutPage = ({ data }) => {
                 />
                 <ListItem
                   boldOne="42+ years"
-                  boldTwo="Husband and Father"
+                  boldTwo="Christ Follower"
                   description="Becoming a Christian at a young age has been, is and will be the most important decision in John’s life. It is the relationship that also provides the lens by which we can see&nbsp;everything."
                 />
                 <ListItem
                   boldOne="25+ years"
-                  boldTwo="Christ Follower"
+                  boldTwo="Husband and Father"
                   description="John and his wife Kristen live in Newtown Square, Pennsylvania and have three children. Alison is a senior at Wheaton College, Cole is beginning his freshman year at Gordon College, and Matthew is entering 9th grade and is super excited to spend the next four years alone with his&nbsp;parents."
                 />
                 <ListItem
@@ -94,14 +94,14 @@ const AboutPage = ({ data }) => {
                   description="John has coached all levels and ages of athletes from youth through college. He resurrected the Eastern University Men’s Lacrosse program 2006 after helping coach the Marple Newtown Boys Lacrosse team to the state semifinals and the last two years has coached the boys soccer team at Delaware County Christian School to the District Finals for the second and third time in school&nbsp;history."
                 />
                 <ListItem
-                  boldOne="22+ years"
-                  boldTwo="Competitive Athlete"
-                  description="John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach, Club, event. He also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern&nbsp;University."
-                />
-                <ListItem
                   boldOne="10 years"
                   boldTwo="Young Life Staff"
                   description="Growing up John played competitive soccer, tennis, basketball, baseball, football and lacrosse. As a college athlete, John played basketball and lacrosse at Wheaton&nbsp;College."
+                />
+                <ListItem
+                  boldOne="22+ years"
+                  boldTwo="Competitive Athlete"
+                  description="John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach, Club, event. He also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern&nbsp;University."
                 />
                 <ListItem
                   boldOne="9 years"
