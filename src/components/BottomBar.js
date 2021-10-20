@@ -6,10 +6,9 @@ const BottomBar = () => {
   const isBrowser = typeof window !== "undefined"
 
   if (isBrowser) {
-    const bottomBar = document.querySelector(".bottom-bar")
-
     var prevScrollpos = window.pageYOffset
     window.onscroll = function () {
+      const bottomBar = document.querySelector(".bottom-bar")
       var currentScrollPos = window.pageYOffset
       if (prevScrollpos > currentScrollPos) {
         bottomBar.classList.add("slideIn")
