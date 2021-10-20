@@ -12,27 +12,7 @@ import IntroRow from "../components/IntroRow"
 import Contact from "../components/Contact"
 import VideoSlowGrass from "../components/VideoSlowGrass"
 
-const isBrowser = typeof window !== "undefined"
-
 const IndexPage = () => {
-  if (isBrowser) {
-    const bottomBar = document.querySelector(".bottom-bar")
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (window.scrollY === 0) {
-          bottomBar.classList.add("slideIn")
-          bottomBar.classList.remove("slideOut")
-        } else {
-          bottomBar.classList.add("slideOut")
-          bottomBar.classList.remove("slideIn")
-        }
-      },
-      false
-    )
-  }
-
   return (
     <Layout>
       <span id="homepage">
@@ -55,6 +35,7 @@ const IndexPage = () => {
             description="John has broad experience coaching and working in higher&nbsp;education."
             id="aboutCard"
           />
+
           <Card
             link="/work"
             category="Work"
