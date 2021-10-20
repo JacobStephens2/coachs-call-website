@@ -34,21 +34,32 @@ const AboutPage = ({ data }) => {
         <Container>
           <Row className="flex-start">
             <Col className="order-lg-2" lg={5}>
-              <StaticImage
-                alt="Portrait photo of John Levis"
-                className="john-portrait"
-                placeholder="blurred"
-                loading="eager"
-                src="../images/john-levis-headshot-sep-2021-edited.jpg"
-                height={500}
-              />
-              <StaticImage
-                alt="John Levis with their family"
-                placeholder="blurred"
-                loading="eager"
-                src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
-                height={300}
-              />
+              <div className="about-photos-background">
+                <StaticImage
+                  className="about-photo"
+                  alt="Portrait photo of John Levis"
+                  placeholder="blurred"
+                  loading="eager"
+                  src="../images/john-levis-headshot-sep-2021-edited.jpg"
+                  height={500}
+                />
+                <figcaption className="john-portrait-caption">
+                  John Levis
+                </figcaption>
+                <StaticImage
+                  className="about-photo"
+                  alt="John Levis with their family"
+                  placeholder="blurred"
+                  loading="eager"
+                  src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
+                  height={500}
+                />
+                <figcaption>
+                  The Levis Family (from left) Alison, Kristen, John, Matthew,
+                  and&nbsp;Cole
+                </figcaption>
+              </div>
+              <hr />
               <QuoteSection
                 quote="The level of my growth in grace is revealed by the way I look
                 at obedience. We should have a much higher view of the word
@@ -56,7 +67,6 @@ const AboutPage = ({ data }) => {
                 citation="Oswald Chambers"
               />
             </Col>
-
             <Col className="order-lg-1 wide-col-gap" lg={6}>
               <h2>John Levis, Founder</h2>
               <p className="subhead">
