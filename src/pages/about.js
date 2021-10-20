@@ -69,15 +69,49 @@ const AboutPage = ({ data }) => {
             </Col>
             <Col className="order-lg-1 wide-col-gap" lg={6}>
               <h2>John Levis, Founder</h2>
-              <p className="subhead">
+              <p className="subhead bold">
                 helping coaches understand the pursuit of excellence on the
                 field or court as their daily act of&nbsp;worship
               </p>
               <ul>
-                <ListItem
-                  boldOne="Education"
-                  description="John holds a Master’s in Business Administration from Eastern University (2007) and completed undergraduate studies at Wheaton College&nbsp;(1996)."
-                />
+                <li className="education-section">
+                  <b>Education</b>
+                  <Row>
+                    <Col>
+                      <StaticImage
+                        alt="Eastern University logo"
+                        placeholder="blurred"
+                        loading="eager"
+                        src="../images/EasternUniversityLogo.png"
+                        height={100}
+                      />
+                    </Col>
+                    <Col>
+                      <p>
+                        <em>Master’s in Business Administration</em>
+                      </p>
+                      <p>Eastern University (2007)</p>
+                    </Col>
+                  </Row>
+                  <hr className="education-rule" />
+                  <Row>
+                    <Col>
+                      <StaticImage
+                        alt="Eastern University logo"
+                        placeholder="blurred"
+                        loading="eager"
+                        src="../images/WheatonCollegeLogo.png"
+                        height={100}
+                      />
+                    </Col>
+                    <Col>
+                      <p>
+                        <em>B.S. in Health and Physical Education</em>
+                      </p>
+                      <p>Wheaton College (1996)</p>
+                    </Col>
+                  </Row>
+                </li>
                 <ListItem
                   boldOne="42+ years"
                   boldTwo="Christ Follower"

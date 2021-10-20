@@ -885,6 +885,14 @@ figcaption {
 
 // Classes --------------------------
 
+.education-section p {
+  margin-bottom: 0.25rem;
+}
+
+.education-rule {
+  margin: 0.5rem 0;
+}
+
 .about-photos-background {
   background-color: var(--dark-blue);
   padding: 1.5rem;
@@ -1196,6 +1204,11 @@ span.bm-cross:last-child {
 }
 .introText .subhead {
   font-size: 1.4rem;
+}
+.bold {
+  font-family: var(--bold-font);
+  font-weight: var(--bold-font-weight);
+  font-style: var(--bold-font-style);
 }
 
 // tagline
