@@ -158,10 +158,10 @@ body h1 {
   font-size: var(--main-header-font-size);
 }
 .introRow h1 {
-  font-size: 3.3rem;
+  font-size: 3.6rem;
   color: var(--white);
   text-transform: initial;
-  line-height: 1.05;
+  line-height: 0.95;
   margin-bottom: 0.7rem;
 }
 @include media-breakpoint-up(lg) {
@@ -174,6 +174,11 @@ html h1 {
 }
 .introRow {
   padding-left: 1rem;
+}
+.introRow .subhead {
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
+  font-style: var(--primary-font-style);
 }
 .videoBackground .row .tagline {
   padding-left: 1.7rem;
@@ -952,7 +957,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 }
 
 .intro-row-crest #Crest {
-  height: 40vh;
+  height: 28vh;
 }
 
 .intro-row-crest {
@@ -1068,7 +1073,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 }
 
 .intro-row-image {
-  min-height: 750px;
+  min-height: 600px;
   max-width: 100vw;
 }
 

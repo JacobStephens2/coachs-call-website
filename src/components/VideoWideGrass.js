@@ -12,7 +12,7 @@ const VideoWideGrass = () => {
         className="desktop-hidden darken intro-row-image"
         src="../images/ImageWideGrass.png"
         alt="Athlete stretching"
-        height={750}
+        height={600}
         layout="fixed"
       />
     </span>
