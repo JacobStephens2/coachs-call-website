@@ -14,6 +14,7 @@ import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import ListItem from "../components/ListItem"
 import LetsConnect from "../components/LetsConnect"
+import BlockQuote from "../components/BlockQuote"
 import Contact from "../components/Contact"
 import QuoteSection from "../components/QuoteSection"
 import VideoGoal from "../components/VideoGoal"
@@ -48,12 +49,12 @@ const AboutPage = ({ data }) => {
                 src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
                 height={300}
               />
-              <blockquote className="column-blockquote">
-                "The level of my growth in grace is revealed by the way I look
+              <QuoteSection
+                quote="The level of my growth in grace is revealed by the way I look
                 at obedience. We should have a much higher view of the word
-                obedience, rescuing it from the mire of the&nbsp;world.”
-              </blockquote>
-              <p className="column-citation">Oswald Chambers</p>
+                obedience, rescuing it from the mire of the&nbsp;world."
+                citation="Oswald Chambers"
+              />
             </Col>
 
             <Col className="order-lg-1 wide-col-gap" lg={6}>
@@ -138,9 +139,9 @@ const AboutPage = ({ data }) => {
         </Container>
       </section>
 
-      <QuoteSection
+      <BlockQuote
         quote="John is an effective coach who clearly understands the hearts of students and how to apply the hope of Jesus through sport to them. He is insightful and thought provoking, helping you to think deeply about your philosophy, vision, and mission as a coach. He helps put language to your values and passion. He is someone you want on your team."
-        citation="Boys’ Soccer Coach, Second Baptist School"
+        source="Boys’ Soccer Coach, Second Baptist School"
       />
 
       <LetsConnect />
