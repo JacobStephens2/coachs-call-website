@@ -778,6 +778,10 @@ li {
   text-indent: -21px;
   padding-left: 20px;
 }
+#mentoring li {
+  text-indent: -21px;
+  padding-left: 20px;
+}
 ol li {
   padding-left: 0;
 }
@@ -923,6 +927,11 @@ figcaption {
 
 .quote-section-cite {
   display: block;
+  margin-top: 0.7rem;
+}
+
+#seminars-and-workshops button {
+  margin-bottom: 1rem;
 }
 
 .quote-section.grey-section {
@@ -1574,6 +1583,19 @@ $mission-vision-font-size: 1.2rem;
 .about-photo {
   border-radius: 11px;
   box-shadow: $photo-shadow;
+}
+
+.work-photo {
+  box-shadow: $photo-shadow;
+}
+
+.work-photo+figcaption {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.work-photo:first-of-type {
+  margin-bottom: 1rem;
 }
 
 .privacy-policy {

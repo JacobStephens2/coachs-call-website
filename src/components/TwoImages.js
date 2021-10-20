@@ -9,12 +9,13 @@ const TwoImages = props => {
     return (
       <div className="about-photos-background">
         <StaticImage
-          className="drop-shadow"
+          className="work-photo"
           src="../images/WorkImage1.jpg"
           alt="The Coaching Pyramid"
         />
+        <figcaption>Sample slides used in John's teaching</figcaption>
         <StaticImage
-          className="drop-shadow"
+          className="work-photo"
           src="../images/WorkImage2.jpg"
           alt="Joy and Performance slide"
         />
