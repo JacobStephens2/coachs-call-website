@@ -168,7 +168,10 @@ const AboutPage = ({ data }) => {
                 through&nbsp;sports
               </p>
             </Col>
-            <Col lg={7} className="bigger-column mission-vision-box">
+            <Col
+              lg={7}
+              className="bigger-column mission-box mission-vision-box"
+            >
               <h3>
                 <strong>MISSION</strong>
               </h3>

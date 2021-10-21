@@ -1556,8 +1556,24 @@ $logo-mobile-scale: 80%;
   padding-left: 1rem;
 }
 
+@include media-breakpoint-up(lg) {
+  .mission-box {
+    border-left: white;
+    border-left-width: 2px;
+    border-left-style: solid;
+    padding-left: 2rem;
+  }
+  #mission-vision-section {
+    margin-top: 2rem;
+    padding-top: 0;
+  }
+}
 section#mission-vision-section {
   padding-bottom: 5px;
+}
+
+#mission-vision-section {
+  background-color: var(--dark-blue);
 }
 
 $mission-vision-font-size: 1.2rem;
