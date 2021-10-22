@@ -164,6 +164,11 @@ body h1 {
   line-height: 0.95;
   margin-bottom: 0.7rem;
 }
+@include media-breakpoint-up(sm) {
+  .introRow h1 {
+    font-size: 5rem;
+  }
+}
 @include media-breakpoint-up(lg) {
   .introRow h1 {
     font-size: 5rem;

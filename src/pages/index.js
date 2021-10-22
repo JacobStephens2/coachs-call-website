@@ -17,7 +17,10 @@ const IndexPage = () => {
     <Layout>
       <span id="homepage">
         <Seo title="Home" />
-
+        <p className="screen-reader-text">
+          The intro section below has a video background which displays a close
+          up panning video clip of an athletic field
+        </p>
         <IntroRow
           logo="yes"
           heading="Deepening coach impact"
