@@ -159,7 +159,7 @@ const AboutPage = () => {
       <section id="mission-vision-section">
         <Container>
           <Row>
-            <Col lg={4} className="bigger-column mission-vision-box">
+            <Col md={5} className="bigger-column mission-vision-box">
               <h3>
                 <strong>VISION</strong>
               </h3>
@@ -169,7 +169,7 @@ const AboutPage = () => {
               </p>
             </Col>
             <Col
-              lg={7}
+              md={7}
               className="bigger-column mission-box mission-vision-box"
             >
               <h3>

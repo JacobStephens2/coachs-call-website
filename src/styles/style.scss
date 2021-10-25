@@ -478,6 +478,11 @@ q {
 section {
   padding: 4rem 0 3rem;
 }
+@include media-breakpoint-up(md) {
+  section {
+    padding: 2rem 0 2rem;
+  }
+}
 
 img {
   border-style: none;
@@ -1592,6 +1597,11 @@ $logo-mobile-scale: 80%;
 section#mission-vision-section {
   padding-bottom: 5px;
 }
+@include media-breakpoint-up(md) {
+  section#mission-vision-section {
+    padding-bottom: 2rem;
+  }
+}
 
 #mission-vision-section {
   background-color: var(--dark-blue);
@@ -1602,6 +1612,11 @@ $mission-vision-font-size: 1.2rem;
 .vision {
   padding-right: 3rem;
   font-size: $mission-vision-font-size;
+}
+@include media-breakpoint-up(md) {
+  .vision {
+    padding-right: 0;
+  }  
 }
 
 .mission {
@@ -1654,6 +1669,13 @@ section#donate {
 
 .mission-vision-box:first-of-type {
   margin-bottom: 5px;
+}
+
+@include media-breakpoint-up(md) {
+  .mission-vision-box:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  }
 }
 
 #mission-vision-section p {
