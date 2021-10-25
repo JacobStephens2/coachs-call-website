@@ -33,7 +33,7 @@ const AboutPage = () => {
       <section id="john-levis">
         <Container>
           <Row className="flex-start">
-            <Col className="order-lg-2" lg={5}>
+            <Col className="order-md-2" md={5}>
               <div className="about-photos-background">
                 <StaticImage
                   className="about-photo"
@@ -67,7 +67,7 @@ const AboutPage = () => {
                 citation="Oswald Chambers"
               />
             </Col>
-            <Col className="order-lg-1 wide-col-gap" lg={6}>
+            <Col className="order-md-1 wide-col-gap" md={6}>
               <h2>John Levis, Founder</h2>
               <p className="subhead bold">
                 helping coaches understand the pursuit of excellence on the

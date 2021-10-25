@@ -669,6 +669,7 @@ p.subhead {
   font-family: var(--bold-font);
   font-weight: var(--bold-font-weight);
   font-style: var(--bold-font-style);
+  line-height: 1.25;
 }
 dl {
   margin-left: 0;
@@ -1617,7 +1618,6 @@ $mission-vision-font-size: 1.2rem;
 }
 
 .about-photo {
-  border-radius: 11px;
   box-shadow: $photo-shadow;
 }
 
