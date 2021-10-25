@@ -932,6 +932,15 @@ figcaption {
   padding: 1rem;
 }
 
+@include media-breakpoint-up(lg) {
+  .about-photos-background {
+    columns: 2;
+  }
+  .work-photo {
+    margin-bottom: 0.6rem;
+  }
+}
+
 .connect-cite {
   color: black;
   text-transform: uppercase;
