@@ -93,7 +93,7 @@ const Section = props => {
         </Container>
       </section>
     )
-  } else if (props.id == "mentoring") {
+  } else if (props.id === "mentoring") {
     return (
       <section id={props.id} className={props.sectionClass}>
         <Container>
