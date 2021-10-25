@@ -93,6 +93,24 @@ const Section = props => {
         </Container>
       </section>
     )
+  } else if (props.id == "mentoring") {
+    return (
+      <section id={props.id} className={props.sectionClass}>
+        <Container>
+          <Row gx={20}>
+            <Col lg={8}>
+              <h2>{props.heading}</h2>
+              <p className="subhead">{props.subheading}</p>
+              <p>
+                <strong>{boldIntro}</strong> {props.description}
+              </p>
+              {list}
+              {button}
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    )
   } else {
     return (
       <section id={props.id} className={props.sectionClass}>
