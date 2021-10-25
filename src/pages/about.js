@@ -33,7 +33,7 @@ const AboutPage = () => {
       <section className="about-page" id="john-levis">
         <Container>
           <Row className="flex-start">
-            <Col className="order-md-2" md={5}>
+            <Col className="order-md-2 vertical-grey-rule-two-col" md={5}>
               <div className="about-photos-background">
                 <StaticImage
                   className="about-photo"

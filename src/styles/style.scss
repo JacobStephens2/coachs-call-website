@@ -948,10 +948,32 @@ figcaption {
     margin-bottom: 0.6rem;
   }
 }
+@include media-breakpoint-up(xl) {
+  .about-photos-background {
+    margin-left: 0;
+  }
+}
 
 .vertical-grey-rule {
   border-left: 2px solid lightgrey;
   margin-bottom: 2rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .vertical-grey-rule-two-col {
+    border-left: 2px solid lightgrey;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
+  .about-page hr {
+    margin: 1.5rem 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .about-page {
+    padding-bottom: 0;
+  }
 }
 
 .connect-cite {
@@ -982,6 +1004,11 @@ figcaption {
 
 #john-levis .quote-section {
   margin-bottom: 1rem;
+}
+@include media-breakpoint-up(lg) {
+  #john-levis .quote-section {
+    margin-bottom: 0;
+  }
 }
 
 $quote-background-color: rgba(49, 50, 53, 0.8);
@@ -1650,7 +1677,7 @@ section#mission-vision-section {
     padding-left: 2rem;
   }
   #mission-vision-section {
-    margin-top: 2rem;
+    margin-top: 0;
     padding-top: 0;
   }
 }
