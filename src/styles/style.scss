@@ -179,6 +179,11 @@ body h1 {
     font-size: 5.75rem;
   }
 }
+@include media-breakpoint-up(xl) {
+  .introRow h1 {
+    font-size: 6.9rem;
+  }
+}
 html h1 {
   font-size: 2.5rem;
 }
@@ -1002,7 +1007,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   .header-logo {
     height: 62px;
     margin-top: 1.1rem;
-    margin-left: 1rem;
+    margin-left: 1.8rem;
   }
 }
 
@@ -1037,6 +1042,13 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   }
 }
 
+@include media-breakpoint-up(xl) {
+  .about-page .intro-row-crest {
+    position: relative;
+    top: -48px;
+  }
+}
+
 .john-portrait-caption {
   margin-bottom: 2rem;
 }
@@ -1050,7 +1062,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 }
 
 .white-bar {
-  height: 6px;
+  height: 4px;
   background-color: var(--white);
 }
 
@@ -1619,17 +1631,8 @@ $logo-mobile-scale: 80%;
   padding-left: 1rem;
 }
 
-@include media-breakpoint-up(lg) {
-  .mission-box {
-    border-left: white;
-    border-left-width: 2px;
-    border-left-style: solid;
-    padding-left: 2rem;
-  }
-  #mission-vision-section {
-    margin-top: 2rem;
-    padding-top: 0;
-  }
+#mission-vision-section {
+  background-color: var(--dark-blue);
 }
 section#mission-vision-section {
   padding-bottom: 5px;
@@ -1639,13 +1642,20 @@ section#mission-vision-section {
     padding-bottom: 2rem;
   }
 }
-
-#mission-vision-section {
-  background-color: var(--dark-blue);
+@include media-breakpoint-up(lg) {
+  .vision-box {
+    border-right: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    padding-left: 2rem;
+  }
+  #mission-vision-section {
+    margin-top: 2rem;
+    padding-top: 0;
+  }
 }
 
 $mission-vision-font-size: 1.2rem;
-
 .vision {
   padding-right: 3rem;
   font-size: $mission-vision-font-size;
@@ -1706,6 +1716,27 @@ section#donate {
 
 .mission-vision-box:first-of-type {
   margin-bottom: 5px;
+}
+@include media-breakpoint-up(xl) {
+  .mission-vision-box:first-of-type {
+    margin-bottom: 0;
+    border-right: 4px solid white;
+  }
+  #mission-vision-section .mission-box {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 4rem
+  }
+  #mission-vision-section .vision-box {
+    padding: 3rem 4rem  
+  }
+  .bigger-column {
+    padding-top: 3rem;
+  }
+  section#mission-vision-section {
+    padding-bottom: 0;
+    border-bottom: 4px solid white;
+  }
 }
 
 @include media-breakpoint-up(md) {

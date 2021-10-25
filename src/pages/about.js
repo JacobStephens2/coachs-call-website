@@ -30,7 +30,7 @@ const AboutPage = () => {
       >
         <VideoGoal />
       </IntroRow>
-      <section id="john-levis">
+      <section className="about-page" id="john-levis">
         <Container>
           <Row className="flex-start">
             <Col className="order-md-2" md={5}>
