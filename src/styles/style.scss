@@ -1370,6 +1370,11 @@ button.btn {
   min-height: 266px;
   padding-top: 69px;
 }
+@include media-breakpoint-up(lg) {
+  .card {
+    padding-top: 38px;
+  }
+}
 
 .slim-card#contactCard {
   padding-left: 5px;
@@ -1734,7 +1739,7 @@ $work-gradient: var(--green-overlay);
 #workCard {
   background-image: linear-gradient($work-gradient, $work-gradient),
     url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
-  max-height: 320px;
+  max-height: 266px;
 }
 
 $contact-gradient: var(--light-blue-overlay);
