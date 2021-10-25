@@ -7,10 +7,10 @@ import Crest from "../../svg/crest-white-stars.svg"
 
 const Contact = () => {
   return (
-    <section className="dark-blue-section">
+    <section className="dark-blue-section tagline-section">
       <Container>
         <Row>
-          <Col xs={8} sm={9} md={10}>
+          <Col xs={8} sm={9} md={10} xxl={7}>
             <p className="subhead tagline">
               Glorifying God and Experiencing Joy Through&nbsp;Sports
             </p>

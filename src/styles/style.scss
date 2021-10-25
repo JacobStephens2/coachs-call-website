@@ -823,6 +823,16 @@ li {
     padding-bottom: 4rem;
   }
 }
+@include media-breakpoint-up(xxl) {
+  div.lets-connect {
+    padding-left: 20vw;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  #mentoring {
+    padding-left: 19vw;
+  }
+}
 #mentoring li {
   text-indent: -21px;
   padding-left: 20px;
@@ -950,6 +960,12 @@ figcaption {
 
 .sems-and-workshops {
   padding-right: 2rem;
+}
+@include media-breakpoint-up(xxl) {
+  .sems-and-workshops {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
 }
 
 .education-section p {
@@ -1229,6 +1245,11 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
     position: initial;
   }
 }
+@include media-breakpoint-up(xxl) {
+  .blockquote-column {
+    position: static;
+  }
+}
 
 // Burger Menu
 /* Position and sizing of burger button */
@@ -1480,6 +1501,10 @@ button.btn {
   border-radius: 0;
 }
 
+.tagline-section {
+  padding-left: 16vw;
+}
+
 // Other
 
 
@@ -1497,6 +1522,9 @@ button.btn {
 .footer {
   padding: 1rem 0;
   font-size: 0.8rem;
+  font-family: var(--primary-font);
+  font-weight: var(--primary-font-weight);
+  font-style: var(--primary-font-style);
 }
 @include media-breakpoint-up(md) {
   .footer {
@@ -1590,6 +1618,8 @@ $logo-mobile-scale: 80%;
 @include media-breakpoint-up(xxl) {
   .introText {
     padding-left: 6vw;
+    padding-right: 2vw;
+
   }
   .intro-row-crest #Crest {
     height: 38vh;
@@ -1637,6 +1667,12 @@ $logo-mobile-scale: 80%;
   position: relative;
   top: -9px;
 }
+@include media-breakpoint-up(xxl) {
+  .contact-section-crest-col {
+    padding-right: 5vw;
+  }
+}
+
 
 .belowheader {
   padding-top: 84px;
@@ -1680,12 +1716,6 @@ $logo-mobile-scale: 80%;
   }
   .mobile-hidden {
     display: inline;
-  }
-}
-
-@include media-breakpoint-up(xxl) {
-  .blockquote-column {
-    margin-left: 3rem;
   }
 }
 
