@@ -933,12 +933,20 @@ figcaption {
 }
 
 @include media-breakpoint-up(lg) {
-  .about-photos-background {
-    columns: 2;
-  }
   .work-photo {
     margin-bottom: 0.6rem;
   }
+  .about-photos-background {
+    margin-left: 1rem;
+  }
+  .work-photo:first-of-type {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.vertical-grey-rule {
+  border-left: 2px solid lightgrey;
+  margin-bottom: 2rem;
 }
 
 .connect-cite {

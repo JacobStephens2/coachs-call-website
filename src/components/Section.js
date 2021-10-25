@@ -53,12 +53,14 @@ const Section = props => {
     belowImages = ""
   } else {
     belowImages = (
-      <TwoImages
-        image={props.image}
-        imageAlt={props.imageAlt}
-        imageTwo={props.imageTwo}
-        imageAltTwo={props.imageAltTwo}
-      />
+      <Col className="vertical-grey-rule" lg={5}>
+        <TwoImages
+          image={props.image}
+          imageAlt={props.imageAlt}
+          imageTwo={props.imageTwo}
+          imageAltTwo={props.imageAltTwo}
+        />
+      </Col>
     )
   }
 
@@ -80,13 +82,13 @@ const Section = props => {
               <p>
                 <strong>{boldIntro}</strong> {props.description}
               </p>
+              {list}
               {button}
             </Col>
 
             <Col lg={5}>{props.children}</Col>
+            {belowImages}
           </Row>
-          {list}
-          {belowImages}
           {quote}
         </Container>
       </section>
@@ -102,12 +104,12 @@ const Section = props => {
               <p>
                 <strong>{boldIntro}</strong> {props.description}
               </p>
+              {list}
+              {button}
             </Col>
+            {belowImages}
             <Col lg={5}>{props.children}</Col>
           </Row>
-          {list}
-          {button}
-          {belowImages}
           {quote}
         </Container>
       </section>

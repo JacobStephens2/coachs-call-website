@@ -13,7 +13,7 @@ const TwoImages = props => {
           src="../images/WorkImage1.jpg"
           alt="The Coaching Pyramid"
         />
-        <figcaption>Sample slides used in John's teaching</figcaption>
+        <figcaption>Sample slides used in John's&nbsp;teaching</figcaption>
         <StaticImage
           className="work-photo"
           src="../images/WorkImage2.jpg"
