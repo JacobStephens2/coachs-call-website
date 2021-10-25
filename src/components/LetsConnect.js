@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button"
 const LetsConnect = () => {
   return (
     <section>
-      <Container>
+      <Container className="lets-connect">
         <h2>Let's Connect</h2>
         <p>
           “As iron sharpens iron, so one person sharpens another.”{" "}

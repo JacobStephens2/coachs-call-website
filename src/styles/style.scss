@@ -799,10 +799,31 @@ li {
   text-indent: -21px;
   padding-left: 20px;
 }
+@include media-breakpoint-up(lg) {
+  #seminars-and-workshops .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #mentoring {
+    padding-left: 5rem;
+  }
+  div.lets-connect {
+    padding-left: 5rem;
+    margin-left: 0;
+  }
+  .subhead.tagline {
+    margin-left: 2.5rem;
+  }
+  .large-quotation-mark {
+    padding-left: 3.5rem;
+  }
+}
 #mentoring li {
   text-indent: -21px;
   padding-left: 20px;
 }
+
 ol li {
   padding-left: 0;
 }
