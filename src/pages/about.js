@@ -19,13 +19,13 @@ import Contact from "../components/Contact"
 import QuoteSection from "../components/QuoteSection"
 import VideoGoal from "../components/VideoGoal"
 
-const AboutPage = ({ data }) => {
+const AboutPage = () => {
   return (
     <Layout>
       <Seo title="About" />
       <IntroRow
         logo="yes"
-        heading="Game day is&nbsp;a&nbsp;call to&nbsp;worship"
+        heading="Game day is a call to&nbsp;worship"
         subhead="John has helped over 500 athletes celebrate over 25&nbsp;years"
       >
         <VideoGoal />

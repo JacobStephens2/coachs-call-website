@@ -169,6 +169,11 @@ body h1 {
     font-size: 5rem;
   }
 }
+@include media-breakpoint-up(md) {
+  .introRow h1 {
+    font-size: 6.4rem;
+  }
+}
 @include media-breakpoint-up(lg) {
   .introRow h1 {
     font-size: 5rem;
@@ -1234,9 +1239,19 @@ span.bm-cross:last-child {
 .introText .subhead {
   font-size: 1.4rem;
 }
-
+@include media-breakpoint-up(md) {
+  .introText .subhead {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+}
 div.introRow {
   margin-top: 4rem;
+}
+@include media-breakpoint-up(md) {
+  div.introRow {
+    margin-top: 0rem;
+  }
 }
 
 .bold {
