@@ -39,7 +39,7 @@ const WorkPage = ({ data }) => {
         descriptionThree="to use and implement into sport specific&nbsp;coaching"
         belowImages="yes"
         citation="John Levis"
-        quote="I am created to glorify God by obeying His call through coaching and my primary responsibility is to create the “beautiful game” as an act of worship to&nbsp;Him."
+        quote="I am created to glorify God by obeying His call through coaching and my primary responsibility is to create the 'beautiful game' as an act of worship to&nbsp;Him."
       />
 
       <Section
