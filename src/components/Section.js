@@ -53,7 +53,7 @@ const Section = props => {
     belowImages = ""
   } else {
     belowImages = (
-      <Col className="vertical-grey-rule" lg={5}>
+      <Col className="vertical-grey-rule" lg={5} xxl={6}>
         <TwoImages
           image={props.image}
           imageAlt={props.imageAlt}
@@ -89,8 +89,8 @@ const Section = props => {
             <Col lg={5}>{props.children}</Col>
             {belowImages}
           </Row>
-          {quote}
         </Container>
+        {quote}
       </section>
     )
   } else if (props.id === "mentoring") {
@@ -116,7 +116,7 @@ const Section = props => {
       <section id={props.id} className={props.sectionClass}>
         <Container>
           <Row gx={20}>
-            <Col lg={7}>
+            <Col className="sems-and-workshops" lg={7} xxl={6}>
               <h2>{props.heading}</h2>
               <p className="subhead">{props.subheading}</p>
               <p>
@@ -128,8 +128,8 @@ const Section = props => {
             {belowImages}
             <Col lg={5}>{props.children}</Col>
           </Row>
-          {quote}
         </Container>
+        {quote}
       </section>
     )
   }

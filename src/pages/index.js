@@ -55,16 +55,18 @@ const IndexPage = () => {
           />
         </Row>
 
-        <Section
-          heading="National Connections"
-          subheading="SERVING AND ENRICHING THROUGH&nbsp;RELATIONSHIPS"
-          description="Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching."
-          link="/work"
-          button="yes"
-          buttonText="LEARN MORE ABOUT OUR WORK"
-        >
-          <Map />
-        </Section>
+        <div className="map-section">
+          <Section
+            heading="National Connections"
+            subheading="SERVING AND ENRICHING THROUGH&nbsp;RELATIONSHIPS"
+            description="Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching."
+            link="/work"
+            button="yes"
+            buttonText="LEARN MORE ABOUT OUR WORK"
+          >
+            <Map />
+          </Section>
+        </div>
 
         <QuoteSection
           quote="To become holy is rather like joining a secret society. To put it at the very lowest, it must be great fun."

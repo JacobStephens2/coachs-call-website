@@ -948,6 +948,9 @@ figcaption {
 
 // Classes --------------------------
 
+.sems-and-workshops {
+  padding-right: 2rem;
+}
 
 .education-section p {
   margin-bottom: 0.25rem;
@@ -1583,6 +1586,19 @@ $logo-mobile-scale: 80%;
 
 .introText {
   font-weight: bold;
+}
+@include media-breakpoint-up(xxl) {
+  .introText {
+    padding-left: 6vw;
+  }
+  .intro-row-crest #Crest {
+    height: 38vh;
+    position: relative;
+    left: -3.5vw;
+  }
+  .card {
+    padding-top: 57px;
+  }
 }
 
 .introRow {
