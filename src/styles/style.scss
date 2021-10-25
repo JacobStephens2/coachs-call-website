@@ -963,6 +963,8 @@ figcaption {
   .vertical-grey-rule-two-col {
     border-left: 2px solid lightgrey;
     margin-bottom: 2rem;
+  }
+  div.vertical-grey-rule-two-col {
     padding-left: 2rem;
   }
   .about-page hr {
@@ -1024,6 +1026,14 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
       $quote-background-color
     ),
     url("../images/AdobeStock_145127324_soccer-field.jpeg");
+  }
+  
+.quote-section.net-background {
+  background-image: linear-gradient(
+      $quote-background-color,
+      $quote-background-color
+    ),
+    url("../images/AdobeStock_431541063_prev-net.jpeg");
 }
 
 .header-logo {

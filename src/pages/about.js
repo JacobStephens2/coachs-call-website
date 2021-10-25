@@ -16,7 +16,7 @@ import ListItem from "../components/ListItem"
 import LetsConnect from "../components/LetsConnect"
 import BlockQuote from "../components/BlockQuote"
 import Contact from "../components/Contact"
-import QuoteSection from "../components/QuoteSection"
+import QuoteSectionNet from "../components/QuoteSectionNet"
 import VideoGoal from "../components/VideoGoal"
 
 const AboutPage = () => {
@@ -60,7 +60,7 @@ const AboutPage = () => {
                 </figcaption>
               </div>
               <hr />
-              <QuoteSection
+              <QuoteSectionNet
                 quote="The level of my growth in grace is revealed by the way I look
                 at obedience. We should have a much higher view of the word
                 obedience, rescuing it from the mire of the&nbsp;world."
@@ -106,7 +106,7 @@ const AboutPage = () => {
                     </Col>
                     <Col>
                       <p>
-                        <em>B.S. in Health and Physical Education</em>
+                        <em>B.S. in Health and Physical&nbsp;Education</em>
                       </p>
                       <p>Wheaton College (1996)</p>
                     </Col>
