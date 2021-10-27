@@ -7,10 +7,10 @@ import QuoteSection from "../components/QuoteSection"
 import Card from "../components/Card"
 import BlockQuote from "../components/BlockQuote"
 import Section from "../components/Section"
-import Map from "../../svg/map-pins-labels.svg"
 import IntroRow from "../components/IntroRow"
 import Contact from "../components/Contact"
 import VideoSlowGrass from "../components/VideoSlowGrass"
+import Map from "../components/Map"
 
 const IndexPage = () => {
   return (
