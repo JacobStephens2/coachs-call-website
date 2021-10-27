@@ -1,5 +1,6 @@
 import * as React from "react"
 import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
 
 const ContactForm = () => {
   return (
@@ -7,7 +8,7 @@ const ContactForm = () => {
       <form action="/api/sendgrid" method="POST">
         <h2 style={{ marginBottom: `16px` }}>Contact John</h2>
 
-        <div style={{ marginBottom: `8px` }}>
+        <div className="form-field">
           <label
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="email"
@@ -17,7 +18,7 @@ const ContactForm = () => {
           <input name="email" id="email" type="email" required />
         </div>
 
-        <div style={{ marginBottom: `8px` }}>
+        <div className="form-field">
           <label
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="interest"
@@ -27,7 +28,7 @@ const ContactForm = () => {
           <input name="interest" id="interest" type="text" />
         </div>
 
-        <div style={{ marginBottom: `8px` }}>
+        <div className="form-field">
           <label
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="name"
@@ -37,7 +38,7 @@ const ContactForm = () => {
           <input name="name" id="name" type="text" />
         </div>
 
-        <div style={{ marginBottom: `8px` }}>
+        <div className="form-field">
           <label
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="organization"
@@ -47,7 +48,7 @@ const ContactForm = () => {
           <input name="organization" id="organization" type="text" />
         </div>
 
-        <div style={{ marginBottom: `8px` }}>
+        <div className="form-field">
           <label
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="role"
@@ -74,7 +75,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <button>Send message</button>
+          <button>SEND MESSAGE</button>
         </div>
       </form>
     </Container>
