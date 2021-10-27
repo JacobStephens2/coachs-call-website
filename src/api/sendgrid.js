@@ -13,19 +13,31 @@ const handler = (req, res) => {
     }
 
     if (req.body) {
-      content = `
-        Interest: ${req.body.interest},
-        Name: ${req.body.name},
-        Organization: ${req.body.organization},
-        Role: ${req.body.role},
-        Email: ${req.body.email}
-        Other: ${req.body.other},
-      `;
+      content = `Interest: ${req.body.interest}
+Name: ${req.body.name}
+Organization: ${req.body.organization}
+Role: ${req.body.role}
+Email: ${req.body.email}
+Other: 
+
+${req.body.message}`
+
+      var messagehtml = req.body.message.replace(/\r/gm, "<br><br>")
+
+      contentHTML = `
+        <p>Interest: ${req.body.interest}</p>
+        <p>Name: ${req.body.name}</p>
+        <p>Organization: ${req.body.organization}</p>
+        <p>Role: ${req.body.role}</p>
+        <p>Email: ${req.body.email}</p>
+        <p>Message:</p>
+        <div>${messagehtml}</div>
+      `
       message.to = process.env.SENDGRID_TARGET_EMAIL
-      message.subject = "Inquiry"
+      message.subject = `Message from ${req.body.name}`
       message.reply_to = req.body.email
       message.text = content
-      message.html = content
+      message.html = contentHTML
     }
 
     return sendgrid.send(message).then(
