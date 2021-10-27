@@ -42,9 +42,7 @@ ${req.body.message}`
 
     return sendgrid.send(message).then(
       () => {
-        res.status(200).json({
-          message: "Your message was sent",
-        })
+        res.status(200).redirect("/success")
       },
       error => {
         console.error(error)
