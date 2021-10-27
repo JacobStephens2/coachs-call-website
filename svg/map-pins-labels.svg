@@ -6,7 +6,11 @@
 	.st0{fill:#B2B2B2;}
 	.st1{fill:#00A7E1;}
 	.map-hidden{display:none;}
-	.st3{display:inline;fill:#002856;}
+	.st3{
+		display:inline;
+		fill:#002856;
+		filter: drop-shadow(3px 2px 7px rgba(0,0,0,0.5));
+	}
 	.st4{display:inline;fill:#FFFFFF;}
 	.st5{font-family:'ProximaNova-Semibold';}
 	.st6{font-size:36.7692px;}
