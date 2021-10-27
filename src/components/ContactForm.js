@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container"
 
 const ContactForm = () => {
   return (
-    <Container>
+    <Container className="contact-container">
       <form action="/api/sendgrid" method="POST">
         <h2 style={{ marginBottom: `16px` }}>Contact John</h2>
 
@@ -40,21 +40,21 @@ const ContactForm = () => {
         <div style={{ marginBottom: `8px` }}>
           <label
             style={{ display: `block`, marginBottom: `4px` }}
-            htmlFor="role"
-          >
-            Role
-          </label>
-          <input name="role" id="role" type="text" />
-        </div>
-
-        <div style={{ marginBottom: `8px` }}>
-          <label
-            style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="organization"
           >
             Organization / College or University
           </label>
           <input name="organization" id="organization" type="text" />
+        </div>
+
+        <div style={{ marginBottom: `8px` }}>
+          <label
+            style={{ display: `block`, marginBottom: `4px` }}
+            htmlFor="role"
+          >
+            Role
+          </label>
+          <input name="role" id="role" type="text" />
         </div>
 
         <div style={{ marginBottom: `24px` }}>
