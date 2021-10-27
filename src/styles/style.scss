@@ -1861,6 +1861,12 @@ $mission-vision-font-size: 1.2rem;
 
 // IDs #ids --------------------------
 
+#pins {
+  filter: drop-shadow(3px 6px 8px rgba(0,0,0,0.4));
+  stroke: var(--grey);
+  stroke-width: 3px;
+}
+
 section#donate {
   padding-top: 0;
   padding-left: 0.4rem;
