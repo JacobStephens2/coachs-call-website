@@ -5,7 +5,7 @@
 <style type="text/css">
 	.st0{fill:#B2B2B2;}
 	.st1{fill:#00A7E1;}
-	.st2{display:none;}
+	.map-hidden{display:none;}
 	.st3{display:inline;fill:#002856;}
 	.st4{display:inline;fill:#FFFFFF;}
 	.st5{font-family:'ProximaNova-Semibold';}
@@ -573,22 +573,22 @@
 		c-7.3,0.3-14.7,0.7-22,1c-21.8,1-39.4,1.5-55.6,1.5L822,646.2z"/>
 </g>
 <g id="pins">
-	<g id="dcc">
-		<circle class="st1" cx="1587.8" cy="490.3" r="35.1"/>
-	</g>
-	<g id="eastern">
-		<circle class="st1" cx="1547.1" cy="512.3" r="35.1"/>
-	</g>
 	<g id="pa_three">
 		<circle class="st1" cx="1611.6" cy="529.6" r="35.1"/>
 	</g>
 	<g id="pa_four">
 		<circle class="st1" cx="1573" cy="541.2" r="35.1"/>
 	</g>
-	<g id="gordon">
-		<circle class="st1" cx="1300" cy="477.1" r="35.1"/>
+	<g id="dcc">
+		<circle class="st1" cx="1587.8" cy="490.3" r="35.1"/>
+	</g>
+	<g id="eastern">
+		<circle class="st1" cx="1547.1" cy="512.3" r="35.1"/>
 	</g>
 	<g id="calvin">
+		<circle class="st1" cx="1300" cy="477.1" r="35.1"/>
+	</g>
+	<g id="gordon">
 		<circle class="st1" cx="1708.4" cy="405" r="35.1"/>
 	</g>
 	<g id="wheaton">
@@ -599,7 +599,7 @@
 	</g>
 </g>
 <g id="labels">
-	<g id="dcc-label" class="st2">
+	<g id="dcc-label" class="map-hidden">
 		<rect x="1078.6" y="128.4" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 1129.5645 206.9414)" class="st4 st5 st6">NEW</text>
 		<text transform="matrix(1 0 0 1 1210.4645 206.9414)" class="st4 st5 st6">T</text>
@@ -628,7 +628,7 @@
 		<text transform="matrix(1 0 0 1 1507.7644 372.4062)" class="st4 st5 st8">o</text>
 		<text transform="matrix(1 0 0 1 1541.4645 372.4062)" class="st4 st5 st8">l</text>
 	</g>
-	<g id="eastern-label" class="st2">
+	<g id="eastern-label" class="map-hidden">
 		<rect x="1109.4" y="595.7" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 1160.3837 674.2854)" class="st4 st5 st6">ST DAVIDS, </text>
 		<text transform="matrix(1 0 0 1 1364.3837 674.2854)" class="st4 st5 st6 st7">P</text>
@@ -636,7 +636,7 @@
 		<text transform="matrix(1 0 0 1 1160.3837 775.3987)" class="st4 st5 st8">Eastern</text>
 		<text transform="matrix(1 0 0 1 1160.3837 839.7502)" class="st4 st5 st8">University</text>
 	</g>
-	<g id="gordon-label" class="st2">
+	<g id="gordon-label" class="map-hidden">
 		<rect x="1095" y="196.6" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 1145.9193 275.1855)" class="st4 st5 st6">WENHAM, </text>
 		<text transform="matrix(1 0 0 1 1327.3193 275.1855)" class="st4 st5 st6 st7">M</text>
@@ -644,21 +644,21 @@
 		<text transform="matrix(1 0 0 1 1145.9193 376.2987)" class="st4 st5 st8">Gordon</text>
 		<text transform="matrix(1 0 0 1 1145.9193 440.6503)" class="st4 st5 st8">College</text>
 	</g>
-	<g id="wheaton-label" class="st2">
+	<g id="wheaton-label" class="map-hidden">
 		<rect x="585.8" y="405.4" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 636.7645 483.9856)" class="st4 st5 st6">WHEATON, </text>
 		<text transform="matrix(1 0 0 1 836.7645 483.9856)" class="st4 st5 st6 st7">IL</text>
 		<text transform="matrix(1 0 0 1 636.7645 585.0989)" class="st4 st5 st8">Wheaton</text>
 		<text transform="matrix(1 0 0 1 636.7645 649.4504)" class="st4 st5 st8">College</text>
 	</g>
-	<g id="baylor-label" class="st2">
+	<g id="baylor-label" class="map-hidden">
 		<rect x="369.9" y="766.3" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 420.8348 844.8455)" class="st4 st5 st6">WACO, </text>
 		<text transform="matrix(1 0 0 1 550.4348 844.8455)" class="st4 st5 st6 st7">TX</text>
 		<text transform="matrix(1 0 0 1 420.8348 945.9588)" class="st4 st5 st8">Baylor</text>
 		<text transform="matrix(1 0 0 1 420.8348 1010.3104)" class="st4 st5 st8">University</text>
 	</g>
-	<g id="calvin-label" class="st2">
+	<g id="calvin-label" class="map-hidden">
 		<rect x="686" y="147.2" class="st3" width="551.7" height="319.1"/>
 		<text transform="matrix(1 0 0 1 736.9645 225.7854)" class="st4 st5 st6">GRAND RAPIDS, </text>
 		<text transform="matrix(1 0 0 1 1019.2644 225.7854)" class="st4 st5 st6 st7">MI</text>
