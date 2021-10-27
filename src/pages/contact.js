@@ -6,6 +6,7 @@ import QuoteSection from "../components/QuoteSection"
 import Contact from "../components/Contact"
 import LetsConnect from "../components/LetsConnect"
 import VideoWideGrass from "../components/VideoWideGrass"
+import ContactForm from "../components/ContactForm"
 
 const ContactPage = ({ data }) => {
   return (
@@ -20,7 +21,7 @@ const ContactPage = ({ data }) => {
         >
           <VideoWideGrass />
         </IntroRow>
-
+        <ContactForm />
         <QuoteSection
           quote="For this reason, since the day we heard about you, we have not stopped praying for you. We continually ask God to fill you with the knowledge of His will through all wisdom and understanding that the Spirit gives, so that you may live a life worthy of the Lord and please Him in every way: bearing fruit in every good&nbsp;work."
           citation="Colossians 1:9-10"
