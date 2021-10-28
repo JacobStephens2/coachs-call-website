@@ -54,15 +54,6 @@
   --orange: #f78d1e;
   --black: #000;
 
-  /* Sizes and widths */
-  /* If root size = 16px, then 80rem = 1280px */
-  --content-w-wide: 80rem;
-  /* If root size = 16px, then 60rem = 960px */
-  --content-w-regular: 45rem;
-  /* If root size = 16px, then 40rem = 640px */
-  --content-w-narrow: 40rem;
-  --mobile-card-height: 500px;
-
   // Layout
   --one-col-section-lg-pl: 11vw;
 }
@@ -817,7 +808,6 @@ li {
     padding-left: 5rem;
   }
   div.lets-connect {
-    padding-left: 5rem;
     margin-left: 0;
   }
   .quote-section {
@@ -827,7 +817,6 @@ li {
 }
 @include media-breakpoint-up(xxl) {
   div.lets-connect {
-    padding-left: 20vw;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
@@ -1007,7 +996,7 @@ input {
 // Classes --------------------------
 
 @include media-breakpoint-up(lg) {
-  .one-col-section {
+  section.one-col-section {
     padding-left: var(--one-col-section-lg-pl);
     margin-left: 0;
   }
@@ -1297,7 +1286,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
 
 @include media-breakpoint-up(md) {
   .coachquote-column {
-    position: absolute;
+    margin-left: var(--coachquote-lg-left);
   }
   .block-position .coachquote-column {
     position: initial;
@@ -1391,21 +1380,19 @@ span.bm-cross:last-child {
 }
 
 // .coachquote-column::before
-.coachquote-column::before {
-  content: '"';
-  font-size: 10rem;
-  font-family: var(--highlight-font);
-  font-weight: var(--highlight-font-weight); 
-  font-style: var(--highlight-font-style); 
-  height: 5rem;
-  position: absolute;
-  top: -47px;
+:root {
+  --coachquote-lg-left: 11vw;
 }
+
+#quote-marks {
+  float: left;
+  height: 2.6rem;
+  display: none;
+}
+
 @include media-breakpoint-up(md) {
-  .coachquote-column::before {
-    height: 100%;
-    position: absolute;
-    top: -2.9rem;
+  #quote-marks {
+    display: inline;
   }
 }
 
@@ -1634,10 +1621,13 @@ button.btn {
   margin-top: 1rem;
 }
 
-$logo-mobile-scale: 80%;
+:root {
+  --logo-mobile-scale: 80%;
+}
+
 .logo {
-  width: $logo-mobile-scale;
-  height: $logo-mobile-scale;
+  width: var(--logo-mobile-scale);
+  height: var(--logo-mobile-scale);
 }
 @include media-breakpoint-up(md) {
   .logo {
