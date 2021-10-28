@@ -9,7 +9,7 @@ import BottomBar from "../components/BottomBar"
 
 import "../styles/reset.css"
 import "../styles/accessibility.css"
-import "../styles/style.scss"
+import "../styles/style.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Layout = ({ children, props }) => {

@@ -1577,10 +1577,12 @@ button.btn {
   font-style: var(--primary-font-style);
 }
 @media screen and (min-width: 768px) {
-  .footer {
+  footer.footer {
     display: flex;
     justify-content: start;
-    padding: 1rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0
   }
 }
 
