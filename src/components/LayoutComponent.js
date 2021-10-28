@@ -3,7 +3,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 
 import Header from "./headerRow"
-import Footer from "./Footer"
+import FooterComponent from "./FooterComponent"
 
 import BottomBar from "../components/BottomBar"
 
@@ -25,7 +25,7 @@ const Layout = ({ children, props }) => {
           <main>{children}</main>
           <BottomBar />
         </div>
-        <Footer />
+        <FooterComponent />
       </main>
     </div>
   )
