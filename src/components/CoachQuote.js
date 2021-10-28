@@ -7,7 +7,7 @@ import QuoteMarks from "../../svg/quote-marks.svg"
 const CoachQuote = props => {
   return (
     <section className="coachquote-section one-col-section">
-      <Container>
+      <Container className="coachquote-container">
         <QuoteMarks />
         <Col sm={12} md={10} lg={8} xl={7} className="coachquote-column">
           <blockquote>{props.quote}”</blockquote>
