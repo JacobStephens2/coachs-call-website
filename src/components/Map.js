@@ -6,7 +6,7 @@ const Map = () => {
 
   if (isBrowser) {
     setTimeout(() => {
-      console.log("this is the first message")
+      console.log("The map is now interactive")
       const wheaton = document.querySelector("#wheaton")
       const wheatonLabel = document.querySelector("#wheaton-label")
       wheaton.addEventListener("click", () => {

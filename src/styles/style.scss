@@ -1552,8 +1552,10 @@ button.btn {
   border-radius: 0;
 }
 
-.tagline-section {
-  padding-left: 16vw;
+@include media-breakpoint-up(xxl) {
+  .tagline-section {
+    padding-left: 16vw;
+  }
 }
 
 // Other
