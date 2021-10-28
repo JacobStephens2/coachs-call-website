@@ -62,6 +62,9 @@
   /* If root size = 16px, then 40rem = 640px */
   --content-w-narrow: 40rem;
   --mobile-card-height: 500px;
+
+  // Layout
+  --one-col-section-lg-pl: 11vw;
 }
 
 $photo-shadow: 2px 4px 8px 4px rgb(0 0 0 / 21%);
@@ -817,12 +820,6 @@ li {
     padding-left: 5rem;
     margin-left: 0;
   }
-  .subhead.tagline {
-    margin-left: 2.5rem;
-  }
-  div.large-quotation-mark {
-    padding-left: 1.5rem;
-  }
   .quote-section {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -1009,6 +1006,13 @@ input {
 
 // Classes --------------------------
 
+@include media-breakpoint-up(lg) {
+  .one-col-section {
+    padding-left: var(--one-col-section-lg-pl);
+    margin-left: 0;
+  }
+}
+
 .sems-and-workshops {
   padding-right: 2rem;
 }
@@ -1189,7 +1193,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   padding-left: 2rem;
 }
 
-.contact-page .blockquote-column {
+.contact-page .coachquote-column {
   padding-left: 0;
 }
 
@@ -1287,17 +1291,20 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   justify-content: end;
 }
 
+.coachquote-column {
+  min-height: 15rem;
+}
+
 @include media-breakpoint-up(md) {
-  .blockquote-column {
+  .coachquote-column {
     position: absolute;
-    left: 16%;
   }
-  .block-position .blockquote-column {
+  .block-position .coachquote-column {
     position: initial;
   }
 }
 @include media-breakpoint-up(xxl) {
-  .blockquote-column {
+  .coachquote-column {
     position: static;
   }
 }
@@ -1383,20 +1390,21 @@ span.bm-cross:last-child {
   color: var(--light-blue);
 }
 
-// large-quotation-mark
-.large-quotation-mark {
+// .coachquote-column::before
+.coachquote-column::before {
+  content: '"';
   font-size: 10rem;
   font-family: var(--highlight-font);
   font-weight: var(--highlight-font-weight); 
   font-style: var(--highlight-font-style); 
   height: 5rem;
-  position: relative;
+  position: absolute;
   top: -47px;
 }
 @include media-breakpoint-up(md) {
-  .large-quotation-mark {
+  .coachquote-column::before {
     height: 100%;
-    position: relative;
+    position: absolute;
     top: -2.9rem;
   }
 }
@@ -1480,10 +1488,12 @@ div.introRow {
 .light-grey-section {
   background-color: var(--lighter-grey);
 }
-.blue-section {
+.coachquote-section {
   background-color: var(--light-blue);
   color: var(--white);
-  padding: 2rem 0 2rem;
+  padding-top: 2rem
+  padding-bottom: 2rem;
+  min-height: 15rem;
 }
 .dark-blue-section {
   background-color: var(--dark-blue);
@@ -1595,7 +1605,7 @@ button.btn {
   padding-left: 0;
 }
 
-#email .blue-section .container {
+#email .coachquote-section .container {
   padding-left: 2rem;
 }
 
