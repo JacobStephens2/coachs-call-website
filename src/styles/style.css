@@ -994,6 +994,13 @@ input {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  section.one-col-section .container {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 .sems-and-workshops {
   padding-right: 2rem;
 }
