@@ -5,6 +5,7 @@ import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
+import Mentoring from "../components/Mentoring"
 import Section from "../components/Section"
 import Tagline from "../components/Tagline"
 import VideoWideGrass from "../components/VideoWideGrass"
@@ -42,7 +43,7 @@ const WorkPage = ({ data }) => {
         quote="I am created to glorify God by obeying His call through coaching and my primary responsibility is to create the 'beautiful game' as an act of worship to&nbsp;Him."
       />
 
-      <Section
+      <Mentoring
         id="mentoring"
         heading="One-on-One Mentoring and Small Group Sessions"
         subheading="Pursuing excellence"
