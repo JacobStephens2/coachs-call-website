@@ -20,6 +20,7 @@ const Tagline = () => {
             xs={4}
             sm={3}
             md={2}
+            xxl={5}
           >
             <Crest />
           </Col>

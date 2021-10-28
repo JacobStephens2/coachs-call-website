@@ -991,6 +991,7 @@ input {
   section.one-col-section {
     padding-left: var(--one-col-section-lg-pl);
     margin-left: 0;
+    padding-right: 1rem;
   }
 }
 
