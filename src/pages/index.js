@@ -5,10 +5,10 @@ import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"
 import Card from "../components/Card"
-import BlockQuote from "../components/BlockQuote"
+import CoachQuote from "../components/CoachQuote"
 import Section from "../components/Section"
 import IntroRow from "../components/IntroRow"
-import Contact from "../components/Contact"
+import Tagline from "../components/Tagline"
 import VideoSlowGrass from "../components/VideoSlowGrass"
 import Map from "../components/Map"
 
@@ -74,14 +74,14 @@ const IndexPage = () => {
           citation="C.S. Lewis, <i>Mere Christianity</i>"
         />
 
-        <BlockQuote
+        <CoachQuote
           quote="The talks with John this past year have been life-giving. Walking through this past year has been a real challenge to my faith and to my career with all of the setbacks, disappointments and uncertainty. Having John there to keep me grounded in my faith, focus my attention on seeking God in all things and allowing me to work through my thoughts and feelings while challenging me to seek solutions through God that furthers His kingdom has been&nbsp;invaluable."
           source="Men’s lacrosse coach, Calvin&nbsp;University"
         />
 
         <LetsConnect />
 
-        <Contact />
+        <Tagline />
       </span>
     </Layout>
   )

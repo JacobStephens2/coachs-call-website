@@ -3,7 +3,7 @@ import Seo from "../components/Seo"
 import Layout from "../components/LayoutComponent"
 import IntroRow from "../components/IntroRow"
 import QuoteSection from "../components/QuoteSection"
-import Contact from "../components/Contact"
+import Tagline from "../components/Tagline"
 import LetsConnect from "../components/LetsConnect"
 import VideoWideGrass from "../components/VideoWideGrass"
 import ContactForm from "../components/ContactForm"
@@ -27,7 +27,7 @@ const ContactPage = ({ data }) => {
           citation="Colossians 1:9-10"
         />
         <LetsConnect />
-        <Contact />
+        <Tagline />
       </span>
     </Layout>
   )

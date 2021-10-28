@@ -4,9 +4,9 @@ import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import LetsConnect from "../components/LetsConnect"
-import BlockQuote from "../components/BlockQuote"
+import CoachQuote from "../components/CoachQuote"
 import Section from "../components/Section"
-import Contact from "../components/Contact"
+import Tagline from "../components/Tagline"
 import VideoWideGrass from "../components/VideoWideGrass"
 
 const WorkPage = ({ data }) => {
@@ -59,14 +59,14 @@ const WorkPage = ({ data }) => {
         descriptionThree="develop strategies for culture building, program development, recruiting, and day to day&nbsp;excellence"
       />
 
-      <BlockQuote
+      <CoachQuote
         quote="Perpetual growth is a massive part of becoming who we want to be; as an individual, as a team, or even as a program. Proper growth often is produced not by adding but by uncovering. Working with John pushes me to dig, to uncover where my identity truly is. Not just my identity but where I want the identity of my program to&nbsp;be."
         source="Men’s Soccer Coach, University of Valley&nbsp;Forge"
       />
 
       <LetsConnect />
 
-      <Contact />
+      <Tagline />
     </Layout>
   )
 }

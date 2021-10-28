@@ -3,7 +3,7 @@ import * as React from "react"
 import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
-import Contact from "../components/Contact"
+import Tagline from "../components/Tagline"
 import Container from "react-bootstrap/Container"
 
 const PrivacyPage = () => {
@@ -46,7 +46,7 @@ const PrivacyPage = () => {
         </p>
       </Container>
       <LetsConnect />
-      <Contact />
+      <Tagline />
     </Layout>
   )
 }

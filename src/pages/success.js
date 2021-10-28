@@ -2,7 +2,7 @@ import * as React from "react"
 
 import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
-import Contact from "../components/Contact"
+import Tagline from "../components/Tagline"
 import Container from "react-bootstrap/Container"
 
 const Success = () => {
@@ -18,7 +18,7 @@ const Success = () => {
           Your message was sent
         </h1>
       </Container>
-      <Contact />
+      <Tagline />
     </Layout>
   )
 }

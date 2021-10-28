@@ -5,10 +5,10 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import Crest from "../../svg/crest-white-stars.svg"
 
-const Contact = () => {
+const Tagline = () => {
   return (
     <section className="dark-blue-section tagline-section">
-      <Container>
+      <Container className="one-col-section">
         <Row>
           <Col xs={8} sm={9} md={10} xxl={7}>
             <p className="subhead tagline">
@@ -29,4 +29,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Tagline
