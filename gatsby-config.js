@@ -9,7 +9,6 @@ module.exports = {
   },
   flags: {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    PRESERVE_WEBPACK_CACHE: true,
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
     LMDB_STORE: true,
@@ -26,13 +25,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           "G-9FWTXPCKKJ", // Google Analytics / GA
         ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
-        // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: false,
@@ -65,10 +60,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    `mini-css-extract-plugin`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,

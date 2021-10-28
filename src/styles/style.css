@@ -1,7 +1,3 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-
 :root {
   /* Fonts */
   --main-header-font-size: 3rem;
@@ -54,13 +50,15 @@
   --orange: #f78d1e;
   --black: #000;
 
-  // Layout
+  /* // Layout */
   --one-col-section-lg-pl: 11vw;
+  
+  /* // styles */
+  --photo-shadow: 2px 4px 8px 4px rgb(0 0 0 / 21%);
 }
 
-$photo-shadow: 2px 4px 8px 4px rgb(0 0 0 / 21%);
 
-// CONTENTS
+/* // CONTENTS
 //
 // If an element is ultimately targeted, that rule goes into the elements section, and so on.
 // Within each section, rules should be organized from less to more specific
@@ -75,7 +73,7 @@ $photo-shadow: 2px 4px 8px 4px rgb(0 0 0 / 21%);
 // Classes
 // IDs
 
-// Elements  --------------------------
+// Elements  -------------------------- */
 
 html {
   -ms-text-size-adjust: 100%;
@@ -130,7 +128,7 @@ template {
   display: none;
 }
 
-// h1
+/* // h1 */
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -158,27 +156,27 @@ body h1 {
   line-height: 0.95;
   margin-bottom: 0.7rem;
 }
-@include media-breakpoint-up(sm) {
+@media screen and (min-width: 576px) {
   .introRow h1 {
     font-size: 5rem;
   }
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .introRow h1 {
     font-size: 6.4rem;
   }
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .introRow h1 {
     font-size: 5.75rem;
   }
 }
-@include media-breakpoint-up(xl) {
+@media screen and (min-width: 1200px) {
   .introRow h1 {
     font-size: 6.9rem;
   }
 }
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   .introRow h1 {
     padding-right: 2rem;
   }
@@ -195,7 +193,7 @@ html h1 {
   padding-left: 1.7rem;
 }
 
-// h2
+/* // h2 */
 h2 {
   margin-left: 0;
   margin-right: 0;
@@ -230,7 +228,7 @@ a h2 {
   color: var(--white);
 }
 
-// h3
+/* // h3 */
 h3 {
   margin-left: 0;
   margin-right: 0;
@@ -257,7 +255,7 @@ h2 + h3 {
   color: var(--white);
 }
 
-// h4
+/* // h4 */
 h4 {
   margin-left: 0;
   margin-right: 0;
@@ -281,7 +279,7 @@ h4 {
   margin-bottom: 1.1rem;
 }
 
-// h5 and h6
+/* // h5 and h6 */
 h5 {
   margin-left: 0;
   margin-right: 0;
@@ -319,7 +317,7 @@ h6 {
   line-height: 1.1;
 }
 
-// Paragraphs
+/* // Paragraphs */
 p {
   margin-left: 0;
   margin-right: 0;
@@ -339,7 +337,7 @@ p {
   color: var(--white);
 }
 
-// Anchors
+/* // Anchors */
 a {
   text-decoration: none !important;
   color: inherit;
@@ -389,7 +387,7 @@ h2 a {
   margin-bottom: 6px;
 }
 
-// Citations
+/* // Citations */
 cite {
   font-family: var(--light-font);
   font-style: var(--light-font-style);
@@ -411,7 +409,7 @@ blockquote + cite {
   font-style: var(--highlight-font-style);
 }
 
-// Video
+/* // Video */
 video {
   position: relative;
   top: 0;
@@ -422,7 +420,7 @@ video {
   filter: brightness(50%);
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   video {
     height: 92vh;
   }
@@ -432,7 +430,7 @@ video {
   height: 850px;
 }
 
-// Other
+/* // Other */
 b,
 strong {
   font-weight: inherit;
@@ -482,7 +480,7 @@ q {
 section {
   padding: 4rem 0 3rem;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   section {
     padding: 2rem 0 2rem;
   }
@@ -798,7 +796,7 @@ li {
   text-indent: -21px;
   padding-left: 20px;
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   #seminars-and-workshops .row {
     display: flex;
     flex-direction: row;
@@ -812,15 +810,13 @@ li {
     padding-bottom: 4rem;
   }
 }
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   div.lets-connect {
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
-  #mentoring {
-    padding-left: 19vw;
-  }
 }
+
 #mentoring li {
   text-indent: -21px;
   padding-left: 20px;
@@ -990,9 +986,8 @@ input {
   max-width: fit-content;
 }
 
-// Classes --------------------------
-
-@include media-breakpoint-up(lg) {
+/* // Classes -------------------------- */
+@media screen and (min-width: 992px) {
   section.one-col-section {
     padding-left: var(--one-col-section-lg-pl);
     margin-left: 0;
@@ -1002,9 +997,9 @@ input {
 .sems-and-workshops {
   padding-right: 2rem;
 }
-@include media-breakpoint-up(xxl) {
+
+@media screen and (min-width: 1400px) {
   div.sems-and-workshops {
-    padding-left: 3vw;
     padding-right: 3vw;
     padding-top: 2.4rem;
   }
@@ -1023,7 +1018,7 @@ input {
   padding: 1rem;
 }
 
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .work-photo {
     margin-bottom: 0.6rem;
   }
@@ -1034,7 +1029,7 @@ input {
     margin-bottom: 0.6rem;
   }
 }
-@include media-breakpoint-up(xl) {
+@media screen and (min-width: 1200px) {
   .about-photos-background {
     margin-left: 0;
   }
@@ -1045,7 +1040,7 @@ input {
   margin-bottom: 2rem;
 }
 
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .vertical-grey-rule-two-col {
     border-left: 2px solid lightgrey;
     margin-bottom: 2rem;
@@ -1058,7 +1053,7 @@ input {
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .about-page {
     padding-bottom: 0;
   }
@@ -1093,13 +1088,15 @@ input {
 #john-levis .quote-section {
   margin-bottom: 1rem;
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   #john-levis .quote-section {
     margin-bottom: 0;
   }
 }
 
-$quote-background-color: rgba(49, 50, 53, 0.8);
+:root {
+  --quote-background-color: rgba(49, 50, 53, 0.8);
+}
 
 .quote-section {
   margin-top: 8px;
@@ -1108,16 +1105,16 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   padding-right: 0.5rem;
   background-blend-mode: multiply;
   background-image: linear-gradient(
-      $quote-background-color,
-      $quote-background-color
+      var(--quote-background-color),
+      var(--quote-background-color)
     ),
     url("../images/AdobeStock_145127324_soccer-field.jpeg");
   }
   
 .quote-section.net-background {
   background-image: linear-gradient(
-      $quote-background-color,
-      $quote-background-color
+      var(--quote-background-color),
+      var(--quote-background-color)
     ),
     url("../images/AdobeStock_431541063_prev-net.jpeg");
 }
@@ -1126,7 +1123,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   height: 42px;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .header-logo {
     height: 62px;
     margin-top: 1.1rem;
@@ -1144,7 +1141,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   justify-content: center;
   display: none;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .intro-row-crest {
     display: flex;
     top: -27px;
@@ -1155,7 +1152,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .intro-row-crest {
     position: relative;
     top: -34px;
@@ -1165,7 +1162,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   }
 }
 
-@include media-breakpoint-up(xl) {
+@media screen and (min-width: 1200px) {
   .about-page .intro-row-crest {
     position: relative;
     top: -48px;
@@ -1289,7 +1286,7 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
   justify-content: center;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .coachquote-column {
     margin-left: var(--coachquote-lg-left);
   }
@@ -1297,13 +1294,13 @@ $quote-background-color: rgba(49, 50, 53, 0.8);
     position: initial;
   }
 }
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   .coachquote-column {
     position: static;
   }
 }
 
-// Burger Menu
+/* // Burger Menu */
 /* Position and sizing of burger button */
 .bm-burger-button {
   width: 38px;
@@ -1384,7 +1381,7 @@ span.bm-cross:last-child {
   color: var(--light-blue);
 }
 
-// .coachquote-column::before
+/* // .coachquote-column::before */
 :root {
   --coachquote-lg-left: 11vw;
 }
@@ -1395,13 +1392,13 @@ span.bm-cross:last-child {
   display: none;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   #quote-marks {
     display: inline;
   }
 }
 
-// listitem
+/* // listitem */
 .listitem {
   margin: 3rem 0;
 }
@@ -1413,7 +1410,7 @@ span.bm-cross:last-child {
   border-bottom: 1px solid black;
 }
 
-// subhead
+/* // subhead */
 .subhead {
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -1421,7 +1418,7 @@ span.bm-cross:last-child {
 .introText .subhead {
   font-size: 1.4rem;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .introText .subhead {
     font-size: 1.8rem;
     line-height: 1.25;
@@ -1430,12 +1427,12 @@ span.bm-cross:last-child {
 div.introRow {
   margin-top: 4rem;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   div.introRow {
     margin-top: 0rem;
   }
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   div.introRow {
     margin-top: 13vh;
   }
@@ -1447,7 +1444,7 @@ div.introRow {
   font-style: var(--bold-font-style);
 }
 
-// tagline
+/* // tagline */
 .tagline {
   letter-spacing: 5px;
   font-style: italic;
@@ -1473,7 +1470,7 @@ div.introRow {
   margin-top: 3%;
 }
 
-// Sections
+/* // Sections */
 .grey-section {
   background-color: var(--light-grey);
 }
@@ -1492,7 +1489,7 @@ div.introRow {
   padding: 2rem 0 2rem;
 }
 
-// Buttons
+/* // Buttons */
 button.btn {
   font-size: 0.7rem;
   background-color: var(--white);
@@ -1515,12 +1512,12 @@ button.btn {
   padding: 0;
 }
 
-// Cards
+/* // Cards */
 .card {
   min-height: 266px;
   padding-top: 69px;
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .card {
     padding-top: 38px;
   }
@@ -1553,21 +1550,20 @@ button.btn {
   border-radius: 0;
 }
 
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   .tagline-section {
     padding-left: 16vw;
   }
 }
 
-// Other
-
+/* // Other */
 
 .bigger-column {
   height: 250px;
   padding: 2rem;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .wide-col-gap {
     margin-right: 2rem;
   }
@@ -1580,7 +1576,7 @@ button.btn {
   font-weight: var(--primary-font-weight);
   font-style: var(--primary-font-style);
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .footer {
     display: flex;
     justify-content: start;
@@ -1633,7 +1629,7 @@ button.btn {
   width: var(--logo-mobile-scale);
   height: var(--logo-mobile-scale);
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .logo {
     margin-left: 1rem;
   }
@@ -1655,7 +1651,7 @@ button.btn {
   left: 12px;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .logo-box {
     top: -15px;
     left: 0;
@@ -1672,7 +1668,7 @@ button.btn {
 .introText {
   font-weight: bold;
 }
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   .introText {
     padding-left: 6vw;
     padding-right: 2vw;
@@ -1693,7 +1689,7 @@ button.btn {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .introRow {
     padding-top: 5%;
   }
@@ -1724,7 +1720,7 @@ button.btn {
   position: relative;
   top: -9px;
 }
-@include media-breakpoint-up(xxl) {
+@media screen and (min-width: 1400px) {
   .contact-section-crest-col {
     padding-right: 5vw;
   }
@@ -1742,7 +1738,7 @@ button.btn {
   padding-left: 0.3rem;
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .dark-blue-section .contact-text-container {
     padding-left: 0;
   }
@@ -1766,7 +1762,7 @@ button.btn {
 .mobile-hidden {
   display: none;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none !important;
     height: 750px;
@@ -1802,12 +1798,12 @@ button.btn {
 section#mission-vision-section {
   padding-bottom: 5px;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   section#mission-vision-section {
     padding-bottom: 2rem;
   }
 }
-@include media-breakpoint-up(lg) {
+@media screen and (min-width: 992px) {
   .vision-box {
     border-right: white;
     border-right-width: 4px;
@@ -1820,36 +1816,39 @@ section#mission-vision-section {
   }
 }
 
-$mission-vision-font-size: 1.2rem;
+:root {
+  --mission-vision-font-size: 1.2rem;
+}
+
 .vision {
   padding-right: 3rem;
-  font-size: $mission-vision-font-size;
+  font-size: var(--mision-vision-font-size);
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .vision {
     padding-right: 0;
   }  
 }
 
 .mission {
-  font-size: $mission-vision-font-size;
+  font-size: var(--mision-vision-font-size);
 }
 
 .mission-column {
   margin-left: 0;
 }
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .mission-column {
     margin-left: 1rem;
   }
 }
 
 .about-photo {
-  box-shadow: $photo-shadow;
+  box-shadow: var(--photo-shadow);
 }
 
 .work-photo {
-  box-shadow: $photo-shadow;
+  box-shadow: var(--photo-shadow);
 }
 
 .work-photo+figcaption {
@@ -1865,7 +1864,7 @@ $mission-vision-font-size: 1.2rem;
   margin-top: 5rem;
 }
 
-// IDs #ids --------------------------
+/* // IDs #ids -------------------------- */
 
 #pins {
   filter: drop-shadow(3px 6px 8px rgba(0,0,0,0.4));
@@ -1888,7 +1887,7 @@ section#donate {
 .mission-vision-box:first-of-type {
   margin-bottom: 5px;
 }
-@include media-breakpoint-up(xl) {
+@media screen and (min-width: 1200px) {
   .mission-vision-box:first-of-type {
     margin-bottom: 0;
     border-right: 4px solid white;
@@ -1910,7 +1909,7 @@ section#donate {
   }
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (min-width: 768px) {
   .mission-vision-box:first-of-type {
     display: flex;
     flex-direction: column;
@@ -1931,26 +1930,28 @@ section#donate {
   min-height: 360px;
 }
 
-$about-gradient: var(--dark-blue-overlay);
+:root {
+  --about-gradient: var(--dark-blue-overlay);
+  --work-gradient: var(--green-overlay);
+  --contact-gradient: var(--light-blue-overlay);
+}
 #aboutCard {
-  background-image: linear-gradient($about-gradient, $about-gradient),
+  background-image: linear-gradient(var(--about-gradient), var(--about-gradient)),
     url("../images/AdobeStock-track-119954823_Preview.jpeg");
 }
 
-$work-gradient: var(--green-overlay);
 #workCard {
-  background-image: linear-gradient($work-gradient, $work-gradient),
+  background-image: linear-gradient(var(--work-gradient), var(--work-gradient)),
     url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
   max-height: 266px;
 }
 
-$contact-gradient: var(--light-blue-overlay);
 #contactCard {
-  background-image: linear-gradient($contact-gradient, $contact-gradient),
+  background-image: linear-gradient(var(--contact-gradient), var(--contact-gradient)),
     url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
 }
 
-// Attributes --------------------
+/* // Attributes -------------------- */
 
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -1958,7 +1959,7 @@ abbr[title] {
   text-decoration: none;
 }
 
-// MainNav
+/* // MainNav */
 
 a.mainnav {
   margin: 0 auto 0;
@@ -2008,4 +2009,9 @@ a.mainnav {
   font-weight: initial;
   padding-left: 1.3rem;
   text-indent: -0.6rem;
+}
+
+section.footer-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
