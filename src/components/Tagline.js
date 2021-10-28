@@ -7,8 +7,8 @@ import Crest from "../../svg/crest-white-stars.svg"
 
 const Tagline = () => {
   return (
-    <section className="dark-blue-section tagline-section">
-      <Container className="one-col-section">
+    <section className="dark-blue-section one-col-section tagline-section">
+      <Container>
         <Row>
           <Col xs={8} sm={9} md={10} xxl={7}>
             <p className="subhead tagline">
