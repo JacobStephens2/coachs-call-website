@@ -21,3 +21,27 @@
     ),
     url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
 }
+
+.darkBackground h2 {
+  color: var(--white);
+}
+
+.darkBackground h3 {
+  color: var(--white);
+}
+
+.darkBackground p {
+  color: var(--white);
+}
+
+.darkBackground a {
+  color: var(--white);
+}
+
+.darkBackground h2 a {
+  color: var(--white);
+}
+
+.darkBackground {
+  text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.5);
+}

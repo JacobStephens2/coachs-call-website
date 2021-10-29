@@ -22,3 +22,9 @@
 .about-photo {
   box-shadow: var(--photo-shadow);
 }
+
+@media screen and (min-width: 768px) {
+  .wide-col-gap {
+    margin-right: 2rem;
+  }
+}

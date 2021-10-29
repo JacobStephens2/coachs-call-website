@@ -24,39 +24,17 @@ body {
 }
 
 article,
-aside,
-details,
 figcaption,
-figure,
 footer,
 header,
 main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
-audio,
-canvas,
-progress,
 video {
   display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-[hidden],
-template {
-  display: none;
 }
 
 h1 {
@@ -212,26 +190,6 @@ p {
   margin-bottom: 1.45rem;
   color: var(--black);
   font-family: var(--primary-font);
-}
-
-.darkBackground h2 {
-  color: var(--white);
-}
-
-.darkBackground h3 {
-  color: var(--white);
-}
-
-.darkBackground p {
-  color: var(--white);
-}
-
-.darkBackground a {
-  color: var(--white);
-}
-
-.darkBackground h2 a {
-  color: var(--white);
 }
 
 a {
@@ -749,18 +707,8 @@ button.btn {
   padding: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-  .wide-col-gap {
-    margin-right: 2rem;
-  }
-}
-
 .container {
   padding-left: 1rem;
-}
-
-.upperCase {
-  text-transform: uppercase;
 }
 
 .drop-shadow {
@@ -768,10 +716,6 @@ button.btn {
     rgba(71, 63, 79, 0.16) 0px 4px 8px;
   margin-top: 1rem;
   margin-bottom: 1.7rem;
-}
-
-.darkBackground {
-  text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .centerText {
