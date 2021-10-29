@@ -10,6 +10,8 @@ import Section from "../components/Section"
 import Tagline from "../components/Tagline"
 import VideoWideGrass from "../components/VideoWideGrass"
 
+import "./work-style.css"
+
 const WorkPage = ({ data }) => {
   return (
     <Layout>

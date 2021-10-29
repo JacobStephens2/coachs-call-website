@@ -16,8 +16,10 @@ import ListItem from "../components/ListItem"
 import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
 import Tagline from "../components/Tagline"
-import QuoteSectionNet from "../components/QuoteSectionNet"
+import QuoteSection from "../components/QuoteSection"
 import VideoGoal from "../components/VideoGoal"
+
+import "./about-style.css"
 
 const AboutPage = () => {
   return (
@@ -34,7 +36,7 @@ const AboutPage = () => {
         <Container>
           <Row className="flex-start">
             <Col className="order-md-2 vertical-grey-rule-two-col" md={5}>
-              <div className="about-photos-background">
+              <div className="photos-background">
                 <StaticImage
                   className="about-photo"
                   alt="Portrait photo of John Levis"
@@ -60,11 +62,12 @@ const AboutPage = () => {
                 </figcaption>
               </div>
               <hr />
-              <QuoteSectionNet
+              <QuoteSection
                 quote="The level of my growth in grace is revealed by the way I look
                 at obedience. We should have a much higher view of the word
                 obedience, rescuing it from the mire of the&nbsp;world."
                 citation="Oswald Chambers"
+                classProp="net-background"
               />
             </Col>
             <Col className="order-md-1 wide-col-gap" md={6}>

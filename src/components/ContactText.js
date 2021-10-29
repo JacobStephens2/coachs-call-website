@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import "./ContactTextStyle.css"
+
 const ContactText = () => {
   return (
     <span className="contact-text">

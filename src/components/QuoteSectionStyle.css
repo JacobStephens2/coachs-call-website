@@ -1,0 +1,51 @@
+.quote-section {
+  margin-top: 8px;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(
+      var(--quote-background-color),
+      var(--quote-background-color)
+    ),
+    url("../images/AdobeStock_145127324_soccer-field.jpeg");
+}
+
+@media screen and (min-width: 992px) {
+  .quote-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.quote-section-cite {
+  display: block;
+  margin-top: 0.7rem;
+}
+
+.quote-section.net-background {
+  background-image: linear-gradient(
+      var(--quote-background-color),
+      var(--quote-background-color)
+    ),
+    url("../images/AdobeStock_431541063_prev-net.jpeg");
+}
+
+#john-levis .quote-section {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  #john-levis .quote-section {
+    margin-bottom: 0;
+  }
+}
+
+.quote-section.grey-section {
+  background-color: rgba(156, 158, 169, 0.8);
+}
+
+.quote-center {
+  display: flex;
+  justify-content: center;
+}

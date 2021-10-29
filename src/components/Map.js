@@ -1,6 +1,8 @@
 import * as React from "react"
 import MapSVG from "../../svg/map-pins-labels.svg"
 
+import "./MapStyle.css"
+
 const Map = () => {
   const isBrowser = typeof window !== "undefined"
 

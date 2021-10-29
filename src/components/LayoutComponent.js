@@ -7,8 +7,6 @@ import FooterComponent from "./FooterComponent"
 
 import BottomBar from "../components/BottomBar"
 
-import "../styles/reset.css"
-import "../styles/accessibility.css"
 import "../styles/style.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 

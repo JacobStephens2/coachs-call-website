@@ -1,0 +1,43 @@
+.coachquote-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.coachquote-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .coachquote-column {
+    margin-left: var(--coachquote-lg-left);
+  }
+  .block-position .coachquote-column {
+    position: initial;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .coachquote-column {
+    position: static;
+  }
+}
+
+.coachquote-section {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#quote-marks {
+  float: left;
+  height: 2.6rem;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #quote-marks {
+    display: inline;
+  }
+}

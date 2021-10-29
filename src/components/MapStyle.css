@@ -1,0 +1,5 @@
+#pins {
+  filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.4));
+  stroke: var(--grey);
+  stroke-width: 3px;
+}

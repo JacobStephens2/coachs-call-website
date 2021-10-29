@@ -2,6 +2,8 @@ import * as React from "react"
 
 import Container from "react-bootstrap/Container"
 
+import "./FooterStyle.css"
+
 const Footer = () => {
   return (
     <section className="one-col-section footer-section">

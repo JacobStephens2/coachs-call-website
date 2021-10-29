@@ -10,6 +10,8 @@ import MainNavComponent from "./MainNavComponent"
 
 import Container from "react-bootstrap/Container"
 
+import "./headerRowStyle.css"
+
 const Header = ({ siteTitle }) => {
   return (
     <header className="header">

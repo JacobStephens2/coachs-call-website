@@ -1,0 +1,41 @@
+.container.contact-container {
+  max-width: fit-content;
+}
+
+#email .container {
+  padding-left: 0;
+}
+
+#email .coachquote-section .container {
+  padding-left: 2rem;
+}
+
+.dark-blue-section .contact-text-container {
+  padding: 0;
+}
+
+.contact-page .dark-blue-section .contact-text-container {
+  padding-left: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .dark-blue-section .contact-text-container {
+    padding-left: 0;
+  }
+}
+
+.contact-page .contact-section-crest-col {
+  padding-left: 0;
+}
+
+.contact-section-crest-col #Crest {
+  height: 104px;
+  position: relative;
+  top: -9px;
+}
+
+@media screen and (min-width: 1400px) {
+  .contact-section-crest-col {
+    padding-right: 5vw;
+  }
+}

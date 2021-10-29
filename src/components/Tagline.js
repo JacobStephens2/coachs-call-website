@@ -5,6 +5,8 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import Crest from "../../svg/crest-white-stars.svg"
 
+import "./TaglineStyle.css"
+
 const Tagline = () => {
   return (
     <section className="dark-blue-section one-col-section tagline-section">

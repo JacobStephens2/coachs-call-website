@@ -1,0 +1,24 @@
+.education-section p {
+  margin-bottom: 0.25rem;
+}
+
+.education-rule {
+  margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  .about-page hr {
+    margin: 1.5rem 0;
+  }
+  .about-page {
+    padding-bottom: 0;
+  }
+}
+
+.john-portrait-caption {
+  margin-bottom: 2rem;
+}
+
+.about-photo {
+  box-shadow: var(--photo-shadow);
+}

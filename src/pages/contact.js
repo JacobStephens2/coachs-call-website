@@ -8,6 +8,8 @@ import LetsConnect from "../components/LetsConnect"
 import VideoWideGrass from "../components/VideoWideGrass"
 import ContactForm from "../components/ContactForm"
 
+import "./contact-style.css"
+
 const ContactPage = ({ data }) => {
   return (
     <Layout>

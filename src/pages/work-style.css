@@ -1,0 +1,148 @@
+#seminars-and-workshops li {
+  text-indent: -21px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  #seminars-and-workshops .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.sems-and-workshops {
+  padding-right: 2rem;
+}
+
+#seminars-and-workshops button {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1400px) {
+  div.sems-and-workshops {
+    padding-right: 3vw;
+    padding-top: 2.4rem;
+  }
+}
+
+#mentoring li {
+  text-indent: -21px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .work-photo {
+    margin-bottom: 0.6rem;
+  }
+  .work-photo:first-of-type {
+    margin-bottom: 0.6rem;
+  }
+}
+
+#mission-vision-section {
+  background-color: var(--dark-blue);
+}
+section#mission-vision-section {
+  padding-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  section#mission-vision-section {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .vision-box {
+    border-right: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    padding-left: 2rem;
+  }
+  #mission-vision-section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.vision {
+  padding-right: 3rem;
+  font-size: var(--mision-vision-font-size);
+}
+@media screen and (min-width: 768px) {
+  .vision {
+    padding-right: 0;
+  }
+}
+
+.mission {
+  font-size: var(--mision-vision-font-size);
+}
+
+.mission-column {
+  margin-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .mission-column {
+    margin-left: 1rem;
+  }
+}
+
+.work-photo {
+  box-shadow: var(--photo-shadow);
+}
+
+.work-photo + figcaption {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.work-photo:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.mission-vision-box {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-vision-box:first-of-type {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+  .mission-vision-box:first-of-type {
+    margin-bottom: 0;
+    border-right: 4px solid white;
+  }
+  #mission-vision-section .mission-box {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 4rem;
+  }
+  #mission-vision-section .vision-box {
+    padding: 3rem 4rem;
+  }
+  section#mission-vision-section {
+    padding-bottom: 0;
+    border-bottom: 4px solid white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mission-vision-box:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+#mission-vision-section p {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+#mission-vision-section h3 {
+  color: var(--light-blue);
+}

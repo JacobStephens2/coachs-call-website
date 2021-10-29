@@ -11,6 +11,8 @@ import Col from "react-bootstrap/Col"
 
 import DonateButton from "./DonateButton"
 
+import "./IntroRowStyle.css"
+
 const IntroRow = props => {
   var logo = ""
   var textColumnWidth = 8

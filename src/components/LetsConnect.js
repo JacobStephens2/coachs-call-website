@@ -6,6 +6,8 @@ import ContactText from "./ContactText"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 
+import "./LetsConnectStyle.css"
+
 const LetsConnect = () => {
   return (
     <section className="one-col-section">

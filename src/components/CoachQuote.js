@@ -4,6 +4,8 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import QuoteMarks from "../../svg/quote-marks.svg"
 
+import "./CoachQuoteStyle.css"
+
 const CoachQuote = props => {
   return (
     <section className="coachquote-section one-col-section">

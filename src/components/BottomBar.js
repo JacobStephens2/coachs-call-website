@@ -2,6 +2,8 @@ import * as React from "react"
 import CardSlim from "../components/CardSlim"
 import Row from "react-bootstrap/Row"
 
+import "./BottomBarStyle.css"
+
 const BottomBar = () => {
   const isBrowser = typeof window !== "undefined"
 
@@ -23,7 +25,7 @@ const BottomBar = () => {
 
   return (
     <Row id="animated-example" className="bottom-bar animated">
-      <div className="white-bar"></div>
+      <div className="header-bar"></div>
       <CardSlim link="/about" category="About" id="aboutCard" />
       <CardSlim link="/work" category="Work" id="workCard" />
       <CardSlim link="/contact" category="Contact" id="contactCard" />

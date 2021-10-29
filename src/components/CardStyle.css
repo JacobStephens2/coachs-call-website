@@ -1,0 +1,23 @@
+/* Here is CSS for both the CardFull and CardSlim components */
+
+#aboutCard {
+  background-image: linear-gradient(
+      var(--about-gradient),
+      var(--about-gradient)
+    ),
+    url("../images/AdobeStock-track-119954823_Preview.jpeg");
+}
+
+#workCard {
+  background-image: linear-gradient(var(--work-gradient), var(--work-gradient)),
+    url("../images/AdobeStock-baseball_batting_spot-13720898_Preview-edit.jpg");
+  max-height: 266px;
+}
+
+#contactCard {
+  background-image: linear-gradient(
+      var(--contact-gradient),
+      var(--contact-gradient)
+    ),
+    url("../images/AdobeStock-high_school_fields-296321889_Preview.jpeg");
+}

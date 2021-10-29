@@ -1,0 +1,32 @@
+.tagline {
+  letter-spacing: 5px;
+  font-style: italic;
+}
+
+.subhead.tagline {
+  font-size: 1.5rem;
+  margin-top: 3%;
+  color: var(--white);
+  font-family: var(--athletic-font);
+  font-weight: var(--athletic-font-weight);
+  font-style: var(--athletic-font-style);
+}
+
+.subhead.tagline {
+  margin-top: 0;
+}
+
+.contact-page .subhead.tagline {
+  margin-top: 1rem;
+}
+
+.grey-section .subhead.tagline {
+  color: var(--dark-blue);
+  margin-top: 3%;
+}
+
+@media screen and (min-width: 1400px) {
+  .tagline-section {
+    padding-left: 16vw;
+  }
+}

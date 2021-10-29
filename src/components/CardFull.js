@@ -5,26 +5,21 @@ import { Link } from "gatsby"
 import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 
-import "./CardSlimStyle.css"
+import "./CardFullStyle.css"
 import "./CardStyle.css"
 
-const CardSlim = props => {
+const CardFull = props => {
   return (
-    <Col
-      id={props.id}
-      className="slim-card darkBackground"
-      xs={4}
-      sm={4}
-      md={4}
-      lg={4}
-    >
+    <Col id={props.id} className="card darkBackground" lg={4}>
       <Link to={props.link}>
-        <Container className="no-padding">
+        <Container>
           <h2>{props.category}</h2>
+          <h3>{props.heading}</h3>
+          <p>{props.description}</p>
         </Container>
       </Link>
     </Col>
   )
 }
 
-export default CardSlim
+export default CardFull

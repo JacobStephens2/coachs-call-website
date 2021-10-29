@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 import { slide as Menu } from "react-burger-menu"
 
+import "./MainNavComponentStyle.css"
+
 const MainNavComponent = () => {
   return (
     <nav className="mainnav">

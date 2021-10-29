@@ -1,16 +1,23 @@
 import * as React from "react"
+
+// Bootstrap components
 import Row from "react-bootstrap/Row"
+
+// Custom components
 import Layout from "../components/LayoutComponent"
 import Seo from "../components/Seo"
 import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"
-import Card from "../components/Card"
+import CardFull from "../components/CardFull"
 import CoachQuote from "../components/CoachQuote"
 import Section from "../components/Section"
 import IntroRow from "../components/IntroRow"
 import Tagline from "../components/Tagline"
 import VideoSlowGrass from "../components/VideoSlowGrass"
 import Map from "../components/Map"
+
+// Styles
+import "./index-style.css"
 
 const IndexPage = () => {
   return (
@@ -32,7 +39,7 @@ const IndexPage = () => {
         </p>
 
         <Row className="home-page-main-card-row">
-          <Card
+          <CardFull
             link="/about"
             category="About"
             heading="John Levis"
@@ -40,14 +47,14 @@ const IndexPage = () => {
             id="aboutCard"
           />
 
-          <Card
+          <CardFull
             link="/work"
             category="Work"
             heading="Seminars | Mentoring | Consulting"
             description="Customized offerings for coaches and&nbsp;programs."
             id="workCard"
           />
-          <Card
+          <CardFull
             link="/contact"
             category="Contact"
             heading="Contact John"

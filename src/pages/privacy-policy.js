@@ -6,6 +6,8 @@ import LetsConnect from "../components/LetsConnect"
 import Tagline from "../components/Tagline"
 import Container from "react-bootstrap/Container"
 
+import "./privacy-policy-style.css"
+
 const PrivacyPage = () => {
   return (
     <Layout>

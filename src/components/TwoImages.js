@@ -7,7 +7,7 @@ const TwoImages = props => {
     return ""
   } else {
     return (
-      <div className="about-photos-background">
+      <div className="photos-background">
         <StaticImage
           className="work-photo"
           src="../images/WorkImage1.jpg"
