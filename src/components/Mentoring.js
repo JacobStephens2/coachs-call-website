@@ -33,7 +33,7 @@ const Mentoring = props => {
 }
 
 Mentoring.defaultProps = {
-  belowImages: "no",
+  seminarImages: "no",
   quote: "no",
   list: "no",
   button: "no",

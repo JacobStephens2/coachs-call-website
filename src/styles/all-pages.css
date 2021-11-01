@@ -767,3 +767,9 @@ button.btn {
 .row.flex-start {
   align-items: start;
 }
+
+.text-col {
+  max-width: 70ch;
+  margin-right: 0;
+  margin-bottom: 2rem;
+}

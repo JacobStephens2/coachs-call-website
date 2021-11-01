@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 import ListItemNoDivider from "./ListItemNoDivider"
-import TwoImages from "./TwoImages"
+import SeminarImages from "./SeminarImages"
 import DonateButton from "./DonateButton"
 import QuoteSection from "./QuoteSection"
 
@@ -48,13 +48,13 @@ const Section = props => {
     )
   }
 
-  var belowImages = ""
-  if (props.belowImages === "no") {
-    belowImages = ""
+  var seminarImages = ""
+  if (props.seminarImages === "no") {
+    seminarImages = ""
   } else {
-    belowImages = (
-      <Col className="vertical-grey-rule" lg={5} xxl={6}>
-        <TwoImages
+    seminarImages = (
+      <Col className="vertical-grey-rule" md={6}>
+        <SeminarImages
           image={props.image}
           imageAlt={props.imageAlt}
           imageTwo={props.imageTwo}
@@ -76,7 +76,7 @@ const Section = props => {
       <section id={props.id} className={props.sectionClass}>
         <Container>
           <Row gx={20}>
-            <Col lg={7}>
+            <Col lg={8}>
               <h2>{props.heading}</h2>
               <p className="subhead">{props.subheading}</p>
               <p>
@@ -86,8 +86,8 @@ const Section = props => {
               {button}
             </Col>
 
-            <Col lg={5}>{props.children}</Col>
-            {belowImages}
+            <Col lg={6}>{props.children}</Col>
+            {seminarImages}
           </Row>
         </Container>
         {quote}
@@ -96,21 +96,19 @@ const Section = props => {
   } else {
     return (
       <section id={props.id} className={props.sectionClass}>
-        <Container>
-          <Row gx={20}>
-            <Col className="sems-and-workshops" lg={7} xxl={6}>
-              <h2>{props.heading}</h2>
-              <p className="subhead">{props.subheading}</p>
-              <p>
-                <strong>{boldIntro}</strong> {props.description}
-              </p>
-              {list}
-              {button}
-            </Col>
-            {belowImages}
-            <Col lg={5}>{props.children}</Col>
-          </Row>
-        </Container>
+        <Row gx={20}>
+          <Col className="one-col-section sems-and-workshops" md={6}>
+            <h2>{props.heading}</h2>
+            <p className="subhead">{props.subheading}</p>
+            <p>
+              <strong>{boldIntro}</strong> {props.description}
+            </p>
+            {list}
+            {button}
+          </Col>
+          {seminarImages}
+          <Col lg={5}>{props.children}</Col>
+        </Row>
         {quote}
       </section>
     )
@@ -118,7 +116,7 @@ const Section = props => {
 }
 
 Section.defaultProps = {
-  belowImages: "no",
+  seminarImages: "no",
   quote: "no",
   list: "no",
   button: "no",

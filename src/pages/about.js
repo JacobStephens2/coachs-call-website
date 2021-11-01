@@ -35,7 +35,7 @@ const AboutPage = () => {
       <section className="about-page" id="john-levis">
         <Row className="flex-start about-main-section">
           <Col md={6}>
-            <Container className="about-text-col">
+            <Container className="text-col">
               <h2>John Levis, Founder</h2>
               <p className="subhead bold">
                 helping coaches understand the pursuit of excellence on the

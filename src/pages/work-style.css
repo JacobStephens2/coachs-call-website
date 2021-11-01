@@ -11,18 +11,24 @@
   }
 }
 
-.sems-and-workshops {
-  padding-right: 2rem;
-}
-
 #seminars-and-workshops button {
   margin-bottom: 1rem;
 }
 
+.sems-and-workshops {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.sems-and-workshops h2 {
+  font-size: 2.6rem;
+}
+
 @media screen and (min-width: 1400px) {
   div.sems-and-workshops {
-    padding-right: 3vw;
     padding-top: 2.4rem;
+    max-width: 70ch;
+    margin-left: auto;
   }
 }
 
