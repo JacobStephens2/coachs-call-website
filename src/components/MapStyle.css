@@ -3,3 +3,9 @@
   stroke: var(--grey);
   stroke-width: 3px;
 }
+
+.st5 {
+  font-family: var(--highlight-font);
+  font-weight: var(--highlight-font-weight);
+  font-style: var(--highlight-font-style);
+}

@@ -4,6 +4,10 @@
   /* Fonts */
   --main-header-font-size: 3rem;
 
+  --light-font: proxima-nova, sans-serif
+  --light-font-weight: 300;
+  --light-font-style: normal;
+
   --primary-font: proxima-nova, sans-serif;
   --primary-font-weight: 400;
   --primary-font-style: normal;
@@ -11,10 +15,6 @@
   --highlight-font: proxima-nova, sans-serif;
   --highlight-font-weight: 600;
   --highlight-font-style: normal;
-
-  --light-font: proxima-nova, sans-serif
-  --light-font-weight: 300;
-  --light-font-style: normal;
   
   --bold-font: proxima-nova, sans-serif;
   --bold-font-weight: 700;

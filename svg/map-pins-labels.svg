@@ -12,7 +12,6 @@
 		filter: drop-shadow(3px 2px 7px rgba(0,0,0,0.5));
 	}
 	.st4{display:inline;fill:#FFFFFF;}
-	.st5{font-family:'ProximaNova-Semibold';}
 	.st6{font-size:36.7692px;}
 	.st7{letter-spacing:-1;}
 	.st8{font-size:59.75px;}
@@ -605,67 +604,37 @@
 <g id="labels">
 	<g id="dcc-label" class="map-hidden">
 		<rect x="1078.6" y="128.4" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1129.5645 206.9414)" class="st4 st5 st6">NEW</text>
-		<text transform="matrix(1 0 0 1 1210.4645 206.9414)" class="st4 st5 st6">T</text>
-		<text transform="matrix(1 0 0 1 1230.7644 206.9414)" class="st4 st5 st6">O</text>
-		<text transform="matrix(1 0 0 1 1258.1644 206.9414)" class="st4 st5 st6">WN SQ</text>
-		<text transform="matrix(1 0 0 1 1377.2644 206.9414)" class="st4 st5 st6">U</text>
-		<text transform="matrix(1 0 0 1 1402.6644 206.9414)" class="st4 st5 st6">ARE, </text>
-		<text transform="matrix(1 0 0 1 1490.1644 206.9414)" class="st4 st5 st6 st7">P</text>
-		<text transform="matrix(1 0 0 1 1509.7644 206.9414)" class="st4 st5 st6">A</text>
-		<text transform="matrix(1 0 0 1 1129.5645 308.0547)" class="st4 st5 st8">Del</text>
-		<text transform="matrix(1 0 0 1 1218.0645 308.0547)" class="st4 st5 st8">a</text>
-		<text transform="matrix(1 0 0 1 1249.4645 308.0547)" class="st4 st5 st8">w</text>
-		<text transform="matrix(1 0 0 1 1293.9645 308.0547)" class="st4 st5 st8">a</text>
-		<text transform="matrix(1 0 0 1 1325.4645 308.0547)" class="st4 st5 st8">re C</text>
-		<text transform="matrix(1 0 0 1 1433.3645 308.0547)" class="st4 st5 st8">o</text>
-		<text transform="matrix(1 0 0 1 1467.0645 308.0547)" class="st4 st5 st8">unt</text>
-		<text transform="matrix(1 0 0 1 1552.2644 308.0547)" class="st4 st5 st8">y </text>
-		<text transform="matrix(1 0 0 1 1129.5645 372.4062)" class="st4 st5 st8">Chr</text>
-		<text transform="matrix(1 0 0 1 1223.3645 372.4062)" class="st4 st5 st8">i</text>
-		<text transform="matrix(1 0 0 1 1237.1644 372.4062)" class="st4 st5 st8">st</text>
-		<text transform="matrix(1 0 0 1 1283.3645 372.4062)" class="st4 st5 st8">ia</text>
-		<text transform="matrix(1 0 0 1 1328.5645 372.4062)" class="st4 st5 st8">n </text>
-		<text transform="matrix(1 0 0 1 1376.7644 372.4062)" class="st4 st5 st8">S</text>
-		<text transform="matrix(1 0 0 1 1411.6644 372.4062)" class="st4 st5 st8">c</text>
-		<text transform="matrix(1 0 0 1 1440.7644 372.4062)" class="st4 st5 st8">ho</text>
-		<text transform="matrix(1 0 0 1 1507.7644 372.4062)" class="st4 st5 st8">o</text>
-		<text transform="matrix(1 0 0 1 1541.4645 372.4062)" class="st4 st5 st8">l</text>
+		<text transform="matrix(1 0 0 1 1129.5645 206.9414)" class="st4 st5 st6">NEW TOWN SQUARE, PA</text>
+		<text transform="matrix(1 0 0 1 1129.5645 308.0547)" class="st4 st5 st8">Delaware County</text>
+		<text transform="matrix(1 0 0 1 1129.5645 372.4062)" class="st4 st5 st8">Christian School</text>
 	</g>
 	<g id="eastern-label" class="map-hidden">
 		<rect x="1109.4" y="595.7" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1160.3837 674.2854)" class="st4 st5 st6">ST DAVIDS, </text>
-		<text transform="matrix(1 0 0 1 1364.3837 674.2854)" class="st4 st5 st6 st7">P</text>
-		<text transform="matrix(1 0 0 1 1383.9836 674.2854)" class="st4 st5 st6">A</text>
+		<text transform="matrix(1 0 0 1 1160.3837 674.2854)" class="st4 st5 st6">ST DAVIDS, PA</text>
 		<text transform="matrix(1 0 0 1 1160.3837 775.3987)" class="st4 st5 st8">Eastern</text>
 		<text transform="matrix(1 0 0 1 1160.3837 839.7502)" class="st4 st5 st8">University</text>
 	</g>
 	<g id="gordon-label" class="map-hidden">
 		<rect x="1095" y="196.6" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1145.9193 275.1855)" class="st4 st5 st6">WENHAM, </text>
-		<text transform="matrix(1 0 0 1 1327.3193 275.1855)" class="st4 st5 st6 st7">M</text>
-		<text transform="matrix(1 0 0 1 1355.2194 275.1855)" class="st4 st5 st6">A</text>
+		<text transform="matrix(1 0 0 1 1145.9193 275.1855)" class="st4 st5 st6">WENHAM, MA</text>
 		<text transform="matrix(1 0 0 1 1145.9193 376.2987)" class="st4 st5 st8">Gordon</text>
 		<text transform="matrix(1 0 0 1 1145.9193 440.6503)" class="st4 st5 st8">College</text>
 	</g>
 	<g id="wheaton-label" class="map-hidden">
 		<rect x="585.8" y="405.4" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 636.7645 483.9856)" class="st4 st5 st6">WHEATON, </text>
-		<text transform="matrix(1 0 0 1 836.7645 483.9856)" class="st4 st5 st6 st7">IL</text>
+		<text transform="matrix(1 0 0 1 636.7645 483.9856)" class="st4 st5 st6">WHEATON, IL</text>
 		<text transform="matrix(1 0 0 1 636.7645 585.0989)" class="st4 st5 st8">Wheaton</text>
 		<text transform="matrix(1 0 0 1 636.7645 649.4504)" class="st4 st5 st8">College</text>
 	</g>
 	<g id="baylor-label" class="map-hidden">
 		<rect x="369.9" y="766.3" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 420.8348 844.8455)" class="st4 st5 st6">WACO, </text>
-		<text transform="matrix(1 0 0 1 550.4348 844.8455)" class="st4 st5 st6 st7">TX</text>
+		<text transform="matrix(1 0 0 1 420.8348 844.8455)" class="st4 st5 st6">WACO, TX</text>
 		<text transform="matrix(1 0 0 1 420.8348 945.9588)" class="st4 st5 st8">Baylor</text>
 		<text transform="matrix(1 0 0 1 420.8348 1010.3104)" class="st4 st5 st8">University</text>
 	</g>
 	<g id="calvin-label" class="map-hidden">
 		<rect x="686" y="147.2" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 736.9645 225.7854)" class="st4 st5 st6">GRAND RAPIDS, </text>
-		<text transform="matrix(1 0 0 1 1019.2644 225.7854)" class="st4 st5 st6 st7">MI</text>
+		<text transform="matrix(1 0 0 1 736.9645 225.7854)" class="st4 st5 st6">GRAND RAPIDS, MI</text>
 		<text transform="matrix(1 0 0 1 736.9645 326.8987)" class="st4 st5 st8">Calvin</text>
 		<text transform="matrix(1 0 0 1 736.9645 391.2502)" class="st4 st5 st8">University</text>
 	</g>
