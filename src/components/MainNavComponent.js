@@ -55,11 +55,6 @@ const MainNavComponent = () => {
                 <i className="fas fa-angle-right"></i>&ensp;Email
               </Link>
             </li>
-            <li>
-              <Link to="/contact#donate">
-                <i className="fas fa-angle-right"></i>&ensp;Donate
-              </Link>
-            </li>
           </ul>
         </ul>
       </Menu>
