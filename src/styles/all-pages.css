@@ -609,6 +609,7 @@ input {
 @media screen and (min-width: 992px) {
   .photos-background {
     margin-left: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -618,19 +619,19 @@ input {
   }
 }
 
-.vertical-grey-rule {
+/* .vertical-grey-rule {
   border-left: 2px solid lightgrey;
   margin-bottom: 2rem;
-}
+} */
 
 @media screen and (min-width: 992px) {
-  .vertical-grey-rule-two-col {
+  /* .vertical-grey-rule-two-col {
     border-left: 2px solid lightgrey;
     margin-bottom: 2rem;
-  }
-  div.vertical-grey-rule-two-col {
+  } */
+  /* div.vertical-grey-rule-two-col {
     padding-left: 2rem;
-  }
+  } */
 }
 
 .form-field {

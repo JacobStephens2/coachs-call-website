@@ -33,44 +33,9 @@ const AboutPage = () => {
         <VideoGoal />
       </IntroRow>
       <section className="about-page" id="john-levis">
-        <Container>
-          <Row className="flex-start">
-            <Col className="order-md-2 vertical-grey-rule-two-col" md={5}>
-              <div className="photos-background">
-                <StaticImage
-                  className="about-photo"
-                  alt="Portrait photo of John Levis"
-                  placeholder="blurred"
-                  loading="eager"
-                  src="../images/john-levis-headshot-sep-2021-edited.jpg"
-                  height={500}
-                />
-                <figcaption className="john-portrait-caption">
-                  John Levis
-                </figcaption>
-                <StaticImage
-                  className="about-photo"
-                  alt="John Levis with their family"
-                  placeholder="blurred"
-                  loading="eager"
-                  src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
-                  height={500}
-                />
-                <figcaption>
-                  The Levis Family (from left) Alison, Kristen, John, Matthew,
-                  and&nbsp;Cole
-                </figcaption>
-              </div>
-              <hr />
-              <QuoteSection
-                quote="The level of my growth in grace is revealed by the way I look
-                at obedience. We should have a much higher view of the word
-                obedience, rescuing it from the mire of the&nbsp;world."
-                citation="Oswald Chambers"
-                classProp="net-background"
-              />
-            </Col>
-            <Col className="order-md-1 wide-col-gap" md={6}>
+        <Row className="flex-start about-main-section">
+          <Col md={6}>
+            <Container>
               <h2>John Levis, Founder</h2>
               <p className="subhead bold">
                 helping coaches understand the pursuit of excellence on the
@@ -154,9 +119,44 @@ const AboutPage = () => {
               <Link to="/contact">
                 <Button>LEARN MORE</Button>
               </Link>
-            </Col>
-          </Row>
-        </Container>
+            </Container>
+          </Col>
+          <Col md={6}>
+            <div className="photos-background">
+              <StaticImage
+                className="about-photo"
+                alt="Portrait photo of John Levis"
+                placeholder="blurred"
+                loading="eager"
+                src="../images/john-levis-headshot-sep-2021-edited.jpg"
+                height={500}
+              />
+              <figcaption className="john-portrait-caption">
+                John Levis
+              </figcaption>
+              <StaticImage
+                className="about-photo"
+                alt="John Levis with their family"
+                placeholder="blurred"
+                loading="eager"
+                src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
+                height={500}
+              />
+              <figcaption className="about-photo-caption">
+                The Levis Family (from left) Alison, Kristen, John, Matthew,
+                and&nbsp;Cole
+              </figcaption>
+            </div>
+            <hr className="about-photo-divider" />
+            <QuoteSection
+              quote="The level of my growth in grace is revealed by the way I look
+                at obedience. We should have a much higher view of the word
+                obedience, rescuing it from the mire of the&nbsp;world."
+              citation="Oswald Chambers"
+              classProp="net-background"
+            />
+          </Col>
+        </Row>
       </section>
 
       <section id="mission-vision-section">

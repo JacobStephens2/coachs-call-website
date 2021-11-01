@@ -32,3 +32,16 @@
 .wheaton-row {
   margin-bottom: 1.3rem;
 }
+
+.about-photo-caption {
+  max-width: 500px;
+}
+
+.about-main-section {
+  margin-bottom: 2rem;
+}
+
+hr.about-photo-divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
