@@ -33,11 +33,31 @@
 #quote-marks {
   float: left;
   height: 2.6rem;
-  display: none;
+  padding-right: 0.7rem;
 }
 
 @media screen and (min-width: 768px) {
   #quote-marks {
     display: inline;
+    position: absolute;
+    left: 5vw;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  #quote-marks {
+    left: 7vw;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  #quote-marks {
+    left: 9vw;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  #quote-marks {
+    left: 11vw;
   }
 }
