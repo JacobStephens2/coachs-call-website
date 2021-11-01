@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 992px) {
   .about-page hr {
-    margin: 1.5rem 0;
+    margin: 1.2rem 0 0.7rem;
   }
   .about-page {
     padding-bottom: 0;
@@ -27,4 +27,8 @@
   .wide-col-gap {
     margin-right: 2rem;
   }
+}
+
+.wheaton-row {
+  margin-bottom: 1.3rem;
 }
