@@ -24,7 +24,6 @@ body {
 }
 
 article,
-figcaption,
 footer,
 header,
 main,
@@ -534,7 +533,8 @@ li > p {
 }
 
 figcaption {
-  margin-top: 0.5rem;
+  display: block;
+  margin-top: 1rem;
   color: var(--white);
   font-family: var(--bold-font);
   font-weight: var(--bold-font-weight);
