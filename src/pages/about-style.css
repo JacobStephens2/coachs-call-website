@@ -45,3 +45,7 @@ hr.about-photo-divider {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.about-text-col {
+  max-width: 70ch;
+}
