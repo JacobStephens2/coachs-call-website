@@ -12,7 +12,10 @@ const PrivacyPage = () => {
   return (
     <Layout>
       <Seo title="PrivacyPolicy" />
-      <Container>
+      <section
+        className="one-col-section privacy-section"
+        style={{ maxWidth: `70ch` }}
+      >
         <br />
         <br />
         <br />
@@ -46,7 +49,7 @@ const PrivacyPage = () => {
           </a>
           .
         </p>
-      </Container>
+      </section>
       <LetsConnect />
       <Tagline />
     </Layout>

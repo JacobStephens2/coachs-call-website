@@ -1,3 +1,8 @@
 .privacy-policy {
   margin-top: 5rem;
 }
+
+.privacy-section h1 {
+  font-size: var(--main-header-font-size);
+  margin-bottom: 1.3rem;
+}
