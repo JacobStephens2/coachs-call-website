@@ -17,9 +17,9 @@ const Footer = () => {
               href="https://www.15eastcreative.com"
               target="_blank"
             >
-              Coach's Call
+              Coach’s Call
             </a>
-            &ensp;|&ensp; All rights reserved. &ensp;|&ensp;
+            &ensp;|&ensp; All rights reserved&ensp;|&ensp;
             <a href="/privacy-policy">Privacy&nbsp;Policy</a>
           </div>
         </Container>
