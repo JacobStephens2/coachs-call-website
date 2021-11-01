@@ -45,6 +45,10 @@
   font-style: var(--primary-font-style);
 }
 
+.introText {
+  font-weight: bold;
+}
+
 .introText h2 {
   color: var(--white);
   font-size: 2.8rem;
@@ -52,6 +56,20 @@
 
 .introText p {
   color: var(--white);
+}
+
+@media screen and (min-width: 1400px) {
+  .introText {
+    margin-left: 6vw;
+    margin-right: 2vw;
+    padding: 0;
+    width: 745px;
+  }
+  .intro-row-crest #Crest {
+    height: 38vh;
+    position: relative;
+    left: -3.5vw;
+  }
 }
 
 .intro-row-crest #Crest {
@@ -110,22 +128,6 @@ div.introRow {
 @media screen and (min-width: 992px) {
   div.introRow {
     margin-top: 13vh;
-  }
-}
-
-.introText {
-  font-weight: bold;
-}
-
-@media screen and (min-width: 1400px) {
-  .introText {
-    padding-left: 6vw;
-    padding-right: 2vw;
-  }
-  .intro-row-crest #Crest {
-    height: 38vh;
-    position: relative;
-    left: -3.5vw;
   }
 }
 

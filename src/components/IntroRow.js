@@ -18,7 +18,7 @@ const IntroRow = props => {
   var textColumnWidth = 8
   if (props.logo === "yes") {
     logo = (
-      <Col className="order-lg-2 intro-row-crest" md={12} lg={4}>
+      <Col className="order-lg-2 intro-row-crest" md={12} lg={4} xl={3}>
         <Crest />
       </Col>
     )
