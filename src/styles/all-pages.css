@@ -588,6 +588,10 @@ input {
     margin-left: 0;
     padding-right: 1rem;
   }
+  .one-col-section .container {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 @media screen and (min-width: 1400px) {
