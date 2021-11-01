@@ -40,9 +40,6 @@
   }
 }
 
-#mission-vision-section {
-  background-color: var(--dark-blue);
-}
 section#mission-vision-section {
   padding-bottom: 5px;
 }
@@ -50,17 +47,28 @@ section#mission-vision-section {
   section#mission-vision-section {
     padding-bottom: 2rem;
   }
-}
-@media screen and (min-width: 992px) {
+  section#mission-vision-section {
+    padding-bottom: 0;
+    border-bottom: 4px solid white;
+  }
+  #mission-vision-section .mission-box {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
   .vision-box {
     border-right: white;
     border-right-width: 4px;
     border-right-style: solid;
     padding-left: 2rem;
   }
-  #mission-vision-section {
-    margin-top: 0;
-    padding-top: 0;
+}
+@media screen and (min-width: 992px) {
+  #mission-vision-section .mission-box {
+    padding: 3rem 4rem;
+  }
+  #mission-vision-section .vision-box {
+    padding: 3rem 4rem;
   }
 }
 
@@ -105,9 +113,11 @@ section#mission-vision-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: fit-content;
 }
 
 .mission-vision-box:first-of-type {
+  padding-bottom: 0;
   margin-bottom: 5px;
 }
 
@@ -116,18 +126,6 @@ section#mission-vision-section {
     margin-bottom: 0;
     border-right: 4px solid white;
   }
-  #mission-vision-section .mission-box {
-    display: flex;
-    justify-content: flex-start;
-    padding: 3rem 4rem;
-  }
-  #mission-vision-section .vision-box {
-    padding: 3rem 4rem;
-  }
-  section#mission-vision-section {
-    padding-bottom: 0;
-    border-bottom: 4px solid white;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -135,7 +133,14 @@ section#mission-vision-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 2rem;
+    min-height: 198px;
   }
+}
+
+#mission-vision-section {
+  background-color: var(--dark-blue);
+  padding-top: 0;
 }
 
 #mission-vision-section p {
@@ -145,4 +150,11 @@ section#mission-vision-section {
 
 #mission-vision-section h3 {
   color: var(--light-blue);
+}
+
+@media screen and (min-width: 768px) {
+  #mission-vision-section {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
