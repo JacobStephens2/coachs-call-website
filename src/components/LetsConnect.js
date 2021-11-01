@@ -12,7 +12,7 @@ const LetsConnect = () => {
   return (
     <section className="one-col-section">
       <Container className="lets-connect">
-        <h2>Let's Connect</h2>
+        <h2>Let’s Connect</h2>
         <p>
           “As iron sharpens iron, so one person sharpens another.”{" "}
           <cite className="connect-cite">Proverbs 27:1</cite>

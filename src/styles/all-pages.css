@@ -287,6 +287,15 @@ q {
   font-weight: var(--highlight-font-weight);
   font-style: var(--highlight-font-style);
   line-height: 1.25;
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
 }
 
 section {
