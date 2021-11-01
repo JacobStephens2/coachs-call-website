@@ -93,11 +93,30 @@ const Section = props => {
         {quote}
       </section>
     )
-  } else {
+  } else if (props.subClass === "sems-and-workshops") {
     return (
       <section id={props.id} className={props.sectionClass}>
         <Row gx={20}>
           <Col className="one-col-section sems-and-workshops" md={6}>
+            <h2>{props.heading}</h2>
+            <p className="subhead">{props.subheading}</p>
+            <p>
+              <strong>{boldIntro}</strong> {props.description}
+            </p>
+            {list}
+            {button}
+          </Col>
+          {seminarImages}
+          <Col lg={5}>{props.children}</Col>
+        </Row>
+        {quote}
+      </section>
+    )
+  } else {
+    return (
+      <section id={props.id} className={props.sectionClass}>
+        <Row gx={20}>
+          <Col className="one-col-section" md={6}>
             <h2>{props.heading}</h2>
             <p className="subhead">{props.subheading}</p>
             <p>
@@ -122,6 +141,7 @@ Section.defaultProps = {
   button: "no",
   bold: "no",
   endButton: "no",
+  subClass: "no",
 }
 
 export default Section

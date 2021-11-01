@@ -30,6 +30,11 @@
     max-width: 70ch;
     margin-left: auto;
   }
+  .one-col-section.sems-and-workshops {
+    padding-top: 2.4rem;
+    max-width: 70ch;
+    margin-left: auto;
+  }
 }
 
 #mentoring li {

@@ -43,6 +43,7 @@ const WorkPage = ({ data }) => {
         seminarImages="yes"
         citation="John Levis"
         quote="I am created to glorify God by obeying His call through coaching and my primary responsibility is to create the 'beautiful game' as an act of worship to&nbsp;Him."
+        subClass="sems-and-workshops"
       />
 
       <Mentoring
