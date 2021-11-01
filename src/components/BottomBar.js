@@ -12,12 +12,12 @@ const BottomBar = () => {
     window.onscroll = function () {
       const bottomBar = document.querySelector(".bottom-bar")
       var currentScrollPos = window.pageYOffset
-      if (prevScrollpos > currentScrollPos) {
-        bottomBar.classList.add("slideIn")
-        bottomBar.classList.remove("slideOut")
-      } else {
+      if (prevScrollpos < currentScrollPos) {
         bottomBar.classList.add("slideOut")
         bottomBar.classList.remove("slideIn")
+      } else {
+        bottomBar.classList.add("slideIn")
+        bottomBar.classList.remove("slideOut")
       }
       prevScrollpos = currentScrollPos
     }
