@@ -6,6 +6,10 @@
   margin: 0.5rem 0;
 }
 
+.about-page {
+  padding-bottom: 2rem;
+}
+
 @media screen and (min-width: 992px) {
   .about-page hr {
     margin: 1.2rem 0 0.7rem;
@@ -37,8 +41,10 @@
   max-width: 500px;
 }
 
-.about-main-section {
-  margin-bottom: 2rem;
+@media screen and (min-width: 1200px) {
+  .about-main-section {
+    margin-bottom: 2rem;
+  }
 }
 
 hr.about-photo-divider {
