@@ -160,6 +160,7 @@ const AboutPage = () => {
       </section>
 
       <section id="mission-vision-section">
+        <span id="mission-vision"></span>
         <Container>
           <Row>
             <Col md={5} className="bigger-column vision-box mission-vision-box">
