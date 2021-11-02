@@ -28,6 +28,7 @@ const ContactPage = ({ data }) => {
           quote="For this reason, since the day we heard about you, we have not stopped praying for you. We continually ask God to fill you with the knowledge of His will through all wisdom and understanding that the Spirit gives, so that you may live a life worthy of the Lord and please Him in every way: bearing fruit in every good&nbsp;work."
           citation="Colossians 1:9-10"
         />
+        <span id="call"></span>
         <LetsConnect />
         <Tagline />
       </span>

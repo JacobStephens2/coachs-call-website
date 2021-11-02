@@ -55,6 +55,11 @@ const MainNavComponent = () => {
                 <i className="fas fa-angle-right"></i>&ensp;Email
               </Link>
             </li>
+            <li>
+              <Link to="/contact#call">
+                <i className="fas fa-angle-right"></i>&ensp;Call
+              </Link>
+            </li>
           </ul>
         </ul>
       </Menu>
