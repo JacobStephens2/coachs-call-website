@@ -76,7 +76,7 @@ const Section = props => {
       <section id={props.id} className={props.sectionClass}>
         <Container>
           <Row gx={20}>
-            <Col lg={8}>
+            <Col lg={6}>
               <h2>{props.heading}</h2>
               <p className="subhead">{props.subheading}</p>
               <p>
