@@ -47,7 +47,6 @@ const WorkPage = ({ data }) => {
       />
 
       <Mentoring
-        id="mentoring"
         heading="One-on-One Mentoring and Small Group Sessions"
         subheading="Pursuing excellence"
         button="yes"

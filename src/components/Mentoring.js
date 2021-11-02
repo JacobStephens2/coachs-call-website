@@ -8,9 +8,11 @@ import Col from "react-bootstrap/Col"
 
 import ListItemNoDivider from "./ListItemNoDivider"
 
+import "./MentoringStyle.css"
+
 const Mentoring = props => {
   return (
-    <section id={props.id} className="one-col-section">
+    <section id="mentoring" className="one-col-section">
       <Container>
         <Col lg={7} xxl={7}>
           <h2>{props.heading}</h2>
