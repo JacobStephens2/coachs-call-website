@@ -8,18 +8,16 @@ const BottomBar = () => {
   const isBrowser = typeof window !== "undefined"
 
   if (isBrowser) {
-    var prevScrollpos = window.pageYOffset
     window.onscroll = function () {
       const bottomBar = document.querySelector(".bottom-bar")
-      var currentScrollPos = window.pageYOffset
-      if (prevScrollpos < currentScrollPos) {
+      var scrollPos = window.pageYOffset
+      if (scrollPos > 0) {
         bottomBar.classList.add("slideOut")
         bottomBar.classList.remove("slideIn")
       } else {
         bottomBar.classList.add("slideIn")
         bottomBar.classList.remove("slideOut")
       }
-      prevScrollpos = currentScrollPos
     }
   }
 
