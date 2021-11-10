@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1884.4 1314.2" style="enable-background:new 0 0 1884.4 1314.2;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#B2B2B2;}
 	.st1{fill:#00A7E1;}
-	.map-hidden{display:none;}
-	.st3{
-		display:inline;
-		fill:#002856;
-		filter: drop-shadow(3px 2px 7px rgba(0,0,0,0.5));
-	}
+	.st2{display:none;}
+	.st3{display:inline;fill:#002856;}
 	.st4{display:inline;fill:#FFFFFF;}
+	.st5{font-family:'ArialMT';}
 	.st6{font-size:36.7692px;}
-	.st7{letter-spacing:-1;}
-	.st8{font-size:59.75px;}
+	.st7{font-size:59.75px;}
 </style>
 <g id="US">
 	<path class="st0" d="M398.2,905.5c-4.3-1.1-8.7-1.4-12.9-1.7c-1.9-0.1-3.9-0.3-5.8-0.5c-17.2-1.9-34.7-3.6-51.6-5.2l-6.1-0.6
@@ -575,68 +571,85 @@
 		c-11.5,0.6-23.3,1.2-35,1.9c-11.6,0.7-23.3,1.3-34.7,1.8c-4.1,0.2-8.2,0.4-12.3,0.6c-10.1,0.5-20.3,1-30.2,1.4
 		c-7.3,0.3-14.7,0.7-22,1c-21.8,1-39.4,1.5-55.6,1.5L822,646.2z"/>
 </g>
-<g id="pins">
-	<g id="pa_three">
-		<circle class="st1" cx="1611.6" cy="529.6" r="35.1"/>
-	</g>
-	<g id="pa_four">
-		<circle class="st1" cx="1573" cy="541.2" r="35.1"/>
-	</g>
-	<g id="dcc">
-		<circle class="st1" cx="1587.8" cy="490.3" r="35.1"/>
-	</g>
-	<g id="eastern">
-		<circle class="st1" cx="1547.1" cy="512.3" r="35.1"/>
-	</g>
-	<g id="calvin">
-		<circle class="st1" cx="1300" cy="477.1" r="35.1"/>
-	</g>
-	<g id="gordon">
-		<circle class="st1" cx="1708.4" cy="405" r="35.1"/>
-	</g>
-	<g id="wheaton">
-		<circle class="st1" cx="1226.5" cy="559.1" r="35.1"/>
-	</g>
-	<g id="baylor">
-		<circle class="st1" cx="1024.3" cy="1032.8" r="35.1"/>
-	</g>
+<g id="christian-academy">
+	<circle class="st1" cx="1611.6" cy="529.6" r="35.1"/>
 </g>
-<g id="labels">
-	<g id="dcc-label" class="map-hidden">
-		<rect x="1078.6" y="128.4" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1129.5645 206.9414)" class="st4 st5 st6">NEW TOWN SQUARE, PA</text>
-		<text transform="matrix(1 0 0 1 1129.5645 308.0547)" class="st4 st5 st8">Delaware County</text>
-		<text transform="matrix(1 0 0 1 1129.5645 372.4062)" class="st4 st5 st8">Christian School</text>
-	</g>
-	<g id="eastern-label" class="map-hidden">
-		<rect x="1109.4" y="595.7" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1160.3837 674.2854)" class="st4 st5 st6">ST DAVIDS, PA</text>
-		<text transform="matrix(1 0 0 1 1160.3837 775.3987)" class="st4 st5 st8">Eastern</text>
-		<text transform="matrix(1 0 0 1 1160.3837 839.7502)" class="st4 st5 st8">University</text>
-	</g>
-	<g id="gordon-label" class="map-hidden">
-		<rect x="1095" y="196.6" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 1145.9193 275.1855)" class="st4 st5 st6">WENHAM, MA</text>
-		<text transform="matrix(1 0 0 1 1145.9193 376.2987)" class="st4 st5 st8">Gordon</text>
-		<text transform="matrix(1 0 0 1 1145.9193 440.6503)" class="st4 st5 st8">College</text>
-	</g>
-	<g id="wheaton-label" class="map-hidden">
-		<rect x="585.8" y="405.4" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 636.7645 483.9856)" class="st4 st5 st6">WHEATON, IL</text>
-		<text transform="matrix(1 0 0 1 636.7645 585.0989)" class="st4 st5 st8">Wheaton</text>
-		<text transform="matrix(1 0 0 1 636.7645 649.4504)" class="st4 st5 st8">College</text>
-	</g>
-	<g id="baylor-label" class="map-hidden">
-		<rect x="369.9" y="766.3" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 420.8348 844.8455)" class="st4 st5 st6">WACO, TX</text>
-		<text transform="matrix(1 0 0 1 420.8348 945.9588)" class="st4 st5 st8">Baylor</text>
-		<text transform="matrix(1 0 0 1 420.8348 1010.3104)" class="st4 st5 st8">University</text>
-	</g>
-	<g id="calvin-label" class="map-hidden">
-		<rect x="686" y="147.2" class="st3" width="551.7" height="319.1"/>
-		<text transform="matrix(1 0 0 1 736.9645 225.7854)" class="st4 st5 st6">GRAND RAPIDS, MI</text>
-		<text transform="matrix(1 0 0 1 736.9645 326.8987)" class="st4 st5 st8">Calvin</text>
-		<text transform="matrix(1 0 0 1 736.9645 391.2502)" class="st4 st5 st8">University</text>
-	</g>
+<g id="messiah">
+	<circle class="st1" cx="1573" cy="541.2" r="35.1"/>
+</g>
+<g id="dcc">
+	<circle class="st1" cx="1587.8" cy="490.3" r="35.1"/>
+</g>
+<g id="eastern">
+	<circle class="st1" cx="1547.1" cy="512.3" r="35.1"/>
+</g>
+<g id="calvin">
+	<circle class="st1" cx="1300" cy="477.1" r="35.1"/>
+</g>
+<g id="gordon">
+	<circle class="st1" cx="1708.4" cy="405" r="35.1"/>
+</g>
+<g id="wheaton">
+	<circle class="st1" cx="1236.6" cy="605.3" r="35.1"/>
+</g>
+<g id="iit">
+	<circle class="st1" cx="1222.7" cy="549" r="35.1"/>
+</g>
+<g id="second-baptist">
+	<circle class="st1" cx="1024.3" cy="1032.8" r="35.1"/>
+</g>
+<g id="dcc-label" class="st2">
+	<rect x="1078.6" y="128.4" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 1129.5645 206.9414)" class="st4 st5 st6">NEW TOWN SQUARE, PA</text>
+	<text transform="matrix(1 0 0 1 1129.5645 308.0547)" class="st4 st5 st7">Delaware County</text>
+	<text transform="matrix(1 0 0 1 1129.5645 372.4062)" class="st4 st5 st7">Christian School</text>
+</g>
+<g id="eastern-label" class="st2">
+	<rect x="1109.4" y="595.7" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 1160.3837 674.2854)" class="st4 st5 st6">ST DAVIDS, PA</text>
+	<text transform="matrix(1 0 0 1 1160.3837 775.3987)" class="st4 st5 st7">Eastern</text>
+	<text transform="matrix(1 0 0 1 1160.3837 839.7502)" class="st4 st5 st7">University</text>
+</g>
+<g id="gordon-label" class="st2">
+	<rect x="1095" y="196.6" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 1145.9193 275.1855)" class="st4 st5 st6">WENHAM, MA</text>
+	<text transform="matrix(1 0 0 1 1145.9193 376.2987)" class="st4 st5 st7">Gordon</text>
+	<text transform="matrix(1 0 0 1 1145.9193 440.6503)" class="st4 st5 st7">College</text>
+</g>
+<g id="wheaton-label" class="st2">
+	<rect x="585.8" y="405.4" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 636.7645 483.9856)" class="st4 st5 st6">WHEATON, IL</text>
+	<text transform="matrix(1 0 0 1 636.7645 585.0989)" class="st4 st5 st7">Wheaton</text>
+	<text transform="matrix(1 0 0 1 636.7645 649.4504)" class="st4 st5 st7">College</text>
+</g>
+<g id="iit-label" class="st2">
+	<rect x="727.6" y="669" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 778.5645 747.5356)" class="st4 st5 st6">CHICAGO, IL</text>
+	<text transform="matrix(1 0 0 1 778.5645 848.6489)" class="st4 st5 st7">Illinois Institute</text>
+	<text transform="matrix(1 0 0 1 778.5645 913.0004)" class="st4 st5 st7">of Technology</text>
+</g>
+<g id="second-baptist-label" class="st2">
+	<rect x="369.9" y="766.3" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 420.8348 844.8455)" class="st4 st5 st6">HOUSTON, TX</text>
+	<text transform="matrix(1 0 0 1 420.8348 945.9588)" class="st4 st5 st7">Second </text>
+	<text transform="matrix(1 0 0 1 420.8348 1010.3104)" class="st4 st5 st7">Baptist School</text>
+</g>
+<g id="calvin-label" class="st2">
+	<rect x="686" y="147.2" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 736.9645 225.7854)" class="st4 st5 st6">GRAND RAPIDS, MI</text>
+	<text transform="matrix(1 0 0 1 736.9645 326.8987)" class="st4 st5 st7">Calvin</text>
+	<text transform="matrix(1 0 0 1 736.9645 391.2502)" class="st4 st5 st7">University</text>
+</g>
+<g id="christian-academy-label" class="st2">
+	<rect x="1049.4" y="576.2" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 1100.3977 654.7914)" class="st4 st5 st6">BROOKHAVEN, PA</text>
+	<text transform="matrix(1 0 0 1 1100.3977 755.9047)" class="st4 st5 st7">The Christan</text>
+	<text transform="matrix(1 0 0 1 1100.3977 820.2562)" class="st4 st5 st7">Academy</text>
+</g>
+<g id="messiah-label" class="st2">
+	<rect x="925.7" y="474.9" class="st3" width="551.7" height="319.1"/>
+	<text transform="matrix(1 0 0 1 976.6146 553.3915)" class="st4 st5 st6">MECHANICSBURG, PA</text>
+	<text transform="matrix(1 0 0 1 976.6146 654.5048)" class="st4 st5 st7">Messiah</text>
+	<text transform="matrix(1 0 0 1 976.6146 718.8563)" class="st4 st5 st7">University</text>
 </g>
 </svg>
