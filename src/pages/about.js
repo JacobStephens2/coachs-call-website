@@ -147,17 +147,17 @@ const AboutPage = () => {
                 and&nbsp;Cole
               </figcaption>
             </div>
-            <hr className="about-photo-divider" />
-            <QuoteSection
-              quote="The level of my growth in grace is revealed by the way I look
-                at obedience. We should have a much higher view of the word
-                obedience, rescuing it from the mire of the&nbsp;world."
-              citation="Oswald Chambers"
-              classProp="net-background"
-            />
           </Col>
         </Row>
       </section>
+
+      <QuoteSection
+        quote="The level of my growth in grace is revealed by the way I look
+              at obedience. We should have a much higher view of the word
+              obedience, rescuing it from the mire of the&nbsp;world."
+        citation="Oswald Chambers"
+        classProp="net-background"
+      />
 
       <section id="mission-vision-section">
         <span id="mission-vision"></span>
