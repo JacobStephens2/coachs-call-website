@@ -17,7 +17,6 @@ const SeminarImages = props => {
             alt="The Coaching Pyramid"
           />
         </a>
-        <figcaption>Sample slides used in John's&nbsp;teaching</figcaption>
         <a href="https://content.coachscall.org/wp-content/uploads/2021/11/JoyAndPerformance-CoachsCall.jpg">
           <StaticImage
             className="work-photo"

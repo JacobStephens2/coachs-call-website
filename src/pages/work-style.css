@@ -169,3 +169,11 @@ section#mission-vision-section {
     padding-top: 0;
   }
 }
+
+#seminars-and-workshops .photos-background {
+  background-color: white;
+}
+
+#seminars-and-workshops figcaption {
+  color: var(--dark-blue);
+}

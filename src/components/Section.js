@@ -54,12 +54,7 @@ const Section = props => {
   } else {
     seminarImages = (
       <Col className="vertical-grey-rule" md={6}>
-        <SeminarImages
-          image={props.image}
-          imageAlt={props.imageAlt}
-          imageTwo={props.imageTwo}
-          imageAltTwo={props.imageAltTwo}
-        />
+        <SeminarImages />
       </Col>
     )
   }

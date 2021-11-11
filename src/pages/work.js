@@ -5,7 +5,6 @@ import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
-import Mentoring from "../components/Mentoring"
 import Section from "../components/Section"
 import Tagline from "../components/Tagline"
 import VideoWideGrass from "../components/VideoWideGrass"
@@ -46,7 +45,7 @@ const WorkPage = ({ data }) => {
         subClass="sems-and-workshops"
       />
 
-      <Mentoring
+      <Section
         heading="One-on-One Mentoring and Small Group Sessions"
         subheading="Pursuing excellence"
         button="yes"
@@ -61,7 +60,6 @@ const WorkPage = ({ data }) => {
         boldThree="Helping coaches"
         descriptionThree="develop strategies for culture building, program development, recruiting, and day to day&nbsp;excellence"
       />
-
       <CoachQuote
         quote="Perpetual growth is a massive part of becoming who we want to be; as an individual, as a team, or even as a program. Proper growth often is produced not by adding but by uncovering. Working with John pushes me to dig, to uncover where my identity truly is. Not just my identity but where I want the identity of my program to&nbsp;be."
         source="Men’s Soccer Coach, University of Valley&nbsp;Forge"
