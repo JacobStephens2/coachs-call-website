@@ -8,6 +8,7 @@ const Map = () => {
 
   if (isBrowser) {
     setTimeout(() => {
+      console.log("Map is active")
       const wheaton = document.querySelector("#wheaton")
       const wheatonLabel = document.querySelector("#wheaton-label")
       wheaton.addEventListener("click", () => {
@@ -18,7 +19,6 @@ const Map = () => {
         easternLabel.classList.add("map-hidden")
         dccLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        baylorLabel.classList.add("map-hidden")
         calvinLabel.classList.add("map-hidden")
       })
       wheatonLabel.addEventListener("click", () => {
@@ -35,7 +35,6 @@ const Map = () => {
         wheatonLabel.classList.add("map-hidden")
         dccLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        baylorLabel.classList.add("map-hidden")
         calvinLabel.classList.add("map-hidden")
       })
       easternLabel.addEventListener("click", () => {
@@ -52,7 +51,6 @@ const Map = () => {
         easternLabel.classList.add("map-hidden")
         wheatonLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        baylorLabel.classList.add("map-hidden")
         calvinLabel.classList.add("map-hidden")
       })
       dccLabel.addEventListener("click", () => {
@@ -69,29 +67,12 @@ const Map = () => {
         easternLabel.classList.add("map-hidden")
         dccLabel.classList.add("map-hidden")
         wheatonLabel.classList.add("map-hidden")
-        baylorLabel.classList.add("map-hidden")
         calvinLabel.classList.add("map-hidden")
       })
       gordonLabel.addEventListener("click", () => {
         gordonLabel.classList.toggle("map-hidden")
       })
 
-      const baylor = document.querySelector("#baylor")
-      const baylorLabel = document.querySelector("#baylor-label")
-      baylor.addEventListener("click", () => {
-        baylorLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          baylorLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-      })
-      baylorLabel.addEventListener("click", () => {
-        baylorLabel.classList.remove("map-hidden")
-      })
       const calvin = document.querySelector("#calvin")
       const calvinLabel = document.querySelector("#calvin-label")
       calvin.addEventListener("click", () => {
@@ -102,7 +83,6 @@ const Map = () => {
         easternLabel.classList.add("map-hidden")
         dccLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        baylorLabel.classList.add("map-hidden")
         wheatonLabel.classList.add("map-hidden")
       })
       calvinLabel.addEventListener("click", () => {
