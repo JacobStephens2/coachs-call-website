@@ -35,12 +35,8 @@ const Mentoring = props => {
 }
 
 Mentoring.defaultProps = {
-  seminarImages: "no",
   quote: "no",
-  list: "no",
-  button: "no",
   bold: "no",
-  endButton: "no",
 }
 
 export default Mentoring

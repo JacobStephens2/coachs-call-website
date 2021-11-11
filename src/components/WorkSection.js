@@ -43,11 +43,8 @@ const WorkSection = props => {
 }
 
 WorkSection.defaultProps = {
-  seminarImages: "no",
   quote: "no",
-  list: "no",
   bold: "no",
-  endButton: "no",
   subClass: "no",
 }
 
