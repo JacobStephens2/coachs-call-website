@@ -2,7 +2,6 @@ import * as React from "react"
 
 import { Link } from "gatsby"
 import Col from "react-bootstrap/Col"
-import ContactText from "./ContactText"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 
@@ -18,7 +17,20 @@ const LetsConnect = () => {
           <cite className="connect-cite">Proverbs 27:1</cite>
         </p>
         <Col>
-          <ContactText />
+          <span className="contact-text">
+            <p>
+              <a href="tel:484.574.1444">
+                <i className="fas fa-phone-alt"></i>
+                &ensp; 484.574.1444
+              </a>
+            </p>
+            <p>
+              <a href="mailto:john@coachscall.org">
+                <i className="far fa-envelope"></i>
+                &ensp; john@coachscall.org
+              </a>
+            </p>
+          </span>
         </Col>
 
         <Link to="/contact">

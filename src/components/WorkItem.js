@@ -6,11 +6,11 @@ import Button from "react-bootstrap/Button"
 
 import ListItemNoDivider from "./ListItemNoDivider"
 
-import "./MentoringStyle.css"
+import "./WorkItemStyle.css"
 
-const Mentoring = props => {
+const WorkItem = props => {
   return (
-    <section id="mentoring">
+    <section id={props.id} className="work-area">
       <h2>{props.heading}</h2>
       <p className="subhead">{props.subheading}</p>
       <ListItemNoDivider
@@ -21,16 +21,11 @@ const Mentoring = props => {
         boldThree={props.boldThree}
         descriptionThree={props.descriptionThree}
       />
-      <Link to={props.link}>
-        <Button className="section-button">{props.buttonText}</Button>
+      <Link to="/contact">
+        <Button className="section-button">LEARN MORE</Button>
       </Link>
     </section>
   )
 }
 
-Mentoring.defaultProps = {
-  quote: "no",
-  bold: "no",
-}
-
-export default Mentoring
+export default WorkItem

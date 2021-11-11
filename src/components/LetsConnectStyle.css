@@ -19,3 +19,23 @@
   font-weight: var(--highlight-font-weight);
   font-style: var(--highlight-font-style);
 }
+
+.contact-text a {
+  color: black;
+}
+
+.contact-john-levis .contact-text a {
+  color: var(--dark-blue);
+}
+
+.contact-text a:hover {
+  color: var(--light-blue);
+}
+
+.contact-text p {
+  font-size: 0.9rem;
+}
+
+.contact-text p:first-of-type {
+  margin-bottom: 6px;
+}

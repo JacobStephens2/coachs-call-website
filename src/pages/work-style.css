@@ -108,6 +108,8 @@ section#mission-vision-section {
 
 .work-photo {
   box-shadow: var(--photo-shadow);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .work-photo + figcaption {
@@ -176,4 +178,75 @@ section#mission-vision-section {
 
 #seminars-and-workshops figcaption {
   color: var(--dark-blue);
+}
+
+.photos-background figcaption {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .photos-background figcaption {
+    margin-left: 0;
+  }
+}
+
+#seminars-and-workshops .photos-background {
+  margin-bottom: 2rem;
+}
+
+.work-container .photos-background {
+  background-color: white;
+}
+
+#seminars-and-workshops {
+  grid-area: seminars;
+}
+
+#mentoring {
+  grid-area: mentoring;
+}
+
+.joy {
+  grid-area: joy;
+}
+
+.pyramid {
+  grid-area: pyramid;
+}
+
+.work-container {
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "seminars"
+    "pyramid"
+    "joy"
+    "mentoring";
+}
+
+@media screen and (min-width: 992px) {
+  .work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "seminars pyramid"
+      "mentoring joy";
+  }
+}
+
+.work-area {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.work-container .photos-background {
+  padding: 2rem 1rem 0;
+}
+
+.work-container section {
+  padding-bottom: 0;
 }
