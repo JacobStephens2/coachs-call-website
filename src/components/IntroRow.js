@@ -9,8 +9,6 @@ import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Col from "react-bootstrap/Col"
 
-import DonateButton from "./DonateButton"
-
 import "./IntroRowStyle.css"
 
 const IntroRow = props => {
@@ -48,13 +46,6 @@ const IntroRow = props => {
     )
   }
 
-  var donateButton = ""
-  if (props.donateButton === "yes") {
-    donateButton = <DonateButton />
-  } else {
-    donateButton = ""
-  }
-
   return (
     <div className="introRowFirstDiv">
       {props.children}
@@ -66,7 +57,6 @@ const IntroRow = props => {
               <h1>{props.heading}</h1>
               <p className="subhead">{props.subhead}</p>
               <p className="intro-body">{props.body}</p>
-              {donateButton}
               {contactButton}
               {emailButton}
             </Col>

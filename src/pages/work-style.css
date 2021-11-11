@@ -227,6 +227,30 @@ section#mission-vision-section {
     "mentoring";
 }
 
+.work-area {
+  padding-left: 2rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-container .photos-background {
+  padding: 2rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-container section {
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80ch;
+}
+
 @media screen and (min-width: 992px) {
   .work-container {
     display: grid;
@@ -236,17 +260,13 @@ section#mission-vision-section {
       "seminars pyramid"
       "mentoring joy";
   }
-}
 
-.work-area {
-  padding-left: 2rem;
-  padding-right: 1rem;
-}
+  .work-area {
+    margin-left: auto;
+    margin-right: 0;
+  }
 
-.work-container .photos-background {
-  padding: 2rem 1rem 0;
-}
-
-.work-container section {
-  padding-bottom: 0;
+  .work-container .photos-background {
+    margin-left: 0;
+  }
 }

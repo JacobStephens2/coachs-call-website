@@ -56,6 +56,7 @@ const WorkPage = ({ data }) => {
               className="work-photo"
               src="../images/WorkImage1.jpg"
               alt="The Coaching Pyramid"
+              layout="constrained"
             />
           </a>
         </section>
@@ -65,6 +66,7 @@ const WorkPage = ({ data }) => {
               className="work-photo"
               src="../images/WorkImage2.jpg"
               alt="Joy and Performance slide"
+              layout="constrained"
             />
           </a>
         </section>
