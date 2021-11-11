@@ -7,6 +7,7 @@ import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
 import Section from "../components/Section"
 import Tagline from "../components/Tagline"
+import Mentoring from "../components/Mentoring"
 import VideoWideGrass from "../components/VideoWideGrass"
 
 import "./work-style.css"
@@ -45,7 +46,7 @@ const WorkPage = ({ data }) => {
         subClass="sems-and-workshops"
       />
 
-      <Section
+      <Mentoring
         heading="One-on-One Mentoring and Small Group Sessions"
         subheading="Pursuing excellence"
         button="yes"

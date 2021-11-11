@@ -10,7 +10,7 @@ import LetsConnect from "../components/LetsConnect"
 import QuoteSection from "../components/QuoteSection"
 import CardFull from "../components/CardFull"
 import CoachQuote from "../components/CoachQuote"
-import Section from "../components/Section"
+import MapSection from "../components/MapSection"
 import IntroRow from "../components/IntroRow"
 import Tagline from "../components/Tagline"
 import VideoSlowGrass from "../components/VideoSlowGrass"
@@ -64,16 +64,15 @@ const IndexPage = () => {
         </Row>
 
         <div className="map-section">
-          <Section
+          <MapSection
             heading="National Connections"
             subheading="SERVING AND ENRICHING THROUGH&nbsp;RELATIONSHIPS"
             description="Experience working with coaches from a variety of Christian athletic organizations helps bring a wider perspective to your&nbsp;coaching."
             link="/work"
-            button="yes"
             buttonText="LEARN MORE ABOUT OUR WORK"
           >
             <Map />
-          </Section>
+          </MapSection>
         </div>
 
         <QuoteSection
