@@ -12,7 +12,7 @@ import SeminarImages from "./SeminarImages"
 import DonateButton from "./DonateButton"
 import QuoteSection from "./QuoteSection"
 
-const Section = props => {
+const WorkSection = props => {
   var quote = ""
   if (props.quote === "no") {
     quote = ""
@@ -129,7 +129,7 @@ const Section = props => {
   }
 }
 
-Section.defaultProps = {
+WorkSection.defaultProps = {
   seminarImages: "no",
   quote: "no",
   list: "no",
@@ -139,4 +139,4 @@ Section.defaultProps = {
   subClass: "no",
 }
 
-export default Section
+export default WorkSection

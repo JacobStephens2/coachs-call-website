@@ -5,7 +5,7 @@ import Seo from "../components/Seo"
 import IntroRow from "../components/IntroRow"
 import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
-import Section from "../components/Section"
+import WorkSection from "../components/WorkSection"
 import Tagline from "../components/Tagline"
 import Mentoring from "../components/Mentoring"
 import VideoWideGrass from "../components/VideoWideGrass"
@@ -24,7 +24,7 @@ const WorkPage = ({ data }) => {
         <VideoWideGrass />
       </IntroRow>
 
-      <Section
+      <WorkSection
         id="seminars-and-workshops"
         heading="Professional Development Seminars and&nbsp;Workshops"
         subheading="exploring the orthodoxy of sport and how we pursue 
