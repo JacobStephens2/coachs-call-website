@@ -604,6 +604,8 @@ input {
 .photos-background {
   background-color: var(--dark-blue);
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 992px) {

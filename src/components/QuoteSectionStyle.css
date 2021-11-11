@@ -31,6 +31,10 @@
     url("../images/AdobeStock_431541063_prev-net.jpeg");
 }
 
+.net-background {
+  margin-bottom: 4px;
+}
+
 #john-levis .quote-section {
   margin-bottom: 1rem;
 }

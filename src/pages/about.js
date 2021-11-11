@@ -34,8 +34,8 @@ const AboutPage = () => {
       </IntroRow>
       <section className="about-page" id="john-levis">
         <Row className="flex-start about-main-section">
-          <Col md={6}>
-            <Container className="text-col">
+          <Col sm={12} md={6}>
+            <Container className="text-col about-text-col">
               <h2>John Levis, Founder</h2>
               <p className="subhead bold">
                 helping coaches understand the pursuit of excellence on the
@@ -121,7 +121,7 @@ const AboutPage = () => {
               </Link>
             </Container>
           </Col>
-          <Col md={6}>
+          <Col sm={12} md={6}>
             <div className="photos-background">
               <StaticImage
                 className="about-photo"
