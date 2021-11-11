@@ -29,7 +29,6 @@ const WorkPage = ({ data }) => {
         heading="Professional Development Seminars and&nbsp;Workshops"
         subheading="exploring the orthodoxy of sport and how we pursue 
 					god’s high calling to&nbsp;coach."
-        button="yes"
         endButton="yes"
         link="/contact"
         buttonText="LEARN MORE"
