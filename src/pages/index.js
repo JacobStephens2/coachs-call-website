@@ -43,7 +43,7 @@ const IndexPage = () => {
             link="/about"
             category="About"
             heading="John Levis"
-            description="John has broad experience coaching and working in higher&nbsp;education."
+            description="John has broad experience coaching and working in higher&nbsp;education"
             id="aboutCard"
           />
 
@@ -51,14 +51,14 @@ const IndexPage = () => {
             link="/work"
             category="Work"
             heading="Seminars | Mentoring | Consulting"
-            description="Customized offerings for coaches and&nbsp;programs."
+            description="Customized offerings for coaches and&nbsp;programs"
             id="workCard"
           />
           <CardFull
             link="/contact"
             category="Contact"
             heading="Contact John"
-            description="Learn more about Coach's&nbsp;Call."
+            description="Learn more about Coach's&nbsp;Call"
             id="contactCard"
           />
         </Row>

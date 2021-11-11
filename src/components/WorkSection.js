@@ -17,9 +17,7 @@ const WorkSection = props => {
         <Col className="one-col-section sems-and-workshops" md={6}>
           <h2>{props.heading}</h2>
           <p className="subhead">{props.subheading}</p>
-          <p>
-            <strong>{boldIntro}</strong> {props.description}
-          </p>
+          <p>{props.description}</p>
           <ListItemNoDivider
             bold={props.boldList}
             description={props.descriptionList}
@@ -40,12 +38,6 @@ const WorkSection = props => {
       <QuoteSection quote={props.quote} citation={props.citation} />
     </section>
   )
-}
-
-WorkSection.defaultProps = {
-  quote: "no",
-  bold: "no",
-  subClass: "no",
 }
 
 export default WorkSection
