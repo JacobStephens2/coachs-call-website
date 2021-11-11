@@ -22,7 +22,7 @@ const ContactForm = () => {
             style={{ display: `block`, marginBottom: `4px` }}
             htmlFor="interest"
           >
-            What aspect of Coach's Call are you most interested in?:
+            What aspect of Coach's Call are you most interested in?
           </label>
           <input name="interest" id="interest" type="text" />
         </div>
