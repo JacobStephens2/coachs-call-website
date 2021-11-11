@@ -221,6 +221,7 @@ const Map = () => {
         christianAcademyLabel.classList.add("map-hidden")
         secondBaptistLabel.classList.add("map-hidden")
         messiahLabel.classList.add("map-hidden")
+        calvinLabel.classList.add("map-hidden")
         valleyForgeLabel.classList.add("map-hidden")
         iitLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
