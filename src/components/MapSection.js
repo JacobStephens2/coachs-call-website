@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row"
 const MapSection = props => {
   return (
     <section id={props.id} className={props.sectionClass}>
-      <Row gx={20}>
+      <Row style={{ paddingLeft: `1rem` }} gx={20}>
         <Col className="one-col-section" md={6}>
           <h2>{props.heading}</h2>
           <p className="subhead">{props.subheading}</p>
