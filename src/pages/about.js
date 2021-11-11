@@ -129,7 +129,7 @@ const AboutPage = () => {
                 placeholder="blurred"
                 loading="eager"
                 src="../images/john-levis-headshot-sep-2021-edited.jpg"
-                height={500}
+                height={400}
               />
               <figcaption className="john-portrait-caption">
                 John Levis
@@ -140,7 +140,7 @@ const AboutPage = () => {
                 placeholder="blurred"
                 loading="eager"
                 src="../images/john-levis-family-photo-sep-2021-edited-cropped.jpg"
-                height={500}
+                height={400}
               />
               <figcaption className="about-photo-caption">
                 The Levis Family (from left) Alison, Kristen, John, Matthew,
