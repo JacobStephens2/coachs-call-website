@@ -40,7 +40,7 @@
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .about-page .text-col.about-text-col {
     margin-right: 0.7rem;
   }
@@ -87,14 +87,37 @@ hr.about-photo-divider {
   }
 }
 
+.mission-vision-container {
+  padding-left: 0;
+  margin-left: 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .mission-vision-container {
+    margin-left: 11vw;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about-header-break-one {
     display: none;
+  }
+  .mission-vision-container {
+    margin-left: 3vw;
   }
 }
 
 @media screen and (min-width: 576px) {
   .about-header-break-two {
     display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mission-vision-container {
+    margin-left: 11vw;
+  }
+  .mission-vision-row {
+    margin-left: -0.1rem;
   }
 }

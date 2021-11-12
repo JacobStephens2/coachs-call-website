@@ -35,7 +35,7 @@ const AboutPage = () => {
       <a id="john-levis" class="anchor"></a>
       <section className="about-page">
         <Row className="flex-start about-main-section">
-          <Col sm={12} md={6}>
+          <Col sm={12} lg={6}>
             <Container className="text-col about-text-col">
               <h2>John Levis, Founder</h2>
               <p className="subhead bold">
@@ -122,7 +122,7 @@ const AboutPage = () => {
               </Link>
             </Container>
           </Col>
-          <Col sm={12} md={6}>
+          <Col sm={12} lg={6}>
             <div className="photos-background">
               <StaticImage
                 className="about-photo"
@@ -162,8 +162,8 @@ const AboutPage = () => {
 
       <section id="mission-vision-section">
         <a id="mission-vision" className="anchor"></a>
-        <Container>
-          <Row>
+        <Container className="mission-vision-container">
+          <Row className="mission-vision-row">
             <Col md={5} className="bigger-column vision-box mission-vision-box">
               <h3>
                 <strong>VISION</strong>

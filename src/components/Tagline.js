@@ -10,9 +10,9 @@ import "./TaglineStyle.css"
 const Tagline = () => {
   return (
     <section className="dark-blue-section one-col-section tagline-section">
-      <Container>
-        <Row>
-          <Col xs={8} sm={9} md={9} xxl={7}>
+      <Container className="tagline-container">
+        <Row className="tagline-row">
+          <Col className="tagline-col" xs={8} sm={9} md={9} xxl={7}>
             <p className="subhead tagline">
               Glorifying God and Experiencing Joy Through&nbsp;Sports
             </p>

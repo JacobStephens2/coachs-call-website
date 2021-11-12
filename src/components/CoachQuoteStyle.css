@@ -1,6 +1,14 @@
 .coachquote-container {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  padding-left: 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .coachquote-container {
+    padding-left: 0;
+    margin-left: 11vw;
+  }
 }
 
 .coachquote-column {
@@ -40,23 +48,11 @@
   #quote-marks {
     display: inline;
     position: absolute;
-    left: 5vw;
+    left: 3vw;
   }
 }
 
-@media screen and (min-width: 810px) {
-  #quote-marks {
-    left: 7vw;
-  }
-}
-
-@media screen and (min-width: 860px) {
-  #quote-marks {
-    left: 9vw;
-  }
-}
-
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 992px) {
   #quote-marks {
     left: 11vw;
   }

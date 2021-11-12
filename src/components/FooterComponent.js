@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <section className="one-col-section footer-section">
       <footer className="footer">
-        <Container>
+        <Container className="footer-container">
           <div>
             © {new Date().getFullYear()}
             {` `}

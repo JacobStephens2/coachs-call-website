@@ -39,6 +39,7 @@ const WorkPage = ({ data }) => {
           boldThree="Practical applications"
           descriptionThree="to use and implement into sport specific&nbsp;coaching"
         />
+
         <WorkItem
           id="mentoring"
           heading="One-on-One Mentoring and Small Group Sessions"
@@ -63,7 +64,7 @@ const WorkPage = ({ data }) => {
         <section className="joy photos-background">
           <a href="https://content.coachscall.org/wp-content/uploads/2021/11/JoyAndPerformance-CoachsCall.jpg">
             <StaticImage
-              className="work-photo"
+              className="work-photo joy-static-image"
               src="../images/WorkImage2.jpg"
               alt="Joy and Performance slide"
               layout="constrained"

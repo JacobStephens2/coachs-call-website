@@ -67,15 +67,17 @@ section#mission-vision-section {
     border-right: white;
     border-right-width: 4px;
     border-right-style: solid;
-    padding-left: 2rem;
+    padding-left: 0;
+    padding-right: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
   #mission-vision-section .mission-box {
     padding: 3rem 4rem;
+    max-width: 498px;
   }
   #mission-vision-section .vision-box {
-    padding: 3rem 4rem;
+    padding: 3rem 4rem 3rem 0;
   }
 }
 
@@ -182,7 +184,7 @@ section#mission-vision-section {
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .photos-background figcaption {
     margin-left: 0;
   }
@@ -213,6 +215,15 @@ section#mission-vision-section {
   padding-top: 2rem;
 }
 
+@media screen and (min-width: 1096px) {
+  #mentoring {
+    padding-top: 2rem;
+  }
+  .gatsby-image-wrapper.gatsby-image-wrapper-constrained.work-photo.joy-static-image {
+    margin-top: 2rem;
+  }
+}
+
 .joy {
   grid-area: joy;
 }
@@ -240,10 +251,10 @@ section#mission-vision-section {
 }
 
 .work-container .photos-background {
-  padding: 2rem 1rem 0;
+  padding: 0 1rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
 }

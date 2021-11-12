@@ -30,3 +30,18 @@
     padding-left: 16vw;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .tagline-col {
+    padding-left: 0;
+  }
+  .tagline-container {
+    margin-left: 3vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .taglineRow {
+    padding-left: 0.7rem;
+  }
+}
