@@ -1,7 +1,7 @@
 /* This CSS applies to the IntroRow component */
 
 .introRow h1 {
-  font-size: 3.4rem;
+  font-size: 3.3rem;
   color: var(--white);
   text-transform: initial;
   line-height: 0.95;
@@ -80,7 +80,7 @@
   top: 0;
   margin-top: 28px;
   justify-content: center;
-  display: none;
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -117,9 +117,7 @@
     line-height: 1.25;
   }
 }
-div.introRow {
-  margin-top: 4rem;
-}
+
 @media screen and (min-width: 768px) {
   div.introRow {
     margin-top: 0rem;

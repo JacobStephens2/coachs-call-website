@@ -4,6 +4,7 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   background-blend-mode: multiply;
+  background-size: cover;
   background-image: linear-gradient(
       var(--quote-background-color),
       var(--quote-background-color)
