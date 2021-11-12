@@ -535,7 +535,7 @@ li > p {
 figcaption {
   display: block;
   margin-top: 1rem;
-  color: var(--white);
+  color: var(--dark-blue);
   font-family: var(--bold-font);
   font-weight: var(--bold-font-weight);
   font-style: var(--bold-font-style);
@@ -602,7 +602,6 @@ input {
 }
 
 .photos-background {
-  background-color: var(--dark-blue);
   padding: 1rem;
   display: flex;
   flex-direction: column;
