@@ -11,10 +11,6 @@
   }
 }
 
-#seminars-and-workshops button {
-  margin-bottom: 1rem;
-}
-
 .sems-and-workshops {
   padding-left: 2rem;
   padding-right: 1rem;
@@ -204,8 +200,17 @@ section#mission-vision-section {
   grid-area: seminars;
 }
 
+.work-container {
+  padding-top: 2rem;
+}
+
+.work-container section {
+  padding-top: 0;
+}
+
 #mentoring {
   grid-area: mentoring;
+  padding-top: 2rem;
 }
 
 .joy {
@@ -251,7 +256,7 @@ section#mission-vision-section {
   max-width: 80ch;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1096px) {
   .work-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
