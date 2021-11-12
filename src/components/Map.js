@@ -239,6 +239,7 @@ const Map = () => {
           iitLabel.classList.add("map-hidden")
         }, 3000)
         easternLabel.classList.add("map-hidden")
+        calvinLabel.classList.add("map-hidden")
         dccLabel.classList.add("map-hidden")
         christianAcademyLabel.classList.add("map-hidden")
         valleyForgeLabel.classList.add("map-hidden")

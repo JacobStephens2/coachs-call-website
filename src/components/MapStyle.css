@@ -9,3 +9,9 @@
   font-weight: var(--highlight-font-weight);
   font-style: var(--highlight-font-style);
 }
+
+@media screen and (min-width: 992px) {
+  .map-text {
+    padding-left: 2.1rem;
+  }
+}
