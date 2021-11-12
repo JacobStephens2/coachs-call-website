@@ -26,7 +26,7 @@ const IndexPage = () => {
         <Seo title="Home" />
         <IntroRow
           logo="yes"
-          heading="Deepening coach impact"
+          heading="Deepening coach&nbsp;impact"
           subhead="Through one-on-one mentoring, consulting, and&nbsp;seminars."
           cardClass="aboutCard"
         >

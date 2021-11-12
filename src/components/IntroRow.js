@@ -54,7 +54,7 @@ const IntroRow = props => {
           <Row className="introRow">
             {logo}
             <Col className="order-lg-1 introText" lg={textColumnWidth}>
-              <h1>{props.heading}</h1>
+              <h1 dangerouslySetInnerHTML={{ __html: props.heading }}></h1>
               <p className="subhead">{props.subhead}</p>
               <p className="intro-body">{props.body}</p>
               {contactButton}

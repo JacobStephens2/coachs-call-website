@@ -275,3 +275,22 @@ section#mission-vision-section {
     margin-left: 0;
   }
 }
+
+.work-header-break-two {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .work-header-break-two {
+    display: initial;
+  }
+  .work-header-break-one {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-header-break-two {
+    display: none;
+  }
+}

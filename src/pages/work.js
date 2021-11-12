@@ -20,7 +20,7 @@ const WorkPage = ({ data }) => {
 
       <IntroRow
         logo="yes"
-        heading="It's how you play the&nbsp;game"
+        heading="It's how <br class='work-header-break-two' />you <br class='work-header-break-one' />play the&nbsp;game"
         subhead="And winning and losing do&nbsp;matter"
       >
         <VideoWideGrass />

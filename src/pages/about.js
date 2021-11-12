@@ -27,7 +27,7 @@ const AboutPage = () => {
       <Seo title="About" />
       <IntroRow
         logo="yes"
-        heading="Game day is a call to&nbsp;worship"
+        heading='Game day <br class="about-header-break-one"/>is a <br class="about-header-break-two"/>call to&nbsp;worship'
         subhead="John has helped over 500 athletes celebrate over 25&nbsp;years"
       >
         <VideoGoal />
