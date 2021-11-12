@@ -265,6 +265,8 @@ section#mission-vision-section {
   flex-direction: column;
   justify-content: center;
   max-width: 80ch;
+  margin-left: 11vw;
+  padding-left: 0;
 }
 
 @media screen and (min-width: 1096px) {
