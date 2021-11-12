@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container"
 const ContactForm = () => {
   return (
     <Container className="contact-container">
+      <a id="contact-form" className="anchor"></a>
       <form action="/api/sendgrid" method="POST">
         <h2 style={{ marginBottom: `16px` }}>Contact John</h2>
 

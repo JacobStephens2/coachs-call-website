@@ -32,7 +32,8 @@ const AboutPage = () => {
       >
         <VideoGoal />
       </IntroRow>
-      <section className="about-page" id="john-levis">
+      <a id="john-levis" class="anchor"></a>
+      <section className="about-page">
         <Row className="flex-start about-main-section">
           <Col sm={12} md={6}>
             <Container className="text-col about-text-col">
@@ -160,7 +161,7 @@ const AboutPage = () => {
       />
 
       <section id="mission-vision-section">
-        <span id="mission-vision"></span>
+        <a id="mission-vision" className="anchor"></a>
         <Container>
           <Row>
             <Col md={5} className="bigger-column vision-box mission-vision-box">
