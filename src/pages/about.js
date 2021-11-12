@@ -64,7 +64,7 @@ const AboutPage = () => {
                   </Row>
                   <hr className="education-rule" />
                   <Row className="wheaton-row">
-                    <Col>
+                    <Col className="wheaton-col">
                       <StaticImage
                         alt="Eastern University logo"
                         placeholder="blurred"
