@@ -125,3 +125,7 @@ hr.about-photo-divider {
 .wheaton-col {
   padding-top: 1rem;
 }
+
+.about-page figcaption {
+  color: white;
+}

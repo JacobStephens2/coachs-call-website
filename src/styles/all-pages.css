@@ -600,9 +600,11 @@ input {
 }
 
 .photos-background {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: var(--dark-blue);
 }
 
@@ -610,6 +612,7 @@ input {
   .photos-background {
     margin-left: 1rem;
     padding: 2rem;
+    width: fit-content;
   }
 }
 
