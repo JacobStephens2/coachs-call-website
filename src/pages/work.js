@@ -40,6 +40,28 @@ const WorkPage = ({ data }) => {
           descriptionThree="to use and implement into sport specific&nbsp;coaching"
         />
 
+        <section className="pyramid photos-background">
+          <a href="https://content.coachscall.org/wp-content/uploads/2021/11/CoachingPyramid-CoachsCall.jpg">
+            <StaticImage
+              className="work-photo"
+              src="../images/WorkImage1.jpg"
+              alt="The Coaching Pyramid"
+              layout="constrained"
+            />
+          </a>
+        </section>
+
+        <section className="joy photos-background">
+          <a href="https://content.coachscall.org/wp-content/uploads/2021/11/JoyAndPerformance-CoachsCall.jpg">
+            <StaticImage
+              className="work-photo joy-static-image"
+              src="../images/WorkImage2.jpg"
+              alt="Joy and Performance slide"
+              layout="constrained"
+            />
+          </a>
+        </section>
+
         <WorkItem
           id="mentoring"
           heading="One-on-One Mentoring and Small Group Sessions"
@@ -51,26 +73,6 @@ const WorkPage = ({ data }) => {
           boldThree="Helping coaches"
           descriptionThree="develop strategies for culture building, program development, recruiting, and day to day&nbsp;excellence"
         />
-        <section className="pyramid photos-background">
-          <a href="https://content.coachscall.org/wp-content/uploads/2021/11/CoachingPyramid-CoachsCall.jpg">
-            <StaticImage
-              className="work-photo"
-              src="../images/WorkImage1.jpg"
-              alt="The Coaching Pyramid"
-              layout="constrained"
-            />
-          </a>
-        </section>
-        <section className="joy photos-background">
-          <a href="https://content.coachscall.org/wp-content/uploads/2021/11/JoyAndPerformance-CoachsCall.jpg">
-            <StaticImage
-              className="work-photo joy-static-image"
-              src="../images/WorkImage2.jpg"
-              alt="Joy and Performance slide"
-              layout="constrained"
-            />
-          </a>
-        </section>
       </div>
 
       <QuoteSection

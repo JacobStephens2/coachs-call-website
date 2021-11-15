@@ -234,13 +234,20 @@ section#mission-vision-section {
 
 .work-container {
   padding-bottom: 2rem;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "seminars"
-    "pyramid"
-    "joy"
-    "mentoring";
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 716px) {
+  .work-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "seminars"
+      "pyramid"
+      "joy"
+      "mentoring";
+  }
 }
 
 .work-area {
@@ -305,6 +312,10 @@ section#mission-vision-section {
   }
 }
 
+section.work-area:first-of-type {
+  padding-bottom: 1rem;
+}
+
 @media screen and (min-width: 576px) {
   .work-header-break-two {
     display: initial;
@@ -315,6 +326,9 @@ section#mission-vision-section {
 }
 
 @media screen and (min-width: 768px) {
+  section.work-area:first-of-type {
+    padding-bottom: 0;
+  }
   .work-header-break-two {
     display: none;
   }

@@ -11,9 +11,9 @@ const VideoSlowGrass = () => {
       <StaticImage
         className="desktop-hidden darken intro-row-image"
         src="../images/ImageGoal.png"
-        alt="Athlete stretching"
+        alt="Football goal"
         height={750}
-        layout="fixed"
+        layout="constrained"
       />
     </span>
   )
