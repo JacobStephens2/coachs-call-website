@@ -1,11 +1,12 @@
 /* This CSS applies to the IntroRow component */
 
 .introRow h1 {
-  font-size: 3.1rem;
+  font-size: 3rem;
   color: var(--white);
   text-transform: initial;
   line-height: 0.95;
   margin-bottom: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 576px) {
