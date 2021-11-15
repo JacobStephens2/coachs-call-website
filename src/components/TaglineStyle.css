@@ -1,18 +1,18 @@
+p.subhead.tagline {
+  padding-left: 0.8rem;
+}
+
 .tagline {
   letter-spacing: 5px;
   font-style: italic;
 }
 
 .subhead.tagline {
-  font-size: 1.5rem;
-  margin-top: 3%;
+  font-size: 1.4rem;
   color: var(--white);
   font-family: var(--athletic-font);
   font-weight: var(--athletic-font-weight);
   font-style: var(--athletic-font-style);
-}
-
-.subhead.tagline {
   margin-top: 0;
 }
 
@@ -43,5 +43,8 @@
 @media screen and (min-width: 992px) {
   .taglineRow {
     padding-left: 0.7rem;
+  }
+  p.subhead.tagline {
+    padding-left: 0;
   }
 }
