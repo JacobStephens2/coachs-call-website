@@ -331,3 +331,7 @@ section.work-area:first-of-type {
     display: none;
   }
 }
+
+.work-area ul {
+  margin-bottom: 0;
+}
