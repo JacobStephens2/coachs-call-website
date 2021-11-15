@@ -5,7 +5,7 @@ import IntroRow from "../components/IntroRow"
 import QuoteSection from "../components/QuoteSection"
 import Tagline from "../components/Tagline"
 import LetsConnect from "../components/LetsConnect"
-import VideoWideGrass from "../components/VideoWideGrass"
+import VideoTrack from "../components/VideoTrack"
 import ContactForm from "../components/ContactForm"
 import CoachQuote from "../components/CoachQuote"
 
@@ -22,7 +22,7 @@ const ContactPage = ({ data }) => {
           subhead="The pursuit of God's calling in&nbsp;coaching"
           emailButton="yes"
         >
-          <VideoWideGrass />
+          <VideoTrack />
         </IntroRow>
         <ContactForm />
         <QuoteSection
