@@ -206,10 +206,6 @@ section#mission-vision-section {
   padding-top: 2rem;
 }
 
-.work-container section {
-  padding-top: 0;
-}
-
 #mentoring {
   grid-area: mentoring;
   padding-top: 2rem;
@@ -267,6 +263,7 @@ section#mission-vision-section {
 }
 
 .work-container section {
+  padding-top: 0;
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -274,6 +271,7 @@ section#mission-vision-section {
   max-width: 80ch;
   margin-left: 11vw;
   padding-left: 0;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 1096px) {
