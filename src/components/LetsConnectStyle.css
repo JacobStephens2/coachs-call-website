@@ -46,3 +46,7 @@
 .contact-text p:first-of-type {
   margin-bottom: 4px;
 }
+
+.lets-connect h2 {
+  margin-bottom: 0.1rem;
+}
