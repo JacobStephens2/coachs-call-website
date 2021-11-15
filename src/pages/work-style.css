@@ -269,9 +269,15 @@ section#mission-vision-section {
   flex-direction: column;
   justify-content: center;
   max-width: 80ch;
-  margin-left: 11vw;
   padding-left: 0;
   padding-right: 1rem;
+  margin-left: 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .work-container section {
+    margin-left: 11vw;
+  }
 }
 
 @media screen and (min-width: 1096px) {
