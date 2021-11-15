@@ -76,7 +76,7 @@ const IndexPage = () => {
         </div>
 
         <QuoteSection
-          quote="To become holy is rather like joining a secret society. To put it at the very lowest, it must be great fun."
+          quote="To become holy is rather like joining a secret society.<br class='wide-only'/>To put it at the very lowest, it must be great fun."
           citation="C.S. Lewis, <i>Mere Christianity</i>"
         />
 

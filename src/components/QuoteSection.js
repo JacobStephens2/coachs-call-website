@@ -10,7 +10,7 @@ const QuoteSection = props => {
     <section className={`grey-section quote-section ${props.classProp}`}>
       <Container className="quote-center">
         <Col lg={8}>
-          <q>{props.quote}</q>
+          <q dangerouslySetInnerHTML={{ __html: props.quote }}></q>
           <cite
             className="quote-section-cite"
             dangerouslySetInnerHTML={{ __html: props.citation }}

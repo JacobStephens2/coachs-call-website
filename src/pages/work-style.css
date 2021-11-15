@@ -290,7 +290,19 @@ section#mission-vision-section {
 }
 
 .work-header-break-two {
+  display: initial;
+}
+.work-header-break-one {
   display: none;
+}
+
+@media screen and (min-width: 396px) {
+  .work-header-break-two {
+    display: none;
+  }
+  .work-header-break-one {
+    display: initial;
+  }
 }
 
 @media screen and (min-width: 576px) {

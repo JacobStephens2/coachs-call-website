@@ -757,6 +757,10 @@ button.btn {
   display: none;
 }
 
+.wide-only {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none !important;
@@ -764,6 +768,9 @@ button.btn {
   }
   .mobile-hidden {
     display: inline;
+  }
+  .wide-only {
+    display: initial;
   }
 }
 
