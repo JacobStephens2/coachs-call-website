@@ -64,7 +64,7 @@ const WorkPage = ({ data }) => {
 
         <WorkItem
           id="mentoring"
-          heading="One-on-One Mentoring and Small Group Sessions"
+          heading="One-on-One Mentoring and Small Group Consulting"
           subheading="Pursuing excellence"
           boldList="Engaging coaches"
           descriptionList="where they are in their journey and helping them develop more fully their view of what God requires of the call to&nbsp;coaches"
