@@ -17,7 +17,7 @@ import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
 import Tagline from "../components/Tagline"
 import QuoteSection from "../components/QuoteSection"
-import VideoGoal from "../components/VideoGoal"
+import VideoAbout from "../components/VideoAbout"
 
 import "./about-style.css"
 
@@ -30,7 +30,7 @@ const AboutPage = () => {
         heading='Game day <br class="about-header-break-one"/>is a <br class="about-header-break-two"/>call to&nbsp;worship'
         subhead="John has helped over 500 athletes celebrate over 25&nbsp;years"
       >
-        <VideoGoal />
+        <VideoAbout />
       </IntroRow>
       <a id="john-levis" class="anchor"></a>
       <section className="about-page">

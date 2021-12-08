@@ -7,7 +7,7 @@ import LetsConnect from "../components/LetsConnect"
 import CoachQuote from "../components/CoachQuote"
 import Tagline from "../components/Tagline"
 import WorkItem from "../components/WorkItem"
-import VideoWideGrass from "../components/VideoWideGrass"
+import VideoWork from "../components/VideoWork"
 import QuoteSection from "../components/QuoteSection"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -23,7 +23,7 @@ const WorkPage = ({ data }) => {
         heading="It's how <br class='work-header-break-two' />you <br class='work-header-break-one' />play the&nbsp;game"
         subhead="And winning and losing do&nbsp;matter"
       >
-        <VideoWideGrass />
+        <VideoWork />
       </IntroRow>
 
       <div className="work-container">

@@ -13,7 +13,7 @@ import CoachQuote from "../components/CoachQuote"
 import MapSection from "../components/MapSection"
 import IntroRow from "../components/IntroRow"
 import Tagline from "../components/Tagline"
-import VideoSlowGrass from "../components/VideoSlowGrass"
+import VideoHome from "../components/VideoHome"
 import Map from "../components/Map"
 
 // Styles
@@ -30,7 +30,7 @@ const IndexPage = () => {
           subhead="Through one-on-one mentoring, consulting, and&nbsp;seminars"
           cardClass="aboutCard"
         >
-          <VideoSlowGrass />
+          <VideoHome />
         </IntroRow>
 
         <p className="screen-reader-text">
