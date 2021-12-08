@@ -9,27 +9,7 @@ const Map = () => {
   if (isBrowser) {
     setTimeout(() => {
       console.log("Map is active")
-      const wheaton = document.querySelector("#wheaton")
-      const wheatonLabel = document.querySelector("#wheaton-label")
-      wheaton.addEventListener("click", () => {
-        wheatonLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          wheatonLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-      })
-      wheatonLabel.addEventListener("click", () => {
-        wheatonLabel.classList.toggle("map-hidden")
-      })
+
 
       const eastern = document.querySelector("#eastern")
       const easternLabel = document.querySelector("#eastern-label")
@@ -38,7 +18,7 @@ const Map = () => {
         setTimeout(() => {
           easternLabel.classList.add("map-hidden")
         }, 3000)
-        wheatonLabel.classList.add("map-hidden")
+        
         dccLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
         iitLabel.classList.add("map-hidden")
@@ -62,7 +42,7 @@ const Map = () => {
           dccLabel.classList.add("map-hidden")
         }, 3000)
         easternLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
         valleyForgeLabel.classList.add("map-hidden")
         secondBaptistLabel.classList.add("map-hidden")
         iitLabel.classList.add("map-hidden")
@@ -87,7 +67,7 @@ const Map = () => {
         dccLabel.classList.add("map-hidden")
         christianAcademyLabel.classList.add("map-hidden")
         secondBaptistLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
         iitLabel.classList.add("map-hidden")
         valleyForgeLabel.classList.add("map-hidden")
         libertyLabel.classList.add("map-hidden")
@@ -114,7 +94,7 @@ const Map = () => {
         libertyLabel.classList.add("map-hidden")
         secondBaptistLabel.classList.add("map-hidden")
         scrantonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       calvinLabel.addEventListener("click", () => {
         calvinLabel.classList.toggle("map-hidden")
@@ -137,7 +117,7 @@ const Map = () => {
         secondBaptistLabel.classList.add("map-hidden")
         scrantonLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       christianAcademyLabel.addEventListener("click", () => {
         christianAcademyLabel.classList.toggle("map-hidden")
@@ -159,7 +139,7 @@ const Map = () => {
         libertyLabel.classList.add("map-hidden")
         scrantonLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
         calvinLabel.classList.add("map-hidden")
       })
       messiahLabel.addEventListener("click", () => {
@@ -182,7 +162,7 @@ const Map = () => {
         iitLabel.classList.add("map-hidden")
         scrantonLabel.classList.add("map-hidden")
         libertyLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       valleyForgeLabel.addEventListener("click", () => {
         valleyForgeLabel.classList.toggle("map-hidden")
@@ -203,7 +183,7 @@ const Map = () => {
         iitLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
         scrantonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       libertyLabel.addEventListener("click", () => {
         libertyLabel.classList.toggle("map-hidden")
@@ -225,7 +205,7 @@ const Map = () => {
         valleyForgeLabel.classList.add("map-hidden")
         iitLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       scrantonLabel.addEventListener("click", () => {
         scrantonLabel.classList.toggle("map-hidden")
@@ -245,7 +225,7 @@ const Map = () => {
         valleyForgeLabel.classList.add("map-hidden")
         secondBaptistLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       iitLabel.addEventListener("click", () => {
         iitLabel.classList.toggle("map-hidden")
@@ -267,7 +247,7 @@ const Map = () => {
         libertyLabel.classList.add("map-hidden")
         valleyForgeLabel.classList.add("map-hidden")
         gordonLabel.classList.add("map-hidden")
-        wheatonLabel.classList.add("map-hidden")
+        
       })
       secondBaptistLabel.addEventListener("click", () => {
         secondBaptistLabel.classList.toggle("map-hidden")
