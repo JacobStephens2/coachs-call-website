@@ -1,5 +1,5 @@
 import * as React from "react"
-import AthleticVideo from "../videos/net-1AdobeStock_167934773_Video_HD_Preview-slowed-to-65pct.mp4"
+import AthleticVideo from "../videos/net-65pct.mp4"
 import { StaticImage } from "gatsby-plugin-image"
 
 const VideoWork = () => {

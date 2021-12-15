@@ -1,5 +1,5 @@
 import * as React from "react"
-import AthleticVideo from "../videos/AdobeStock-grass-lines-259971257_Video_HD_Preview.mp4"
+import AthleticVideo from "../videos/grass.mp4"
 import { StaticImage } from "gatsby-plugin-image"
 
 const VideoHome = () => {
