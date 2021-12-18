@@ -98,12 +98,12 @@ const AboutPage = () => {
                 />
                 <ListItem
                   boldOne="10 years"
-                  boldTwo="Young Life Staff"
+                  boldTwo="Competitive Athlete"
                   description="Growing up John played competitive soccer, tennis, basketball, baseball, football and lacrosse. As a college athlete, John played basketball and lacrosse at Wheaton&nbsp;College."
-                />
+                  />
                 <ListItem
                   boldOne="22+ years"
-                  boldTwo="Competitive Athlete"
+                  boldTwo="Young Life Staff"
                   description="John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach, Club, event. He also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern&nbsp;University."
                 />
                 <ListItem
