@@ -104,7 +104,7 @@ const AboutPage = () => {
                 <ListItem
                   boldOne="22+ years"
                   boldTwo="Young Life Staff"
-                  description="John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach event, Club. He also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern&nbsp;University."
+                  description="John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach event, Club. John also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern&nbsp;University."
                 />
                 <ListItem
                   boldOne="9 years"
