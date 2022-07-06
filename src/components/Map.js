@@ -7,253 +7,109 @@ const Map = () => {
   const isBrowser = typeof window !== "undefined"
 
   if (isBrowser) {
+
     setTimeout(() => {
+
+      const schools = [
+        {
+          name: "dcc",
+          label: "dcc-label"
+        },
+        {
+          name: "gordon",
+          label: "gordon-label"
+        },
+        {
+          name: "iit",
+          label: "iit-label"
+        },
+        {
+          name: "second-baptist",
+          label: "second-baptist-label"
+        },
+        {
+          name: "messiah",
+          label: "messiah-label"
+        },
+        {
+          name: "liberty",
+          label: "liberty-label"
+        },
+        {
+          name: "scranton",
+          label: "scranton-label"
+        },
+        {
+          name: "valley-forge",
+          label: "valley-forge-label"
+        },
+        {
+          name: "calvin",
+          label: "calvin-label"
+        },
+        {
+          name: "christian-academy",
+          label: "christian-academy-label"
+        },
+        {
+          name: "eastern",
+          label: "eastern-label"
+        },
+        {
+          name: "middle_tennessee_state",
+          label: "middle_tennessee_state_label"
+        },
+        {
+          name: "texas_am",
+          label: "texas_am_label"
+        },
+        {
+          name: "troy_university",
+          label: "troy_university_label"
+        },
+        {
+          name: "wheaton_college",
+          label: "wheaton_college_label"
+        },
+        {
+          name: "yale",
+          label: "yale_label"
+        },
+        {
+          name: "emory_weiner_school",
+          label: "emory_weiner_school_label"
+        },
+        {
+          name: "episcopal_academy",
+          label: "episcopal_academy_label"
+        }
+      ]
+
+      function addSchool(school) {
+        let schoolElement = document.querySelector('#' + school.name)
+        schoolElement.addEventListener("click", () => {
+          let schoolLabelElement = document.querySelector('#' + school.label)
+          schoolLabelElement.style.display = 'block'
+          setTimeout(() => {
+            schoolLabelElement.style.display = 'none'
+          }, 3000)
+          for (let i = 0; i < schools.length; i++) {
+            if (schools[i].label == school.label) {
+              schoolLabelElement.addEventListener("click", () => {
+                schoolLabelElement.style.display = 'none'
+              })
+            } else {
+              document.querySelector('#' + schools[i].label).style.display = 'none';
+            }
+          }
+        })
+      }
+
+      for (let i = 0; i < schools.length; i++) {
+        addSchool(schools[i])
+      }
+
       console.log("Map is active")
-
-
-      const eastern = document.querySelector("#eastern")
-      const easternLabel = document.querySelector("#eastern-label")
-      eastern.addEventListener("click", () => {
-        easternLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          easternLabel.classList.add("map-hidden")
-        }, 3000)
-        
-        dccLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        messiahLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-      })
-      easternLabel.addEventListener("click", () => {
-        easternLabel.classList.toggle("map-hidden")
-      })
-
-      const dcc = document.querySelector("#dcc")
-      const dccLabel = document.querySelector("#dcc-label")
-      dcc.addEventListener("click", () => {
-        dccLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          dccLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        
-        valleyForgeLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-      })
-      dccLabel.addEventListener("click", () => {
-        dccLabel.classList.toggle("map-hidden")
-      })
-
-      const gordon = document.querySelector("#gordon")
-      const gordonLabel = document.querySelector("#gordon-label")
-      gordon.addEventListener("click", () => {
-        gordonLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          gordonLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        
-        iitLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-      })
-      gordonLabel.addEventListener("click", () => {
-        gordonLabel.classList.toggle("map-hidden")
-      })
-
-      const calvin = document.querySelector("#calvin")
-      const calvinLabel = document.querySelector("#calvin-label")
-      calvin.addEventListener("click", () => {
-        calvinLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          calvinLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        
-      })
-      calvinLabel.addEventListener("click", () => {
-        calvinLabel.classList.toggle("map-hidden")
-      })
-
-      const christianAcademy = document.querySelector("#christian-academy")
-      const christianAcademyLabel = document.querySelector(
-        "#christian-academy-label"
-      )
-      christianAcademy.addEventListener("click", () => {
-        christianAcademyLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          christianAcademyLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        
-      })
-      christianAcademyLabel.addEventListener("click", () => {
-        christianAcademyLabel.classList.toggle("map-hidden")
-      })
-
-      const messiah = document.querySelector("#messiah")
-      const messiahLabel = document.querySelector("#messiah-label")
-      messiah.addEventListener("click", () => {
-        messiahLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          messiahLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        
-        calvinLabel.classList.add("map-hidden")
-      })
-      messiahLabel.addEventListener("click", () => {
-        messiahLabel.classList.toggle("map-hidden")
-      })
-
-      const valleyForge = document.querySelector("#valley-forge")
-      const valleyForgeLabel = document.querySelector("#valley-forge-label")
-      valleyForge.addEventListener("click", () => {
-        valleyForgeLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          valleyForgeLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        messiahLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        
-      })
-      valleyForgeLabel.addEventListener("click", () => {
-        valleyForgeLabel.classList.toggle("map-hidden")
-      })
-
-      const liberty = document.querySelector("#liberty")
-      const libertyLabel = document.querySelector("#liberty-label")
-      liberty.addEventListener("click", () => {
-        libertyLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          libertyLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        scrantonLabel.classList.add("map-hidden")
-        
-      })
-      libertyLabel.addEventListener("click", () => {
-        libertyLabel.classList.toggle("map-hidden")
-      })
-
-      const scranton = document.querySelector("#scranton")
-      const scrantonLabel = document.querySelector("#scranton-label")
-      scranton.addEventListener("click", () => {
-        scrantonLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          scrantonLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        messiahLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        
-      })
-      scrantonLabel.addEventListener("click", () => {
-        scrantonLabel.classList.toggle("map-hidden")
-      })
-
-      const iit = document.querySelector("#iit")
-      const iitLabel = document.querySelector("#iit-label")
-      iit.addEventListener("click", () => {
-        iitLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          iitLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        secondBaptistLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        
-      })
-      iitLabel.addEventListener("click", () => {
-        iitLabel.classList.toggle("map-hidden")
-      })
-
-      const secondBaptist = document.querySelector("#second-baptist")
-      const secondBaptistLabel = document.querySelector("#second-baptist-label")
-      secondBaptist.addEventListener("click", () => {
-        secondBaptistLabel.classList.toggle("map-hidden")
-        setTimeout(() => {
-          secondBaptistLabel.classList.add("map-hidden")
-        }, 3000)
-        easternLabel.classList.add("map-hidden")
-        dccLabel.classList.add("map-hidden")
-        christianAcademyLabel.classList.add("map-hidden")
-        calvinLabel.classList.add("map-hidden")
-        messiahLabel.classList.add("map-hidden")
-        iitLabel.classList.add("map-hidden")
-        libertyLabel.classList.add("map-hidden")
-        valleyForgeLabel.classList.add("map-hidden")
-        gordonLabel.classList.add("map-hidden")
-        
-      })
-      secondBaptistLabel.addEventListener("click", () => {
-        secondBaptistLabel.classList.toggle("map-hidden")
-      })
-
-      // function to remove labels when the map is clicked
     }, 2000)
   }
 
