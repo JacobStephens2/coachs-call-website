@@ -110,7 +110,7 @@ const Map = () => {
       }
 
       console.log("Map is active")
-    }, 2000)
+    }, 500)
   }
 
   return (
