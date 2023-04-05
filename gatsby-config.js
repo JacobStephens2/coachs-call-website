@@ -63,12 +63,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `https://content.coachscall.org/graphql`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
