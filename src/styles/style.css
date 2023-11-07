@@ -1,6 +1,0 @@
-/* This file brings together styles that apply to all components and is referenced by the LayoutComponent. Stylesheets referring to specific components are imported by those components */
-
-@import "reset.css";
-@import "accessibility.css";
-@import "custom-properties.css";
-@import "all-pages.css";

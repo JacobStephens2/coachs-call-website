@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# for adding .html extension if matching file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1\.html -f [NC]
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# for adding .php extension if matching file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1\.php -f [NC]
+RewriteRule ^(.+?)/?$ /$1.php [L]

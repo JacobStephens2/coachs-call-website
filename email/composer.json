@@ -1,0 +1,17 @@
+{
+    "name": "jacob/coachscall.stewardgoods.com",
+    "autoload": {
+        "psr-4": {
+            "Jacob\\CoachscallStewardgoodsCom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jacob Stephens",
+            "email": "jacob@stewardgoods.com"
+        }
+    ],
+    "require": {
+        "sendgrid/sendgrid": "^8.0"
+    }
+}
