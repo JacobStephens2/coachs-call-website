@@ -690,17 +690,32 @@
 
 		video {
 			filter: brightness(50%);
-			height: 850px;
+			height: 55vh;
 			left: 0;
 			object-fit: cover;
 			position: relative;
 			top: 0;
-			width: 100vw
+			width: 100vw;
+			display: block
+		}
+
+		.introRowFirstDiv {
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 1rem;
+		}
+
+		.videoBackground .container {
+			z-index: 2;
 		}
 
 		@media screen and (min-width:768px) {
 			video {
 				height: 100vh
+			}
+
+			.introRowFirstDiv {
+				max-height: none;
 			}
 		}
 
@@ -740,6 +755,10 @@
 
 		section {
 			padding: 4rem 0 3rem
+		}
+
+		.about-page section {
+			padding: 2rem 0 3rem
 		}
 
 		@media screen and (min-width:768px) {
@@ -855,8 +874,10 @@
 			font-family: var(--bold-font);
 			font-style: var(--bold-font-style);
 			font-weight: var(--bold-font-weight);
-			line-height: 1.25
+			line-height: 1.25;
 		}
+
+
 
 		blockquote {
 			margin: 0 1.45rem 1.45rem;
@@ -1009,7 +1030,22 @@
 
 		.intro-row-image {
 			max-width: 100vw;
-			min-height: 600px
+			min-height: 300px
+		}
+
+		.intro-row-image img[src*="svg"] {
+			height: 300px !important;
+			object-fit: cover;
+		}
+
+		@media screen and (min-width:768px) {
+			.intro-row-image {
+				min-height: 600px
+			}
+
+			.intro-row-image img[src*="svg"] {
+				height: 750px !important;
+			}
 		}
 
 		.listitem {
@@ -1109,7 +1145,6 @@
 			}
 		}
 
-		.mobile-hidden,
 		.wide-only {
 			display: none
 		}
@@ -13334,7 +13369,10 @@
 			line-height: .95;
 			margin-bottom: .9rem;
 			margin-top: .5rem;
-			text-transform: none
+			text-transform: none;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+			position: relative;
+			z-index: 2;
 		}
 
 		@media screen and (min-width:576px) {
@@ -13376,7 +13414,19 @@
 		}
 
 		.introText {
-			font-weight: 700
+			font-weight: 700;
+			position: relative;
+			z-index: 2;
+		}
+
+		/* Mobile-specific styling to ensure video background covers subhead text */
+		@media screen and (max-width: 767px) {
+			.introText {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+				padding: 1rem;
+				border-radius: 0.5rem;
+				margin: 0.5rem;
+			}
 		}
 
 		.introText h2 {
@@ -13412,6 +13462,13 @@
 			justify-content: center;
 			margin-top: 0;
 			top: 0
+		}
+
+		/* Mobile-specific styling to prevent crest from being cut off by top bar */
+		@media screen and (max-width: 767px) {
+			.intro-row-crest {
+				margin-top: 2rem;
+			}
 		}
 
 		@media screen and (min-width:768px) {
@@ -13479,8 +13536,16 @@
 
 		.videoBackground {
 			position: absolute;
-			top: 90px;
-			width: 100vw
+			top: 60px;
+			width: 100vw;
+			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+			padding-bottom: 2rem;
+		}
+
+		@media screen and (min-width:768px) {
+			.videoBackground {
+				top: 90px
+			}
 		}
 
 		.coachquote-container {
@@ -23174,16 +23239,19 @@
 				<main id="page-wrap">
 					<div style="margin: 0px auto;">
 						<main>
-							<div class="introRowFirstDiv"><span><video class="mobile-hidden" autoplay="" playsinline="">
+							<div class="introRowFirstDiv">
+								<span>
+									<video class="mobile-hidden" autoplay="" playsinline="">
 										<source src="/static/goal-eeee281362b1b2969ef2612d7d20d822.mp4"
 											type="video/mp4">
 									</video>
 									<div data-gatsby-image-wrapper=""
 										class="gatsby-image-wrapper gatsby-image-wrapper-constrained desktop-hidden darken intro-row-image">
 										<div style="max-width: 1333px; display: block;"><img alt="" role="presentation"
-												aria-hidden="true"
-												src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#39;750&#39; width=&#39;1333&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39; version=&#39;1.1&#39;%3E%3C/svg%3E"
-												style="max-width: 100%; display: block; position: static;"></div>
+											aria-hidden="true"
+											src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#39;750&#39; width=&#39;1333&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39; version=&#39;1.1&#39;%3E%3C/svg%3E"
+											style="max-width: 100%; display: block; position: static;">
+										</div>
 									</div>
 								</span>
 								<div class="videoBackground">
@@ -23710,7 +23778,8 @@
 		</div>
 		<div id="gatsby-announcer"
 			style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
-			aria-live="assertive" aria-atomic="true">Navigated to Game day is a call to&nbsp;worship</div>
+			aria-live="assertive" aria-atomic="true">Navigated to Game day is a call to&nbsp;worship
+		</div>
 	</div>
 	<script async="" src="./About_Coachs_Call_files/js"></script>
 	<script>

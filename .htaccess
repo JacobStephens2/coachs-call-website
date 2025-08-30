@@ -1,12 +1,26 @@
 Options +FollowSymLinks
 RewriteEngine on
 
+# Enable CORS for static assets
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Serve all static files directly if they exist
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webmanifest|json)$ - [L]
+
 # for adding .html extension if matching file exists
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1\.html -f [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1\.html -f
 RewriteRule ^(.+?)/?$ /$1.html [L]
 
 # for adding .php extension if matching file exists
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1\.php -f [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1\.php -f
 RewriteRule ^(.+?)/?$ /$1.php [L]
+
+# Fallback to index.php for all other requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

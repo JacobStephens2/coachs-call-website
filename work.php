@@ -690,17 +690,32 @@
 
 		video {
 			filter: brightness(50%);
-			height: 850px;
+			height: 55vh;
 			left: 0;
 			object-fit: cover;
 			position: relative;
 			top: 0;
-			width: 100vw
+			width: 100vw;
+			display: block
+		}
+
+		.introRowFirstDiv {
+			overflow: visible;
+			position: relative;
+		}
+
+		.videoBackground .container {
+			position: relative;
+			z-index: 2;
 		}
 
 		@media screen and (min-width:768px) {
 			video {
 				height: 100vh
+			}
+
+			.introRowFirstDiv {
+				max-height: none;
 			}
 		}
 
@@ -740,6 +755,10 @@
 
 		section {
 			padding: 4rem 0 3rem
+		}
+
+		.work-area section {
+			padding: 2rem 0 3rem
 		}
 
 		@media screen and (min-width:768px) {
@@ -855,8 +874,10 @@
 			font-family: var(--bold-font);
 			font-style: var(--bold-font-style);
 			font-weight: var(--bold-font-weight);
-			line-height: 1.25
+			line-height: 1.25;
 		}
+
+
 
 		blockquote {
 			margin: 0 1.45rem 1.45rem;
@@ -1009,7 +1030,22 @@
 
 		.intro-row-image {
 			max-width: 100vw;
-			min-height: 600px
+			min-height: 300px
+		}
+
+		.intro-row-image img[src*="svg"] {
+			height: 300px !important;
+			object-fit: cover;
+		}
+
+		@media screen and (min-width:768px) {
+			.intro-row-image {
+				min-height: 600px
+			}
+
+			.intro-row-image img[src*="svg"] {
+				height: 750px !important;
+			}
 		}
 
 		.listitem {
@@ -1109,7 +1145,6 @@
 			}
 		}
 
-		.mobile-hidden,
 		.wide-only {
 			display: none
 		}
@@ -13334,7 +13369,10 @@
 			line-height: .95;
 			margin-bottom: .9rem;
 			margin-top: .5rem;
-			text-transform: none
+			text-transform: none;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+			position: relative;
+			z-index: 2;
 		}
 
 		@media screen and (min-width:576px) {
@@ -13376,7 +13414,19 @@
 		}
 
 		.introText {
-			font-weight: 700
+			font-weight: 700;
+			position: relative;
+			z-index: 2;
+		}
+
+		/* Mobile-specific styling to ensure video background covers h1 and subhead text */
+		@media screen and (max-width: 767px) {
+			.introText {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+				padding: 1rem;
+				border-radius: 0.5rem;
+				margin: 0.5rem;
+			}
 		}
 
 		.introText h2 {
@@ -13412,6 +13462,13 @@
 			justify-content: center;
 			margin-top: 0;
 			top: 0
+		}
+
+		/* Mobile-specific styling to prevent crest from being cut off by top bar */
+		@media screen and (max-width: 767px) {
+			.intro-row-crest {
+				margin-top: 2rem;
+			}
 		}
 
 		@media screen and (min-width:768px) {
@@ -13479,8 +13536,15 @@
 
 		.videoBackground {
 			position: absolute;
-			top: 90px;
-			width: 100vw
+			top: 60px;
+			width: 100vw;
+			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+		}
+
+		@media screen and (min-width:768px) {
+			.videoBackground {
+				top: 90px
+			}
 		}
 
 		.coachquote-container {

@@ -1,0 +1,9 @@
+{
+  "name": "Coach's Call",
+  "short_name": "Coach's Call",
+  "description": "Deepening coach impact through one-on-one mentoring, consulting, and seminars",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
