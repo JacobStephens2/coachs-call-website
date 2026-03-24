@@ -14357,8 +14357,7 @@
 		type="module">const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);</script>
 	<link rel="icon" href="https://<?php echo DOMAIN; ?>/favicon-32x32.png?v=fc0541a770eb4dd78a5df3204ebe5702"
 		type="image/png">
-	<link rel="manifest" href="https://<?php echo DOMAIN; ?>/manifest.webmanifest" crossorigin="anonymous">
-	<meta name="theme-color" content="#002856">
+
 	<link rel="apple-touch-icon" sizes="48x48"
 		href="https://<?php echo DOMAIN; ?>/icons/icon-48x48.png?v=fc0541a770eb4dd78a5df3204ebe5702">
 	<link rel="apple-touch-icon" sizes="72x72"
