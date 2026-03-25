@@ -216,7 +216,7 @@
 			height: 73px;
 			position: fixed;
 			width: 100%;
-			z-index: 2
+			z-index: 1200
 		}
 
 		.logo-box {
@@ -691,18 +691,20 @@
 
 		video {
 			filter: brightness(50%);
-			height: 55vh;
+			height: 100%;
 			left: 0;
 			object-fit: cover;
-			position: relative;
+			position: absolute;
 			top: 0;
 			width: 100vw;
 			display: block
 		}
 
 		.introRowFirstDiv {
-			overflow: visible;
+			overflow: hidden;
 			position: relative;
+			margin-bottom: 1rem;
+			min-height: 50vh;
 		}
 
 		.videoBackground .container {
@@ -713,12 +715,8 @@
 
 
 		@media screen and (min-width:768px) {
-			video {
-				height: 100vh
-			}
-
 			.introRowFirstDiv {
-				max-height: none;
+				min-height: 100vh;
 			}
 		}
 
@@ -1037,12 +1035,13 @@
 
 		.intro-row-image {
 			max-width: 100vw;
-			min-height: 300px
+			min-height: 180px
 		}
 
 		.intro-row-image img[src*="svg"] {
-			height: 300px !important;
+			height: 180px !important;
 			object-fit: cover;
+			width: 100%;
 		}
 
 		@media screen and (min-width:768px) {
@@ -13471,6 +13470,13 @@
 			top: 0
 		}
 
+		@media screen and (max-width:767px) {
+			.intro-row-crest {
+				position: relative;
+				top: -1rem
+			}
+		}
+
 		@media screen and (min-width:768px) {
 			.intro-row-crest {
 				display: flex;
@@ -13535,16 +13541,16 @@
 		}
 
 		.videoBackground {
-			position: absolute;
-			top: 60px;
+			position: relative;
+			padding-top: 24px;
 			width: 100vw;
-			z-index: 1;
 			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+			padding-bottom: 2rem;
 		}
 
 		@media screen and (min-width:768px) {
 			.videoBackground {
-				top: 90px
+				padding-top: 90px
 			}
 		}
 

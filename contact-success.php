@@ -215,7 +215,7 @@
 			height: 73px;
 			position: fixed;
 			width: 100%;
-			z-index: 2
+			z-index: 1200
 		}
 
 		.logo-box {
