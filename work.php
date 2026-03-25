@@ -13464,13 +13464,6 @@
 			top: 0
 		}
 
-		/* Mobile-specific styling to prevent crest from being cut off by top bar */
-		@media screen and (max-width: 767px) {
-			.intro-row-crest {
-				margin-top: 2rem;
-			}
-		}
-
 		@media screen and (min-width:768px) {
 			.intro-row-crest {
 				display: flex;
@@ -14358,29 +14351,6 @@
 	<link rel="icon" href="https://<?php echo DOMAIN; ?>/favicon-32x32.png?v=fc0541a770eb4dd78a5df3204ebe5702"
 		type="image/png">
 
-	<link rel="apple-touch-icon" sizes="48x48"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-48x48.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="72x72"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-72x72.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="96x96"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-96x96.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="144x144"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-144x144.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="192x192"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-192x192.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="256x256"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-256x256.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="384x384"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-384x384.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-	<link rel="apple-touch-icon" sizes="512x512"
-		href="https://<?php echo DOMAIN; ?>/icons/icon-512x512.png?v=fc0541a770eb4dd78a5df3204ebe5702"><noscript>
-		<meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true" />
-	</noscript>
-	<link as="script" rel="preload" href="./assets/webpack-runtime.js">
-	<link as="script" rel="preload" href="./assets/framework.js">
-	<link as="script" rel="preload" href="./assets/app.js">
-	<link as="script" rel="preload"
-		href="./assets/offline-shell.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -22745,9 +22715,6 @@
 			font-weight: 900
 		}
 	</style>
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/about/page-data.json" crossorigin="anonymous"
-		as="fetch">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/work/page-data.json" crossorigin="anonymous" as="fetch">
 	<style type="text/css">
 		.tk-proxima-nova {
 			font-family: "proxima-nova", sans-serif;
@@ -22871,8 +22838,6 @@
 			font-display: auto;
 		}
 	</style>
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/contact/page-data.json" crossorigin="anonymous"
-		as="fetch">
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-about.js">
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-work.js">
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-contact.js">
@@ -23701,17 +23666,6 @@
 			gtag('config', 'G-9FWTXPCKKJ', { "send_page_view": false });
 		}
 	</script>
-	<script
-		id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/offline-plugin-app-shell-fallback/";/*]]>*/</script>
-	<script
-		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/</script>
-	<script src="./assets/polyfill.js" nomodule=""></script>
-	<script
-		src="./assets/offline-shell.js"
-		async=""></script>
-	<script src="./assets/app.js" async=""></script>
-	<script src="./assets/framework.js" async=""></script>
-	<script src="./assets/webpack-runtime.js" async=""></script>
 </body>
 
 </html>

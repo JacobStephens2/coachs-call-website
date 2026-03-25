@@ -697,10 +697,10 @@ text-transform: uppercase
 
 video {
 filter: brightness(50%);
-height: 50vh;
+height: 100%;
 left: 0;
 object-fit: cover;
-position: relative;
+position: absolute;
 top: 0;
 width: 100vw;
 display: block
@@ -710,11 +710,12 @@ display: block
 overflow: hidden;
 position: relative;
 margin-bottom: 1rem;
+min-height: 50vh;
 }
 
 @media screen and (min-width:768px) {
-video {
-height: 100vh
+.introRowFirstDiv {
+min-height: 100vh;
 }
 }
 
@@ -1025,12 +1026,13 @@ filter: brightness(50%)
 
 .intro-row-image {
 max-width: 100vw;
-min-height: 300px
+min-height: 180px
 }
 
 .intro-row-image img[src*="svg"] {
-height: 300px !important;
+height: 180px !important;
 object-fit: cover;
+width: 100%;
 }
 
 @media screen and (min-width:768px) {
@@ -13473,12 +13475,12 @@ height: 28vh
 			top: 0
 		}
 
-		/* Mobile-specific styling to prevent crest from being cut off by top bar */
-		@media screen and (max-width: 767px) {
-			.intro-row-crest {
-				margin-top: 2rem;
-			}
-		}
+@media screen and (max-width:767px) {
+.intro-row-crest {
+position: relative;
+top: -1rem
+}
+}
 
 @media screen and (min-width:768px) {
 .intro-row-crest {
@@ -13544,16 +13546,15 @@ padding-top: 5%
 }
 
 .videoBackground {
-position: absolute;
-top: 60px;
+position: relative;
+padding-top: 24px;
 width: 100vw;
-background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 padding-bottom: 2rem;
 }
 
 @media screen and (min-width:768px) {
 .videoBackground {
-top: 90px
+padding-top: 90px
 }
 }
 
@@ -14377,22 +14378,6 @@ opacity: 0 !important
     </script>
     <link rel="icon" href="https://<?php echo DOMAIN; ?>/favicon-32x32.png?v=fc0541a770eb4dd78a5df3204ebe5702" type="image/png">
 
-    <link rel="apple-touch-icon" sizes="48x48" href="https://<?php echo DOMAIN; ?>/icons/icon-48x48.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://<?php echo DOMAIN; ?>/icons/icon-72x72.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="96x96" href="https://<?php echo DOMAIN; ?>/icons/icon-96x96.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://<?php echo DOMAIN; ?>/icons/icon-144x144.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="192x192" href="https://<?php echo DOMAIN; ?>/icons/icon-192x192.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="256x256" href="https://<?php echo DOMAIN; ?>/icons/icon-256x256.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="384x384" href="https://<?php echo DOMAIN; ?>/icons/icon-384x384.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <link rel="apple-touch-icon" sizes="512x512" href="https://<?php echo DOMAIN; ?>/icons/icon-512x512.png?v=fc0541a770eb4dd78a5df3204ebe5702">
-    <noscript >
-      <meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&redirect=true">
-    </meta>
-  </noscript>
-  <link as="script" rel="preload" href="./assets/webpack-runtime.js">
-  <link as="script" rel="preload" href="./assets/framework.js">
-  <link as="script" rel="preload" href="./assets/app.js">
-  <link as="script" rel="preload" href="./assets/offline-shell.js">
   <style >
     
 [id*='google_ads_iframe'],
@@ -22765,8 +22750,6 @@ font-weight: 900
 }
 
   </style>
-  <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/work/page-data.json" crossorigin="anonymous" as="fetch">
-  <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/about/page-data.json" crossorigin="anonymous" as="fetch">
   <style type="text/css">
     
 .tk-proxima-nova {
@@ -22839,7 +22822,6 @@ font-display: auto;
 }
 
   </style>
-  <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/contact/page-data.json" crossorigin="anonymous" as="fetch">
   <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-work.js">
   <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-about.js">
   <style type="text/css">
@@ -24825,22 +24807,6 @@ gtag('js', new Date());
 gtag('config', 'G-9FWTXPCKKJ', { "send_page_view": false });
 }
 
-    </script>
-    <script id="gatsby-script-loader">
-      /*<![CDATA[*/window.pagePath = "/offline-plugin-app-shell-fallback/";/*]]>*/
-    </script>
-    <script id="gatsby-chunk-mapping">
-      /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/
-    </script>
-    <script src="./assets/polyfill.js" nomodule="">
-    </script>
-    <script src="./assets/offline-shell.js" async="">
-    </script>
-    <script src="./assets/app.js" async="">
-    </script>
-    <script src="./assets/framework.js" async="">
-    </script>
-    <script src="./assets/webpack-runtime.js" async="">
     </script>
   </body>
 </html>
