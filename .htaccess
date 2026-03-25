@@ -1,9 +1,9 @@
 Options +FollowSymLinks
 RewriteEngine on
 
-# Enable CORS for static assets
+# Enable CORS for static assets (same-origin only)
 <IfModule mod_headers.c>
-    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Origin "https://coachscall.org"
 </IfModule>
 
 # Serve all static files directly if they exist

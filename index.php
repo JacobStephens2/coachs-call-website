@@ -1,4 +1,4 @@
-<?php include 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; ?>
 
 <!-- saved from url=(0023)https://<?php echo DOMAIN; ?>/ -->
 <html class="wf-proximanova-n7-active wf-proximanova-n6-active wf-proximanova-n4-active wf-proximanova-n3-active wf-abolition-i4-active wf-rift-n6-active wf-active">

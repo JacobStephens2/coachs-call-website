@@ -1,4 +1,4 @@
-<?php include 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; ?>
 <!DOCTYPE html>
 <!-- saved from url=(0028)https://<?php echo DOMAIN; ?>/about -->
 <html
