@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<style data-href="/styles.41bf82717f21f891efc5.css" data-identity="gatsby-global-css">
+	<style data-href="/gatsby-styles.css" data-identity="gatsby-global-css">
 		@charset "UTF-8";
 
 		@font-face {
@@ -14377,11 +14377,11 @@
 		href="https://<?php echo DOMAIN; ?>/icons/icon-512x512.png?v=fc0541a770eb4dd78a5df3204ebe5702"><noscript>
 		<meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true" />
 	</noscript>
-	<link as="script" rel="preload" href="./About_Coachs_Call_files/webpack-runtime-87a96bbe00eb1afb3bb4.js">
-	<link as="script" rel="preload" href="./About_Coachs_Call_files/framework-ae5026fc30f7240a0281.js">
-	<link as="script" rel="preload" href="./About_Coachs_Call_files/app-9804da77f536e94f9ba7.js">
+	<link as="script" rel="preload" href="./about-assets/webpack-runtime.js">
+	<link as="script" rel="preload" href="./about-assets/framework.js">
+	<link as="script" rel="preload" href="./about-assets/app.js">
 	<link as="script" rel="preload"
-		href="./About_Coachs_Call_files/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js">
+		href="./about-assets/offline-shell.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -14401,8 +14401,8 @@
 			height: 0 !important;
 		}
 	</style>
-	<link rel="stylesheet" href="./About_Coachs_Call_files/fot1kfm.css" data-react-helmet="true">
-	<script src="./About_Coachs_Call_files/5ebbfa01b2.js" crossorigin="anonymous"
+	<link rel="stylesheet" href="./about-assets/fonts.css" data-react-helmet="true">
+	<script src="./about-assets/fontawesome-kit.js" crossorigin="anonymous"
 		data-react-helmet="true"></script>
 	<style media="all" id="fa-v4-font-face">
 		/*!
@@ -22874,9 +22874,9 @@
 	</style>
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/contact/page-data.json" crossorigin="anonymous"
 		as="fetch">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-about-js-7708b42ea7fb27f97981.js">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-work-js-2cc4072abed357616497.js">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-contact-js-149b1b41e3a95a2acfc5.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-about.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-work.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-contact.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -23413,7 +23413,7 @@
 																		data-main-image=""
 																		sizes="(min-width: 415px) 415px, 100vw"
 																		decoding="async" loading="eager"
-																		src="./About_Coachs_Call_files/EasternUniversityLogo.png"
+																		src="./about-assets/EasternUniversityLogo.png"
 																		alt="Eastern University logo"
 																		style="object-fit: cover; opacity: 1;">
 																</picture><noscript></noscript>
@@ -23443,7 +23443,7 @@
 																	<img width="301" height="100" data-main-image=""
 																		sizes="(min-width: 301px) 301px, 100vw"
 																		decoding="async" loading="eager"
-																		src="./About_Coachs_Call_files/WheatonCollegeLogo.png"
+																		src="./about-assets/WheatonCollegeLogo.png"
 																		alt="Eastern University logo"
 																		style="object-fit: cover; opacity: 1;">
 																</picture><noscript></noscript>
@@ -23514,7 +23514,7 @@
 														height="400" data-main-image=""
 														sizes="(min-width: 400px) 400px, 100vw" decoding="async"
 														loading="eager"
-														src="./About_Coachs_Call_files/john-levis-headshot-sep-2021-edited.jpg"
+														src="./about-assets/john-levis-headshot-sep-2021-edited.jpg"
 														alt="Portrait photo of John Levis"
 														style="object-fit: cover; opacity: 1;">
 												</picture><noscript></noscript>
@@ -23536,7 +23536,7 @@
 														height="400" data-main-image=""
 														sizes="(min-width: 400px) 400px, 100vw" decoding="async"
 														loading="eager"
-														src="./About_Coachs_Call_files/john-levis-family-photo-sep-2021-edited-cropped.jpg"
+														src="./about-assets/john-levis-family-photo-sep-2021-edited-cropped.jpg"
 														alt="John Levis with their family"
 														style="object-fit: cover; opacity: 1;">
 												</picture><noscript></noscript>
@@ -23780,7 +23780,7 @@
 			aria-live="assertive" aria-atomic="true">Navigated to Game day is a call to&nbsp;worship
 		</div>
 	</div>
-	<script async="" src="./About_Coachs_Call_files/js"></script>
+	<script async="" src="./about-assets/runtime.js"></script>
 	<script>
 		window.excludeGtagPaths = [/^(?:\/preview\/(?:(?!(?:\/|^)\.).)*?)$/, /^(?:\/do\-not\-track\/me\/too\/)$/];
 
@@ -23795,14 +23795,14 @@
 	<script
 		id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/offline-plugin-app-shell-fallback/";/*]]>*/</script>
 	<script
-		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-7ea1635bd4d160485775.js"], "app": ["/app-9804da77f536e94f9ba7.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-a15f140f6a36cf974cb5.js"], "component---src-pages-about-js": ["/component---src-pages-about-js-7708b42ea7fb27f97981.js"], "component---src-pages-contact-js": ["/component---src-pages-contact-js-149b1b41e3a95a2acfc5.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-643b468974bba085b447.js"], "component---src-pages-privacy-policy-js": ["/component---src-pages-privacy-policy-js-30c0e33c95c720e6d125.js"], "component---src-pages-success-js": ["/component---src-pages-success-js-ce37a243bbcd7e68b6f1.js"], "component---src-pages-work-js": ["/component---src-pages-work-js-2cc4072abed357616497.js"] };/*]]>*/</script>
-	<script src="./About_Coachs_Call_files/polyfill-7ea1635bd4d160485775.js" nomodule=""></script>
+		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/</script>
+	<script src="./about-assets/polyfill.js" nomodule=""></script>
 	<script
-		src="./About_Coachs_Call_files/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js"
+		src="./about-assets/offline-shell.js"
 		async=""></script>
-	<script src="./About_Coachs_Call_files/app-9804da77f536e94f9ba7.js" async=""></script>
-	<script src="./About_Coachs_Call_files/framework-ae5026fc30f7240a0281.js" async=""></script>
-	<script src="./About_Coachs_Call_files/webpack-runtime-87a96bbe00eb1afb3bb4.js" async=""></script>
+	<script src="./about-assets/app.js" async=""></script>
+	<script src="./about-assets/framework.js" async=""></script>
+	<script src="./about-assets/webpack-runtime.js" async=""></script>
 </body>
 
 </html>

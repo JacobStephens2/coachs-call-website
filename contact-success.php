@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="x-ua-compatible" scontent="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<style data-href="/styles.41bf82717f21f891efc5.css" data-identity="gatsby-global-css">
+	<style data-href="/gatsby-styles.css" data-identity="gatsby-global-css">
 		@charset "UTF-8";
 
 		@font-face {
@@ -14313,11 +14313,11 @@
 		<meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true" />
 	</noscript>
 	<link as="script" rel="preload"
-		href="./Message Sent _ Coach&#39;s Call_files/webpack-runtime-87a96bbe00eb1afb3bb4.js">
-	<link as="script" rel="preload" href="./Message Sent _ Coach&#39;s Call_files/framework-ae5026fc30f7240a0281.js">
-	<link as="script" rel="preload" href="./Message Sent _ Coach&#39;s Call_files/app-9804da77f536e94f9ba7.js">
+		href="./message-sent-assets/webpack-runtime.js">
+	<link as="script" rel="preload" href="./message-sent-assets/framework.js">
+	<link as="script" rel="preload" href="./message-sent-assets/app.js">
 	<link as="script" rel="preload"
-		href="./Message Sent _ Coach&#39;s Call_files/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js">
+		href="./message-sent-assets/offline-shell.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -14337,8 +14337,8 @@
 			height: 0 !important;
 		}
 	</style>
-	<link rel="stylesheet" href="./Message Sent _ Coach&#39;s Call_files/fot1kfm.css" data-react-helmet="true">
-	<script src="./Message Sent _ Coach&#39;s Call_files/5ebbfa01b2.js" crossorigin="anonymous"
+	<link rel="stylesheet" href="./message-sent-assets/fonts.css" data-react-helmet="true">
+	<script src="./message-sent-assets/fontawesome-kit.js" crossorigin="anonymous"
 		data-react-helmet="true"></script>
 	<style media="all" id="fa-v4-font-face">
 		/*!
@@ -22812,10 +22812,10 @@
 	</style>
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-data/index/page-data.json" crossorigin="anonymous"
 		as="fetch">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-contact-js-149b1b41e3a95a2acfc5.js">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-about-js-7708b42ea7fb27f97981.js">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-index-js-643b468974bba085b447.js">
-	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/component---src-pages-work-js-2cc4072abed357616497.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-contact.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-about.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-index.js">
+	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-work.js">
 </head>
 
 <body>
@@ -23328,7 +23328,7 @@
 			style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
 			aria-live="assertive" aria-atomic="true"></div>
 	</div>
-	<script async="" src="./Message Sent _ Coach&#39;s Call_files/js"></script>
+	<script async="" src="./message-sent-assets/runtime.js"></script>
 	<script>
 		window.excludeGtagPaths = [/^(?:\/preview\/(?:(?!(?:\/|^)\.).)*?)$/, /^(?:\/do\-not\-track\/me\/too\/)$/];
 
@@ -23343,14 +23343,14 @@
 	<script
 		id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/offline-plugin-app-shell-fallback/";/*]]>*/</script>
 	<script
-		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-7ea1635bd4d160485775.js"], "app": ["/app-9804da77f536e94f9ba7.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-a15f140f6a36cf974cb5.js"], "component---src-pages-about-js": ["/component---src-pages-about-js-7708b42ea7fb27f97981.js"], "component---src-pages-contact-js": ["/component---src-pages-contact-js-149b1b41e3a95a2acfc5.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-643b468974bba085b447.js"], "component---src-pages-privacy-policy-js": ["/component---src-pages-privacy-policy-js-30c0e33c95c720e6d125.js"], "component---src-pages-success-js": ["/component---src-pages-success-js-ce37a243bbcd7e68b6f1.js"], "component---src-pages-work-js": ["/component---src-pages-work-js-2cc4072abed357616497.js"] };/*]]>*/</script>
-	<script src="./Message Sent _ Coach&#39;s Call_files/polyfill-7ea1635bd4d160485775.js" nomodule=""></script>
+		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/</script>
+	<script src="./message-sent-assets/polyfill.js" nomodule=""></script>
 	<script
-		src="./Message Sent _ Coach&#39;s Call_files/component---cache-caches-gatsby-plugin-offline-app-shell-js-ce0a1abb794fe6592b28.js"
+		src="./message-sent-assets/offline-shell.js"
 		async=""></script>
-	<script src="./Message Sent _ Coach&#39;s Call_files/app-9804da77f536e94f9ba7.js" async=""></script>
-	<script src="./Message Sent _ Coach&#39;s Call_files/framework-ae5026fc30f7240a0281.js" async=""></script>
-	<script src="./Message Sent _ Coach&#39;s Call_files/webpack-runtime-87a96bbe00eb1afb3bb4.js" async=""></script>
+	<script src="./message-sent-assets/app.js" async=""></script>
+	<script src="./message-sent-assets/framework.js" async=""></script>
+	<script src="./message-sent-assets/webpack-runtime.js" async=""></script>
 </body>
 
 </html>
