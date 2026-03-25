@@ -14385,11 +14385,11 @@
 		href="https://<?php echo DOMAIN; ?>/icons/icon-512x512.png?v=fc0541a770eb4dd78a5df3204ebe5702"><noscript>
 		<meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true" />
 	</noscript>
-	<link as="script" rel="preload" href="./contact-assets/webpack-runtime.js">
-	<link as="script" rel="preload" href="./contact-assets/framework.js">
-	<link as="script" rel="preload" href="./contact-assets/app.js">
+	<link as="script" rel="preload" href="./assets/webpack-runtime.js">
+	<link as="script" rel="preload" href="./assets/framework.js">
+	<link as="script" rel="preload" href="./assets/app.js">
 	<link as="script" rel="preload"
-		href="./contact-assets/offline-shell.js">
+		href="./assets/offline-shell.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -14409,8 +14409,8 @@
 			height: 0 !important;
 		}
 	</style>
-	<link rel="stylesheet" href="./contact-assets/fonts.css" data-react-helmet="true">
-	<script src="./contact-assets/fontawesome-kit.js" crossorigin="anonymous"
+	<link rel="stylesheet" href="./assets/fonts.css" data-react-helmet="true">
+	<script src="./assets/fontawesome-kit.js" crossorigin="anonymous"
 		data-react-helmet="true"></script>
 	<style media="all" id="fa-v4-font-face">
 		/*!
@@ -23696,7 +23696,7 @@
 			aria-live="assertive" aria-atomic="true">Navigated to Let's start a conversation</div>
 	</div>
 
-	<script async="" src="./contact-assets/runtime.js"></script>
+	<script async="" src="./assets/runtime.js"></script>
 	
 	<script>
 		window.excludeGtagPaths = [/^(?:\/preview\/(?:(?!(?:\/|^)\.).)*?)$/, /^(?:\/do\-not\-track\/me\/too\/)$/];
@@ -23718,17 +23718,17 @@
 		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/
 	</script>
 
-	<script src="./contact-assets/polyfill.js" nomodule="">
+	<script src="./assets/polyfill.js" nomodule="">
 	</script>
 
 	<script
-		src="./contact-assets/offline-shell.js"
+		src="./assets/offline-shell.js"
 		async="">
 	</script>
 
-	<script src="./contact-assets/app.js" async=""></script>
-	<script src="./contact-assets/framework.js" async=""></script>
-	<script src="./contact-assets/webpack-runtime.js" async=""></script>
+	<script src="./assets/app.js" async=""></script>
+	<script src="./assets/framework.js" async=""></script>
+	<script src="./assets/webpack-runtime.js" async=""></script>
 
 </body>
 

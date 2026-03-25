@@ -14376,11 +14376,11 @@
 		href="https://<?php echo DOMAIN; ?>/icons/icon-512x512.png?v=fc0541a770eb4dd78a5df3204ebe5702"><noscript>
 		<meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&amp;redirect=true" />
 	</noscript>
-	<link as="script" rel="preload" href="./work-assets/webpack-runtime.js">
-	<link as="script" rel="preload" href="./work-assets/framework.js">
-	<link as="script" rel="preload" href="./work-assets/app.js">
+	<link as="script" rel="preload" href="./assets/webpack-runtime.js">
+	<link as="script" rel="preload" href="./assets/framework.js">
+	<link as="script" rel="preload" href="./assets/app.js">
 	<link as="script" rel="preload"
-		href="./work-assets/offline-shell.js">
+		href="./assets/offline-shell.js">
 	<style>
 		[id*='google_ads_iframe'],
 		[id*='taboola-'],
@@ -14400,8 +14400,8 @@
 			height: 0 !important;
 		}
 	</style>
-	<link rel="stylesheet" href="./work-assets/fonts.css" data-react-helmet="true">
-	<script src="./work-assets/fontawesome-kit.js" crossorigin="anonymous"
+	<link rel="stylesheet" href="./assets/fonts.css" data-react-helmet="true">
+	<script src="./assets/fontawesome-kit.js" crossorigin="anonymous"
 		data-react-helmet="true"></script>
 	<style media="all" id="fa-v4-font-face">
 		/*!
@@ -23689,7 +23689,7 @@
 			style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
 			aria-live="assertive" aria-atomic="true">Navigated to It's how you play the&nbsp;game</div>
 	</div>
-	<script async="" src="./work-assets/runtime.js"></script>
+	<script async="" src="./assets/runtime.js"></script>
 	<script>
 		window.excludeGtagPaths = [/^(?:\/preview\/(?:(?!(?:\/|^)\.).)*?)$/, /^(?:\/do\-not\-track\/me\/too\/)$/];
 
@@ -23705,13 +23705,13 @@
 		id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/offline-plugin-app-shell-fallback/";/*]]>*/</script>
 	<script
 		id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/</script>
-	<script src="./work-assets/polyfill.js" nomodule=""></script>
+	<script src="./assets/polyfill.js" nomodule=""></script>
 	<script
-		src="./work-assets/offline-shell.js"
+		src="./assets/offline-shell.js"
 		async=""></script>
-	<script src="./work-assets/app.js" async=""></script>
-	<script src="./work-assets/framework.js" async=""></script>
-	<script src="./work-assets/webpack-runtime.js" async=""></script>
+	<script src="./assets/app.js" async=""></script>
+	<script src="./assets/framework.js" async=""></script>
+	<script src="./assets/webpack-runtime.js" async=""></script>
 </body>
 
 </html>

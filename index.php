@@ -14389,10 +14389,10 @@ opacity: 0 !important
       <meta http-equiv="refresh" content="0;url=/.gatsby-plugin-offline:api=disableOfflineShell&redirect=true">
     </meta>
   </noscript>
-  <link as="script" rel="preload" href="./home-assets/webpack-runtime.js">
-  <link as="script" rel="preload" href="./home-assets/framework.js">
-  <link as="script" rel="preload" href="./home-assets/app.js">
-  <link as="script" rel="preload" href="./home-assets/offline-shell.js">
+  <link as="script" rel="preload" href="./assets/webpack-runtime.js">
+  <link as="script" rel="preload" href="./assets/framework.js">
+  <link as="script" rel="preload" href="./assets/app.js">
+  <link as="script" rel="preload" href="./assets/offline-shell.js">
   <style >
     
 [id*='google_ads_iframe'],
@@ -14414,8 +14414,8 @@ height: 0 !important;
 }
 
   </style>
-  <link rel="stylesheet" href="./home-assets/fonts.css" data-react-helmet="true">
-  <script src="./home-assets/fontawesome-kit.js" crossorigin="anonymous" data-react-helmet="true">
+  <link rel="stylesheet" href="./assets/fonts.css" data-react-helmet="true">
+  <script src="./assets/fontawesome-kit.js" crossorigin="anonymous" data-react-helmet="true">
   </script>
   <style media="all" id="fa-v4-font-face">
     
@@ -24811,7 +24811,7 @@ stroke-width: 1.37px;
       <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true">
       </div>
     </div>
-    <script async="" src="./home-assets/runtime.js">
+    <script async="" src="./assets/runtime.js">
     </script>
     <script >
       
@@ -24832,15 +24832,15 @@ gtag('config', 'G-9FWTXPCKKJ', { "send_page_view": false });
     <script id="gatsby-chunk-mapping">
       /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill.js"], "app": ["/app.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/offline-shell.js"], "component---src-pages-404-js": ["/page-404.js"], "component---src-pages-about-js": ["/page-about.js"], "component---src-pages-contact-js": ["/page-contact.js"], "component---src-pages-index-js": ["/page-index.js"], "component---src-pages-privacy-policy-js": ["/page-privacy-policy.js"], "component---src-pages-success-js": ["/page-success.js"], "component---src-pages-work-js": ["/page-work.js"] };/*]]>*/
     </script>
-    <script src="./home-assets/polyfill.js" nomodule="">
+    <script src="./assets/polyfill.js" nomodule="">
     </script>
-    <script src="./home-assets/offline-shell.js" async="">
+    <script src="./assets/offline-shell.js" async="">
     </script>
-    <script src="./home-assets/app.js" async="">
+    <script src="./assets/app.js" async="">
     </script>
-    <script src="./home-assets/framework.js" async="">
+    <script src="./assets/framework.js" async="">
     </script>
-    <script src="./home-assets/webpack-runtime.js" async="">
+    <script src="./assets/webpack-runtime.js" async="">
     </script>
   </body>
 </html>
