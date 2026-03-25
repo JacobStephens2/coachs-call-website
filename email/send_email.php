@@ -1,62 +1,71 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require 'vendor/autoload.php';
-require '../private/environment_variables.php'; 
+require '../private/environment_variables.php';
 
-/*
+// Validate required fields
+$required = ['name', 'email', 'interest', 'role', 'organization', 'message'];
+foreach ($required as $field) {
+      if (!isset($_POST[$field]) || trim($_POST[$field]) === '') {
+            header("Location: /contact-failure");
+            exit;
+      }
+}
 
-sample POST body:
+// Sanitize inputs
+$name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES, 'UTF-8');
+$userEmail = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
+$interest = htmlspecialchars(trim($_POST['interest']), ENT_QUOTES, 'UTF-8');
+$role = htmlspecialchars(trim($_POST['role']), ENT_QUOTES, 'UTF-8');
+$organization = htmlspecialchars(trim($_POST['organization']), ENT_QUOTES, 'UTF-8');
+$message = htmlspecialchars(trim($_POST['message']), ENT_QUOTES, 'UTF-8');
 
-email: jacob@stewardgoods.com
-interest: coaching
-name: name
-organization: org
-role: role
-message: message
+if (!$userEmail) {
+      header("Location: /contact-failure");
+      exit;
+}
 
-*/
+// Silently reject known spam pattern
+if ($interest === 'Industrial') {
+      header("Location: /contact-success");
+      exit;
+}
 
 $email = new \SendGrid\Mail\Mail();
-$email->setFrom(FROM_EMAIL_ADDRESS, $_POST['name']);
-$email->setReplyTo($_POST['email'], $_POST['name']);
-$email->setSubject("Message from " . $_POST['name'] . " through " . DOMAIN);
+$email->setFrom(FROM_EMAIL_ADDRESS, $name);
+$email->setReplyTo($userEmail, $name);
+$email->setSubject("Message from " . $name . " through " . DOMAIN);
 if (DEV_SERVER === true) {
       $email->addTo(DEV_EMAIL_ADDRESS, DEV_NAME);
 } else {
       $email->addTo(TO_EMAIL_ADDRESS, TO_NAME);
 }
 $email->addContent(
-      "text/html", 
+      "text/html",
       "
-            <p>Name: " . $_POST['name'] . "</p>
-            <p>Role: " . $_POST['role'] . "</p>
-            <p>Organization: " . $_POST['organization'] . "</p>
-            <p>Email: " . $_POST['email'] . "</p>
-            <p>Interest: " . $_POST['interest'] . "</p>
-            <p>Message: " . $_POST['message'] . "</p>
+            <p>Name: " . $name . "</p>
+            <p>Role: " . $role . "</p>
+            <p>Organization: " . $organization . "</p>
+            <p>Email: " . $userEmail . "</p>
+            <p>Interest: " . $interest . "</p>
+            <p>Message: " . $message . "</p>
       "
 );
 
 $sendgrid = new \SendGrid(SENDGRID_APIKEY);
 
 try {
-      if ($_POST['interest'] == 'Industrial') {
-            // silently don't send given spam previously received with this
+      $response = $sendgrid->send($email);
+      if ($response->statusCode() == 202) {
+            header("Location: /contact-success");
       } else {
-            $response = $sendgrid->send($email);
-            if ($response->statusCode() == 202) {
-                  header("Location: /contact-success");
-            } else {
-                  header("Location: /contact-failure");
-            }
+            error_log("SendGrid error: status " . $response->statusCode());
+            header("Location: /contact-failure");
       }
-      header("Location: /contact-success");
 } catch (Exception $e) {
-      echo 'Caught exception: '. $e->getMessage() ."\n";
+      error_log("SendGrid exception: " . $e->getMessage());
+      header("Location: /contact-failure");
 }
+exit;
 
 ?>
