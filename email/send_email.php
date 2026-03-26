@@ -10,7 +10,7 @@ if (empty($turnstileResponse)) {
       exit;
 }
 $verifyData = [
-      'secret' => '0x4AAAAAACv2_WCopxdISRYxo4uu-VazkHY',
+      'secret' => TURNSTILE_SECRET_KEY,
       'response' => $turnstileResponse,
       'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
 ];
