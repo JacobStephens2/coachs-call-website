@@ -24730,37 +24730,7 @@ stroke-width: 1.37px;
                   </section>
                 </span>
               </main>
-              <div id="animated-example" class="bottom-bar animated row">
-                <div class="header-bar">
-                </div>
-                <div id="aboutCard" class="slim-card darkBackground col-lg-4 col-md-4 col-sm-4 col-4">
-                  <a href="https://<?php echo DOMAIN; ?>/about">
-                    <div class="no-padding container">
-                      <h2 >
-                        About
-                      </h2>
-                    </div>
-                  </a>
-                </div>
-                <div id="workCard" class="slim-card darkBackground col-lg-4 col-md-4 col-sm-4 col-4">
-                  <a href="https://<?php echo DOMAIN; ?>/work">
-                    <div class="no-padding container">
-                      <h2 >
-                        Work
-                      </h2>
-                    </div>
-                  </a>
-                </div>
-                <div id="contactCard" class="slim-card darkBackground col-lg-4 col-md-4 col-sm-4 col-4">
-                  <a href="https://<?php echo DOMAIN; ?>/contact">
-                    <div class="no-padding container">
-                      <h2 >
-                        Contact
-                      </h2>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <?php $ccCurrent="home"; include __DIR__ . "/partials/bottom-nav.php"; ?>
             </div>
             <?php include __DIR__ . "/partials/footer.php"; ?>
           </main>
