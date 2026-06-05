@@ -23390,8 +23390,8 @@
 															</div>
 														</div>
 														<div class="col">
-															<p><em>Master’s in Business Administration</em></p>
-															<p>Eastern University (2007)</p>
+															<p><em><?php cc('about.edu.degree1'); ?></em></p>
+															<p><?php cc('about.edu.school1'); ?></p>
 														</div>
 													</div>
 													<hr class="education-rule">
@@ -23420,49 +23420,18 @@
 															</div>
 														</div>
 														<div class="col">
-															<p><em>B.S. in Health and Physical&nbsp;Education</em></p>
-															<p>Wheaton College (1996)</p>
+															<p><em><?php cc('about.edu.degree2'); ?></em></p>
+															<p><?php cc('about.edu.school2'); ?></p>
 														</div>
 													</div>
 												</li>
-												<li><b>42+ years</b> | <b>Christ Follower</b> | Becoming a Christian at
-													a young age has been, is and will be the most important decision in
-													John’s life. It is the relationship that also provides the lens by
-													which we can see&nbsp;everything.</li>
-												<li><b>25+ years</b> | <b>Husband and Father</b> | John and his wife
-													Kristen live in Newtown Square, Pennsylvania and have three
-													children. Alison is a senior at Wheaton College, Cole is beginning
-													his freshman year at Gordon College, and Matthew is entering 9th
-													grade and is super excited to spend the next four years alone with
-													his&nbsp;parents.</li>
-												<li><b>25+ years</b> | <b>Coach</b> | John has coached all levels and
-													ages of athletes from youth through college. He resurrected the
-													Eastern University Men’s Lacrosse program 2006 after helping coach
-													the Marple Newtown Boys Lacrosse team to the state semifinals and
-													the last two years has coached the boys soccer team at Delaware
-													County Christian School to the District Finals for the second and
-													third time in school&nbsp;history.</li>
-												<li><b>10 years</b> | <b>Competitive Athlete</b> | Growing up John
-													played competitive soccer, tennis, basketball, baseball, football
-													and lacrosse. As a college athlete, John played basketball and
-													lacrosse at Wheaton&nbsp;College.</li>
-												<li><b>22+ years</b> | <b>Young Life Staff</b> | John started a Young
-													Life ministry at Marple Newtown High School that had a regular
-													attendance of 150 students for the weekly outreach event, Club. John
-													also spent three years teaching the Leadership Training Course in
-													partnership with the scholarship program at Eastern&nbsp;University.
-												</li>
-												<li><b>9 years</b> | <b>Corporate World</b> | John has spent his time in
-													the corporate world working in the areas of marketing, sales and
-													project management. The transferrable nature of the skills in
-													athletics has been instrumental in John’s corporate&nbsp;success.
-												</li>
-												<li><b>7 years</b> | <b>College Administrator</b> | John served as an
-													Assistant Director of Admissions and the Director of Advancement for
-													the Templeton Honors College at Eastern University. His time was
-													spent in recruiting, marketing, and fundraising as the Honors
-													College went through branding, doubled its size, founded an
-													institute, and built a global recruiting presence.</li>
+												<li><?php cc_bio('about.bio.christ'); ?></li>
+												<li><?php cc_bio('about.bio.family'); ?></li>
+												<li><?php cc_bio('about.bio.coach'); ?></li>
+												<li><?php cc_bio('about.bio.athlete'); ?></li>
+												<li><?php cc_bio('about.bio.younglife'); ?></li>
+												<li><?php cc_bio('about.bio.corporate'); ?></li>
+												<li><?php cc_bio('about.bio.admin'); ?></li>
 											</ul><a href="https://<?php echo DOMAIN; ?>/contact"><button type="button"
 													class="btn btn-primary">LEARN MORE</button></a>
 										</div>

@@ -62,4 +62,19 @@ if (!defined('CC_CONTENT_LOADED')) {
     {
         echo nl2br(htmlspecialchars(cc_value($key), ENT_QUOTES, 'UTF-8'), false);
     }
+
+    /**
+     * Print a "years | role | description" bio line, showing the first two
+     * pipe-separated parts in bold (matches the About page timeline markup).
+     */
+    function cc_bio(string $key): void
+    {
+        $parts = explode(' | ', cc_value($key));
+        $out = [];
+        foreach ($parts as $i => $part) {
+            $p = htmlspecialchars($part, ENT_QUOTES, 'UTF-8');
+            $out[] = ($i < 2) ? "<b>$p</b>" : $p;
+        }
+        echo implode(' | ', $out);
+    }
 }

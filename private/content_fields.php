@@ -61,6 +61,68 @@ return [
         ],
     ],
 
+    'about_bio' => [
+        'label'  => 'About — John’s background',
+        'fields' => [
+            'about.bio.christ' => [
+                'label'   => 'Christ Follower',
+                'type'    => 'multiline',
+                'help'    => 'Format: years | role | description (the first two parts show in bold).',
+                'default' => '42+ years | Christ Follower | Becoming a Christian at a young age has been, is and will be the most important decision in John’s life. It is the relationship that also provides the lens by which we can see everything.',
+            ],
+            'about.bio.family' => [
+                'label'   => 'Husband and Father',
+                'type'    => 'multiline',
+                'default' => '25+ years | Husband and Father | John and his wife Kristen live in Newtown Square, Pennsylvania and have three children. Alison is a senior at Wheaton College, Cole is beginning his freshman year at Gordon College, and Matthew is entering 9th grade and is super excited to spend the next four years alone with his parents.',
+            ],
+            'about.bio.coach' => [
+                'label'   => 'Coach',
+                'type'    => 'multiline',
+                'default' => '25+ years | Coach | John has coached all levels and ages of athletes from youth through college. He resurrected the Eastern University Men’s Lacrosse program 2006 after helping coach the Marple Newtown Boys Lacrosse team to the state semifinals and the last two years has coached the boys soccer team at Delaware County Christian School to the District Finals for the second and third time in school history.',
+            ],
+            'about.bio.athlete' => [
+                'label'   => 'Competitive Athlete',
+                'type'    => 'multiline',
+                'default' => '10 years | Competitive Athlete | Growing up John played competitive soccer, tennis, basketball, baseball, football and lacrosse. As a college athlete, John played basketball and lacrosse at Wheaton College.',
+            ],
+            'about.bio.younglife' => [
+                'label'   => 'Young Life Staff',
+                'type'    => 'multiline',
+                'default' => '22+ years | Young Life Staff | John started a Young Life ministry at Marple Newtown High School that had a regular attendance of 150 students for the weekly outreach event, Club. John also spent three years teaching the Leadership Training Course in partnership with the scholarship program at Eastern University.',
+            ],
+            'about.bio.corporate' => [
+                'label'   => 'Corporate World',
+                'type'    => 'multiline',
+                'default' => '9 years | Corporate World | John has spent his time in the corporate world working in the areas of marketing, sales and project management. The transferrable nature of the skills in athletics has been instrumental in John’s corporate success.',
+            ],
+            'about.bio.admin' => [
+                'label'   => 'College Administrator',
+                'type'    => 'multiline',
+                'default' => '7 years | College Administrator | John served as an Assistant Director of Admissions and the Director of Advancement for the Templeton Honors College at Eastern University. His time was spent in recruiting, marketing, and fundraising as the Honors College went through branding, doubled its size, founded an institute, and built a global recruiting presence.',
+            ],
+            'about.edu.degree1' => [
+                'label'   => 'Education — degree 1',
+                'type'    => 'text',
+                'default' => 'Master’s in Business Administration',
+            ],
+            'about.edu.school1' => [
+                'label'   => 'Education — school 1',
+                'type'    => 'text',
+                'default' => 'Eastern University (2007)',
+            ],
+            'about.edu.degree2' => [
+                'label'   => 'Education — degree 2',
+                'type'    => 'text',
+                'default' => 'B.S. in Health and Physical Education',
+            ],
+            'about.edu.school2' => [
+                'label'   => 'Education — school 2',
+                'type'    => 'text',
+                'default' => 'Wheaton College (1996)',
+            ],
+        ],
+    ],
+
     'work' => [
         'label'  => 'Work page',
         'fields' => [
