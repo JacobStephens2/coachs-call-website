@@ -23360,8 +23360,7 @@
 									<div class="col-lg-6 col-sm-12">
 										<div class="text-col about-text-col container">
 											<h2><?php cc('about.founder.heading'); ?></h2>
-											<p class="subhead bold">helping coaches understand the pursuit of excellence
-												on the field or court as their daily act of&nbsp;worship</p>
+											<p class="subhead bold"><?php cc('about.founder.subhead'); ?></p>
 											<ul>
 												<li class="education-section"><b>Education</b>
 													<div class="row">

@@ -23406,7 +23406,7 @@
 								</div>
 								<div class="contact-container container"><a id="contact-form" class="anchor"></a>
 									<form action="https://<?php echo DOMAIN; ?>/email/send_email" method="POST">
-										<h2 style="margin-bottom: 16px;">Contact John</h2>
+										<h2 style="margin-bottom: 16px;"><?php cc('contact.contactjohn.heading'); ?></h2>
 										<div class="form-field"><label for="email"
 												style="display: block; margin-bottom: 4px;">Your Email</label><input
 												name="email" id="email" type="email" required="">

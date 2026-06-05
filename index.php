@@ -24533,13 +24533,7 @@ label.style.display = 'none';
                   <section class="grey-section quote-section undefined">
                     <div class="quote-center container">
                       <div class="col-lg-8">
-                        <q >
-                          To become holy is rather like joining a secret
-society.
-                          <br class="wide-only">
-                          To put it at the very lowest, it must be
-great fun.
-                        </q>
+                        <q ><?php cc_lines('home.quote.text'); ?></q>
                         <cite class="quote-section-cite">
                           C.S. Lewis, 
                           <i >

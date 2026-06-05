@@ -23374,9 +23374,8 @@
 							</div>
 							<div class="work-container"><span><a id="seminars-and-workshops" class="anchor"></a>
 									<section class="work-area">
-										<h2>Professional Development Seminars and&nbsp;Workshops</h2>
-										<p class="subhead">exploring the orthodoxy of sport and how we pursue god’s high
-											calling to&nbsp;coach.</p>
+										<h2><?php cc('work.seminars.heading'); ?></h2>
+										<p class="subhead"><?php cc('work.seminars.subhead'); ?></p>
 										<ul>
 											<li><b>Biblically-based content</b><span> </span>that explores the
 												connection of the theology of Christian life to&nbsp;sport</li>
@@ -23433,8 +23432,8 @@
 										</div>
 									</a></section><span><a id="mentoring" class="anchor"></a>
 									<section class="work-area">
-										<h2>One-on-One Mentoring and Small Group Consulting</h2>
-										<p class="subhead">Pursuing excellence</p>
+										<h2><?php cc('work.consulting.heading'); ?></h2>
+										<p class="subhead"><?php cc('work.consulting.subhead'); ?></p>
 										<ul>
 											<li><b>Engaging coaches</b><span> </span>where they are in their journey and
 												helping them develop more fully their view of what God requires of the
