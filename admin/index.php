@@ -4,8 +4,8 @@
  *
  * Lets the site owner edit selected page text (see private/content_fields.php).
  * Saved values are written to private/content.json, which the public pages read
- * through private/content.php. Login is a single username/password stored
- * hashed in private/admin_credentials.php (created on first visit).
+ * through private/content.php. Login is a single email/password stored
+ * hashed in private/data/admin_credentials.php (created on first visit).
  */
 
 declare(strict_types=1);
@@ -42,10 +42,10 @@ function atomic_write(string $path, string $contents): bool
     return true;
 }
 
-function write_credentials(string $path, string $username, string $hash): bool
+function write_credentials(string $path, string $email, string $hash): bool
 {
     $php = "<?php\n// Admin login for the content editor. Not committed to git.\n"
-         . 'return ' . var_export(['username' => $username, 'hash' => $hash], true) . ";\n";
+         . 'return ' . var_export(['email' => $email, 'hash' => $hash], true) . ";\n";
     return atomic_write($path, $php);
 }
 
@@ -53,7 +53,7 @@ function load_credentials(string $path): ?array
 {
     if (!is_readable($path)) return null;
     $data = include $path;
-    return (is_array($data) && isset($data['username'], $data['hash'])) ? $data : null;
+    return (is_array($data) && isset($data['email'], $data['hash'])) ? $data : null;
 }
 
 function csrf_token(): string
@@ -90,18 +90,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!csrf_ok()) {
         $errors[] = 'Your session expired. Please try again.';
     } elseif ($action === 'setup' && $needsSetup) {
-        $u  = trim((string)($_POST['username'] ?? ''));
+        $em = strtolower(trim((string)($_POST['email'] ?? '')));
         $p  = (string)($_POST['password'] ?? '');
         $p2 = (string)($_POST['password2'] ?? '');
-        if (strlen($u) < 3)               $errors[] = 'Username must be at least 3 characters.';
+        if (!filter_var($em, FILTER_VALIDATE_EMAIL)) $errors[] = 'Please enter a valid email address.';
         if (strlen($p) < 8)               $errors[] = 'Password must be at least 8 characters.';
         if ($p !== $p2)                   $errors[] = 'The two passwords do not match.';
         if (!$errors) {
             $hash = password_hash($p, PASSWORD_DEFAULT);
-            if (write_credentials($CRED_FILE, $u, $hash)) {
+            if (write_credentials($CRED_FILE, $em, $hash)) {
                 session_regenerate_id(true);
                 $_SESSION['cc_admin'] = true;
-                $_SESSION['cc_user']  = $u;
+                $_SESSION['cc_user']  = $em;
                 redirect('Admin account created. You are signed in.');
             }
             $errors[] = 'Could not save the account (file permissions?).';
@@ -112,18 +112,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($fail['n'] >= 5 && ($now - $fail['t']) < 60) {
             $errors[] = 'Too many attempts. Please wait a minute and try again.';
         } else {
-            $u = trim((string)($_POST['username'] ?? ''));
-            $p = (string)($_POST['password'] ?? '');
-            if (hash_equals($creds['username'], $u) && password_verify($p, $creds['hash'])) {
+            $em = strtolower(trim((string)($_POST['email'] ?? '')));
+            $p  = (string)($_POST['password'] ?? '');
+            if (hash_equals($creds['email'], $em) && password_verify($p, $creds['hash'])) {
                 unset($_SESSION['cc_fail']);
                 session_regenerate_id(true);
                 $_SESSION['cc_admin'] = true;
-                $_SESSION['cc_user']  = $creds['username'];
+                $_SESSION['cc_user']  = $creds['email'];
                 redirect('Signed in.');
             }
             usleep(400000);
             $_SESSION['cc_fail'] = ['n' => ($fail['n'] + 1), 't' => $now];
-            $errors[] = 'Incorrect username or password.';
+            $errors[] = 'Incorrect email or password.';
         }
     } elseif ($action === 'logout') {
         $_SESSION = [];
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         elseif ($p !== $p2)                         $errors[] = 'The two new passwords do not match.';
         else {
             $hash = password_hash($p, PASSWORD_DEFAULT);
-            if (write_credentials($CRED_FILE, $creds['username'], $hash)) {
+            if (write_credentials($CRED_FILE, $creds['email'], $hash)) {
                 redirect('Password updated.');
             }
             $errors[] = 'Could not update the password.';
@@ -238,13 +238,13 @@ function field_display(string $key): string
   <div class="wrap center">
     <div class="card">
       <h2>Set up your admin login</h2>
-      <p class="muted">Create the username and password you'll use to edit the website.</p>
+      <p class="muted">Create the email and password you'll use to edit the website.</p>
       <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
       <form method="post" autocomplete="off">
         <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
         <input type="hidden" name="action" value="setup">
-        <label class="fld"><span class="lab">Username</span>
-          <input type="text" name="username" required minlength="3" value="<?= e((string)($_POST['username'] ?? '')) ?>"></label>
+        <label class="fld"><span class="lab">Email</span>
+          <input type="email" name="email" required autocomplete="username" value="<?= e((string)($_POST['email'] ?? '')) ?>"></label>
         <label class="fld"><span class="lab">Password <span class="help">(at least 8 characters)</span></span>
           <input type="password" name="password" required minlength="8"></label>
         <label class="fld"><span class="lab">Confirm password</span>
@@ -265,8 +265,8 @@ function field_display(string $key): string
       <form method="post" autocomplete="off">
         <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
         <input type="hidden" name="action" value="login">
-        <label class="fld"><span class="lab">Username</span>
-          <input type="text" name="username" required></label>
+        <label class="fld"><span class="lab">Email</span>
+          <input type="email" name="email" required autocomplete="username"></label>
         <label class="fld"><span class="lab">Password</span>
           <input type="password" name="password" required></label>
         <button class="btn" type="submit">Sign in</button>
