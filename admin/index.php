@@ -2,22 +2,29 @@
 /**
  * Coach's Call content editor.
  *
- * Lets the site owner edit selected page text (see private/content_fields.php).
- * Saved values are written to private/content.json, which the public pages read
- * through private/content.php. Login is a single email/password stored
- * hashed in private/data/admin_credentials.php (created on first visit).
+ * Lets editors change selected page text (see private/content_fields.php).
+ * Saved values go to private/data/content.json, read by private/content.php.
+ *
+ * Accounts (email + hashed password) live in private/data/admin_users.php.
+ * The first visit creates the first editor; existing editors can invite more
+ * by email. Password-reset and invite tokens are stored hashed, with expiry,
+ * in private/data/reset.json and private/data/invites.json.
  */
 
 declare(strict_types=1);
 
 $PRIVATE      = dirname(__DIR__) . '/private';
-$CRED_FILE    = $PRIVATE . '/data/admin_credentials.php';
+$USERS_FILE   = $PRIVATE . '/data/admin_users.php';
+$OLD_CRED     = $PRIVATE . '/data/admin_credentials.php'; // legacy single-account file (auto-migrated)
 $CONTENT_JSON = $PRIVATE . '/data/content.json';
 $RESET_FILE   = $PRIVATE . '/data/reset.json';
+$INVITES_FILE = $PRIVATE . '/data/invites.json';
 $MAX_LEN      = 2000;
+$RESET_TTL    = 3600;    // 1 hour
+$INVITE_TTL   = 259200;  // 3 days
 
-require $PRIVATE . '/content.php';            // registry + cc_value() etc.
-@include_once $PRIVATE . '/environment_variables.php'; // DOMAIN + SMTP (password-reset email)
+require $PRIVATE . '/content.php';                       // registry + cc_value() etc.
+@include_once $PRIVATE . '/environment_variables.php';   // DOMAIN + SMTP (invite / reset email)
 
 /* ---------- session ---------- */
 $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
@@ -32,6 +39,9 @@ session_set_cookie_params([
 session_name('cc_admin_sess');
 session_start();
 
+$BASEURL = ($https ? 'https' : 'http') . '://'
+         . (defined('DOMAIN') ? DOMAIN : ($_SERVER['HTTP_HOST'] ?? '')) . '/admin/';
+
 /* ---------- helpers ---------- */
 function e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
@@ -44,38 +54,61 @@ function atomic_write(string $path, string $contents): bool
     return true;
 }
 
-function write_credentials(string $path, string $email, string $hash): bool
+/** Load accounts as [email => ['hash'=>..., 'created'=>...]]; migrate legacy file. */
+function load_users(string $usersPath, string $oldCredPath): array
 {
-    $php = "<?php\n// Admin login for the content editor. Not committed to git.\n"
-         . 'return ' . var_export(['email' => $email, 'hash' => $hash], true) . ";\n";
+    if (is_readable($usersPath)) {
+        $u = include $usersPath;
+        if (is_array($u)) return $u;
+    }
+    if (is_readable($oldCredPath)) {
+        $c = include $oldCredPath;
+        if (is_array($c) && isset($c['email'], $c['hash'])) {
+            $users = [strtolower((string)$c['email']) => ['hash' => $c['hash'], 'created' => time()]];
+            save_users($usersPath, $users);
+            return $users;
+        }
+    }
+    return [];
+}
+
+function save_users(string $path, array $users): bool
+{
+    $php = "<?php\n// Content-editor accounts. Not committed to git.\n"
+         . 'return ' . var_export($users, true) . ";\n";
     return atomic_write($path, $php);
 }
 
-function load_credentials(string $path): ?array
+/* token maps: { sha256(token) => { email, expires, ... } } — used for reset + invites */
+function pending_add(string $path, string $token, array $data): bool
 {
-    if (!is_readable($path)) return null;
-    $data = include $path;
-    return (is_array($data) && isset($data['email'], $data['hash'])) ? $data : null;
+    $map = is_readable($path) ? (json_decode((string) file_get_contents($path), true) ?: []) : [];
+    if (!is_array($map)) $map = [];
+    $now = time();
+    foreach ($map as $k => $v) {                 // prune expired
+        if (!is_array($v) || ($v['expires'] ?? 0) < $now) unset($map[$k]);
+    }
+    $map[hash('sha256', $token)] = $data;
+    return atomic_write($path, (string) json_encode($map));
+}
+function pending_lookup(string $path, string $token): ?array
+{
+    if ($token === '') return null;
+    $map = is_readable($path) ? (json_decode((string) file_get_contents($path), true) ?: []) : [];
+    if (!is_array($map)) return null;
+    $entry = $map[hash('sha256', $token)] ?? null;
+    return (is_array($entry) && time() < (int)($entry['expires'] ?? 0)) ? $entry : null;
+}
+function pending_remove(string $path, string $token): void
+{
+    $map = is_readable($path) ? (json_decode((string) file_get_contents($path), true) ?: []) : [];
+    if (!is_array($map)) return;
+    unset($map[hash('sha256', $token)]);
+    atomic_write($path, (string) json_encode($map));
 }
 
-function load_reset(string $path): ?array
-{
-    if (!is_readable($path)) return null;
-    $d = json_decode((string) file_get_contents($path), true);
-    return (is_array($d) && isset($d['hash'], $d['expires'])) ? $d : null;
-}
-
-/** True if $token matches a stored, unexpired reset token. */
-function reset_token_valid(?array $reset, string $token): bool
-{
-    return $reset !== null
-        && $token !== ''
-        && time() < (int) $reset['expires']
-        && hash_equals((string) $reset['hash'], hash('sha256', $token));
-}
-
-/** Email a password-reset link via the site's SMTP settings. */
-function send_reset_email(string $to, string $link): bool
+/** Send mail via the site's SMTP settings (same as the contact form). */
+function send_mail(string $to, string $subject, string $body): bool
 {
     $autoload = dirname(__DIR__) . '/email/vendor/autoload.php';
     if (!is_readable($autoload) || !defined('SMTP_HOST')) return false;
@@ -91,23 +124,19 @@ function send_reset_email(string $to, string $link): bool
         $mail->Port       = SMTP_PORT;
         $mail->setFrom(SMTP_FROM_EMAIL, SMTP_FROM_NAME);
         $mail->addAddress($to);
-        $mail->Subject = "Reset your Coach's Call admin password";
-        $mail->Body    = "We received a request to reset your Coach's Call content-editor password.\n\n"
-                       . "Open this link to choose a new password (it expires in 1 hour):\n$link\n\n"
-                       . "If you didn't request this, you can safely ignore this email.";
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
         $mail->send();
         return true;
     } catch (\Throwable $ex) {
-        error_log('admin reset email failed: ' . $ex->getMessage());
+        error_log('admin mail failed: ' . $ex->getMessage());
         return false;
     }
 }
 
 function csrf_token(): string
 {
-    if (empty($_SESSION['cc_csrf'])) {
-        $_SESSION['cc_csrf'] = bin2hex(random_bytes(32));
-    }
+    if (empty($_SESSION['cc_csrf'])) $_SESSION['cc_csrf'] = bin2hex(random_bytes(32));
     return $_SESSION['cc_csrf'];
 }
 function csrf_ok(): bool
@@ -116,7 +145,6 @@ function csrf_ok(): bool
         && is_string($_POST['csrf'])
         && hash_equals($_SESSION['cc_csrf'], $_POST['csrf']);
 }
-
 function redirect(string $flash = '', string $type = 'ok'): void
 {
     if ($flash !== '') $_SESSION['cc_flash'] = ['msg' => $flash, 'type' => $type];
@@ -125,34 +153,37 @@ function redirect(string $flash = '', string $type = 'ok'): void
 }
 
 /* ---------- state ---------- */
-$creds     = load_credentials($CRED_FILE);
-$needsSetup = ($creds === null);
-$loggedIn  = !empty($_SESSION['cc_admin']);
-$action    = $_POST['action'] ?? '';
-$errors    = [];
+$users      = load_users($USERS_FILE, $OLD_CRED);
+$needsSetup = empty($users);
+$loggedIn   = !empty($_SESSION['cc_admin']) && isset($users[$_SESSION['cc_user'] ?? '']);
+$user       = $loggedIn ? (string) $_SESSION['cc_user'] : '';
+$action     = $_POST['action'] ?? '';
+$errors     = [];
 
 /* ---------- POST handling ---------- */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!csrf_ok()) {
         $errors[] = 'Your session expired. Please try again.';
+
     } elseif ($action === 'setup' && $needsSetup) {
         $em = strtolower(trim((string)($_POST['email'] ?? '')));
         $p  = (string)($_POST['password'] ?? '');
         $p2 = (string)($_POST['password2'] ?? '');
         if (!filter_var($em, FILTER_VALIDATE_EMAIL)) $errors[] = 'Please enter a valid email address.';
-        if (strlen($p) < 8)               $errors[] = 'Password must be at least 8 characters.';
-        if ($p !== $p2)                   $errors[] = 'The two passwords do not match.';
+        if (strlen($p) < 8) $errors[] = 'Password must be at least 8 characters.';
+        if ($p !== $p2)     $errors[] = 'The two passwords do not match.';
         if (!$errors) {
-            $hash = password_hash($p, PASSWORD_DEFAULT);
-            if (write_credentials($CRED_FILE, $em, $hash)) {
+            $users[$em] = ['hash' => password_hash($p, PASSWORD_DEFAULT), 'created' => time()];
+            if (save_users($USERS_FILE, $users)) {
                 session_regenerate_id(true);
                 $_SESSION['cc_admin'] = true;
                 $_SESSION['cc_user']  = $em;
-                redirect('Admin account created. You are signed in.');
+                redirect('Editor account created. You are signed in.');
             }
             $errors[] = 'Could not save the account (file permissions?).';
         }
+
     } elseif ($action === 'login' && !$needsSetup) {
         $now  = time();
         $fail = $_SESSION['cc_fail'] ?? ['n' => 0, 't' => 0];
@@ -161,17 +192,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $em = strtolower(trim((string)($_POST['email'] ?? '')));
             $p  = (string)($_POST['password'] ?? '');
-            if (hash_equals($creds['email'], $em) && password_verify($p, $creds['hash'])) {
+            $u  = $users[$em] ?? null;
+            if ($u && password_verify($p, $u['hash'])) {
                 unset($_SESSION['cc_fail']);
                 session_regenerate_id(true);
                 $_SESSION['cc_admin'] = true;
-                $_SESSION['cc_user']  = $creds['email'];
+                $_SESSION['cc_user']  = $em;
                 redirect('Signed in.');
             }
             usleep(400000);
             $_SESSION['cc_fail'] = ['n' => ($fail['n'] + 1), 't' => $now];
             $errors[] = 'Incorrect email or password.';
         }
+
     } elseif ($action === 'reset_request' && !$needsSetup) {
         $now  = time();
         $last = (int) ($_SESSION['cc_reset_t'] ?? 0);
@@ -180,57 +213,105 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $_SESSION['cc_reset_t'] = $now;
             $em = strtolower(trim((string)($_POST['email'] ?? '')));
-            if ($em !== '' && hash_equals($creds['email'], $em)) {
+            if (isset($users[$em])) {
                 $token = bin2hex(random_bytes(32));
-                atomic_write($RESET_FILE, (string) json_encode([
-                    'hash'    => hash('sha256', $token),
-                    'expires' => $now + 3600,
-                ]));
-                $host = defined('DOMAIN') ? DOMAIN : ($_SERVER['HTTP_HOST'] ?? '');
-                $link = ($https ? 'https' : 'http') . '://' . $host . '/admin/?reset=' . $token;
-                send_reset_email($creds['email'], $link);
+                pending_add($RESET_FILE, $token, ['email' => $em, 'expires' => $now + $RESET_TTL]);
+                send_mail($em, "Reset your Coach's Call password",
+                    "We received a request to reset your Coach's Call content-editor password.\n\n"
+                  . "Open this link to choose a new password (it expires in 1 hour):\n{$BASEURL}?reset={$token}\n\n"
+                  . "If you didn't request this, you can safely ignore this email.");
             }
-            // Generic response either way, so the form can't reveal the admin email.
-            redirect('If that email matches the admin account, a password-reset link has been sent. Please check your inbox.');
+            redirect('If that email matches an editor account, a password-reset link has been sent. Please check your inbox.');
         }
+
     } elseif ($action === 'reset_save' && !$needsSetup) {
         $token = (string)($_POST['token'] ?? '');
+        $res   = pending_lookup($RESET_FILE, $token);
         $p     = (string)($_POST['password'] ?? '');
         $p2    = (string)($_POST['password2'] ?? '');
-        if (!reset_token_valid(load_reset($RESET_FILE), $token)) {
+        $em    = $res ? strtolower((string)$res['email']) : '';
+        if (!$res || !isset($users[$em])) {
             $errors[] = 'This reset link is invalid or has expired. Please request a new one.';
         } elseif (strlen($p) < 8) {
             $errors[] = 'Password must be at least 8 characters.';
         } elseif ($p !== $p2) {
             $errors[] = 'The two passwords do not match.';
         } else {
-            $hash = password_hash($p, PASSWORD_DEFAULT);
-            if (write_credentials($CRED_FILE, $creds['email'], $hash)) {
-                @unlink($RESET_FILE);
+            $users[$em]['hash'] = password_hash($p, PASSWORD_DEFAULT);
+            if (save_users($USERS_FILE, $users)) {
+                pending_remove($RESET_FILE, $token);
                 unset($_SESSION['cc_fail']);
                 redirect('Your password has been reset. Please sign in.');
             }
             $errors[] = 'Could not update the password.';
         }
+
+    } elseif ($action === 'invite_accept') {
+        $token = (string)($_POST['token'] ?? '');
+        $inv   = pending_lookup($INVITES_FILE, $token);
+        $p     = (string)($_POST['password'] ?? '');
+        $p2    = (string)($_POST['password2'] ?? '');
+        if (!$inv) {
+            $errors[] = 'This invite link is invalid or has expired. Ask for a new invite.';
+        } elseif (strlen($p) < 8) {
+            $errors[] = 'Password must be at least 8 characters.';
+        } elseif ($p !== $p2) {
+            $errors[] = 'The two passwords do not match.';
+        } else {
+            $em = strtolower((string)$inv['email']);
+            $users[$em] = ['hash' => password_hash($p, PASSWORD_DEFAULT), 'created' => time()];
+            if (save_users($USERS_FILE, $users)) {
+                pending_remove($INVITES_FILE, $token);
+                session_regenerate_id(true);
+                $_SESSION['cc_admin'] = true;
+                $_SESSION['cc_user']  = $em;
+                redirect('Welcome! Your editor account is ready.');
+            }
+            $errors[] = 'Could not create your account.';
+        }
+
+    } elseif ($action === 'invite' && $loggedIn) {
+        $em = strtolower(trim((string)($_POST['invite_email'] ?? '')));
+        if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = 'Please enter a valid email address to invite.';
+        } elseif (isset($users[$em])) {
+            $errors[] = $em . ' is already an editor.';
+        } else {
+            $token = bin2hex(random_bytes(32));
+            pending_add($INVITES_FILE, $token, ['email' => $em, 'expires' => time() + $INVITE_TTL, 'by' => $user]);
+            $sent = send_mail($em, "You're invited to edit the Coach's Call website",
+                "{$user} has invited you to help edit the Coach's Call website.\n\n"
+              . "Open this link to set your password and start editing (the link expires in 3 days):\n{$BASEURL}?invite={$token}\n\n"
+              . "If you weren't expecting this, you can ignore this email.");
+            if ($sent) redirect('Invite sent to ' . $em . '.');
+            redirect('Invite created, but the email could not be sent. Please check the email settings.', 'err');
+        }
+
+    } elseif ($action === 'remove_editor' && $loggedIn) {
+        $em = strtolower(trim((string)($_POST['email'] ?? '')));
+        if ($em === $user)            $errors[] = 'You cannot remove your own account.';
+        elseif (!isset($users[$em]))  $errors[] = 'That editor was not found.';
+        elseif (count($users) <= 1)   $errors[] = 'You cannot remove the only editor.';
+        else {
+            unset($users[$em]);
+            save_users($USERS_FILE, $users);
+            redirect($em . ' has been removed as an editor.');
+        }
+
     } elseif ($action === 'logout') {
         $_SESSION = [];
         session_destroy();
         header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));
         exit;
+
     } elseif ($action === 'save' && $loggedIn) {
         $overrides = [];
         foreach ($GLOBALS['CC_FIELDS'] as $group) {
             foreach ($group['fields'] as $key => $meta) {
-                $raw = (string)($_POST['f'][$key] ?? '');
-                $raw = str_replace("\r\n", "\n", $raw);
-                if (mb_strlen($raw) > $GLOBALS['MAX_LEN']) {
-                    $raw = mb_substr($raw, 0, $GLOBALS['MAX_LEN']);
-                }
+                $raw = str_replace("\r\n", "\n", (string)($_POST['f'][$key] ?? ''));
+                if (mb_strlen($raw) > $GLOBALS['MAX_LEN']) $raw = mb_substr($raw, 0, $GLOBALS['MAX_LEN']);
                 $val = trim($raw);
-                // Only store a real change; blanks/defaults fall back automatically.
-                if ($val !== '' && $val !== (string)($meta['default'] ?? '')) {
-                    $overrides[$key] = $val;
-                }
+                if ($val !== '' && $val !== (string)($meta['default'] ?? '')) $overrides[$key] = $val;
             }
         }
         $json = json_encode($overrides, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
@@ -238,18 +319,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             redirect('Saved. Your changes are now live on the site.');
         }
         $errors[] = 'Could not save changes (file permissions?).';
+
     } elseif ($action === 'changepw' && $loggedIn) {
         $cur = (string)($_POST['current'] ?? '');
         $p   = (string)($_POST['password'] ?? '');
         $p2  = (string)($_POST['password2'] ?? '');
-        if (!password_verify($cur, $creds['hash'])) $errors[] = 'Current password is incorrect.';
-        elseif (strlen($p) < 8)                     $errors[] = 'New password must be at least 8 characters.';
-        elseif ($p !== $p2)                         $errors[] = 'The two new passwords do not match.';
+        if (!password_verify($cur, $users[$user]['hash'])) $errors[] = 'Current password is incorrect.';
+        elseif (strlen($p) < 8) $errors[] = 'New password must be at least 8 characters.';
+        elseif ($p !== $p2)     $errors[] = 'The two new passwords do not match.';
         else {
-            $hash = password_hash($p, PASSWORD_DEFAULT);
-            if (write_credentials($CRED_FILE, $creds['email'], $hash)) {
-                redirect('Password updated.');
-            }
+            $users[$user]['hash'] = password_hash($p, PASSWORD_DEFAULT);
+            if (save_users($USERS_FILE, $users)) redirect('Password updated.');
             $errors[] = 'Could not update the password.';
         }
     }
@@ -258,13 +338,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $flash = $_SESSION['cc_flash'] ?? null;
 unset($_SESSION['cc_flash']);
 $csrf  = csrf_token();
-$user  = $_SESSION['cc_user'] ?? '';
 
-/* ---------- forgot/reset view state ---------- */
+/* ---------- invite / reset / forgot view state ---------- */
+$inviteToken = (string)($_GET['invite'] ?? (($action === 'invite_accept') ? ($_POST['token'] ?? '') : ''));
+$invite      = pending_lookup($INVITES_FILE, $inviteToken);
+$inviteValid = !$loggedIn && $invite !== null;
+if (!$loggedIn && $inviteToken !== '' && !$invite && $action !== 'invite_accept') {
+    $errors[] = 'This invite link is invalid or has expired. Ask for a new invite.';
+}
+
 $resetToken = (string)($_GET['reset'] ?? (($action === 'reset_save') ? ($_POST['token'] ?? '') : ''));
-$resetValid = !$needsSetup && reset_token_valid(load_reset($RESET_FILE), $resetToken);
-$showForgot = !$needsSetup && !$loggedIn && (isset($_GET['forgot']) || ($action === 'reset_request' && $errors));
-if (!$loggedIn && !$needsSetup && $resetToken !== '' && !$resetValid && $action !== 'reset_save') {
+$resetOk    = !$loggedIn && pending_lookup($RESET_FILE, $resetToken) !== null;
+$showForgot = !$loggedIn && !$needsSetup && !$inviteValid && (isset($_GET['forgot']) || ($action === 'reset_request' && $errors));
+if (!$loggedIn && $resetToken !== '' && !$resetOk && $action !== 'reset_save') {
     $errors[] = 'This reset link is invalid or has expired. Please request a new one.';
 }
 
@@ -309,6 +395,7 @@ function field_display(string $key): string
          font-weight:700; cursor:pointer; background:var(--blue); color:#fff; }
   .btn:hover { filter:brightness(1.05); }
   .btn.ghost { background:#fff; color:var(--navy); border:1px solid var(--line); }
+  .btn.small { padding:6px 12px; font-size:.85rem; }
   .btn.nav { background:rgba(255,255,255,.14); color:#fff; padding:8px 13px; font-weight:600; }
   .actions { position:sticky; bottom:0; background:linear-gradient(transparent,var(--bg) 22px);
              padding:14px 0 4px; margin-top:6px; }
@@ -320,13 +407,13 @@ function field_display(string $key): string
   .muted { color:#6b7a89; font-size:.85rem; }
   details.pw { margin-top:6px; }
   details.pw summary { cursor:pointer; color:var(--navy); font-weight:600; font-size:.9rem; }
+  .editor-row { display:flex; align-items:center; justify-content:space-between; gap:10px;
+                padding:9px 0; border-bottom:1px solid var(--line); }
+  .editor-row:last-of-type { border-bottom:0; }
   a { color:var(--blue); }
 </style>
 </head>
 <body>
-<?php if ($flash): ?>
-  <?php /* flash shown inside content areas below */ ?>
-<?php endif; ?>
 
 <?php if ($needsSetup): ?>
   <!-- ===== first-run setup ===== -->
@@ -341,20 +428,41 @@ function field_display(string $key): string
         <label class="fld"><span class="lab">Email</span>
           <input type="email" name="email" required autocomplete="username" value="<?= e((string)($_POST['email'] ?? '')) ?>"></label>
         <label class="fld"><span class="lab">Password <span class="help">(at least 8 characters)</span></span>
-          <input type="password" name="password" required minlength="8"></label>
+          <input type="password" name="password" required minlength="8" autocomplete="new-password"></label>
         <label class="fld"><span class="lab">Confirm password</span>
-          <input type="password" name="password2" required minlength="8"></label>
+          <input type="password" name="password2" required minlength="8" autocomplete="new-password"></label>
         <button class="btn" type="submit">Create account</button>
       </form>
     </div>
   </div>
 
-<?php elseif (!$loggedIn && $resetValid): ?>
+<?php elseif ($inviteValid): ?>
+  <!-- ===== accept invite (set password) ===== -->
+  <div class="wrap center">
+    <div class="card">
+      <h2>Set your password</h2>
+      <p class="muted">You've been invited to edit the Coach's Call website as
+         <strong><?= e((string)$invite['email']) ?></strong>. Choose a password to finish.</p>
+      <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
+      <form method="post" autocomplete="off">
+        <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
+        <input type="hidden" name="action" value="invite_accept">
+        <input type="hidden" name="token" value="<?= e($inviteToken) ?>">
+        <label class="fld"><span class="lab">Password <span class="help">(at least 8 characters)</span></span>
+          <input type="password" name="password" required minlength="8" autocomplete="new-password"></label>
+        <label class="fld"><span class="lab">Confirm password</span>
+          <input type="password" name="password2" required minlength="8" autocomplete="new-password"></label>
+        <button class="btn" type="submit">Create my account</button>
+      </form>
+    </div>
+  </div>
+
+<?php elseif ($resetOk): ?>
   <!-- ===== choose a new password (from reset link) ===== -->
   <div class="wrap center">
     <div class="card">
       <h2>Choose a new password</h2>
-      <p class="muted">Enter a new password for the content editor.</p>
+      <p class="muted">Enter a new password for your editor account.</p>
       <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
       <form method="post" autocomplete="off">
         <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
@@ -369,12 +477,12 @@ function field_display(string $key): string
     </div>
   </div>
 
-<?php elseif (!$loggedIn && $showForgot): ?>
+<?php elseif ($showForgot): ?>
   <!-- ===== forgot password (request reset email) ===== -->
   <div class="wrap center">
     <div class="card">
       <h2>Reset your password</h2>
-      <p class="muted">Enter the email for your admin account and we'll send a reset link.</p>
+      <p class="muted">Enter your editor email and we'll send a reset link.</p>
       <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
       <form method="post" autocomplete="off">
         <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
@@ -456,18 +564,47 @@ function field_display(string $key): string
       </div>
     </form>
 
+    <!-- Editors -->
+    <div class="card">
+      <h2>Editors</h2>
+      <p class="group-sub">People who can sign in and edit the site.</p>
+      <?php foreach ($users as $em => $info): ?>
+        <div class="editor-row">
+          <span><?= e((string)$em) ?><?php if ($em === $user): ?> <span class="muted">(you)</span><?php endif; ?></span>
+          <?php if ($em !== $user && count($users) > 1): ?>
+            <form method="post" onsubmit="return confirm('Remove <?= e((string)$em) ?> as an editor?');">
+              <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
+              <input type="hidden" name="action" value="remove_editor">
+              <input type="hidden" name="email" value="<?= e((string)$em) ?>">
+              <button class="btn ghost small" type="submit">Remove</button>
+            </form>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+
+      <form method="post" autocomplete="off" style="margin-top:16px">
+        <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
+        <input type="hidden" name="action" value="invite">
+        <label class="fld"><span class="lab">Invite an editor by email
+          <span class="help">— they'll get a link to set their own password</span></span>
+          <input type="email" name="invite_email" placeholder="name@example.com" required></label>
+        <button class="btn" type="submit">Send invite</button>
+      </form>
+    </div>
+
+    <!-- Change password -->
     <div class="card">
       <details class="pw">
-        <summary>Change password</summary>
+        <summary>Change my password</summary>
         <form method="post" autocomplete="off" style="margin-top:12px">
           <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
           <input type="hidden" name="action" value="changepw">
           <label class="fld"><span class="lab">Current password</span>
-            <input type="password" name="current" required></label>
+            <input type="password" name="current" required autocomplete="current-password"></label>
           <label class="fld"><span class="lab">New password <span class="help">(at least 8 characters)</span></span>
-            <input type="password" name="password" required minlength="8"></label>
+            <input type="password" name="password" required minlength="8" autocomplete="new-password"></label>
           <label class="fld"><span class="lab">Confirm new password</span>
-            <input type="password" name="password2" required minlength="8"></label>
+            <input type="password" name="password2" required minlength="8" autocomplete="new-password"></label>
           <button class="btn ghost" type="submit">Update password</button>
         </form>
       </details>
