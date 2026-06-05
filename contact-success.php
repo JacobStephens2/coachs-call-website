@@ -22785,6 +22785,7 @@
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-about.js">
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-index.js">
 	<link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-work.js">
+  <link rel="stylesheet" href="/assets/cc-fixes.css">
 </head>
 
 <body>

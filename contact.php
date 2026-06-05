@@ -22914,6 +22914,7 @@
 		}
 	</style>
 	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <link rel="stylesheet" href="/assets/cc-fixes.css">
 </head>
 
 <body>

@@ -22882,6 +22882,7 @@ font-display: auto;
 
   </style>
   <link rel="prefetch" href="https://<?php echo DOMAIN; ?>/page-contact.js">
+  <link rel="stylesheet" href="/assets/cc-fixes.css">
 </head>
 <body >
   <div id="___gatsby">

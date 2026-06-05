@@ -1,0 +1,70 @@
+/* coachscall.org layout fixes
+ * 1. Bottom nav labels (ABOUT / WORK / CONTACT) were wrapping so the final "T"
+ *    dropped to a second line: each col-4 card adds grid gutters AND an inner
+ *    .container padding-left:1rem, squeezing the word. Stop the wrap and remove
+ *    the asymmetric inner padding so the labels sit centered on one line.
+ * 2. The fixed bottom nav (position:fixed; bottom:0) overlapped the hero
+ *    "coach impact" box and could hide the footer. Compact the mobile hero so
+ *    the box clears the bar, and reserve the bar's height at the page bottom.
+ */
+
+/* ---- 1. bottom nav labels ---- */
+.bottom-bar .slim-card h2 {
+  white-space: nowrap;
+  margin: 0;
+  line-height: 1.1;
+}
+.bottom-bar .slim-card .no-padding.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* drop the 4px white strip that sat between the grass and the nav bar */
+.bottom-bar .header-bar {
+  display: none;
+}
+
+/* ---- footer tagline ---- */
+/* The athletic tagline used 5px letter-spacing, so in the narrow mobile
+ * column "AND EXPERIENCING" filled a line and left "JOY" orphaned on its own.
+ * Tighten the tracking on small screens so "AND EXPERIENCING JOY" fits one
+ * line: GLORIFYING GOD / AND EXPERIENCING JOY / THROUGH SPORTS. */
+@media screen and (max-width: 575px) {
+  .subhead.tagline {
+    letter-spacing: 2px;
+  }
+}
+
+/* ---- 2. fixed bar must not cover content ---- */
+/* reserve the bar's height so the footer / page end is never hidden under it */
+#page-wrap {
+  padding-bottom: 56px;
+}
+
+/* about-page hero headline: on small phones break-one was hidden while
+ * break-two stayed, and at 3rem the text overflowed -> "Game day is / a /
+ * call / to worship" with orphan words. Restore the intended stacked
+ * headline ("Game day / is a / call to worship") at a size that fits. */
+@media screen and (max-width: 575px) {
+  .introText h1.about-hero-title {
+    font-size: 2.4rem;
+  }
+  .about-hero-title .about-header-break-one {
+    display: initial;
+  }
+}
+
+/* on mobile, compact the hero so the dark box (which can run several lines on
+ * the interior pages) sits above the fixed bar instead of behind it */
+@media screen and (max-width: 767px) {
+  .intro-row-image,
+  .intro-row-image img[src*="svg"] {
+    height: 96px !important;
+    min-height: 96px;
+  }
+  .intro-row-crest #Crest {
+    height: 17vh;
+  }
+  .intro-row-crest {
+    top: 0;
+  }
+}
