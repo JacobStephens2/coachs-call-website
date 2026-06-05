@@ -22886,6 +22886,7 @@
 			height: 0 !important;
 		}
 	</style>
+  <link rel="stylesheet" href="/assets/cc-fixes.css">
 </head>
 
 <body>
@@ -23387,7 +23388,7 @@
 									</section>
 								</span>
 								<section class="pyramid photos-background"><a
-										href="https://content.<?php echo DOMAIN; ?>/wp-content/uploads/2021/11/CoachingPyramid-CoachsCall.jpg">
+										href="/work-assets/WorkImage1.jpg" target="_blank" rel="noopener">
 										<div data-gatsby-image-wrapper=""
 											class="gatsby-image-wrapper gatsby-image-wrapper-constrained work-photo">
 											<div style="max-width: 956px; display: block;"><img alt=""
@@ -23409,7 +23410,7 @@
 										</div>
 									</a></section>
 								<section class="joy photos-background"><a
-										href="https://content.<?php echo DOMAIN; ?>/wp-content/uploads/2021/11/JoyAndPerformance-CoachsCall.jpg">
+										href="/work-assets/WorkImage2.jpg" target="_blank" rel="noopener">
 										<div data-gatsby-image-wrapper=""
 											class="gatsby-image-wrapper gatsby-image-wrapper-constrained work-photo joy-static-image">
 											<div style="max-width: 956px; display: block;"><img alt=""
