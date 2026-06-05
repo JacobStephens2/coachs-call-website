@@ -13,9 +13,11 @@ declare(strict_types=1);
 $PRIVATE      = dirname(__DIR__) . '/private';
 $CRED_FILE    = $PRIVATE . '/data/admin_credentials.php';
 $CONTENT_JSON = $PRIVATE . '/data/content.json';
+$RESET_FILE   = $PRIVATE . '/data/reset.json';
 $MAX_LEN      = 2000;
 
-require $PRIVATE . '/content.php'; // registry + cc_value() etc.
+require $PRIVATE . '/content.php';            // registry + cc_value() etc.
+@include_once $PRIVATE . '/environment_variables.php'; // DOMAIN + SMTP (password-reset email)
 
 /* ---------- session ---------- */
 $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
@@ -54,6 +56,51 @@ function load_credentials(string $path): ?array
     if (!is_readable($path)) return null;
     $data = include $path;
     return (is_array($data) && isset($data['email'], $data['hash'])) ? $data : null;
+}
+
+function load_reset(string $path): ?array
+{
+    if (!is_readable($path)) return null;
+    $d = json_decode((string) file_get_contents($path), true);
+    return (is_array($d) && isset($d['hash'], $d['expires'])) ? $d : null;
+}
+
+/** True if $token matches a stored, unexpired reset token. */
+function reset_token_valid(?array $reset, string $token): bool
+{
+    return $reset !== null
+        && $token !== ''
+        && time() < (int) $reset['expires']
+        && hash_equals((string) $reset['hash'], hash('sha256', $token));
+}
+
+/** Email a password-reset link via the site's SMTP settings. */
+function send_reset_email(string $to, string $link): bool
+{
+    $autoload = dirname(__DIR__) . '/email/vendor/autoload.php';
+    if (!is_readable($autoload) || !defined('SMTP_HOST')) return false;
+    require_once $autoload;
+    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host       = SMTP_HOST;
+        $mail->SMTPAuth   = true;
+        $mail->Username   = SMTP_USER;
+        $mail->Password   = SMTP_PASS;
+        $mail->SMTPSecure = SMTP_ENCRYPTION;
+        $mail->Port       = SMTP_PORT;
+        $mail->setFrom(SMTP_FROM_EMAIL, SMTP_FROM_NAME);
+        $mail->addAddress($to);
+        $mail->Subject = "Reset your Coach's Call admin password";
+        $mail->Body    = "We received a request to reset your Coach's Call content-editor password.\n\n"
+                       . "Open this link to choose a new password (it expires in 1 hour):\n$link\n\n"
+                       . "If you didn't request this, you can safely ignore this email.";
+        $mail->send();
+        return true;
+    } catch (\Throwable $ex) {
+        error_log('admin reset email failed: ' . $ex->getMessage());
+        return false;
+    }
 }
 
 function csrf_token(): string
@@ -125,6 +172,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['cc_fail'] = ['n' => ($fail['n'] + 1), 't' => $now];
             $errors[] = 'Incorrect email or password.';
         }
+    } elseif ($action === 'reset_request' && !$needsSetup) {
+        $now  = time();
+        $last = (int) ($_SESSION['cc_reset_t'] ?? 0);
+        if ($now - $last < 30) {
+            $errors[] = 'Please wait a moment before requesting another reset email.';
+        } else {
+            $_SESSION['cc_reset_t'] = $now;
+            $em = strtolower(trim((string)($_POST['email'] ?? '')));
+            if ($em !== '' && hash_equals($creds['email'], $em)) {
+                $token = bin2hex(random_bytes(32));
+                atomic_write($RESET_FILE, (string) json_encode([
+                    'hash'    => hash('sha256', $token),
+                    'expires' => $now + 3600,
+                ]));
+                $host = defined('DOMAIN') ? DOMAIN : ($_SERVER['HTTP_HOST'] ?? '');
+                $link = ($https ? 'https' : 'http') . '://' . $host . '/admin/?reset=' . $token;
+                send_reset_email($creds['email'], $link);
+            }
+            // Generic response either way, so the form can't reveal the admin email.
+            redirect('If that email matches the admin account, a password-reset link has been sent. Please check your inbox.');
+        }
+    } elseif ($action === 'reset_save' && !$needsSetup) {
+        $token = (string)($_POST['token'] ?? '');
+        $p     = (string)($_POST['password'] ?? '');
+        $p2    = (string)($_POST['password2'] ?? '');
+        if (!reset_token_valid(load_reset($RESET_FILE), $token)) {
+            $errors[] = 'This reset link is invalid or has expired. Please request a new one.';
+        } elseif (strlen($p) < 8) {
+            $errors[] = 'Password must be at least 8 characters.';
+        } elseif ($p !== $p2) {
+            $errors[] = 'The two passwords do not match.';
+        } else {
+            $hash = password_hash($p, PASSWORD_DEFAULT);
+            if (write_credentials($CRED_FILE, $creds['email'], $hash)) {
+                @unlink($RESET_FILE);
+                unset($_SESSION['cc_fail']);
+                redirect('Your password has been reset. Please sign in.');
+            }
+            $errors[] = 'Could not update the password.';
+        }
     } elseif ($action === 'logout') {
         $_SESSION = [];
         session_destroy();
@@ -172,6 +259,14 @@ $flash = $_SESSION['cc_flash'] ?? null;
 unset($_SESSION['cc_flash']);
 $csrf  = csrf_token();
 $user  = $_SESSION['cc_user'] ?? '';
+
+/* ---------- forgot/reset view state ---------- */
+$resetToken = (string)($_GET['reset'] ?? (($action === 'reset_save') ? ($_POST['token'] ?? '') : ''));
+$resetValid = !$needsSetup && reset_token_valid(load_reset($RESET_FILE), $resetToken);
+$showForgot = !$needsSetup && !$loggedIn && (isset($_GET['forgot']) || ($action === 'reset_request' && $errors));
+if (!$loggedIn && !$needsSetup && $resetToken !== '' && !$resetValid && $action !== 'reset_save') {
+    $errors[] = 'This reset link is invalid or has expired. Please request a new one.';
+}
 
 /* ---------- value to show in an editor field (posted-on-error, else current) ---------- */
 function field_display(string $key): string
@@ -254,6 +349,44 @@ function field_display(string $key): string
     </div>
   </div>
 
+<?php elseif (!$loggedIn && $resetValid): ?>
+  <!-- ===== choose a new password (from reset link) ===== -->
+  <div class="wrap center">
+    <div class="card">
+      <h2>Choose a new password</h2>
+      <p class="muted">Enter a new password for the content editor.</p>
+      <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
+      <form method="post" autocomplete="off">
+        <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
+        <input type="hidden" name="action" value="reset_save">
+        <input type="hidden" name="token" value="<?= e($resetToken) ?>">
+        <label class="fld"><span class="lab">New password <span class="help">(at least 8 characters)</span></span>
+          <input type="password" name="password" required minlength="8" autocomplete="new-password"></label>
+        <label class="fld"><span class="lab">Confirm new password</span>
+          <input type="password" name="password2" required minlength="8" autocomplete="new-password"></label>
+        <button class="btn" type="submit">Set new password</button>
+      </form>
+    </div>
+  </div>
+
+<?php elseif (!$loggedIn && $showForgot): ?>
+  <!-- ===== forgot password (request reset email) ===== -->
+  <div class="wrap center">
+    <div class="card">
+      <h2>Reset your password</h2>
+      <p class="muted">Enter the email for your admin account and we'll send a reset link.</p>
+      <?php foreach ($errors as $err): ?><div class="flash err"><?= e($err) ?></div><?php endforeach; ?>
+      <form method="post" autocomplete="off">
+        <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
+        <input type="hidden" name="action" value="reset_request">
+        <label class="fld"><span class="lab">Email</span>
+          <input type="email" name="email" required autocomplete="username"></label>
+        <button class="btn" type="submit">Send reset link</button>
+        <a class="btn ghost" href="?">Back to sign in</a>
+      </form>
+    </div>
+  </div>
+
 <?php elseif (!$loggedIn): ?>
   <!-- ===== login ===== -->
   <div class="wrap center">
@@ -268,9 +401,10 @@ function field_display(string $key): string
         <label class="fld"><span class="lab">Email</span>
           <input type="email" name="email" required autocomplete="username"></label>
         <label class="fld"><span class="lab">Password</span>
-          <input type="password" name="password" required></label>
+          <input type="password" name="password" required autocomplete="current-password"></label>
         <button class="btn" type="submit">Sign in</button>
       </form>
+      <p style="margin:14px 0 0"><a href="?forgot=1">Forgot password?</a></p>
     </div>
   </div>
 
