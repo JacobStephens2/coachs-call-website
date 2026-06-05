@@ -205,7 +205,7 @@ function field_display(string $key): string
   label.fld { display:block; margin:0 0 16px; }
   label.fld .lab { display:block; font-weight:600; font-size:.9rem; margin-bottom:6px; }
   label.fld .help { font-weight:400; color:#6b7a89; font-size:.8rem; }
-  input[type=text], input[type=password], textarea {
+  input[type=text], input[type=email], input[type=password], textarea {
       width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px;
       font:inherit; color:var(--ink); background:#fbfdff; }
   input:focus, textarea:focus { outline:2px solid var(--blue); border-color:var(--blue); }
