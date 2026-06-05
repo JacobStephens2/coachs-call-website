@@ -115,6 +115,8 @@ function send_mail(string $to, string $subject, string $body): bool
     require_once $autoload;
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
     try {
+        $mail->CharSet  = 'UTF-8';   // render em dashes / curly quotes correctly
+        $mail->Encoding = 'base64';
         $mail->isSMTP();
         $mail->Host       = SMTP_HOST;
         $mail->SMTPAuth   = true;

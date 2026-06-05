@@ -61,6 +61,8 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 try {
+      $mail->CharSet  = 'UTF-8';   // render accents / curly quotes correctly
+      $mail->Encoding = 'base64';
       $mail->isSMTP();
       $mail->Host = SMTP_HOST;
       $mail->SMTPAuth = true;
