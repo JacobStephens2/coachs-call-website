@@ -22866,6 +22866,7 @@
 			height: 0 !important;
 		}
 	</style>
+  <link rel="stylesheet" href="/assets/cc-fixes.css">
 </head>
 
 <body>
@@ -23344,7 +23345,7 @@
 													</polygon>
 												</svg></div>
 											<div class="order-lg-1 introText col-lg-8">
-												<h1>Game day <br class="about-header-break-one">is a <br
+												<h1 class="about-hero-title">Game day <br class="about-header-break-one">is a <br
 														class="about-header-break-two">call to&nbsp;worship</h1>
 												<p class="subhead">John has helped over 500 athletes celebrate over
 													25&nbsp;years</p>
