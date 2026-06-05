@@ -24777,6 +24777,7 @@ stroke-width: 1.37px;
                     <a href="https://<?php echo DOMAIN; ?>/privacy-policy">
                       Privacy Policy
                     </a>
+                     |  <a href="/admin/">Admin</a>
                   </div>
                 </div>
               </footer>
