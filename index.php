@@ -1,4 +1,4 @@
-<?php require 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; require_once 'private/content.php'; ?>
 
 <!-- saved from url=(0023)https://<?php echo DOMAIN; ?>/ -->
 <html class="wf-proximanova-n7-active wf-proximanova-n6-active wf-proximanova-n4-active wf-proximanova-n3-active wf-abolition-i4-active wf-rift-n6-active wf-active">
@@ -23387,12 +23387,8 @@ Menu
                           </div>
 
                           <div class="order-lg-1 introText col-lg-8">
-                            <h1 >
-                              Deepening coach impact
-                            </h1>
-                            <p class="subhead">
-                              Through one-on-one mentoring, consulting, and seminars
-                            </p>
+                            <h1 ><?php cc('home.hero.heading'); ?></h1>
+                            <p class="subhead"><?php cc('home.hero.subhead'); ?></p>
                             <p class="intro-body">
                             </p>
                           </div>
@@ -24626,10 +24622,7 @@ lacrosse coach, Calvin University
                     <div class="tagline-container container">
                       <div class="tagline-row row">
                         <div class="tagline-col col-xxl-7 col-md-9 col-sm-9 col-8">
-                          <p class="subhead tagline">
-                            Glorifying God and Experiencing Joy
-Through Sports
-                          </p>
+                          <p class="subhead tagline"><?php cc('shared.footer.tagline'); ?></p>
                         </div>
                         <div class="justify-end contact-section-crest-col col-xxl-5 col-md-2 col-sm-3 col-4">
                           <svg id="Crest" viewbox="0 0 199.77 257.3">

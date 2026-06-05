@@ -1,0 +1,5 @@
+# Content editor — keep out of search engines, no directory listing
+Options -Indexes
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

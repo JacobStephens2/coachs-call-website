@@ -1,4 +1,4 @@
-<?php require 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; require_once 'private/content.php'; ?>
 <!DOCTYPE html>
 <!-- saved from url=(0028)https://<?php echo DOMAIN; ?>/about -->
 <html
@@ -23345,10 +23345,8 @@
 													</polygon>
 												</svg></div>
 											<div class="order-lg-1 introText col-lg-8">
-												<h1 class="about-hero-title">Game day <br class="about-header-break-one">is a <br
-														class="about-header-break-two">call to&nbsp;worship</h1>
-												<p class="subhead">John has helped over 500 athletes celebrate over
-													25&nbsp;years</p>
+												<h1 class="about-hero-title"><?php cc_lines('about.hero.heading'); ?></h1>
+												<p class="subhead"><?php cc('about.hero.subhead'); ?></p>
 												<p class="intro-body"></p>
 											</div>
 										</div>
@@ -23359,7 +23357,7 @@
 								<div class="flex-start about-main-section row">
 									<div class="col-lg-6 col-sm-12">
 										<div class="text-col about-text-col container">
-											<h2>John Levis, Founder</h2>
+											<h2><?php cc('about.founder.heading'); ?></h2>
 											<p class="subhead bold">helping coaches understand the pursuit of excellence
 												on the field or court as their daily act of&nbsp;worship</p>
 											<ul>
@@ -23587,8 +23585,7 @@
 								<div class="tagline-container container">
 									<div class="tagline-row row">
 										<div class="tagline-col col-xxl-7 col-md-9 col-sm-9 col-8">
-											<p class="subhead tagline">Glorifying God and Experiencing Joy
-												Through&nbsp;Sports</p>
+											<p class="subhead tagline"><?php cc('shared.footer.tagline'); ?></p>
 										</div>
 										<div
 											class="justify-end contact-section-crest-col col-xxl-5 col-md-2 col-sm-3 col-4">

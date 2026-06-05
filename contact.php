@@ -1,4 +1,4 @@
-<?php require 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; require_once 'private/content.php'; ?>
 <!DOCTYPE html>
 <!-- saved from url=(0030)https://<?php echo DOMAIN; ?>/contact -->
 <html
@@ -23392,8 +23392,8 @@
 														</polygon>
 													</svg></div>
 												<div class="order-lg-1 introText col-lg-8">
-													<h1>Let's start a conversation</h1>
-													<p class="subhead">The pursuit of God's calling in&nbsp;coaching</p>
+													<h1><?php cc('contact.hero.heading'); ?></h1>
+													<p class="subhead"><?php cc('contact.hero.subhead'); ?></p>
 													<p class="intro-body"></p><a
 														href="mailto:john@<?php echo DOMAIN; ?>"><button type="button"
 															class="btn btn-primary">EMAIL JOHN</button></a>
@@ -23489,12 +23489,11 @@
 								</section><span id="call"></span>
 								<section class="one-col-section">
 									<div class="lets-connect container">
-										<h2>Let’s Connect</h2>
-										<p>“As iron sharpens iron, so one person sharpens another.” <cite
-												class="connect-cite">Proverbs 27:1</cite></p>
+										<h2><?php cc('contact.connect.heading'); ?></h2>
+										<p><?php cc('contact.connect.quote'); ?> <cite class="connect-cite"><?php cc('contact.connect.cite'); ?></cite></p>
 										<div class="col"><span class="contact-text">
-												<p><a href="tel:484.574.1444"><i class="fas fa-phone-alt"
-															aria-hidden="true"></i>  484.574.1444</a></p>
+												<p><a href="tel:<?php cc('contact.phone'); ?>"><i class="fas fa-phone-alt"
+															aria-hidden="true"></i>  <?php cc('contact.phone'); ?></a></p>
 												<p><a href="mailto:john@<?php echo DOMAIN; ?>"><i class="far fa-envelope"
 															aria-hidden="true"></i>  john@<?php echo DOMAIN; ?></a></p>
 											</span></div><a aria-current="page" class=""
@@ -23506,8 +23505,7 @@
 									<div class="tagline-container container">
 										<div class="tagline-row row">
 											<div class="tagline-col col-xxl-7 col-md-9 col-sm-9 col-8">
-												<p class="subhead tagline">Glorifying God and Experiencing Joy
-													Through&nbsp;Sports</p>
+												<p class="subhead tagline"><?php cc('shared.footer.tagline'); ?></p>
 											</div>
 											<div
 												class="justify-end contact-section-crest-col col-xxl-5 col-md-2 col-sm-3 col-4">

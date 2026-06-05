@@ -1,4 +1,4 @@
-<?php require 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; require_once 'private/content.php'; ?>
 <!DOCTYPE html>
 <!-- saved from url=(0031)https://<?php echo DOMAIN; ?>/success/ -->
 <html
@@ -23135,8 +23135,7 @@
 								<div class="tagline-container container">
 									<div class="tagline-row row">
 										<div class="tagline-col col-xxl-7 col-md-9 col-sm-9 col-8">
-											<p class="subhead tagline">Glorifying God and Experiencing Joy
-												Through&nbsp;Sports</p>
+											<p class="subhead tagline"><?php cc('shared.footer.tagline'); ?></p>
 										</div>
 										<div
 											class="justify-end contact-section-crest-col col-xxl-5 col-md-2 col-sm-3 col-4">

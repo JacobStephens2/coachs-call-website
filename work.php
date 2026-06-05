@@ -1,4 +1,4 @@
-<?php require 'private/environment_variables.php'; ?>
+<?php require 'private/environment_variables.php'; require_once 'private/content.php'; ?>
 <!DOCTYPE html>
 <!-- saved from url=(0027)https://<?php echo DOMAIN; ?>/work -->
 <html
@@ -23362,9 +23362,8 @@
 													</polygon>
 												</svg></div>
 											<div class="order-lg-1 introText col-lg-8">
-												<h1>It's how <br class="work-header-break-two">you <br
-														class="work-header-break-one">play the&nbsp;game</h1>
-												<p class="subhead">And winning and losing do&nbsp;matter</p>
+												<h1><?php cc_lines('work.hero.heading'); ?></h1>
+												<p class="subhead"><?php cc('work.hero.subhead'); ?></p>
 												<p class="intro-body"></p>
 											</div>
 										</div>
@@ -23499,8 +23498,7 @@
 								<div class="tagline-container container">
 									<div class="tagline-row row">
 										<div class="tagline-col col-xxl-7 col-md-9 col-sm-9 col-8">
-											<p class="subhead tagline">Glorifying God and Experiencing Joy
-												Through&nbsp;Sports</p>
+											<p class="subhead tagline"><?php cc('shared.footer.tagline'); ?></p>
 										</div>
 										<div
 											class="justify-end contact-section-crest-col col-xxl-5 col-md-2 col-sm-3 col-4">
