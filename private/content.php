@@ -19,7 +19,7 @@ if (!defined('CC_CONTENT_LOADED')) {
     $GLOBALS['CC_FIELDS'] = require __DIR__ . '/content_fields.php';
 
     $GLOBALS['CC_OVERRIDES'] = [];
-    $ccFile = __DIR__ . '/content.json';
+    $ccFile = __DIR__ . '/data/content.json';
     if (is_readable($ccFile)) {
         $decoded = json_decode((string) file_get_contents($ccFile), true);
         if (is_array($decoded)) {

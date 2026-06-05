@@ -1,6 +1,6 @@
 vendor
 environment_variables.php
 
-# admin content editor (runtime data / credentials)
-private/admin_credentials.php
-private/content.json
+# admin content editor — runtime data & credentials (web-writable dir)
+private/data/*
+!private/data/.gitkeep

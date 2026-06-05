@@ -11,8 +11,8 @@
 declare(strict_types=1);
 
 $PRIVATE      = dirname(__DIR__) . '/private';
-$CRED_FILE    = $PRIVATE . '/admin_credentials.php';
-$CONTENT_JSON = $PRIVATE . '/content.json';
+$CRED_FILE    = $PRIVATE . '/data/admin_credentials.php';
+$CONTENT_JSON = $PRIVATE . '/data/content.json';
 $MAX_LEN      = 2000;
 
 require $PRIVATE . '/content.php'; // registry + cc_value() etc.
